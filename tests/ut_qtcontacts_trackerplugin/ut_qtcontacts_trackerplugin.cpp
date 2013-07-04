@@ -8478,11 +8478,8 @@ void
 ut_qtcontacts_trackerplugin::testPartialSave_data()
 {
     QTest::addColumn<QString>("interfaceVersion");
-    QTest::addColumn<bool>("restrictive");
-
-    QTest::newRow("emulated") << QString::fromLatin1("1") << false;
-    QTest::newRow("forgiving") << QString::fromLatin1("2") << false;
-    QTest::newRow("restrictive") << QString::fromLatin1("2") << true;
+    QTest::newRow("emulated") << QString::fromLatin1("1");
+    QTest::newRow("native") << QString::fromLatin1("2");
 }
 
 // copied from http://qt.gitorious.org/qt-mobility/contacts/trees/master/tests/auto/qcontactmanager
@@ -8490,11 +8487,9 @@ void
 ut_qtcontacts_trackerplugin::testPartialSave()
 {
     QFETCH(QString, interfaceVersion);
-    QFETCH(bool, restrictive);
 
     QMap<QString, QString> params = makeEngineParams();
     params.insert(QLatin1String(QTCONTACTS_IMPLEMENTATION_VERSION_NAME), interfaceVersion);
-    params.insert(QLatin1String("compliance"), QLatin1String(restrictive ? "restrictive" : "default"));
     QScopedPointer<QContactManager> cm(new QContactManager(QLatin1String("tracker"), params));
 
     QVERIFY(not cm.isNull());
