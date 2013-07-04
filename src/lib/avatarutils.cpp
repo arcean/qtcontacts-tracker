@@ -66,7 +66,8 @@ makeAvatarCacheFileName(const QImage &image, QFile::FileError *error)
     // smaller than probability that we mess up because of miscalculations caused by
     // electrostatics and flipping bits. That's why we can apply this cheap trick.
 
-    const QByteArray pixels(reinterpret_cast<const char *>(image.bits()), image.byteCount());
+    const char *const rawPixelData = reinterpret_cast<const char *>(image.constBits());
+    const QByteArray pixels = QByteArray::fromRawData(rawPixelData, image.byteCount());
     const QByteArray pixelHash = QCryptographicHash::hash(pixels, QCryptographicHash::Sha1).toHex();
     const QString fileName = QString::fromLatin1("%1.png").arg(QString::fromLatin1(pixelHash));
 
