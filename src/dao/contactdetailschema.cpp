@@ -80,6 +80,17 @@ private: // flags
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
+class QTrackerContactInvalidDetailSchemaData : public QTrackerContactDetailSchemaData
+{
+public:
+   QTrackerContactInvalidDetailSchemaData()
+        : QTrackerContactDetailSchemaData(QString(), QStringList(), QStringList(), 0)
+    {
+    }
+};
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
 class QTrackerPersonContactDetailSchemaData : public QTrackerContactDetailSchemaData
 {
 public:
@@ -1156,6 +1167,13 @@ QTrackerContactDetailSchema &
 QTrackerContactDetailSchema::operator=(const QTrackerContactDetailSchema &other)
 {
     return d = other.d, *this;
+}
+
+const QTrackerContactDetailSchema &
+QTrackerContactDetailSchema::invalidSchema()
+{
+    static const QTrackerContactDetailSchema null(new QTrackerContactInvalidDetailSchemaData);
+    return null;
 }
 
 const QString &

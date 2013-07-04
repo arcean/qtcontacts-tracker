@@ -66,6 +66,8 @@ public: // operators
     QTrackerContactDetailSchema & operator=(const QTrackerContactDetailSchema &other);
 
 public: // attributes
+    static const QTrackerContactDetailSchema & invalidSchema();
+
     const QString & contactType() const;
 
     const QTrackerContactDetailMap & details() const;

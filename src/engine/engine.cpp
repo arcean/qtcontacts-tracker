@@ -880,7 +880,7 @@ QContactTrackerEngine::schema(const QString& contactType) const
 
     if (schema == schemas().constEnd()) {
         qctFail(QString::fromLatin1("Unexpected contact type %1. Aborting.").arg(contactType));
-        schema = schemas().constBegin();
+        return QTrackerContactDetailSchema::invalidSchema();
     }
 
     return schema.value();
