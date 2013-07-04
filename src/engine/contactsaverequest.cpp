@@ -303,7 +303,7 @@ public: // attributes
     QString queryString();
 
     bool isExistingContact() const { return 0 != m_contactLocalId; }
-    bool isPartialSaveRequest() const { return isExistingContact() && not m_detailMask.isEmpty(); }
+    bool isPartialSaveRequest() const { return not m_detailMask.isEmpty(); }
     bool isUnknownDetail(const QString &name) const { return isPartialSaveRequest() && not m_detailMask.contains(name); }
     template <class T> bool isUnknownDetail() const { return isUnknownDetail(T::DefinitionName); }
 
