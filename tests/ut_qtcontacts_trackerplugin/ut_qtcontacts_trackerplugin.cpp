@@ -8586,15 +8586,10 @@ ut_qtcontacts_trackerplugin::testPartialSave()
     newContact.setId(QContactId());
     contacts.append(newContact);
 
-    // emulated partial save request doesn't catch this error
-    if (restrictive) {
-        QVERIFY(not cm->saveContacts(&contacts, QStringList(QContactEmailAddress::DefinitionName)));
-        QCOMPARE(cm->errorMap().count(), 1);
-        QCOMPARE(cm->errorMap().value(4), QContactManager::BadArgumentError);
-    } else {
-        QVERIFY(cm->saveContacts(&contacts, QStringList(QContactEmailAddress::DefinitionName)));
-        QVERIFY(cm->errorMap().isEmpty());
-    }
+    // emulated partial save request doesn't catch this error    
+    QVERIFY(cm->saveContacts(&contacts, QStringList(QContactEmailAddress::DefinitionName)));
+    QVERIFY(cm->errorMap().isEmpty());
+
 
     // 4b - New contact, empty mask
     QVERIFY(cm->saveContacts(&contacts, QStringList()));
@@ -8610,14 +8605,8 @@ ut_qtcontacts_trackerplugin::testPartialSave()
     contacts.append(newContact);
 
     // emulated partial save request doesn't catch this error
-    if (restrictive) {
-        QVERIFY(not cm->saveContacts(&contacts, QStringList(QContactEmailAddress::DefinitionName)));
-        QCOMPARE(cm->errorMap().count(), 1);
-        QCOMPARE(cm->errorMap().value(5), QContactManager::BadArgumentError);
-    } else {
-        QVERIFY(cm->saveContacts(&contacts, QStringList(QContactEmailAddress::DefinitionName)));
-        QVERIFY(cm->errorMap().isEmpty());
-    }
+    QVERIFY(cm->saveContacts(&contacts, QStringList(QContactEmailAddress::DefinitionName)));
+    QVERIFY(cm->errorMap().isEmpty());
 
     // 5b - New contact, empty mask
     QVERIFY(cm->saveContacts(&contacts, QStringList()));
