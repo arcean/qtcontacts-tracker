@@ -1,0 +1,66 @@
+Implement missing QtContacts API
+---------------------------------
+
+ - QContact::preferredDetails()
+ - what else?
+
+First step would be to implement or steal unit tests.
+
+Sorting in fetch requests implemented in query
+-----------------------------------------------
+
+(sorting also missing from QContactLocalIdFetchRequest)
+
+sorting for QContactLocalIdFetchRequest is not implemented.
+would be complex to implement as you would have to replicate the filtering framework
+so won't happen before we got query sanity
+
+but local id fetch request could be a good test bed: when it works and query sanity is done,
+we might just apply the localidfetchrequest code to the contact fetchrequest
+BlankPolicy seems to be hard to implement (?)
+currently we use qtcontacts infrastructure and sort the retrieved result
+
+for sorting local ids we'd have to create "order by" statements in the query.
+this feature should be added to the query builder class
+
+
+QContactManagerEngineV2
+------------------------
+nothing done yet, explicite support might not be needed, qtm's fallback implementation hopefully is good enough,
+incl. for partial saving.
+only have to implement QContactManagerEngineV2 if we have ideas for optimization
+(like for partial saving without doing the fetch as fallback does, pretty relevant for performance)
+
+we should have unit tests, checking that QContactManagerEngineV2 features work properly with our plugin
+also to see where custom code is really useful
+could be used to check our own v2 implementations, once done
+
+hasselmm proposal for partial saving:
+all the QTrackerContactDetail loops in the save request might just have to check if the detail is covered
+by the save request's definition list
+
+probably should keep some fallback path in our engine, ignoring v2 support, as the v2 fallback mechanisms
+are some kind of unit test we get from qt contacts for free
+if V2 features work with their fallback implementation we have some indication that their and our interpretation
+of some API doesn't differ too much
+
+        // Build custom detail query when needed
+        if (not context->customDetailHints.isEmpty()) {
+            context->queries += customDetailQuery(*context);
+        }
+in QTrackerContactFetchRequest::buildQueries()
+
+guess we must just fetch all custom details if the fetch hint doesn't restrict details
+
+
+Refcounting on used resources
+------------------------------
+
+nie:usageCounter a rdf:Property ;
+        nrl:maxCardinality 1 ;
+        rdfs:domain nie:InformationElement ;
+        rdfs:range xsd:integer ;
+        tracker:isAnnotation true ;
+        tracker:weight 3 .
+
+we might want to use that reference counter on phone numbers, email addresses and so on

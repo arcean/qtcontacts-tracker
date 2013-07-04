@@ -1,0 +1,212 @@
+# Delete properties related objects so that we can update them.
+# =================================================================================================
+DELETE
+{
+  GRAPH <urn:uuid:08070f5c-a334-4d19-a8b0-12a3071bfab9>
+  {
+    ?subject nco:hasPostalAddress ?object .
+  }
+}
+WHERE
+{
+  GRAPH <urn:uuid:08070f5c-a334-4d19-a8b0-12a3071bfab9>
+  {
+    <contact:58390905> nco:hasAffiliation ?subject .
+    ?subject nco:hasPostalAddress ?object .
+  }
+}
+
+DELETE
+{
+  GRAPH <urn:uuid:08070f5c-a334-4d19-a8b0-12a3071bfab9>
+  {
+    ?subject ncal:dtstart ?object
+  }
+}
+WHERE
+{
+  GRAPH <urn:uuid:08070f5c-a334-4d19-a8b0-12a3071bfab9>
+  {
+    <contact:58390905> ncal:anniversary ?subject .
+    ?subject ncal:dtstart ?object
+  }
+}
+
+DELETE
+{
+  GRAPH <urn:uuid:08070f5c-a334-4d19-a8b0-12a3071bfab9>
+  {
+    ?subject nco:hasPostalAddress ?object .
+  }
+}
+WHERE
+{
+  GRAPH <urn:uuid:08070f5c-a334-4d19-a8b0-12a3071bfab9>
+  {
+    <contact:58390905> nco:hasAffiliation [ nco:org ?subject ] .
+    ?subject nco:hasPostalAddress ?object .
+  }
+}
+
+DELETE
+{
+  GRAPH <urn:uuid:08070f5c-a334-4d19-a8b0-12a3071bfab9>
+  {
+    ?subject nco:org ?object .
+  }
+}
+WHERE
+{
+  GRAPH <urn:uuid:08070f5c-a334-4d19-a8b0-12a3071bfab9>
+  {
+    <contact:58390905> nco:hasAffiliation ?subject .
+    ?subject nco:org ?object .
+  }
+}
+
+DELETE
+{
+  <urn:x-maemo-phone:messagingcapable,mobile,voice:+4916134567> ?predicate ?object .
+}
+WHERE
+{
+  <urn:x-maemo-phone:messagingcapable,mobile,voice:+4916134567> ?predicate ?object .
+  FILTER(?predicate IN (nao:hasProperty, nco:phoneNumber, maemo:localPhoneNumber)) .
+}
+
+DELETE
+{
+  ?resource a nco:CarPhoneNumber, nco:BbsNumber, nco:PagerNumber, nco:VideoTelephoneNumber,
+              nco:MessagingNumber, nco:VoicePhoneNumber, nco:CellPhoneNumber, nco:FaxNumber,
+              nco:ModemNumber .
+}
+WHERE
+{
+  ?resource a nco:PhoneNumber .
+  FILTER(?resource IN (<urn:x-maemo-phone:messagingcapable,mobile,voice:+4916134567>)) .
+}
+
+# Delete the contact's properties so that we can update them nicely.
+# Only nco:contactUID and nco:contactLocalUID must be preserved.
+# =================================================================================================
+DELETE
+{
+  GRAPH <urn:uuid:08070f5c-a334-4d19-a8b0-12a3071bfab9>
+  {
+    <contact:58390905> ?predicate ?object .
+  }
+}
+WHERE
+{
+  GRAPH <urn:uuid:08070f5c-a334-4d19-a8b0-12a3071bfab9>
+  {
+    <contact:58390905> ?predicate ?object .
+    FILTER(?predicate NOT IN (rdf:type, nco:belongsToGroup, nco:contactUID, nie:contentCreated)) .
+  }
+}
+
+# Write new contact data
+# =================================================================================================
+
+INSERT
+{
+  GRAPH <urn:uuid:08070f5c-a334-4d19-a8b0-12a3071bfab9>
+  {
+    <mailto:babera@beverly.com>
+      a nco:EmailAddress ;
+      nco:emailAddress "babera@beverly.com" .
+  }
+}
+WHERE
+{
+  FILTER(NOT EXISTS { ?resource nco:emailAddress "babera@beverly.com" })
+}
+
+INSERT
+{
+  GRAPH <urn:uuid:08070f5c-a334-4d19-a8b0-12a3071bfab9>
+  {
+    <contact:58390905>
+      rdf:type nco:PersonContact ;
+      nco:gender nco:gender-female ;
+      nco:nameGiven "Babera" ;
+      nco:nameAdditional "Beate" ;
+      nco:nameFamily "Beverly" ;
+      nco:hasAffiliation _:Affiliation_Home1, _:Affiliation_Work2 ;
+      nie:contentLastModified "2010-05-04T09:30:00Z" .
+
+    _:Affiliation_Home1
+      rdf:type nco:Affiliation ;
+      rdfs:label "Home" ;
+      nco:hasEmailAddress ?emailAddress ;
+      nco:hasPhoneNumber <urn:x-maemo-phone:messagingcapable,mobile,voice:+4916134567> ;
+      nco:websiteUrl "http://beverly.com/" .
+
+    _:Affiliation_Work2
+      rdf:type nco:Affiliation ;
+      nco:title "Office Clerk" .
+
+    <urn:x-maemo-phone:messagingcapable,mobile,voice:+4916134567>
+      rdf:type nco:VoicePhoneNumber, nco:CellPhoneNumber, nco:MessagingNumber, nco:PhoneNumber ;
+      nco:phoneNumber "+4916134567" ;
+      maemo:localPhoneNumber "6134567" .
+  }
+}
+WHERE
+{
+  ?emailAddress nco:emailAddress "babera@beverly.com" .
+}
+
+# Create new timestamp if he contact doesn't have one yet.
+# =================================================================================================
+INSERT
+{
+  GRAPH <urn:uuid:08070f5c-a334-4d19-a8b0-12a3071bfab9>
+  {
+    <contact:58390905> nie:contentCreated "2010-05-04T09:30:00Z"
+  }
+}
+WHERE
+{
+  FILTER(!(EXISTS
+  {
+    GRAPH <urn:uuid:08070f5c-a334-4d19-a8b0-12a3071bfab9>
+    {
+      <contact:58390905> nie:contentCreated ?date
+    }
+  }))
+}
+
+# Create a new UUID if he contact doesn't have one yet.
+# =================================================================================================
+INSERT
+{
+  GRAPH <urn:uuid:08070f5c-a334-4d19-a8b0-12a3071bfab9>
+  {
+    <contact:58390905> nco:contactUID "<placeholder:guid>"
+  }
+}
+WHERE
+{
+  FILTER(!(EXISTS
+  {
+    GRAPH <urn:uuid:08070f5c-a334-4d19-a8b0-12a3071bfab9>
+    {
+      <contact:58390905> nco:contactUID ?guid
+    }
+  }))
+}
+
+# Enforce proper sync target
+# =================================================================================================
+INSERT OR REPLACE
+{
+  GRAPH <urn:uuid:08070f5c-a334-4d19-a8b0-12a3071bfab9>
+  {
+    <contact:58390905> nie:generator "addressbook"
+  }
+}
+WHERE
+{
+  FILTER((tracker:coalesce(nie:generator(<contact:58390905>), "") IN ("", "telepathy")))
+}

@@ -1,0 +1,20 @@
+SELECT
+  ?_contact tracker:id(?_contact)
+  ?_context rdfs:label(?_context)
+
+  ?_customDetail ?_customDetailName
+  ?_customFieldName ?_customFieldValue
+
+WHERE
+{
+  ?_contact rdf:type nco:PersonContact .
+
+  ?_contact nao:hasProperty ?_customDetail .
+  ?_customDetail nao:propertyName ?_customDetailName .
+
+  ?_customDetail nao:hasProperty ?_customField .
+  ?_customField nao:propertyName ?_customFieldName .
+  ?_customField nao:propertyValue ?_customFieldValue .
+
+  FILTER((?_customDetailName IN ("Family"))) .
+}

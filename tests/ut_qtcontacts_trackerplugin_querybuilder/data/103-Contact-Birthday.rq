@@ -1,0 +1,15 @@
+SELECT
+  ?_contact tracker:id(?_contact)
+  ?_context rdfs:label(?_context)
+
+ (SELECT fn:concat (fn:concat(?birthDate, "|", fn:timezone-from-dateTime(?birthDate)) , "\u001c",
+                    tracker:coalesce((SELECT ?g WHERE { GRAPH ?g { ?_contact nco:birthDate ?birthDate }}), ""))
+  WHERE { ?_contact nco:birthDate ?birthDate })
+
+ (SELECT ncal:uid(?_event, "\u002c", "\u001c")
+  WHERE { ?_contact ncal:birthday ?_event })
+
+WHERE {
+  ?_contact rdf:type nco:PersonContact
+  OPTIONAL { ?_contact nco:hasAffiliation ?_context }
+}

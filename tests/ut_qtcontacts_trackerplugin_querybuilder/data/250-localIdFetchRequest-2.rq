@@ -1,0 +1,31 @@
+# Reference query for QContactLocalIdFetchRequest
+# Verify if original fields and generic fields can be mixed within an intersection filter.
+# Applied filter: (Nickname == "Havoc") && (Note == "Chaos")
+# ==================================================================================================
+
+SELECT
+  tracker:id(?_contact)
+
+WHERE {
+  {
+    ?_contact rdf:type nco:PersonContact
+
+    FILTER((EXISTS {
+      ?_contact nco:nickname ?_nickname1
+      FILTER((fn:lower-case(?_nickname1) = "havoc"))
+    } && EXISTS {
+      ?_contact nco:note ?_note1
+      FILTER((fn:lower-case(?_note1) = "chaos"))
+    }))
+  } UNION {
+    ?_contact rdf:type nco:ContactGroup, nco:Contact
+
+    FILTER((EXISTS {
+      ?_contact nco:contactGroupName ?_nickname2
+      FILTER((fn:lower-case(?_nickname2) = "havoc"))
+    } && EXISTS {
+      ?_contact nco:note ?_note2
+      FILTER((fn:lower-case(?_note2) = "chaos"))
+    }))
+  }
+}

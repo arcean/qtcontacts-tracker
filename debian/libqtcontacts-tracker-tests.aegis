@@ -1,0 +1,68 @@
+<aegis>
+    <request>
+        <credential name="TrackerReadAccess" />
+        <credential name="TrackerWriteAccess" />
+        <credential name="GRP::metadata-users" />
+        <for path="/usr/bin/ut_qtcontacts_trackerplugin" />
+    </request>
+    <request>
+        <credential name="TrackerReadAccess" />
+        <credential name="TrackerWriteAccess" />
+        <credential name="GRP::metadata-users" />
+        <for path="/usr/bin/ut_qtcontacts_trackerplugin_helper" />
+    </request>
+    <request>
+        <credential name="TrackerReadAccess" />
+        <credential name="TrackerWriteAccess" />
+        <credential name="GRP::metadata-users" />
+        <for path="/usr/bin/ut_qtcontacts_trackerplugin_add_async" />
+    </request>
+    <request>
+        <credential name="TrackerReadAccess" />
+        <credential name="TrackerWriteAccess" />
+        <credential name="GRP::metadata-users" />
+        <for path="/usr/bin/ut_qtcontacts_trackerplugin_fetch" />
+    </request>
+    <request>
+        <credential name="TrackerReadAccess" />
+        <credential name="TrackerWriteAccess" />
+        <credential name="GRP::metadata-users" />
+        <for path="/usr/bin/ut_qtcontacts_trackerplugin_groups" />
+    </request>
+    <request>
+        <credential name="TrackerReadAccess" />
+        <credential name="TrackerWriteAccess" />
+        <credential name="GRP::metadata-users" />
+        <for path="/usr/bin/ut_qtcontacts_trackerplugin_performance" />
+    </request>
+    <request>
+        <credential name="TrackerReadAccess" />
+        <credential name="TrackerWriteAccess" />
+        <credential name="GRP::metadata-users" />
+        <for path="/usr/bin/ut_qtcontacts_trackerplugin_querybuilder" />
+    </request>
+    <request>
+        <credential name="TrackerReadAccess" />
+        <credential name="TrackerWriteAccess" />
+        <credential name="GRP::metadata-users" />
+        <for path="/usr/bin/ut_qtcontacts_trackerplugin_resourcecache" />
+    </request>
+    <request>
+        <credential name="TrackerReadAccess" />
+        <credential name="TrackerWriteAccess" />
+        <credential name="GRP::metadata-users" />
+        <for path="/usr/bin/ut_qtcontacts_trackerplugin_settings" />
+    </request>
+    <request>
+        <credential name="TrackerReadAccess" />
+        <credential name="TrackerWriteAccess" />
+        <credential name="GRP::metadata-users" />
+        <for path="/usr/bin/ut_qtcontacts_trackerplugin_settings_helper" />
+    </request>
+    <request>
+        <credential name="TrackerReadAccess" />
+        <credential name="TrackerWriteAccess" />
+        <credential name="GRP::metadata-users" />
+        <for path="/usr/bin/ut_qtcontacts_trackerplugin_signals" />
+    </request>
+</aegis>

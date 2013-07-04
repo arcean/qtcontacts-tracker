@@ -1,0 +1,5 @@
+ut_qtcontacts_trackerplugin::testAnniversary: hasselmm: under dicussion if the test is valid
+ut_qtcontacts_trackerplugin_querybuilder::testSaveRequestCreate: hasselmm: timestamps broken, must be investigated
+ut_qtcontacts_trackerplugin_querybuilder::testSaveRequestUpdate: hasselmm: reference contact loading is broken
+ut_qtcontacts_trackerplugin_signals::testSignals: abustany: Signal count fails due to heavy signal batching
+ut_qtcontacts_trackerplugin_settings::testSignallingOfSettingsChangeInOtherProcess: abustany: It fails randomly

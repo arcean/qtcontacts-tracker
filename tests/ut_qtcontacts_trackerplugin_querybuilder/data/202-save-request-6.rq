@@ -1,0 +1,62 @@
+# Delete properties related objects so that we can update them.
+# =================================================================================================
+DELETE
+{
+  GRAPH <urn:uuid:08070f5c-a334-4d19-a8b0-12a3071bfab9>
+  {
+    ?subject ncal:dtstart ?object
+  }
+}
+WHERE
+{
+  GRAPH <urn:uuid:08070f5c-a334-4d19-a8b0-12a3071bfab9>
+  {
+    <contact:98899889> ncal:anniversary ?subject .
+    ?subject ncal:dtstart ?object
+  }
+}
+
+# Delete the contact's properties so that we can update them nicely.
+# Only nco:contactLocalUID must be preserved as we assume to know the GUID of this contact
+# and want to preserve it.
+# =================================================================================================
+DELETE
+{
+  GRAPH <urn:uuid:08070f5c-a334-4d19-a8b0-12a3071bfab9>
+  {
+    <contact:98899889> ?predicate ?object .
+  }
+}
+WHERE
+{
+  GRAPH <urn:uuid:08070f5c-a334-4d19-a8b0-12a3071bfab9>
+  {
+    <contact:98899889> ?predicate ?object .
+    FILTER(?predicate NOT IN (rdf:type,nco:belongsToGroup)) .
+  }
+}
+
+# Write new contact group data
+# =================================================================================================
+INSERT
+{
+  GRAPH <urn:uuid:08070f5c-a334-4d19-a8b0-12a3071bfab9>
+  {
+    <contact:98899889>
+      rdf:type nco:ContactGroup, nco:Contact ;
+      nco:contactGroupName "Freischwimmer" ;
+      nie:contentLastModified "2010-05-04T09:30:00Z" ;
+      nie:contentCreated "2010-01-23T12:00:00Z" ;
+      nco:contactUID "8e4c3c72-8560-4350-9d96-30694bbdb71f" .
+  }
+}
+
+# Enforce proper sync target
+# =================================================================================================
+INSERT OR REPLACE
+{
+  GRAPH <urn:uuid:08070f5c-a334-4d19-a8b0-12a3071bfab9>
+  {
+    <contact:98899889> nie:generator "addressbook"
+  }
+}

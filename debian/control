@@ -1,0 +1,107 @@
+Source: libqtcontacts-tracker
+Priority: extra
+Maintainer: Aleksandar Stojiljkovic <aleksandar.stojiljkovic@nokia.com>
+Uploaders: Mathias Hasselmann <mathias@openismus.com>
+Build-Depends:
+  libtracker-sparql-dev (>= 0.10),
+  libqtsparql-dev (>= 0.0.11),
+  libqtsparql-tracker-extensions-dev (>= 0.0.3),
+  libqtm-contacts-dev (>= 1.2.1+201),
+  libqtm-versit-dev (>= 1.2),
+  libqtm-organizer-dev (>= 1.2),
+  libcubi-0.1-dev (>= 0.1.14),
+  libcubi-0.1-tracker-0.10-ontologies-dev (>= 0.1.3),
+  debhelper (>= 7), pkg-config, aegis-builder, python,
+# optionally used, controlled by ENABLE_CELLULAR as set from configure
+  libcellular-qt-dev, libsysinfo-dev,
+# optionally used, controlled by ENABLE_CREDENTIALS as set from configure
+  mssf-qt-dev,
+# optionally used, controlled by ENABLE_DOCS as set from configure
+  doxygen
+Standards-Version: 3.8.1
+Section: comm
+
+Package: libqtcontacts-tracker
+Section: libs
+Architecture: any
+Depends:
+  ${shlibs:Depends}, ${misc:Depends}, tracker (>= 0.10.11), tracker,
+  libqtcontacts-extensions-tracker0 (=${binary:Version}),
+  libqtsparql-tracker-extensions0
+Recommends: contactsd, libqtsparql-tracker-direct
+Conflicts: contactsd (<< 1.0.15)
+Description: QtContacts tracker storage plugin
+ This plugin permits QtContacts to use tracker as contact store.
+
+Package: libqtcontacts-tracker-dbg
+Section: debug
+Architecture: any
+Depends: libqtcontacts-tracker (=${binary:Version})
+Description: QtContacts tracker storage plugin (debug symbols)
+ This plugin permits QtContacts to use tracker as contact store.
+ .
+ This package contains debugging symbols for libqtcontacts-tracker.
+
+Package: libqtcontacts-tracker-tests
+Section: libdevel
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, testrunner-lite, libqtcontacts-tracker, ci-testing
+XB-Maemo-CI-Packages: libqtcontacts-tracker, tracker, libqtsparql-tracker-extensions
+XB-Maemo-CI-Stage: fast, staging, acceptance
+Description: QtContacts tracker storage plugin (unit tests)
+ This plugin permits QtContacts to use tracker as contact store.
+ .
+ This package contains unit tests for libqtcontacts-tracker.
+
+Package: libqtcontacts-tracker-tests-dbg
+Section: debug
+Architecture: any
+Depends: libqtcontacts-tracker (=${binary:Version})
+Description: QtContacts tracker storage plugin (debug symbols for unit tests)
+ This plugin permits QtContacts to use tracker as contact store.
+ .
+ This package contains debugging symbols for libqtcontacts-tracker-tests.
+
+Package: libqtcontacts-tracker-benchmarks
+Section: misc
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libqtcontacts-tracker
+Description: QtContacts tracker storage plugin (benchmarks)
+ This plugin permits QtContacts to use tracker as contact store.
+ .
+ This package contains benchmarks for libqtcontacts-tracker.
+
+Package: libqtcontacts-tracker-benchmarks-dbg
+Section: debug
+Architecture: any
+Depends: libqtcontacts-tracker (=${binary:Version})
+Description: QtContacts tracker storage plugin (debug symbols for benchmarks)
+ This plugin permits QtContacts to use tracker as contact store.
+ .
+ This package contains debugging symbols for libqtcontacts-tracker-benchmarks.
+
+Package: libqtcontacts-extensions-tracker0
+Architecture: any
+Section: libdevel
+Depends: libqtm-contacts, ${shlibs:Depends}
+Description: Library with extensions to QtContacts, as provided by the Tracker-based backend.
+
+Package: libqtcontacts-extensions-tracker0-dbg
+Section: debug
+Architecture: any
+Depends: libqtcontacts-extensions-tracker0 (=${binary:Version})
+Description: Library with extensions to QtContacts, as provided by the Tracker-based backend (debug symbols).
+ .
+ This package contains debugging symbols for libqtcontacts-extensions-tracker0.
+
+Package: libqtcontacts-extensions-tracker-dev
+Architecture: all
+Section: libdevel
+Depends: libqtm-contacts-dev, libqtcontacts-extensions-tracker0 (= ${binary:Version}), libcubi-0.1-dev (>= 0.1.14),
+  libqtsparql-tracker-extensions-dev (>= 0.0.3), libqtsparql-dev (>= 0.0.11)
+Description: Development headers for libqtcontacts_extensions_tracker0
+
+Package: libqtcontacts-extensions-tracker-doc
+Architecture: all
+Section: doc
+Description: API documentation for libqtcontacts_extensions_tracker0

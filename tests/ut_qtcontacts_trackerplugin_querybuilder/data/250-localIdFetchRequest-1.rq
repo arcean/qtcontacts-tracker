@@ -1,0 +1,51 @@
+# Reference query for QContactLocalIdFetchRequest.
+# Verify if original fields and generic fields can be mixed within an union filter.
+# Applied filter: (Nickname == "Havoc") || (Note == "Chaos")
+# ==================================================================================================
+
+SELECT
+  tracker:id(?_contact)
+
+WHERE {
+  {
+    ?_contact rdf:type nco:PersonContact
+
+    FILTER((EXISTS {
+      ?_contact nco:nickname ?_nickname1
+      FILTER((fn:lower-case(?_nickname1) = "havoc"))
+    } || EXISTS {
+      ?_contact nco:note ?_note1
+      FILTER((fn:lower-case(?_note1) = "chaos"))
+    }))
+  } UNION {
+    ?_contact rdf:type nco:ContactGroup, nco:Contact
+
+    FILTER((EXISTS {
+      ?_contact nco:contactGroupName ?_nickname2
+      FILTER((fn:lower-case(?_nickname2) = "havoc"))
+    } || EXISTS {
+      ?_contact nco:note ?_note2
+      FILTER((fn:lower-case(?_note2) = "chaos"))
+    }))
+  }
+}
+
+ORDER BY (SELECT IF (EXISTS { ?_contact rdf:type nco:PersonContact },
+                      (SELECT ?sortKey1a WHERE {
+                         ?_contact nco:nameGiven ?sortKey1a
+                       } LIMIT 1),
+                      (SELECT ?sortKey1b WHERE {
+                         ?_contact nao:hasProperty ?sortDetail1 .
+                         ?sortDetail1 nao:propertyName "Name" ; nao:hasProperty ?sortField1 .
+                         ?sortField1 nao:propertyName "FirstName" ; nao:propertyValue ?sortKey1b .
+                       } LIMIT 1)))
+
+    DESC((SELECT IF (EXISTS { ?_contact rdf:type nco:PersonContact },
+                      (SELECT ?sortKey2a WHERE {
+                         ?_contact nco:nameFamily ?sortKey2a
+                       } LIMIT 1),
+                      (SELECT ?sortKey2b WHERE {
+                         ?_contact nao:hasProperty ?sortDetail2 .
+                         ?sortDetail2 nao:propertyName "Name" ; nao:hasProperty ?sortField2 .
+                         ?sortField2 nao:propertyName "LastName" ; nao:propertyValue ?sortKey2b .
+                       } LIMIT 1))))

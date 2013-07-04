@@ -1,0 +1,302 @@
+#!/bin/sh
+# =================================================================================================
+# Configures the project's build system
+# =================================================================================================
+
+VERSION_MAJOR=4
+VERSION_MINOR=19
+VERSION_MICRO=2
+VERSION_PATCH=
+
+PACKAGE="libqtcontacts-tracker"
+VERSION="${VERSION_MAJOR}.${VERSION_MINOR}.${VERSION_MICRO}${VERSION_PATCH:+.}${VERSION_PATCH}"
+VERSION_LABEL="${VERSION}"
+CONFIGURE_FLAGS="$@"
+
+# =================================================================================================
+# Compute real package version
+# =================================================================================================
+
+relpath=`dirname "$0"`
+changelog="$relpath/debian/changelog"
+
+if [ -x "/usr/bin/dpkg-parsechangelog" -a -f "$changelog" ]
+then
+    VERSION_LABEL=`/usr/bin/dpkg-parsechangelog -l"$changelog" | sed -ne 's/^Version: //p'`
+
+    case "${VERSION_LABEL}" in
+    ${VERSION}|${VERSION}[~-]*);;
+    *)
+        echo "ERROR: Package version $VERSION doesn't match changelog version $VERSION_LABEL." >&2
+        exit 1;;
+    esac
+fi
+
+# =================================================================================================
+# Set default values for configuration settings
+# =================================================================================================
+
+PREFIX="/usr/local"
+BINDIR=
+LIBDIR=
+INCLUDEDIR=
+LOCALSTATEDIR=
+TOP_BUILDDIR=`/bin/pwd`
+TOP_SOURCEDIR=`cd "$relpath"; /bin/pwd`
+TARGET_CPU=`c++ -dumpmachine | sed s/-.*//`
+
+# keep in sync with (default) info in --help output
+ENABLE_RTTI=yes
+ENABLE_BUILDDIRS_RPATH=yes
+ENABLE_CELLULAR=
+ENABLE_CREDENTIALS=
+ENABLE_SCHEMA_LIST=yes
+ENABLE_COVERAGE=no
+ENABLE_DOCS=no
+
+# =================================================================================================
+# Parse command line arguments
+# =================================================================================================
+
+while [ "$#" -gt 0 ]
+do
+    case "$1" in
+    -h|--help)
+        echo "Usage: ./configure [OPTION]..."
+        echo
+        echo "Configuration:"
+        echo "    -h, --help                 display this help and exit"
+        echo
+        echo "Installation directories:"
+        echo "    --prefix=DIR               install everything relative to DIR"
+        echo "                               [/usr/local]"
+        echo
+        echo "Fine tuning of the installation directories:"
+        echo "    --bindir=DIR               user executables [PREFIX/bin]"
+        echo "    --libdir=DIR               object code libraries [PREFIX/lib]"
+        echo "    --includedir=DIR           C header files [PREFIX/include]"
+        echo "    --localstatedir=DIR        modifiable single-machine data [PREFIX/var]"
+        echo
+        echo "Compiling:"
+        echo "    --enable-rtti              compile with Runtime Type Information (default)"
+        echo "    --disable-rtti             do not compile with Runtime Type Information"
+        echo
+        echo "Linking:"
+        echo "    --disable-builddirs-rpath  don't add rpath with builddirs to executables"
+        echo
+        echo "Configure optional features of the package:"
+        echo "    --enable-credentials       check process credentials, basically to ease debugging"
+        echo "    --disable-credentials      don't check process"
+        echo "    --enable-cellular-qt       permit contact handling based on SIM card information"
+        echo "    --disable-cellular-qt      don't consider SIM card information"
+        echo "    --disable-schemalist       don't build schemalist"
+        echo "    --enable-coverage          generate code coverage reports for unit tests"
+        echo "    --disable-coverage         don't generate coverage reports"
+        echo
+        echo "Documentation:"
+        echo "    --enable-docs              build documentation"
+        echo
+        exit
+        ;;
+
+    --prefix|-prefix) shift && PREFIX=$1 ;;
+    --prefix=*) PREFIX=${1#--prefix=} ;;
+
+    --bindir|-bindir) shift && BINDIR=$1 ;;
+    --bindir=*) BINDIR=${1#--bindir=} ;;
+
+    --libdir|-libdir) shift && LIBDIR=$1 ;;
+    --libdir=*) LIBDIR=${1#--libdir=} ;;
+
+    --includedir|-includedir) shift && INCLUDEDIR=$1 ;;
+    --includedir=*) INCLUDEDIR=${1#--includedir=} ;;
+
+    --localstatedir|-localstatedir) shift && LOCALSTATEDIR=$1 ;;
+    --localstatedir=*) LOCALSTATEDIR=${1#--localstatedir=} ;;
+
+    --enable-rtti) ENABLE_RTTI=yes ;;
+    --disable-rtti) ENABLE_RTTI=no ;;
+
+    --enable-builddirs-rpath) ENABLE_BUILDDIRS_RPATH=yes ;;
+    --disable-builddirs-rpath) ENABLE_BUILDDIRS_RPATH=no ;;
+
+    --enable-credentials) ENABLE_CREDENTIALS=yes ;;
+    --disable-credentials) ENABLE_CREDENTIALS=no ;;
+
+    --enable-cellular-qt) ENABLE_CELLULAR=yes ;;
+    --disable-cellular-qt) ENABLE_CELLULAR=no ;;
+
+    --enable-schemalist) ENABLE_SCHEMA_LIST=yes ;;
+    --disable-schemalist) ENABLE_SCHEMA_LIST=no ;;
+
+    --enable-coverage) ENABLE_COVERAGE=yes ;;
+    --disable-coverage) ENABLE_COVERAGE=no ;;
+
+    --enable-docs) ENABLE_DOCS=yes ;;
+    --disable-docs) ENABLE_DOCS=no ;;
+
+
+    *)
+        echo >&2 "configure: error: unrecognized option: '$1'"
+        echo >&2 "Try './configure --help' for more information."
+        exit
+        ;;
+    esac
+    shift
+done
+
+# =================================================================================================
+# Compute values for uninitialized variables
+# =================================================================================================
+
+echo "Configuring $PACKAGE $VERSION_LABEL"
+
+[ -z "$BINDIR" ]        && BINDIR="$PREFIX/bin"
+[ -z "$LIBDIR" ]        && LIBDIR="$PREFIX/lib"
+[ -z "$INCLUDEDIR" ]    && INCLUDEDIR="$PREFIX/include"
+[ -z "$LOCALSTATEDIR" ] && LOCALSTATEDIR="$PREFIX/var"
+
+echo
+
+# =================================================================================================
+# Check for required packages
+# =================================================================================================
+
+echo -n "Checking for mssf-qt..."
+
+if [ -z "$ENABLE_CREDENTIALS" ]
+then
+    [ "$TARGET_CPU" = "arm" ] &&
+    pkg-config --exists MssfCredsQt &&
+    ENABLE_CREDENTIALS=yes || ENABLE_CREDENTIALS=no
+fi
+
+echo " $ENABLE_CREDENTIALS"
+
+# -------------------------------------------------------------------------------------------------
+
+echo -n "Checking for CellularQt..."
+
+if [ -z "$ENABLE_CELLULAR" ]
+then
+    pkg-config --exists CellularQt sysinfo &&
+    ENABLE_CELLULAR=yes || ENABLE_CELLULAR=no
+fi
+
+echo " $ENABLE_CELLULAR"
+
+# -------------------------------------------------------------------------------------------------
+
+echo -n "Checking for cubi... "
+
+if pkg-config --exists cubi-0.1
+then
+    echo "ok"
+else
+    echo "not found"
+    exit 1
+fi
+
+# -------------------------------------------------------------------------------------------------
+
+if [ "$ENABLE_DOCS" = "yes" ]
+then
+    echo -n "Checking for doxygen... "
+
+    DOXYGEN=$(which doxygen 2>/dev/null)
+
+    if [ -z "$DOXYGEN" ]
+    then
+        echo "not found"
+        echo "Documentation is enabled but doxygen could not be found"
+        exit 1
+    else
+        echo "ok"
+    fi
+fi
+
+# =================================================================================================
+# List used configuration
+# =================================================================================================
+echo "Build schema list... $ENABLE_SCHEMA_LIST"
+echo "Add rpath with builddirs to executables... $ENABLE_BUILDDIRS_RPATH"
+echo "Compile with runtime type information (RTTI)... $ENABLE_RTTI"
+echo "Generate code coverage reports... $ENABLE_COVERAGE"
+echo
+
+# =================================================================================================
+# Save configuration into qmake cache
+# =================================================================================================
+
+cachefile=".qmake.cache"
+
+[ -f "$cachefile" ] && rm -f "$cachefile"
+
+cat >> "$cachefile" << EOF
+CONFIGURED = \$\$quote(yes)
+CONFIGURE_FLAGS = \$\$quote($CONFIGURE_FLAGS)
+PACKAGE = \$\$quote($PACKAGE)
+VERSION_LABEL = \$\$quote($VERSION_LABEL)
+VERSION_MAJOR = \$\$quote($VERSION_MAJOR)
+VERSION_MINOR = \$\$quote($VERSION_MINOR)
+VERSION_MICRO = \$\$quote($VERSION_MICRO)
+VERSION = \$\$quote($VERSION)
+PREFIX = \$\$quote($PREFIX)
+BINDIR = \$\$quote($BINDIR)
+LIBDIR = \$\$quote($LIBDIR)
+INCLUDEDIR = \$\$quote($INCLUDEDIR)
+LOCALSTATEDIR = \$\$quote($LOCALSTATEDIR)
+TOP_SOURCEDIR = \$\$quote($TOP_SOURCEDIR)
+TOP_BUILDDIR = \$\$quote($TOP_BUILDDIR)
+TARGET_CPU = \$\$quote($TARGET_CPU)
+ENABLE_CREDENTIALS = \$\$quote($ENABLE_CREDENTIALS)
+ENABLE_CELLULAR = \$\$quote($ENABLE_CELLULAR)
+ENABLE_RTTI = \$\$quote($ENABLE_RTTI)
+ENABLE_BUILDDIRS_RPATH = \$\$quote($ENABLE_BUILDDIRS_RPATH)
+ENABLE_SCHEMA_LIST = \$\$quote($ENABLE_SCHEMA_LIST)
+ENABLE_COVERAGE = \$\$quote($ENABLE_COVERAGE)
+ENABLE_DOCS = \$\$quote($ENABLE_DOCS)
+EOF
+
+if [ "$ENABLE_COVERAGE" = "yes" ]
+then
+    # disable ccache when generating coverage information
+    echo 'QMAKE_CXX = SBOX_USE_CCACHE=no $$QMAKE_CXX' >> "$cachefile"
+    echo 'QMAKE_LINK = SBOX_USE_CCACHE=no $$QMAKE_LINK' >> "$cachefile"
+    echo 'QMAKE_CXXFLAGS = $$QMAKE_CXXFLAGS -ftest-coverage -fprofile-arcs -O0' >> "$cachefile"
+    echo 'QMAKE_LIBS = $$QMAKE_LIBS -lgcov' >> "$cachefile"
+    echo 'QMAKE_CLEAN = $$QMAKE_CLEAN *.gcov *.gcda *.gcno' >> "$cachefile"
+fi
+
+# =================================================================================================
+# Run qmake
+# =================================================================================================
+
+echo "Running qmake..."
+
+touch configure-stamp
+qmake "$relpath/$PACKAGE.pro" -r
+
+# =================================================================================================
+# Fake plugin folder
+# =================================================================================================
+
+echo "Creating fake plugin folder..."
+
+rm -fr plugins
+mkdir -p plugins/contacts
+ln -s ../../src/plugin/libqtcontacts_tracker.so plugins/contacts
+
+# =================================================================================================
+# Print final banner
+# =================================================================================================
+
+echo
+echo "$PACKAGE is configured now."
+echo "You can run 'make' to build the package."
+echo
+echo "Once everything is built, you run 'make install'."
+echo "$PACKAGE will be installed into $PREFIX"
+echo
+echo "To reconfigure, run 'make distclean' and 'configure'."
+echo

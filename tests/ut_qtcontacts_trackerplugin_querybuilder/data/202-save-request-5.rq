@@ -1,0 +1,200 @@
+# Delete properties related objects so that we can update them.
+# =================================================================================================
+DELETE
+{
+  GRAPH <urn:uuid:08070f5c-a334-4d19-a8b0-12a3071bfab9>
+  {
+    ?subject nco:hasPostalAddress ?object .
+  }
+}
+WHERE
+{
+  GRAPH <urn:uuid:08070f5c-a334-4d19-a8b0-12a3071bfab9>
+  {
+    <contact:197632483> nco:hasAffiliation ?subject .
+    ?subject nco:hasPostalAddress ?object .
+  }
+}
+
+DELETE
+{
+  GRAPH <urn:uuid:08070f5c-a334-4d19-a8b0-12a3071bfab9>
+  {
+    ?subject ncal:dtstart ?object
+  }
+}
+WHERE
+{
+  GRAPH <urn:uuid:08070f5c-a334-4d19-a8b0-12a3071bfab9>
+  {
+    <contact:197632483> ncal:anniversary ?subject .
+    ?subject ncal:dtstart ?object
+  }
+}
+
+DELETE
+{
+  GRAPH <urn:uuid:08070f5c-a334-4d19-a8b0-12a3071bfab9>
+  {
+    ?subject nco:hasPostalAddress ?object .
+  }
+}
+WHERE
+{
+  GRAPH <urn:uuid:08070f5c-a334-4d19-a8b0-12a3071bfab9>
+  {
+    <contact:197632483> nco:hasAffiliation [ nco:org ?subject ] .
+    ?subject nco:hasPostalAddress ?object .
+  }
+}
+
+DELETE
+{
+  GRAPH <urn:uuid:08070f5c-a334-4d19-a8b0-12a3071bfab9>
+  {
+    ?subject nco:org ?object .
+  }
+}
+WHERE
+{
+  GRAPH <urn:uuid:08070f5c-a334-4d19-a8b0-12a3071bfab9>
+  {
+    <contact:197632483> nco:hasAffiliation ?subject .
+    ?subject nco:org ?object .
+  }
+}
+
+DELETE
+{
+  <telepathy:/fake/account!userfake@cake.com> ?predicate ?object .
+}
+WHERE
+{
+  <telepathy:/fake/account!userfake@cake.com> ?predicate ?object .
+  FILTER(?predicate IN (nao:hasProperty, nco:imProtocol, nco:imID)) .
+}
+
+DELETE
+{
+  <telepathy:/fake/account!fakeuser@cake.com> ?predicate ?object .
+}
+WHERE
+{
+  <telepathy:/fake/account!fakeuser@cake.com> ?predicate ?object .
+  FILTER(?predicate IN (nao:hasProperty, nco:imProtocol, nco:imID)) .
+}
+
+# Delete the contact's properties so that we can update them nicely.
+# Only nco:contactLocalUID must be preserved as we assume to know the GUID of this contact
+# and want to preserve it.
+# =================================================================================================
+DELETE
+{
+  GRAPH <urn:uuid:08070f5c-a334-4d19-a8b0-12a3071bfab9>
+  {
+    <contact:197632483> ?predicate ?object .
+  }
+}
+WHERE
+{
+  GRAPH <urn:uuid:08070f5c-a334-4d19-a8b0-12a3071bfab9>
+  {
+    <contact:197632483> ?predicate ?object .
+    FILTER(?predicate NOT IN (rdf:type, nco:belongsToGroup)) .
+  }
+}
+
+
+# Create shared objects referenced by foreign keys
+# =================================================================================================
+
+INSERT
+{
+  GRAPH <urn:uuid:08070f5c-a334-4d19-a8b0-12a3071bfab9>
+  {
+    _:_
+      a nfo:FileDataObject, nie:DataObject ;
+      nie:url "file://home/user/.cache/avatars/square/snowball.jpg" .
+  }
+}
+WHERE
+{
+  FILTER(NOT EXISTS
+  {
+    ?resource nie:url "file://home/user/.cache/avatars/square/snowball.jpg" .
+  })
+}
+
+INSERT
+{
+  GRAPH <urn:uuid:08070f5c-a334-4d19-a8b0-12a3071bfab9>
+  {
+    _:_
+      a nfo:FileDataObject, nie:DataObject ;
+      nie:url "file://home/user/.cache/avatars/large/snowball.jpg" .
+  }
+}
+WHERE
+{
+  FILTER(NOT EXISTS
+  {
+    ?resource nie:url "file://home/user/.cache/avatars/large/snowball.jpg" .
+  })
+}
+
+# Write new contact data
+# =================================================================================================
+INSERT
+{
+  GRAPH <urn:uuid:08070f5c-a334-4d19-a8b0-12a3071bfab9>
+  {
+    <contact:197632483>
+      rdf:type nco:PersonContact ;
+      nco:hasAffiliation _:Affiliation, _:Affiliation_Home, _:Affiliation_Hobby ;
+      nie:contentLastModified "2010-05-04T09:30:00Z" ;
+      nie:contentCreated "2010-04-22T05:00:00Z" ;
+      nco:contactUID "c563e9e8-1f41-4873-ba90-e1a166552fa3" .
+
+    # FIXME: where is this empty affiliation comming from!?
+    _:Affiliation
+      rdf:type nco:Affiliation .
+
+    _:Affiliation_Home
+      rdf:type nco:Affiliation ;
+      rdfs:label "Home" ;
+      nco:hasIMAddress <telepathy:/fake/account!userfake@cake.com> .
+
+    <telepathy:/fake/account!userfake@cake.com>
+      rdf:type nco:IMAddress ;
+      nco:imID "userfake@cake.com" .
+
+    # FIXME: make this update conditional?
+    <telepathy:/fake/account>
+      rdf:type nco:IMAccount ;
+      nco:hasIMContact <telepathy:/fake/account!userfake@cake.com>,
+                       <telepathy:/fake/account!fakeuser@cake.com> .
+
+    _:Affiliation_Hobby
+      rdf:type nco:Affiliation ;
+      rdfs:label "Hobby" ;
+      nco:hasIMAddress <telepathy:/fake/account!fakeuser@cake.com> .
+
+    <telepathy:/fake/account!fakeuser@cake.com>
+      rdf:type nco:IMAddress ;
+      nco:imID "fakeuser@cake.com" .
+  }
+}
+
+# Enforce proper sync target
+# =================================================================================================
+INSERT OR REPLACE
+{
+  GRAPH <urn:uuid:08070f5c-a334-4d19-a8b0-12a3071bfab9>
+  {
+    <contact:197632483> nie:generator "addressbook"
+  }
+}
+WHERE
+{
+  FILTER((tracker:coalesce(nie:generator(<contact:197632483>), "") IN ("", "telepathy")))
+}

@@ -1,0 +1,141 @@
+<Contacts>
+  <Contact id="contact:1">
+    <DisplayLabel>
+      <Label>Co-founder Larry Lawrence Page Sir</Label>
+    </DisplayLabel>
+    <Type>Contact</Type>
+    <Timestamp>
+      <ModificationTimestamp>2010-06-14T14:20:51</ModificationTimestamp>
+    </Timestamp>
+    <Name>
+      <FirstName>Larry</FirstName>
+      <LastName>Page</LastName>
+      <MiddleName>Lawrence</MiddleName>
+      <Prefix>Co-founder</Prefix>
+      <Suffix>Sir</Suffix>
+    </Name>
+    <Address>
+      <Context>Home</Context>
+      <Country>City home</Country>
+      <Locality>City home</Locality>
+      <PostOfficeBox>546</PostOfficeBox>
+      <Postcode>Zip home</Postcode>
+      <Region>State home</Region>
+      <Street>St home</Street>
+    </Address>
+    <Address>
+      <Context>Work</Context>
+      <Country>City bus</Country>
+      <Locality>City bus</Locality>
+      <PostOfficeBox>6458</PostOfficeBox>
+      <Postcode>Zip bus</Postcode>
+      <Region>State bus</Region>
+      <Street>St bus</Street>
+    </Address>
+    <Address>
+      <Country>Country</Country>
+      <Locality>City</Locality>
+      <PostOfficeBox>123</PostOfficeBox>
+      <Postcode>Zip</Postcode>
+      <Region>State</Region>
+      <Street>St</Street>
+    </Address>
+    <Organization>
+      <Department>Computer</Department>
+      <Name>Google</Name>
+      <Title>Ceo</Title>
+    </Organization>
+    <PhoneNumber>
+      <PhoneNumber>1234</PhoneNumber>
+      <SubTypes>Mobile</SubTypes>
+    </PhoneNumber>
+    <PhoneNumber>
+      <PhoneNumber>5678</PhoneNumber>
+      <SubTypes>Voice</SubTypes>
+    </PhoneNumber>
+    <EmailAddress>larry.page@gmail.com</EmailAddress>
+    <PhoneNumber>
+      <PhoneNumber>8796</PhoneNumber>
+      <SubTypes>Video</SubTypes>
+    </PhoneNumber>
+    <PhoneNumber>
+      <PhoneNumber>47678</PhoneNumber>
+      <SubTypes>Pager</SubTypes>
+    </PhoneNumber>
+    <PhoneNumber>
+      <Context>Home</Context>
+      <PhoneNumber>6666</PhoneNumber>
+      <SubTypes>Mobile</SubTypes>
+    </PhoneNumber>
+    <PhoneNumber>
+      <Context>Work</Context>
+      <PhoneNumber>7777</PhoneNumber>
+      <SubTypes>Mobile</SubTypes>
+    </PhoneNumber>
+    <PhoneNumber>
+      <Context>Home</Context>
+      <PhoneNumber>9999</PhoneNumber>
+      <SubTypes>Voice</SubTypes>
+    </PhoneNumber>
+    <PhoneNumber>
+      <Context>Work</Context>
+      <PhoneNumber>0000</PhoneNumber>
+      <SubTypes>Voice</SubTypes>
+    </PhoneNumber>
+    <PhoneNumber>
+      <PhoneNumber>21212</PhoneNumber>
+      <SubTypes>Mobile</SubTypes>
+    </PhoneNumber>
+    <PhoneNumber>
+      <PhoneNumber>3131</PhoneNumber>
+      <SubTypes>Voice</SubTypes>
+    </PhoneNumber>
+    <EmailAddress>
+      <Context>Home</Context>
+      <EmailAddress>larry@home.com</EmailAddress>
+    </EmailAddress>
+    <EmailAddress>
+      <Context>Work</Context>
+      <EmailAddress>larry@off.com</EmailAddress>
+    </EmailAddress>
+    <PhoneNumber>
+      <PhoneNumber>88888</PhoneNumber>
+      <SubTypes>Car</SubTypes>
+    </PhoneNumber>
+    <PhoneNumber>
+      <Context>Home</Context>
+      <PhoneNumber>61616</PhoneNumber>
+      <SubTypes>Video</SubTypes>
+    </PhoneNumber>
+    <PhoneNumber>
+      <Context>Work</Context>
+      <PhoneNumber>34343</PhoneNumber>
+      <SubTypes>Video</SubTypes>
+    </PhoneNumber>
+    <PhoneNumber>
+      <PhoneNumber>31888</PhoneNumber>
+      <SubTypes>Fax</SubTypes>
+    </PhoneNumber>
+    <PhoneNumber>
+      <Context>Home</Context>
+      <PhoneNumber>91216</PhoneNumber>
+      <SubTypes>Fax</SubTypes>
+    </PhoneNumber>
+    <PhoneNumber>
+      <Context>Work</Context>
+      <PhoneNumber>02020</PhoneNumber>
+      <SubTypes>Fax</SubTypes>
+    </PhoneNumber>
+    <Url>http://google.com</Url>
+    <Url>
+      <Context>Home</Context>
+      <Url>http://googlehome.com</Url>
+    </Url>
+    <Url>
+      <Context>Work</Context>
+      <Url>http://googlebus.com</Url>
+    </Url>
+    <Birthday>1973-03-26</Birthday>
+    <Note>Tiring</Note>
+  </Contact>
+</Contacts>

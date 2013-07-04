@@ -1,0 +1,29 @@
+SELECT
+  ?_contact tracker:id(?_contact)
+  ?_context rdfs:label(?_context)
+
+ (SELECT
+   GROUP_CONCAT(fn:concat(?_address, "\u001f",
+                          tracker:coalesce(nco:country(?_address, "\u002c", "\u001c"), ""), "\u001f",
+                          tracker:coalesce(nco:extendedAddress(?_address, "\u002c", "\u001c"), ""), "\u001f",
+                          tracker:coalesce(nco:locality(?_address, "\u002c", "\u001c"), ""), "\u001f",
+                          tracker:coalesce(nco:pobox(?_address, "\u002c", "\u001c"), ""), "\u001f",
+                          tracker:coalesce(nco:postalcode(?_address, "\u002c", "\u001c"), ""), "\u001f",
+                          tracker:coalesce(nco:region(?_address, "\u002c", "\u001c"), ""), "\u001f",
+                          tracker:coalesce(nco:streetAddress(?_address, "\u002c", "\u001c"), ""), "\u001f",
+                          tracker:coalesce((SELECT GROUP_CONCAT(tracker:id(?_t), "\u001d")
+                                            WHERE { ?_address rdf:type ?_t }), ""), "\u001f",
+                          tracker:coalesce((SELECT GROUP_CONCAT(fn:concat(nao:propertyValue(?_p), "\u001c",
+                                                                          tracker:coalesce((SELECT ?_g
+                                                                                            WHERE { GRAPH ?_g { ?_address nao:hasProperty ?_p } }), "")), "\u001d")
+                                            WHERE { ?_address nao:hasProperty ?_p . ?_p nao:propertyName "SubTypes" }), "")),
+                "\u001e")
+
+  WHERE {
+    ?_context nco:hasPostalAddress ?_address
+  })
+
+WHERE {
+  ?_contact rdf:type nco:PersonContact
+  OPTIONAL { ?_contact nco:hasAffiliation ?_context }
+}

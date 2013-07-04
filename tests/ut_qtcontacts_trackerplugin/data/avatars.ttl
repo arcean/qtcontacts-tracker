@@ -1,0 +1,76 @@
+@prefix maemo: <http://maemo.org/ontologies/tracker#> .
+@prefix nao: <http://www.semanticdesktop.org/ontologies/2007/08/15/nao#> .
+@prefix ncal: <http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#> .
+@prefix nco: <http://www.semanticdesktop.org/ontologies/2007/03/22/nco#> .
+@prefix nfo: <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#> .
+@prefix nie: <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+GRAPH <urn:uuid:08070f5c-a334-4d19-a8b0-12a3071bfab9> {
+<telepathy:/fake/account!userfake@cake.com>
+    a nco:IMAddress, nie:InformationElement ;
+    nco:imID "userfake@cake.com" .
+
+<telepathy:/fake/account!fakeuser@cake.com>
+    a nco:IMAddress, nie:InformationElement ;
+    nco:imID "fakeuser@cake.com" .
+
+<contact:avatar-types>
+    rdf:type nco:PersonContact ;
+    nco:hasAffiliation [
+        a nco:Affiliation ; rdfs:label "Home";
+        nco:hasIMAddress <telepathy:/fake/account!userfake@cake.com> ] ;
+    nco:hasAffiliation [
+        a nco:Affiliation ; rdfs:label "Hobby";
+        nco:hasIMAddress <telepathy:/fake/account!fakeuser@cake.com> ] .
+}
+
+GRAPH <telepathy:/fake/account!userfake@cake.com> {
+<contact:avatar-types>
+    nco:contactUID "c563e9e8-1f41-4873-ba90-e1a166552fa3" ;
+    nie:contentCreated "2010-04-22T05:00:00Z"^^xsd:dateTime ;
+    nie:contentLastModified "2010-04-22T05:30:00Z"^^xsd:dateTime ;
+    nco:photo <file://home/user/.cache/avatars/default/sunshine.jpg> .
+}
+
+GRAPH <urn:uuid:679293d4-60f0-49c7-8d63-f1528fe31f66> {
+<telepathy:/fake/account!userfake@cake.com>
+    nco:imNickname "userFake" ;
+    nco:imStatusMessage "Freezing in Helsinki" ;
+    nco:imCapability nco:im-capability-audio-calls , nco:im-capability-text-chat ;
+    nco:imPresence nco:presence-status-away ;
+    nco:imAvatar <file://home/user/.cache/avatars/square/snowball.jpg> ;
+    nco:presenceLastModified "2010-04-22T12:00:00Z"^^xsd:dateTime .
+
+<telepathy:/fake/account!fakeuser@cake.com>
+    nco:imNickname "fakeUser" ;
+    nco:imStatusMessage "Sweating in Palma" ;
+    nco:imCapability nco:im-capability-text-chat , nco:im-capability-audio-calls ,
+                     nco:im-capability-video-calls , nco:im-capability-upgrading-calls ,
+                     nco:im-capability-file-transfers ;
+    nco:imPresence nco:presence-status-available ;
+    nco:presenceLastModified "2010-04-22T11:30:00Z"^^xsd:dateTime .
+
+<telepathy:/fake/account>
+    rdf:type nco:IMAccount ;
+    nco:imDisplayName "Fake Cake" ;
+    nco:hasIMContact <telepathy:/fake/account!userfake@cake.com> ;
+    nco:hasIMContact <telepathy:/fake/account!fakeuser@cake.com> .
+
+<file://home/user/.cache/avatars/default/sunshine.jpg>
+    rdf:type nfo:FileDataObject, nfo:Image ;
+    nie:url "file://home/user/.cache/avatars/default/sunshine.jpg" .
+
+<file://home/user/.cache/avatars/square/snowball.jpg>
+    rdf:type nfo:FileDataObject, nfo:Image ;
+    rdfs:label "Default" ;
+    nie:relatedTo <file://home/user/.cache/avatars/large/snowball.jpg> ;
+    nie:url "file://home/user/.cache/avatars/square/snowball.jpg" .
+
+<file://home/user/.cache/avatars/large/snowball.jpg>
+    rdf:type nfo:FileDataObject, nfo:Image ;
+    rdfs:label "Large" ;
+    nie:relatedTo <file://home/user/.cache/avatars/square/snowball.jpg> ;
+    nie:url "file://home/user/.cache/avatars/large/snowball.jpg" .
+}

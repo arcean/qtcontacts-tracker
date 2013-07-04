@@ -1,0 +1,249 @@
+# Delete related objects so that we can update them.
+# Don't restrict the graph as we really must to get rid of all properties
+# =================================================================================================
+
+DELETE
+{
+  <urn:x-maemo-phone:voice:+4917212345> ?predicate ?object .
+}
+WHERE
+{
+  <urn:x-maemo-phone:voice:+4917212345> ?predicate ?object .
+  FILTER(?predicate IN (nao:hasProperty, nco:phoneNumber, maemo:localPhoneNumber)) .
+}
+
+DELETE
+{
+  <urn:x-maemo-phone:messagingcapable,mobile,voice:+4916134567> ?predicate ?object .
+}
+WHERE
+{
+  <urn:x-maemo-phone:messagingcapable,mobile,voice:+4916134567> ?predicate ?object .
+  FILTER(?predicate IN (nao:hasProperty, nco:phoneNumber, maemo:localPhoneNumber)) .
+}
+
+# FIXME: this delete seems redundant for urn:x-maemo-phone:
+DELETE
+{
+  ?resource a nco:CarPhoneNumber, nco:BbsNumber, nco:PagerNumber, nco:VideoTelephoneNumber,
+              nco:MessagingNumber, nco:VoicePhoneNumber, nco:CellPhoneNumber, nco:FaxNumber,
+              nco:ModemNumber .
+}
+WHERE
+{
+  ?resource a nco:PhoneNumber .
+  FILTER(?resource IN (<urn:x-maemo-phone:voice:+4917212345>,
+                       <urn:x-maemo-phone:messagingcapable,mobile,voice:+4916134567>)) .
+}
+
+# Ensure shared resources referenced by foreign key exist.
+# =================================================================================================
+
+INSERT
+{
+  GRAPH <urn:uuid:08070f5c-a334-4d19-a8b0-12a3071bfab9>
+  {
+    _:_
+      a nfo:FileDataObject, nie:InformationElement ;
+      nie:url "file:///home/user/.contacts/avatars/sleeping-bonobo.png" .
+  }
+}
+WHERE
+{
+  FILTER(NOT EXISTS
+  {
+    ?resource nie:url "file:///home/user/.contacts/avatars/sleeping-bonobo.png"
+    .
+  })
+}
+
+INSERT
+{
+  GRAPH <urn:uuid:08070f5c-a334-4d19-a8b0-12a3071bfab9>
+  {
+    _:_
+      a nfo:FileDataObject, nie:InformationElement ;
+      nie:url "file:///home/user/.contacts/avatars/crazy-banana.ogv" .
+  }
+}
+WHERE
+{
+  FILTER(NOT EXISTS
+  {
+    ?resource nie:url "file:///home/user/.contacts/avatars/crazy-banana.ogv"
+    .
+  })
+}
+
+INSERT
+{
+  GRAPH <urn:uuid:08070f5c-a334-4d19-a8b0-12a3071bfab9>
+  {
+    _:_
+      a nfo:FileDataObject, nie:DataObject ;
+     nie:url "file:///home/user/.contacts/avatars/boring-cube.png" .
+  }
+}
+WHERE
+{
+  FILTER(NOT EXISTS
+  {
+    ?resource nie:url "file:///home/user/.contacts/avatars/boring-cube.png"
+    .
+  })
+}
+
+INSERT
+{
+  GRAPH <urn:uuid:08070f5c-a334-4d19-a8b0-12a3071bfab9>
+  {
+    <mailto:andre@andrews.com>
+      a nco:EmailAddress ;
+      nco:emailAddress "andre@andrews.com" .
+  }
+}
+WHERE
+{
+  FILTER(NOT EXISTS { ?resource nco:emailAddress "andre@andrews.com" })
+}
+
+INSERT
+{
+  GRAPH <urn:uuid:08070f5c-a334-4d19-a8b0-12a3071bfab9>
+  {
+    <mailto:andre.andrews@meego.com>
+      a nco:EmailAddress ;
+      nco:emailAddress "andre.andrews@meego.com" .
+  }
+}
+WHERE
+{
+  FILTER(NOT EXISTS { ?resource nco:emailAddress "andre.andrews@meego.com" })
+}
+
+INSERT
+{
+  GRAPH <urn:uuid:08070f5c-a334-4d19-a8b0-12a3071bfab9>
+  {
+    _:_
+      a nao:Tag, rdfs:Resource ;
+      nao:prefLabel "Knorke" .
+  }
+}
+WHERE
+{
+  FILTER(NOT EXISTS
+  {
+    ?resource nao:prefLabel ?value .
+    FILTER(fn:lower-case("Knorke") = fn:lower-case(?value)) .
+  })
+}
+
+# Write new contact data
+# =================================================================================================
+INSERT
+{
+  GRAPH <urn:uuid:08070f5c-a334-4d19-a8b0-12a3071bfab9>
+  {
+    <contact:225543300>
+        rdf:type nco:PersonContact ;
+        nco:gender nco:gender-male ;
+        nco:photo ?personalAvatarImage ;
+        nco:video ?personalAvatarVideo ;
+        nco:nameHonorificPrefix "Sir" ;
+        nco:nameGiven "Andre" ;
+        nco:nameFamily "Andrews" ;
+        nco:hasAffiliation _:organization, _:homeAffiliation, _:workAffiliation ;
+        ncal:anniversary _:wedding ;
+        nco:hobby "fishing" ;
+        nao:hasTag ?knorkeTag ;
+        nao:hasProperty _:preferencesDetail ;
+        nie:contentLastModified "2010-04-22T01:30:00Z" ;
+        nie:contentCreated "2010-04-22T01:00:00Z" ;
+        nco:contactUID "<placeholder:guid>" ;
+        nie:generator "addressbook" .
+
+    _:organization
+        rdf:type nco:Affiliation ;
+        nco:org _:organizationContact .
+
+    _:organizationContact
+        rdf:type nco:OrganizationContact, nco:Contact, nco:Role ;
+        nco:logo ?organizationLogo .
+
+    _:homeAffiliation
+        rdf:type nco:Affiliation ;
+        rdfs:label "Home" ;
+        nco:hasEmailAddress ?emailAddressHome ;
+        nco:hasPhoneNumber <urn:x-maemo-phone:voice:+4917212345>,
+                           <urn:x-maemo-phone:messagingcapable,mobile,voice:+4916134567> ;
+        nco:url "http://andrews.com/" ;
+        nco:hasPostalAddress _:homeAddress .
+
+    _:workAffiliation
+        rdf:type nco:Affiliation ;
+        rdfs:label "Work" ;
+        nco:hasEmailAddress ?emailAddressWork ;
+        nco:hasPostalAddress _:workAddress .
+
+    <urn:x-maemo-phone:voice:+4917212345>
+        rdf:type nco:VoicePhoneNumber, nco:PhoneNumber ;
+        nco:phoneNumber "+4917212345" ;
+        maemo:localPhoneNumber "7212345" .
+
+    <urn:x-maemo-phone:messagingcapable,mobile,voice:+4916134567>
+        rdf:type nco:VoicePhoneNumber, nco:CellPhoneNumber, nco:MessagingNumber, nco:PhoneNumber ;
+        nco:phoneNumber "+4916134567" ;
+        maemo:localPhoneNumber "6134567" .
+
+    _:homeAddress
+        rdf:type maemo:PostalAddress, nco:DomesticDeliveryAddress, nco:PostalAddress ;
+        nco:country "Germany" ;
+        nco:locality "Berlin" ;
+        nco:streetAddress "Alexanderplatz 1" .
+
+    _:workAddress
+        rdf:type nco:ParcelDeliveryAddress, nco:PostalAddress ;
+        nco:country "Germany" ;
+        nco:locality "Berlin" ;
+        nco:streetAddress "Friedrichstrasse 105" .
+
+    _:wedding
+        rdf:type ncal:Event, ncal:UnionParentClass ;
+        ncal:uid "11223344" ;
+        ncal:dtstart _:weddingDate ;
+        ncal:description "Hochzeit" ;
+        ncal:categories "Wedding" .
+
+    _:weddingDate
+        rdf:type ncal:NcalDateTime ;
+        ncal:dateTime "2007-05-05T00:00:00Z" .
+
+    _:preferencesDetail
+        rdf:type nao:Property, nie:InformationElement ;
+        nao:propertyName "Preferences" ;
+        nao:hasProperty _:preferencesDetailFieldCar, _:preferencesDetailFieldColor .
+
+    _:preferencesDetailFieldCar
+        rdf:type nao:Property ;
+        nao:propertyName "Car" ;
+        nao:propertyValue "Tesla" .
+
+    _:preferencesDetailFieldColor
+        rdf:type nao:Property ;
+        nao:propertyName "Color" ;
+        nao:propertyValue "Blue" .
+  }
+}
+WHERE
+{
+  ?personalAvatarImage nie:url "file:///home/user/.contacts/avatars/sleeping-bonobo.png" .
+  ?personalAvatarVideo nie:url "file:///home/user/.contacts/avatars/crazy-banana.ogv" .
+  ?organizationLogo nie:url "file:///home/user/.contacts/avatars/boring-cube.png" .
+
+  ?emailAddressHome nco:emailAddress "andre@andrews.com" .
+  ?emailAddressWork nco:emailAddress "andre.andrews@meego.com" .
+
+  ?knorkeTag nao:prefLabel ?__1
+  FILTER((fn:lower-case(?__1) = fn:lower-case("Knorke"))) .
+}

@@ -1,0 +1,4 @@
+<contact:fullname> a nco:PersonContact
+  ; nco:fullname "A Full Name"
+  .
+

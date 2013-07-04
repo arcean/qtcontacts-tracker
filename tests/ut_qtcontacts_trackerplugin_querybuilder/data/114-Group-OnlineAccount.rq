@@ -1,0 +1,37 @@
+SELECT
+  ?_contact tracker:id(?_contact)
+  ?_context rdfs:label(?_context)
+
+ (SELECT
+    GROUP_CONCAT(fn:concat(?_onlineAccount, "\u001f",
+                           tracker:coalesce(nco:imID(?_onlineAccount, "\u002c", "\u001c"), ""), "\u001f",
+                           tracker:coalesce(nco:imProtocol(?_onlineAccount, "\u002c", "\u001c"), ""), "\u001f",
+                           tracker:coalesce((SELECT GROUP_CONCAT(fn:concat(tracker:id(?_capability), "\u001c",
+                                                                           tracker:coalesce((SELECT ?g0 WHERE { GRAPH ?g0 { ?_onlineAccount nco:imCapability ?_capability } }), "")),
+                                                                 "\u001d")
+                                             WHERE { ?_onlineAccount nco:imCapability ?_capability }), ""), "\u001f",
+                           tracker:coalesce((SELECT GROUP_CONCAT(fn:concat(nao:propertyValue(?_p), "\u001c",
+                                                                           tracker:coalesce((SELECT ?g1 WHERE { GRAPH ?g1 { ?_onlineAccount nao:hasProperty ?_p } }), "")),
+                                                                 "\u001d")
+                                             WHERE { ?_onlineAccount nao:hasProperty ?_p . ?_p nao:propertyName "Capabilities" }), ""), "\u001f",
+                           tracker:coalesce((SELECT GROUP_CONCAT(fn:concat(nao:propertyValue(?_p), "\u001c",
+                                                                           tracker:coalesce((SELECT ?g2 WHERE { GRAPH ?g2 { ?_onlineAccount nao:hasProperty ?_p } }), "")),
+                                                                 "\u001d")
+                                             WHERE { ?_onlineAccount nao:hasProperty ?_p . ?_p nao:propertyName "SubTypes" }), ""), "\u001f",
+                           tracker:coalesce((SELECT fn:concat(fn:concat(?_account, "\u001c",
+                                                                        tracker:coalesce((SELECT ?g3 WHERE { GRAPH ?g3 { ?_contact nco:hasIMAddress ?_onlineAccount } }), "")),
+                                                                        "\u001f",
+                                                                        tracker:coalesce(fn:concat(nco:imDisplayName(?_account), "\u001c",
+                                                                                         tracker:coalesce((SELECT ?g4 WHERE { GRAPH ?g4 { ?_contact nco:hasIMAddress ?_onlineAccount } }), "")), ""))
+                                             WHERE { ?_account nco:hasIMContact ?_onlineAccount }), "\u001f")),
+                 "\u001e")
+
+  WHERE {
+    ?_contact nco:hasIMAddress ?_onlineAccount
+  })
+
+WHERE {
+  ?_contact rdf:type nco:ContactGroup, nco:Contact
+
+  OPTIONAL { ?_contact nco:hasAffiliation ?_context }
+}

@@ -1,0 +1,29 @@
+# Test the detail filter with phone number pattern on a gender and name query
+####################################################################################################
+
+SELECT
+  ?_contact tracker:id(?_contact)
+  ?_context rdfs:label(?_context)
+
+ (SELECT fn:concat(tracker:id(?_gender), "\u001c",
+                   tracker:coalesce((SELECT ?g WHERE { GRAPH ?g { ?_contact nco:gender ?_gender } }),
+                                    ""))
+  WHERE { ?_contact nco:gender ?_gender })
+
+  nco:nameHonorificPrefix(?_contact, "\u002c", "\u001c")
+  nco:nameGiven(?_contact, "\u002c", "\u001c")
+  nco:nameAdditional(?_contact, "\u002c", "\u001c")
+  nco:nameFamily(?_contact, "\u002c", "\u001c")
+  nco:nameHonorificSuffix(?_contact, "\u002c", "\u001c")
+  nco:fullname(?_contact, "\u002c", "\u001c")
+
+WHERE
+{
+  ?_contact rdf:type nco:PersonContact
+  OPTIONAL { ?_contact nco:hasAffiliation ?_context }
+
+  FILTER(EXISTS {
+    ?_contact nco:hasAffiliation ?_1 . ?_1 nco:hasPhoneNumber ?_2 . ?_2 nco:phoneNumber ?_3
+    FILTER(fn:ends-with(fn:lower-case(?_3), "4872444"))
+  })
+}

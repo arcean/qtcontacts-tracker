@@ -1,0 +1,34 @@
+INSERT INTO <urn:uuid:08070f5c-a334-4d19-a8b0-12a3071bfab9> {
+  <telepathy:/org/freedesktop/fake/account!first.last@talk.com>
+    a nco:IMAddress, nie:InformationElement;
+    nco:imID 'first.last@talk.com'.
+
+  _:_Affiliation
+    a nco:Affiliation ;
+    rdfs:label "Other" ;
+    nco:hasIMAddress <telepathy:/org/freedesktop/fake/account!first.last@talk.com> .
+
+  <contact:testing>
+    a nco:PersonContact ;
+    nco:hasAffiliation _:_Affiliation .
+}
+
+INSERT INTO <urn:uuid:679293d4-60f0-49c7-8d63-f1528fe31f66> {
+  <telepathy:/org/freedesktop/fake/account!first.last@talk.com>
+    nco:imNickname 'The Dude';
+    nco:imPresence nco:presence-status-available;
+    nco:imStatusMessage 'Lost in Helsinki';
+    nco:imCapability nco:im-capability-text-chat, nco:im-capability-audio-calls;
+    nco:imAvatar <urn:uuid:11dee5dc-7955-4172-bcfb-9bc35846acdc>;
+    nco:presenceLastModified '2010-05-18T12:00:00Z'^^xsd:dateTime.
+
+  <telepathy:/org/freedesktop/fake/account>
+    a nco:IMAccount;
+    nco:imDisplayName 'Fake Cake';
+    nco:hasIMContact <telepathy:/org/freedesktop/fake/account!first.last@talk.com>.
+
+  <urn:uuid:11dee5dc-7955-4172-bcfb-9bc35846acdc>
+    a nfo:FileDataObject;
+    nie:url "file:///home/user/.cache/avatars/a888d5a6-2434-480a-8798-23875437bcf3".
+}
+

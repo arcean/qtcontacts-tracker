@@ -1,0 +1,187 @@
+DELETE
+{
+  GRAPH <urn:uuid:08070f5c-a334-4d19-a8b0-12a3071bfab9>
+  {
+    ?resource a nao:Property .
+  }
+}
+WHERE
+{
+  GRAPH <urn:uuid:08070f5c-a334-4d19-a8b0-12a3071bfab9>
+  {
+    ?resource a nao:Property
+  }
+  FILTER(NOT EXISTS { ?parent nao:hasProperty ?resource }) .
+}
+
+DELETE
+{
+  GRAPH <urn:uuid:08070f5c-a334-4d19-a8b0-12a3071bfab9>
+  {
+    ?resource a rdfs:Resource .
+  }
+}
+WHERE
+{
+  GRAPH <urn:uuid:08070f5c-a334-4d19-a8b0-12a3071bfab9>
+  {
+    ?resource a nie:DataObject .
+  }
+  FILTER(NOT EXISTS { ?parent maemo:contactAudioRingtone ?resource }) .
+  FILTER(NOT EXISTS { ?parent maemo:contactGroupAudioRingtone ?resource }) .
+  FILTER(NOT EXISTS { ?parent maemo:contactGroupVibrationRingtone ?resource }) .
+  FILTER(NOT EXISTS { ?parent maemo:contactGroupVideoRingtone ?resource }) .
+  FILTER(NOT EXISTS { ?parent maemo:contactVibrationRingtone ?resource }) .
+  FILTER(NOT EXISTS { ?parent maemo:contactVideoRingtone ?resource }) .
+  FILTER(NOT EXISTS { ?parent nie:relatedTo ?resource }) .
+  FILTER(NOT EXISTS { ?parent nco:imAvatar ?resource }) .
+  FILTER(NOT EXISTS { ?parent nco:logo ?resource }) .
+  FILTER(NOT EXISTS { ?parent nco:photo ?resource }) .
+  FILTER(NOT EXISTS { ?parent nco:video ?resource }) .
+}
+
+DELETE
+{
+  GRAPH <urn:uuid:08070f5c-a334-4d19-a8b0-12a3071bfab9>
+  {
+    ?resource a rdfs:Resource .
+  }
+}
+WHERE
+{
+  GRAPH <urn:uuid:08070f5c-a334-4d19-a8b0-12a3071bfab9>
+  {
+    ?resource a nco:Affiliation
+  }
+  FILTER(NOT EXISTS { ?parent nco:hasAffiliation ?resource }) .
+}
+
+DELETE
+{
+  GRAPH <urn:uuid:08070f5c-a334-4d19-a8b0-12a3071bfab9>
+  {
+    ?resource a rdfs:Resource .
+  }
+}
+WHERE
+{
+  GRAPH <urn:uuid:08070f5c-a334-4d19-a8b0-12a3071bfab9>
+  {
+    ?resource a nco:EmailAddress
+  }
+  FILTER(NOT EXISTS { ?parent nco:hasEmailAddress ?resource }) .
+}
+
+DELETE
+{
+  GRAPH <urn:uuid:08070f5c-a334-4d19-a8b0-12a3071bfab9>
+  {
+    ?resource a rdfs:Resource .
+  }
+}
+WHERE
+{
+  GRAPH <urn:uuid:08070f5c-a334-4d19-a8b0-12a3071bfab9>
+  {
+    ?resource a nco:IMAddress
+  }
+  FILTER(NOT EXISTS { ?resource a nco:IMAccount }) .
+  FILTER(NOT EXISTS { ?parent nco:hasIMAddress ?resource }) .
+}
+
+DELETE
+{
+  GRAPH <urn:uuid:08070f5c-a334-4d19-a8b0-12a3071bfab9>
+  {
+    ?resource a rdfs:Resource .
+  }
+}
+WHERE
+{
+  GRAPH <urn:uuid:08070f5c-a334-4d19-a8b0-12a3071bfab9>
+  {
+    ?resource a nco:OrganizationContact
+  }
+  FILTER(NOT EXISTS { ?parent nco:org ?resource }) .
+}
+
+DELETE
+{
+  GRAPH <urn:uuid:08070f5c-a334-4d19-a8b0-12a3071bfab9>
+  {
+    ?resource a rdfs:Resource .
+  }
+}
+WHERE
+{
+  GRAPH <urn:uuid:08070f5c-a334-4d19-a8b0-12a3071bfab9>
+  {
+    ?resource a nco:PhoneNumber
+  }
+  FILTER(NOT EXISTS { ?parent nco:hasPhoneNumber ?resource }) .
+}
+
+DELETE
+{
+  GRAPH <urn:uuid:08070f5c-a334-4d19-a8b0-12a3071bfab9>
+  {
+    ?resource a rdfs:Resource .
+  }
+}
+WHERE
+{
+  GRAPH <urn:uuid:08070f5c-a334-4d19-a8b0-12a3071bfab9>
+  {
+    ?resource a nco:PostalAddress
+  }
+  FILTER(NOT EXISTS { ?parent nco:hasPostalAddress ?resource }) .
+}
+
+DELETE
+{
+  GRAPH <urn:uuid:08070f5c-a334-4d19-a8b0-12a3071bfab9>
+  {
+    ?resource a rdfs:Resource .
+  }
+}
+WHERE
+{
+  GRAPH <urn:uuid:08070f5c-a334-4d19-a8b0-12a3071bfab9>
+  {
+    ?resource a ncal:Event
+  }
+  FILTER(NOT EXISTS { ?parent ncal:anniversary ?resource }) .
+  FILTER(NOT EXISTS { ?parent ncal:birthday ?resource }) .
+}
+
+DELETE
+{
+  GRAPH <urn:uuid:08070f5c-a334-4d19-a8b0-12a3071bfab9>
+  {
+    ?resource a rdfs:Resource
+  }
+}
+WHERE
+{
+  GRAPH <urn:uuid:08070f5c-a334-4d19-a8b0-12a3071bfab9>
+  {
+    ?resource a ncal:NcalDateTime
+  }
+  FILTER(NOT EXISTS { ?parent ncal:dtstart ?resource })
+}
+
+DELETE
+{
+  GRAPH <urn:uuid:08070f5c-a334-4d19-a8b0-12a3071bfab9>
+  {
+    ?resource a rdfs:Resource .
+  }
+}
+WHERE
+{
+  GRAPH <urn:uuid:08070f5c-a334-4d19-a8b0-12a3071bfab9>
+  {
+    ?resource a slo:GeoLocation
+  }
+  FILTER(NOT EXISTS { ?parent nco:hasLocation ?resource }) .
+}

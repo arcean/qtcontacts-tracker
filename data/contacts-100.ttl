@@ -1,0 +1,3002 @@
+@prefix maemo: <http://maemo.org/ontologies/tracker#> .
+@prefix nco: <http://www.semanticdesktop.org/ontologies/2007/03/22/nco#> .
+<tel:3043293575> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "3293575";
+    nco:phoneNumber "(304)329-3575".
+<tel:3038864356> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "8864356";
+    nco:phoneNumber "(303)886-4356".
+<mailto:ivory.barnard@illumduis.org> a nco:EmailAddress;
+    nco:emailAddress "ivory.barnard@illumduis.org".
+<telepathy:/fake/cake!ibarnard@luptatumzzrillorem.org> a nco:IMAddress;
+    nco:imNickname "ibarnard@luptatumzzrillorem.org".
+<address:1> a nco:PostalAddress;
+    nco:streetAddress "6320 Mimosa Trail";
+    nco:locality "Greensboro Bend";
+    nco:region "VT";
+    nco:postalcode "05842";
+    nco:country "USA".
+<affiliation:1> a nco:Affiliation;
+    nco:title "Psychological Services Manager";
+    nco:hasPhoneNumber <tel:3038864356>.
+<contact:1> a nco:PersonContact;
+    nco:contactLocalUID "1";
+    nco:fullname "Ivory Barnard";
+    nco:nameFamily "Barnard";
+    nco:nameGiven "Ivory";
+    nco:birthDate "1940-04-13T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:3043293575>;
+    nco:hasEmailAddress <mailto:ivory.barnard@illumduis.org>;
+    nco:hasIMAddress <telepathy:/fake/cake!ibarnard@luptatumzzrillorem.org>;
+    nco:hasPostalAddress <address:1>;
+    nco:hasAffiliation <affiliation:1>.
+<tel:2274739225> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "4739225";
+    nco:phoneNumber "(227)473-9225".
+<tel:7199885992> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "9885992";
+    nco:phoneNumber "(719)988-5992".
+<mailto:vvillalobos@feugiatnulla.edu> a nco:EmailAddress;
+    nco:emailAddress "vvillalobos@feugiatnulla.edu".
+<telepathy:/fake/cake!vickey.villalobos@dolorevel.edu> a nco:IMAddress;
+    nco:imNickname "vickey.villalobos@dolorevel.edu".
+<address:2> a nco:PostalAddress;
+    nco:streetAddress "6312 Soboda Street";
+    nco:locality "Dublin";
+    nco:region "GA";
+    nco:postalcode "31040";
+    nco:country "USA".
+<affiliation:2> a nco:Affiliation;
+    nco:title "General Maintenance Supervisor";
+    nco:hasPhoneNumber <tel:7199885992>.
+<contact:2> a nco:PersonContact;
+    nco:contactLocalUID "2";
+    nco:fullname "Vickey Villalobos";
+    nco:nameFamily "Villalobos";
+    nco:nameGiven "Vickey";
+    nco:birthDate "1944-12-05T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:2274739225>;
+    nco:hasEmailAddress <mailto:vvillalobos@feugiatnulla.edu>;
+    nco:hasIMAddress <telepathy:/fake/cake!vickey.villalobos@dolorevel.edu>;
+    nco:hasPostalAddress <address:2>;
+    nco:hasAffiliation <affiliation:2>.
+<tel:5635679112> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "5679112";
+    nco:phoneNumber "(563)567-9112".
+<tel:7196643444> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "6643444";
+    nco:phoneNumber "(719)664-3444".
+<mailto:deshawn.bean@praesentdignissim.net> a nco:EmailAddress;
+    nco:emailAddress "deshawn.bean@praesentdignissim.net".
+<telepathy:/fake/cake!deshawn.bean@autemeum.us> a nco:IMAddress;
+    nco:imNickname "deshawn.bean@autemeum.us".
+<address:3> a nco:PostalAddress;
+    nco:streetAddress "4074 Country Avenue";
+    nco:locality "Boles";
+    nco:region "AR";
+    nco:postalcode "72926";
+    nco:country "USA".
+<affiliation:3> a nco:Affiliation;
+    nco:title "Store Decorator";
+    nco:hasPhoneNumber <tel:7196643444>.
+<contact:3> a nco:PersonContact;
+    nco:contactLocalUID "3";
+    nco:fullname "Deshawn Bean";
+    nco:nameFamily "Bean";
+    nco:nameGiven "Deshawn";
+    nco:birthDate "1989-10-31T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:5635679112>;
+    nco:hasEmailAddress <mailto:deshawn.bean@praesentdignissim.net>;
+    nco:hasIMAddress <telepathy:/fake/cake!deshawn.bean@autemeum.us>;
+    nco:hasPostalAddress <address:3>;
+    nco:hasAffiliation <affiliation:3>.
+<tel:3314241307> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "4241307";
+    nco:phoneNumber "(331)424-1307".
+<tel:3155128285> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "5128285";
+    nco:phoneNumber "(315)512-8285".
+<mailto:ebrooks@lobortisdolore.us> a nco:EmailAddress;
+    nco:emailAddress "ebrooks@lobortisdolore.us".
+<telepathy:/fake/cake!ebrooks@eumiusto.com> a nco:IMAddress;
+    nco:imNickname "ebrooks@eumiusto.com".
+<address:4> a nco:PostalAddress;
+    nco:streetAddress "865 Newman Way";
+    nco:locality "La Farge";
+    nco:region "WI";
+    nco:postalcode "54639";
+    nco:country "USA".
+<affiliation:4> a nco:Affiliation;
+    nco:title "Installer Electric Meter";
+    nco:hasPhoneNumber <tel:3155128285>.
+<contact:4> a nco:PersonContact;
+    nco:contactLocalUID "4";
+    nco:fullname "Erasmo Brooks";
+    nco:nameFamily "Brooks";
+    nco:nameGiven "Erasmo";
+    nco:birthDate "1983-03-13T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:3314241307>;
+    nco:hasEmailAddress <mailto:ebrooks@lobortisdolore.us>;
+    nco:hasIMAddress <telepathy:/fake/cake!ebrooks@eumiusto.com>;
+    nco:hasPostalAddress <address:4>;
+    nco:hasAffiliation <affiliation:4>.
+<tel:7046017654> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "6017654";
+    nco:phoneNumber "(704)601-7654".
+<tel:7638521473> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "8521473";
+    nco:phoneNumber "(763)852-1473".
+<mailto:ncolby@tationfeugait.net> a nco:EmailAddress;
+    nco:emailAddress "ncolby@tationfeugait.net".
+<telepathy:/fake/cake!ncolby@duisqui.org> a nco:IMAddress;
+    nco:imNickname "ncolby@duisqui.org".
+<address:5> a nco:PostalAddress;
+    nco:streetAddress "381 Foxgate Avenue";
+    nco:locality "Boca Raton";
+    nco:region "FL";
+    nco:postalcode "33487";
+    nco:country "USA".
+<affiliation:5> a nco:Affiliation;
+    nco:title "Brazer Induction";
+    nco:hasPhoneNumber <tel:7638521473>.
+<contact:5> a nco:PersonContact;
+    nco:contactLocalUID "5";
+    nco:fullname "Nilda Colby";
+    nco:nameFamily "Colby";
+    nco:nameGiven "Nilda";
+    nco:birthDate "1969-07-03T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:7046017654>;
+    nco:hasEmailAddress <mailto:ncolby@tationfeugait.net>;
+    nco:hasIMAddress <telepathy:/fake/cake!ncolby@duisqui.org>;
+    nco:hasPostalAddress <address:5>;
+    nco:hasAffiliation <affiliation:5>.
+<tel:7758436242> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "8436242";
+    nco:phoneNumber "(775)843-6242".
+<tel:2136247586> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "6247586";
+    nco:phoneNumber "(213)624-7586".
+<mailto:belen.sherrill@loremerat.net> a nco:EmailAddress;
+    nco:emailAddress "belen.sherrill@loremerat.net".
+<telepathy:/fake/cake!bsherrill@lobortisvel.info> a nco:IMAddress;
+    nco:imNickname "bsherrill@lobortisvel.info".
+<address:6> a nco:PostalAddress;
+    nco:streetAddress "1775 Northwestern Avenue";
+    nco:locality "Covington";
+    nco:region "TN";
+    nco:postalcode "38019";
+    nco:country "USA".
+<affiliation:6> a nco:Affiliation;
+    nco:title "Head Bookkeeper";
+    nco:hasPhoneNumber <tel:2136247586>.
+<contact:6> a nco:PersonContact;
+    nco:contactLocalUID "6";
+    nco:fullname "Belen Sherrill";
+    nco:nameFamily "Sherrill";
+    nco:nameGiven "Belen";
+    nco:birthDate "1928-05-03T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:7758436242>;
+    nco:hasEmailAddress <mailto:belen.sherrill@loremerat.net>;
+    nco:hasIMAddress <telepathy:/fake/cake!bsherrill@lobortisvel.info>;
+    nco:hasPostalAddress <address:6>;
+    nco:hasAffiliation <affiliation:6>.
+<tel:5026924913> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "6924913";
+    nco:phoneNumber "(502)692-4913".
+<tel:2054292767> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "4292767";
+    nco:phoneNumber "(205)429-2767".
+<mailto:harley.terry@iustoodioillum.net> a nco:EmailAddress;
+    nco:emailAddress "harley.terry@iustoodioillum.net".
+<telepathy:/fake/cake!harley.terry@consequatveliusto.us> a nco:IMAddress;
+    nco:imNickname "harley.terry@consequatveliusto.us".
+<address:7> a nco:PostalAddress;
+    nco:streetAddress "5759 Monte Vallo Lane";
+    nco:locality "Indianapolis";
+    nco:region "IN";
+    nco:postalcode "46226";
+    nco:country "USA".
+<affiliation:7> a nco:Affiliation;
+    nco:title "Planner Long-Range";
+    nco:hasPhoneNumber <tel:2054292767>.
+<contact:7> a nco:PersonContact;
+    nco:contactLocalUID "7";
+    nco:fullname "Harley Terry";
+    nco:nameFamily "Terry";
+    nco:nameGiven "Harley";
+    nco:birthDate "1943-11-06T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:5026924913>;
+    nco:hasEmailAddress <mailto:harley.terry@iustoodioillum.net>;
+    nco:hasIMAddress <telepathy:/fake/cake!harley.terry@consequatveliusto.us>;
+    nco:hasPostalAddress <address:7>;
+    nco:hasAffiliation <affiliation:7>.
+<tel:3126506419> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "6506419";
+    nco:phoneNumber "(312)650-6419".
+<tel:6305037305> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "5037305";
+    nco:phoneNumber "(630)503-7305".
+<mailto:bmesa@tationvel.info> a nco:EmailAddress;
+    nco:emailAddress "bmesa@tationvel.info".
+<telepathy:/fake/cake!bryon.mesa@inodio.eu> a nco:IMAddress;
+    nco:imNickname "bryon.mesa@inodio.eu".
+<address:8> a nco:PostalAddress;
+    nco:streetAddress "3770 Fairy Falls Street";
+    nco:locality "Logan";
+    nco:region "KS";
+    nco:postalcode "67646";
+    nco:country "USA".
+<affiliation:8> a nco:Affiliation;
+    nco:title "Metal Fabricator";
+    nco:hasPhoneNumber <tel:6305037305>.
+<contact:8> a nco:PersonContact;
+    nco:contactLocalUID "8";
+    nco:fullname "Bryon Mesa";
+    nco:nameFamily "Mesa";
+    nco:nameGiven "Bryon";
+    nco:birthDate "1965-06-24T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:3126506419>;
+    nco:hasEmailAddress <mailto:bmesa@tationvel.info>;
+    nco:hasIMAddress <telepathy:/fake/cake!bryon.mesa@inodio.eu>;
+    nco:hasPostalAddress <address:8>;
+    nco:hasAffiliation <affiliation:8>.
+<tel:6628084314> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "8084314";
+    nco:phoneNumber "(662)808-4314".
+<tel:9722735929> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "2735929";
+    nco:phoneNumber "(972)273-5929".
+<mailto:zackary.loving@inqui.com> a nco:EmailAddress;
+    nco:emailAddress "zackary.loving@inqui.com".
+<telepathy:/fake/cake!zloving@nullaut.tv> a nco:IMAddress;
+    nco:imNickname "zloving@nullaut.tv".
+<address:9> a nco:PostalAddress;
+    nco:streetAddress "18 Stags Leap Parkway";
+    nco:locality "Adamsville";
+    nco:region "AL";
+    nco:postalcode "35005";
+    nco:country "USA".
+<affiliation:9> a nco:Affiliation;
+    nco:title "Surveyor Lead";
+    nco:hasPhoneNumber <tel:9722735929>.
+<contact:9> a nco:PersonContact;
+    nco:contactLocalUID "9";
+    nco:fullname "Zackary Loving";
+    nco:nameFamily "Loving";
+    nco:nameGiven "Zackary";
+    nco:birthDate "1955-08-20T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:6628084314>;
+    nco:hasEmailAddress <mailto:zackary.loving@inqui.com>;
+    nco:hasIMAddress <telepathy:/fake/cake!zloving@nullaut.tv>;
+    nco:hasPostalAddress <address:9>;
+    nco:hasAffiliation <affiliation:9>.
+<tel:3528202571> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "8202571";
+    nco:phoneNumber "(352)820-2571".
+<tel:3019777264> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "9777264";
+    nco:phoneNumber "(301)977-7264".
+<mailto:ssterling@etut.com> a nco:EmailAddress;
+    nco:emailAddress "ssterling@etut.com".
+<telepathy:/fake/cake!sammie.sterling@utenim.us> a nco:IMAddress;
+    nco:imNickname "sammie.sterling@utenim.us".
+<address:10> a nco:PostalAddress;
+    nco:streetAddress "6432 Neal Avenue";
+    nco:locality "Slaton";
+    nco:region "TX";
+    nco:postalcode "79364";
+    nco:country "USA".
+<affiliation:10> a nco:Affiliation;
+    nco:title "Total Quality Management Administrator";
+    nco:hasPhoneNumber <tel:3019777264>.
+<contact:10> a nco:PersonContact;
+    nco:contactLocalUID "10";
+    nco:fullname "Sammie Sterling";
+    nco:nameFamily "Sterling";
+    nco:nameGiven "Sammie";
+    nco:birthDate "1941-12-25T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:3528202571>;
+    nco:hasEmailAddress <mailto:ssterling@etut.com>;
+    nco:hasIMAddress <telepathy:/fake/cake!sammie.sterling@utenim.us>;
+    nco:hasPostalAddress <address:10>;
+    nco:hasAffiliation <affiliation:10>.
+<tel:2123924790> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "3924790";
+    nco:phoneNumber "(212)392-4790".
+<tel:2763238739> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "3238739";
+    nco:phoneNumber "(276)323-8739".
+<mailto:cdecker@molestieeum.com> a nco:EmailAddress;
+    nco:emailAddress "cdecker@molestieeum.com".
+<telepathy:/fake/cake!charla.decker@dignissimaugue.edu> a nco:IMAddress;
+    nco:imNickname "charla.decker@dignissimaugue.edu".
+<address:11> a nco:PostalAddress;
+    nco:streetAddress "4573 Corporate Gardens Trail";
+    nco:locality "Detroit Lakes";
+    nco:region "MN";
+    nco:postalcode "56501";
+    nco:country "USA".
+<affiliation:11> a nco:Affiliation;
+    nco:title "Medical Records Coding Technician";
+    nco:hasPhoneNumber <tel:2763238739>.
+<contact:11> a nco:PersonContact;
+    nco:contactLocalUID "11";
+    nco:fullname "Charla Decker";
+    nco:nameFamily "Decker";
+    nco:nameGiven "Charla";
+    nco:birthDate "1964-05-10T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:2123924790>;
+    nco:hasEmailAddress <mailto:cdecker@molestieeum.com>;
+    nco:hasIMAddress <telepathy:/fake/cake!charla.decker@dignissimaugue.edu>;
+    nco:hasPostalAddress <address:11>;
+    nco:hasAffiliation <affiliation:11>.
+<tel:5056199688> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "6199688";
+    nco:phoneNumber "(505)619-9688".
+<tel:9182002932> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "2002932";
+    nco:phoneNumber "(918)200-2932".
+<mailto:robbin.joe@dolorete.us> a nco:EmailAddress;
+    nco:emailAddress "robbin.joe@dolorete.us".
+<telepathy:/fake/cake!robbin.joe@etduis.org> a nco:IMAddress;
+    nco:imNickname "robbin.joe@etduis.org".
+<address:12> a nco:PostalAddress;
+    nco:streetAddress "9992 Barryknoll Parkway";
+    nco:locality "Wallace";
+    nco:region "KS";
+    nco:postalcode "67761";
+    nco:country "USA".
+<affiliation:12> a nco:Affiliation;
+    nco:title "Clerk Payroll";
+    nco:hasPhoneNumber <tel:9182002932>.
+<contact:12> a nco:PersonContact;
+    nco:contactLocalUID "12";
+    nco:fullname "Robbin Joe";
+    nco:nameFamily "Joe";
+    nco:nameGiven "Robbin";
+    nco:birthDate "1966-12-24T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:5056199688>;
+    nco:hasEmailAddress <mailto:robbin.joe@dolorete.us>;
+    nco:hasIMAddress <telepathy:/fake/cake!robbin.joe@etduis.org>;
+    nco:hasPostalAddress <address:12>;
+    nco:hasAffiliation <affiliation:12>.
+<tel:6462482412> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "2482412";
+    nco:phoneNumber "(646)248-2412".
+<tel:8787121157> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "7121157";
+    nco:phoneNumber "(878)712-1157".
+<mailto:erika.freeman@wisiveniamquis.info> a nco:EmailAddress;
+    nco:emailAddress "erika.freeman@wisiveniamquis.info".
+<telepathy:/fake/cake!efreeman@praesentvel.net> a nco:IMAddress;
+    nco:imNickname "efreeman@praesentvel.net".
+<address:13> a nco:PostalAddress;
+    nco:streetAddress "9658 Eldridge Cove";
+    nco:locality "Franklin";
+    nco:region "TN";
+    nco:postalcode "37067";
+    nco:country "USA".
+<affiliation:13> a nco:Affiliation;
+    nco:title "Equal Employment Opportunity Specialist";
+    nco:hasPhoneNumber <tel:8787121157>.
+<contact:13> a nco:PersonContact;
+    nco:contactLocalUID "13";
+    nco:fullname "Erika Freeman";
+    nco:nameFamily "Freeman";
+    nco:nameGiven "Erika";
+    nco:birthDate "1968-12-25T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:6462482412>;
+    nco:hasEmailAddress <mailto:erika.freeman@wisiveniamquis.info>;
+    nco:hasIMAddress <telepathy:/fake/cake!efreeman@praesentvel.net>;
+    nco:hasPostalAddress <address:13>;
+    nco:hasAffiliation <affiliation:13>.
+<tel:4062623937> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "2623937";
+    nco:phoneNumber "(406)262-3937".
+<tel:8571293343> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "1293343";
+    nco:phoneNumber "(857)129-3343".
+<mailto:harriette.may@luptatumzzrilnostrud.tv> a nco:EmailAddress;
+    nco:emailAddress "harriette.may@luptatumzzrilnostrud.tv".
+<telepathy:/fake/cake!hmay@verofacilisi.edu> a nco:IMAddress;
+    nco:imNickname "hmay@verofacilisi.edu".
+<address:14> a nco:PostalAddress;
+    nco:streetAddress "1799 Meadow Wood Avenue";
+    nco:locality "Tucson";
+    nco:region "AZ";
+    nco:postalcode "85701";
+    nco:country "USA".
+<affiliation:14> a nco:Affiliation;
+    nco:title "Staff Nurse";
+    nco:hasPhoneNumber <tel:8571293343>.
+<contact:14> a nco:PersonContact;
+    nco:contactLocalUID "14";
+    nco:fullname "Harriette May";
+    nco:nameFamily "May";
+    nco:nameGiven "Harriette";
+    nco:birthDate "1951-12-15T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:4062623937>;
+    nco:hasEmailAddress <mailto:harriette.may@luptatumzzrilnostrud.tv>;
+    nco:hasIMAddress <telepathy:/fake/cake!hmay@verofacilisi.edu>;
+    nco:hasPostalAddress <address:14>;
+    nco:hasAffiliation <affiliation:14>.
+<tel:4784212622> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "4212622";
+    nco:phoneNumber "(478)421-2622".
+<tel:7162755034> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "2755034";
+    nco:phoneNumber "(716)275-5034".
+<mailto:francis.rankin@delenitnulla.info> a nco:EmailAddress;
+    nco:emailAddress "francis.rankin@delenitnulla.info".
+<telepathy:/fake/cake!frankin@veldignissim.org> a nco:IMAddress;
+    nco:imNickname "frankin@veldignissim.org".
+<address:15> a nco:PostalAddress;
+    nco:streetAddress "7012 Mallard Cove";
+    nco:locality "Virginia Beach";
+    nco:region "VA";
+    nco:postalcode "23450";
+    nco:country "USA".
+<affiliation:15> a nco:Affiliation;
+    nco:title "Technician Mathematical";
+    nco:hasPhoneNumber <tel:7162755034>.
+<contact:15> a nco:PersonContact;
+    nco:contactLocalUID "15";
+    nco:fullname "Francis Rankin";
+    nco:nameFamily "Rankin";
+    nco:nameGiven "Francis";
+    nco:birthDate "1969-07-19T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:4784212622>;
+    nco:hasEmailAddress <mailto:francis.rankin@delenitnulla.info>;
+    nco:hasIMAddress <telepathy:/fake/cake!frankin@veldignissim.org>;
+    nco:hasPostalAddress <address:15>;
+    nco:hasAffiliation <affiliation:15>.
+<tel:4403152817> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "3152817";
+    nco:phoneNumber "(440)315-2817".
+<tel:8629697069> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "9697069";
+    nco:phoneNumber "(862)969-7069".
+<mailto:zmansfield@lobortisnulla.edu> a nco:EmailAddress;
+    nco:emailAddress "zmansfield@lobortisnulla.edu".
+<telepathy:/fake/cake!zelda.mansfield@suscipitenim.us> a nco:IMAddress;
+    nco:imNickname "zelda.mansfield@suscipitenim.us".
+<address:16> a nco:PostalAddress;
+    nco:streetAddress "4334 Lake Lane";
+    nco:locality "Riggins";
+    nco:region "ID";
+    nco:postalcode "83549";
+    nco:country "USA".
+<affiliation:16> a nco:Affiliation;
+    nco:title "Buyer Grocery";
+    nco:hasPhoneNumber <tel:8629697069>.
+<contact:16> a nco:PersonContact;
+    nco:contactLocalUID "16";
+    nco:fullname "Zelda Mansfield";
+    nco:nameFamily "Mansfield";
+    nco:nameGiven "Zelda";
+    nco:birthDate "1940-09-29T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:4403152817>;
+    nco:hasEmailAddress <mailto:zmansfield@lobortisnulla.edu>;
+    nco:hasIMAddress <telepathy:/fake/cake!zelda.mansfield@suscipitenim.us>;
+    nco:hasPostalAddress <address:16>;
+    nco:hasAffiliation <affiliation:16>.
+<tel:5746322472> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "6322472";
+    nco:phoneNumber "(574)632-2472".
+<tel:3145804519> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "5804519";
+    nco:phoneNumber "(314)580-4519".
+<mailto:bridgette.wooley@augueiriure.gov> a nco:EmailAddress;
+    nco:emailAddress "bridgette.wooley@augueiriure.gov".
+<telepathy:/fake/cake!bwooley@facilisiseros.edu> a nco:IMAddress;
+    nco:imNickname "bwooley@facilisiseros.edu".
+<address:17> a nco:PostalAddress;
+    nco:streetAddress "2466 Beaufort Way";
+    nco:locality "Portland";
+    nco:region "OR";
+    nco:postalcode "97225";
+    nco:country "USA".
+<affiliation:17> a nco:Affiliation;
+    nco:title "Railroad Brake/Switch Operator";
+    nco:hasPhoneNumber <tel:3145804519>.
+<contact:17> a nco:PersonContact;
+    nco:contactLocalUID "17";
+    nco:fullname "Bridgette Wooley";
+    nco:nameFamily "Wooley";
+    nco:nameGiven "Bridgette";
+    nco:birthDate "1990-01-20T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:5746322472>;
+    nco:hasEmailAddress <mailto:bridgette.wooley@augueiriure.gov>;
+    nco:hasIMAddress <telepathy:/fake/cake!bwooley@facilisiseros.edu>;
+    nco:hasPostalAddress <address:17>;
+    nco:hasAffiliation <affiliation:17>.
+<tel:9129875561> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "9875561";
+    nco:phoneNumber "(912)987-5561".
+<tel:8328961672> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "8961672";
+    nco:phoneNumber "(832)896-1672".
+<mailto:jstrain@facilisiseu.org> a nco:EmailAddress;
+    nco:emailAddress "jstrain@facilisiseu.org".
+<telepathy:/fake/cake!jamey.strain@illumodio.tv> a nco:IMAddress;
+    nco:imNickname "jamey.strain@illumodio.tv".
+<address:18> a nco:PostalAddress;
+    nco:streetAddress "7298 Towering Pines Street";
+    nco:locality "Fresno";
+    nco:region "CA";
+    nco:postalcode "93760";
+    nco:country "USA".
+<affiliation:18> a nco:Affiliation;
+    nco:title "Contract Coordinator";
+    nco:hasPhoneNumber <tel:8328961672>.
+<contact:18> a nco:PersonContact;
+    nco:contactLocalUID "18";
+    nco:fullname "Jamey Strain";
+    nco:nameFamily "Strain";
+    nco:nameGiven "Jamey";
+    nco:birthDate "1966-04-08T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:9129875561>;
+    nco:hasEmailAddress <mailto:jstrain@facilisiseu.org>;
+    nco:hasIMAddress <telepathy:/fake/cake!jamey.strain@illumodio.tv>;
+    nco:hasPostalAddress <address:18>;
+    nco:hasAffiliation <affiliation:18>.
+<tel:4051529960> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "1529960";
+    nco:phoneNumber "(405)152-9960".
+<tel:2073343433> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "3343433";
+    nco:phoneNumber "(207)334-3433".
+<mailto:abe.beale@delenitnonummy.net> a nco:EmailAddress;
+    nco:emailAddress "abe.beale@delenitnonummy.net".
+<telepathy:/fake/cake!abeale@velenim.info> a nco:IMAddress;
+    nco:imNickname "abeale@velenim.info".
+<address:19> a nco:PostalAddress;
+    nco:streetAddress "8650 Conner Drive";
+    nco:locality "Topeka";
+    nco:region "KS";
+    nco:postalcode "66667";
+    nco:country "USA".
+<affiliation:19> a nco:Affiliation;
+    nco:title "Insulation Worker";
+    nco:hasPhoneNumber <tel:2073343433>.
+<contact:19> a nco:PersonContact;
+    nco:contactLocalUID "19";
+    nco:fullname "Abe Beale";
+    nco:nameFamily "Beale";
+    nco:nameGiven "Abe";
+    nco:birthDate "1981-04-03T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:4051529960>;
+    nco:hasEmailAddress <mailto:abe.beale@delenitnonummy.net>;
+    nco:hasIMAddress <telepathy:/fake/cake!abeale@velenim.info>;
+    nco:hasPostalAddress <address:19>;
+    nco:hasAffiliation <affiliation:19>.
+<tel:2028285495> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "8285495";
+    nco:phoneNumber "(202)828-5495".
+<tel:4844977988> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "4977988";
+    nco:phoneNumber "(484)497-7988".
+<mailto:acorcoran@consequatveliusto.com> a nco:EmailAddress;
+    nco:emailAddress "acorcoran@consequatveliusto.com".
+<telepathy:/fake/cake!armando.corcoran@molestieillum.gov> a nco:IMAddress;
+    nco:imNickname "armando.corcoran@molestieillum.gov".
+<address:20> a nco:PostalAddress;
+    nco:streetAddress "441 Branford Trail";
+    nco:locality "Saint Petersburg";
+    nco:region "FL";
+    nco:postalcode "33738";
+    nco:country "USA".
+<affiliation:20> a nco:Affiliation;
+    nco:title "Vice President Student Affairs";
+    nco:hasPhoneNumber <tel:4844977988>.
+<contact:20> a nco:PersonContact;
+    nco:contactLocalUID "20";
+    nco:fullname "Armando Corcoran";
+    nco:nameFamily "Corcoran";
+    nco:nameGiven "Armando";
+    nco:birthDate "1954-06-20T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:2028285495>;
+    nco:hasEmailAddress <mailto:acorcoran@consequatveliusto.com>;
+    nco:hasIMAddress <telepathy:/fake/cake!armando.corcoran@molestieillum.gov>;
+    nco:hasPostalAddress <address:20>;
+    nco:hasAffiliation <affiliation:20>.
+<tel:6035236922> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "5236922";
+    nco:phoneNumber "(603)523-6922".
+<tel:4066441890> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "6441890";
+    nco:phoneNumber "(406)644-1890".
+<mailto:lamar.herr@consectetuerconsequat.com> a nco:EmailAddress;
+    nco:emailAddress "lamar.herr@consectetuerconsequat.com".
+<telepathy:/fake/cake!lamar.herr@velfeugait.gov> a nco:IMAddress;
+    nco:imNickname "lamar.herr@velfeugait.gov".
+<address:21> a nco:PostalAddress;
+    nco:streetAddress "8188 Grasshopper Lane";
+    nco:locality "Kistler";
+    nco:region "WV";
+    nco:postalcode "25628";
+    nco:country "USA".
+<affiliation:21> a nco:Affiliation;
+    nco:title "Technician Production Electronics";
+    nco:hasPhoneNumber <tel:4066441890>.
+<contact:21> a nco:PersonContact;
+    nco:contactLocalUID "21";
+    nco:fullname "Lamar Herr";
+    nco:nameFamily "Herr";
+    nco:nameGiven "Lamar";
+    nco:birthDate "1935-01-02T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:6035236922>;
+    nco:hasEmailAddress <mailto:lamar.herr@consectetuerconsequat.com>;
+    nco:hasIMAddress <telepathy:/fake/cake!lamar.herr@velfeugait.gov>;
+    nco:hasPostalAddress <address:21>;
+    nco:hasAffiliation <affiliation:21>.
+<tel:2345177556> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "5177556";
+    nco:phoneNumber "(234)517-7556".
+<tel:4063039785> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "3039785";
+    nco:phoneNumber "(406)303-9785".
+<mailto:julius.swan@inveniamquis.org> a nco:EmailAddress;
+    nco:emailAddress "julius.swan@inveniamquis.org".
+<telepathy:/fake/cake!jswan@suscipitvel.tv> a nco:IMAddress;
+    nco:imNickname "jswan@suscipitvel.tv".
+<address:22> a nco:PostalAddress;
+    nco:streetAddress "3052 Claiborne Avenue";
+    nco:locality "Gainesville";
+    nco:region "VA";
+    nco:postalcode "20155";
+    nco:country "USA".
+<affiliation:22> a nco:Affiliation;
+    nco:title "District Manager Fast Food";
+    nco:hasPhoneNumber <tel:4063039785>.
+<contact:22> a nco:PersonContact;
+    nco:contactLocalUID "22";
+    nco:fullname "Julius Swan";
+    nco:nameFamily "Swan";
+    nco:nameGiven "Julius";
+    nco:birthDate "1985-10-29T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:2345177556>;
+    nco:hasEmailAddress <mailto:julius.swan@inveniamquis.org>;
+    nco:hasIMAddress <telepathy:/fake/cake!jswan@suscipitvel.tv>;
+    nco:hasPostalAddress <address:22>;
+    nco:hasAffiliation <affiliation:22>.
+<tel:8025674570> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "5674570";
+    nco:phoneNumber "(802)567-4570".
+<tel:8591859609> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "1859609";
+    nco:phoneNumber "(859)185-9609".
+<mailto:athena.grantham@tationullamcorperautem.com> a nco:EmailAddress;
+    nco:emailAddress "athena.grantham@tationullamcorperautem.com".
+<telepathy:/fake/cake!athena.grantham@aderat.tv> a nco:IMAddress;
+    nco:imNickname "athena.grantham@aderat.tv".
+<address:23> a nco:PostalAddress;
+    nco:streetAddress "7752 Water Lane";
+    nco:locality "Macon";
+    nco:region "VA";
+    nco:postalcode "23101";
+    nco:country "USA".
+<affiliation:23> a nco:Affiliation;
+    nco:title "Operator Wire-Draw";
+    nco:hasPhoneNumber <tel:8591859609>.
+<contact:23> a nco:PersonContact;
+    nco:contactLocalUID "23";
+    nco:fullname "Athena Grantham";
+    nco:nameFamily "Grantham";
+    nco:nameGiven "Athena";
+    nco:birthDate "1967-02-23T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:8025674570>;
+    nco:hasEmailAddress <mailto:athena.grantham@tationullamcorperautem.com>;
+    nco:hasIMAddress <telepathy:/fake/cake!athena.grantham@aderat.tv>;
+    nco:hasPostalAddress <address:23>;
+    nco:hasAffiliation <affiliation:23>.
+<tel:6502344035> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "2344035";
+    nco:phoneNumber "(650)234-4035".
+<tel:2109108459> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "9108459";
+    nco:phoneNumber "(210)910-8459".
+<mailto:kylie.parish@enimin.edu> a nco:EmailAddress;
+    nco:emailAddress "kylie.parish@enimin.edu".
+<telepathy:/fake/cake!kparish@tetation.com> a nco:IMAddress;
+    nco:imNickname "kparish@tetation.com".
+<address:24> a nco:PostalAddress;
+    nco:streetAddress "6260 Masters Circle";
+    nco:locality "Orange";
+    nco:region "TX";
+    nco:postalcode "77632";
+    nco:country "USA".
+<affiliation:24> a nco:Affiliation;
+    nco:title "Manager Tax Research";
+    nco:hasPhoneNumber <tel:2109108459>.
+<contact:24> a nco:PersonContact;
+    nco:contactLocalUID "24";
+    nco:fullname "Kylie Parish";
+    nco:nameFamily "Parish";
+    nco:nameGiven "Kylie";
+    nco:birthDate "1970-06-10T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:6502344035>;
+    nco:hasEmailAddress <mailto:kylie.parish@enimin.edu>;
+    nco:hasIMAddress <telepathy:/fake/cake!kparish@tetation.com>;
+    nco:hasPostalAddress <address:24>;
+    nco:hasAffiliation <affiliation:24>.
+<tel:6205038307> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "5038307";
+    nco:phoneNumber "(620)503-8307".
+<tel:9045079591> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "5079591";
+    nco:phoneNumber "(904)507-9591".
+<mailto:ameade@atodio.eu> a nco:EmailAddress;
+    nco:emailAddress "ameade@atodio.eu".
+<telepathy:/fake/cake!april.meade@feugiatfeugait.org> a nco:IMAddress;
+    nco:imNickname "april.meade@feugiatfeugait.org".
+<address:25> a nco:PostalAddress;
+    nco:streetAddress "5461 Foster Ridge Way";
+    nco:locality "Mina";
+    nco:region "NV";
+    nco:postalcode "89422";
+    nco:country "USA".
+<affiliation:25> a nco:Affiliation;
+    nco:title "Chemical Engineer Supervisor";
+    nco:hasPhoneNumber <tel:9045079591>.
+<contact:25> a nco:PersonContact;
+    nco:contactLocalUID "25";
+    nco:fullname "April Meade";
+    nco:nameFamily "Meade";
+    nco:nameGiven "April";
+    nco:birthDate "1940-02-18T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:6205038307>;
+    nco:hasEmailAddress <mailto:ameade@atodio.eu>;
+    nco:hasIMAddress <telepathy:/fake/cake!april.meade@feugiatfeugait.org>;
+    nco:hasPostalAddress <address:25>;
+    nco:hasAffiliation <affiliation:25>.
+<tel:5411702437> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "1702437";
+    nco:phoneNumber "(541)170-2437".
+<tel:9152871961> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "2871961";
+    nco:phoneNumber "(915)287-1961".
+<mailto:jquick@nullaea.us> a nco:EmailAddress;
+    nco:emailAddress "jquick@nullaea.us".
+<telepathy:/fake/cake!joanne.quick@iustoodioiusto.us> a nco:IMAddress;
+    nco:imNickname "joanne.quick@iustoodioiusto.us".
+<address:26> a nco:PostalAddress;
+    nco:streetAddress "5352 Northwestern Way";
+    nco:locality "Bussey";
+    nco:region "IA";
+    nco:postalcode "50044";
+    nco:country "USA".
+<affiliation:26> a nco:Affiliation;
+    nco:title "Ticket Taker";
+    nco:hasPhoneNumber <tel:9152871961>.
+<contact:26> a nco:PersonContact;
+    nco:contactLocalUID "26";
+    nco:fullname "Joanne Quick";
+    nco:nameFamily "Quick";
+    nco:nameGiven "Joanne";
+    nco:birthDate "1961-01-01T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:5411702437>;
+    nco:hasEmailAddress <mailto:jquick@nullaea.us>;
+    nco:hasIMAddress <telepathy:/fake/cake!joanne.quick@iustoodioiusto.us>;
+    nco:hasPostalAddress <address:26>;
+    nco:hasAffiliation <affiliation:26>.
+<tel:8023496737> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "3496737";
+    nco:phoneNumber "(802)349-6737".
+<tel:2098521676> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "8521676";
+    nco:phoneNumber "(209)852-1676".
+<mailto:narchibald@ineum.gov> a nco:EmailAddress;
+    nco:emailAddress "narchibald@ineum.gov".
+<telepathy:/fake/cake!narchibald@velea.edu> a nco:IMAddress;
+    nco:imNickname "narchibald@velea.edu".
+<address:27> a nco:PostalAddress;
+    nco:streetAddress "2733 Boutwell Cove";
+    nco:locality "Harrisburg";
+    nco:region "OH";
+    nco:postalcode "43126";
+    nco:country "USA".
+<affiliation:27> a nco:Affiliation;
+    nco:title "Supervisor Warehouse";
+    nco:hasPhoneNumber <tel:2098521676>.
+<contact:27> a nco:PersonContact;
+    nco:contactLocalUID "27";
+    nco:fullname "Nita Archibald";
+    nco:nameFamily "Archibald";
+    nco:nameGiven "Nita";
+    nco:birthDate "1991-05-14T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:8023496737>;
+    nco:hasEmailAddress <mailto:narchibald@ineum.gov>;
+    nco:hasIMAddress <telepathy:/fake/cake!narchibald@velea.edu>;
+    nco:hasPostalAddress <address:27>;
+    nco:hasAffiliation <affiliation:27>.
+<tel:2142829581> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "2829581";
+    nco:phoneNumber "(214)282-9581".
+<tel:7131683963> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "1683963";
+    nco:phoneNumber "(713)168-3963".
+<mailto:lia.rollins@luptatumzzrileum.edu> a nco:EmailAddress;
+    nco:emailAddress "lia.rollins@luptatumzzrileum.edu".
+<telepathy:/fake/cake!lia.rollins@eadolore.eu> a nco:IMAddress;
+    nco:imNickname "lia.rollins@eadolore.eu".
+<address:28> a nco:PostalAddress;
+    nco:streetAddress "5170 Brick Drive";
+    nco:locality "Venturia";
+    nco:region "ND";
+    nco:postalcode "58489";
+    nco:country "USA".
+<affiliation:28> a nco:Affiliation;
+    nco:title "Agent Traffic Sales";
+    nco:hasPhoneNumber <tel:7131683963>.
+<contact:28> a nco:PersonContact;
+    nco:contactLocalUID "28";
+    nco:fullname "Lia Rollins";
+    nco:nameFamily "Rollins";
+    nco:nameGiven "Lia";
+    nco:birthDate "1943-08-11T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:2142829581>;
+    nco:hasEmailAddress <mailto:lia.rollins@luptatumzzrileum.edu>;
+    nco:hasIMAddress <telepathy:/fake/cake!lia.rollins@eadolore.eu>;
+    nco:hasPostalAddress <address:28>;
+    nco:hasAffiliation <affiliation:28>.
+<tel:5189854568> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "9854568";
+    nco:phoneNumber "(518)985-4568".
+<tel:5617419959> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "7419959";
+    nco:phoneNumber "(561)741-9959".
+<mailto:niki.quinones@doloreiriure.tv> a nco:EmailAddress;
+    nco:emailAddress "niki.quinones@doloreiriure.tv".
+<telepathy:/fake/cake!nquinones@elitseddolor.org> a nco:IMAddress;
+    nco:imNickname "nquinones@elitseddolor.org".
+<address:29> a nco:PostalAddress;
+    nco:streetAddress "2162 Mimosa Trail";
+    nco:locality "Star Lake";
+    nco:region "WI";
+    nco:postalcode "54561";
+    nco:country "USA".
+<affiliation:29> a nco:Affiliation;
+    nco:title "Medical Medication Certified Technician";
+    nco:hasPhoneNumber <tel:5617419959>.
+<contact:29> a nco:PersonContact;
+    nco:contactLocalUID "29";
+    nco:fullname "Niki Quinones";
+    nco:nameFamily "Quinones";
+    nco:nameGiven "Niki";
+    nco:birthDate "1942-06-05T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:5189854568>;
+    nco:hasEmailAddress <mailto:niki.quinones@doloreiriure.tv>;
+    nco:hasIMAddress <telepathy:/fake/cake!nquinones@elitseddolor.org>;
+    nco:hasPostalAddress <address:29>;
+    nco:hasAffiliation <affiliation:29>.
+<tel:9066821150> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "6821150";
+    nco:phoneNumber "(906)682-1150".
+<tel:6239108914> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "9108914";
+    nco:phoneNumber "(623)910-8914".
+<mailto:man.skipper@illumvulputate.gov> a nco:EmailAddress;
+    nco:emailAddress "man.skipper@illumvulputate.gov".
+<telepathy:/fake/cake!mskipper@adesse.org> a nco:IMAddress;
+    nco:imNickname "mskipper@adesse.org".
+<address:30> a nco:PostalAddress;
+    nco:streetAddress "5217 Marsh Drive";
+    nco:locality "Buena Park";
+    nco:region "CA";
+    nco:postalcode "90622";
+    nco:country "USA".
+<affiliation:30> a nco:Affiliation;
+    nco:title "Engineering Manager Manufacturing";
+    nco:hasPhoneNumber <tel:6239108914>.
+<contact:30> a nco:PersonContact;
+    nco:contactLocalUID "30";
+    nco:fullname "Man Skipper";
+    nco:nameFamily "Skipper";
+    nco:nameGiven "Man";
+    nco:birthDate "1953-07-05T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:9066821150>;
+    nco:hasEmailAddress <mailto:man.skipper@illumvulputate.gov>;
+    nco:hasIMAddress <telepathy:/fake/cake!mskipper@adesse.org>;
+    nco:hasPostalAddress <address:30>;
+    nco:hasAffiliation <affiliation:30>.
+<tel:7751992871> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "1992871";
+    nco:phoneNumber "(775)199-2871".
+<tel:9474691667> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "4691667";
+    nco:phoneNumber "(947)469-1667".
+<mailto:nmorrison@utte.com> a nco:EmailAddress;
+    nco:emailAddress "nmorrison@utte.com".
+<telepathy:/fake/cake!nicole.morrison@erosdelenit.edu> a nco:IMAddress;
+    nco:imNickname "nicole.morrison@erosdelenit.edu".
+<address:31> a nco:PostalAddress;
+    nco:streetAddress "7227 Cattail Parkway";
+    nco:locality "Pompton Plains";
+    nco:region "NJ";
+    nco:postalcode "07444";
+    nco:country "USA".
+<affiliation:31> a nco:Affiliation;
+    nco:title "Drafter Civil Engineering";
+    nco:hasPhoneNumber <tel:9474691667>.
+<contact:31> a nco:PersonContact;
+    nco:contactLocalUID "31";
+    nco:fullname "Nicole Morrison";
+    nco:nameFamily "Morrison";
+    nco:nameGiven "Nicole";
+    nco:birthDate "1976-07-12T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:7751992871>;
+    nco:hasEmailAddress <mailto:nmorrison@utte.com>;
+    nco:hasIMAddress <telepathy:/fake/cake!nicole.morrison@erosdelenit.edu>;
+    nco:hasPostalAddress <address:31>;
+    nco:hasAffiliation <affiliation:31>.
+<tel:6239922175> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "9922175";
+    nco:phoneNumber "(623)992-2175".
+<tel:9596905417> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "6905417";
+    nco:phoneNumber "(959)690-5417".
+<mailto:randy.verdin@duisdolor.gov> a nco:EmailAddress;
+    nco:emailAddress "randy.verdin@duisdolor.gov".
+<telepathy:/fake/cake!randy.verdin@nullafacilisis.net> a nco:IMAddress;
+    nco:imNickname "randy.verdin@nullafacilisis.net".
+<address:32> a nco:PostalAddress;
+    nco:streetAddress "7774 Osman Avenue";
+    nco:locality "Satsuma";
+    nco:region "FL";
+    nco:postalcode "32189";
+    nco:country "USA".
+<affiliation:32> a nco:Affiliation;
+    nco:title "Employee Benefits Manager";
+    nco:hasPhoneNumber <tel:9596905417>.
+<contact:32> a nco:PersonContact;
+    nco:contactLocalUID "32";
+    nco:fullname "Randy Verdin";
+    nco:nameFamily "Verdin";
+    nco:nameGiven "Randy";
+    nco:birthDate "1946-08-23T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:6239922175>;
+    nco:hasEmailAddress <mailto:randy.verdin@duisdolor.gov>;
+    nco:hasIMAddress <telepathy:/fake/cake!randy.verdin@nullafacilisis.net>;
+    nco:hasPostalAddress <address:32>;
+    nco:hasAffiliation <affiliation:32>.
+<tel:9807502285> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "7502285";
+    nco:phoneNumber "(980)750-2285".
+<tel:8061693397> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "1693397";
+    nco:phoneNumber "(806)169-3397".
+<mailto:tcody@eavelit.eu> a nco:EmailAddress;
+    nco:emailAddress "tcody@eavelit.eu".
+<telepathy:/fake/cake!tommie.cody@esseduis.net> a nco:IMAddress;
+    nco:imNickname "tommie.cody@esseduis.net".
+<address:33> a nco:PostalAddress;
+    nco:streetAddress "971 Maple Lane";
+    nco:locality "Alexandria";
+    nco:region "PA";
+    nco:postalcode "16611";
+    nco:country "USA".
+<affiliation:33> a nco:Affiliation;
+    nco:title "Hotel Laundry Worker";
+    nco:hasPhoneNumber <tel:8061693397>.
+<contact:33> a nco:PersonContact;
+    nco:contactLocalUID "33";
+    nco:fullname "Tommie Cody";
+    nco:nameFamily "Cody";
+    nco:nameGiven "Tommie";
+    nco:birthDate "1987-05-05T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:9807502285>;
+    nco:hasEmailAddress <mailto:tcody@eavelit.eu>;
+    nco:hasIMAddress <telepathy:/fake/cake!tommie.cody@esseduis.net>;
+    nco:hasPostalAddress <address:33>;
+    nco:hasAffiliation <affiliation:33>.
+<tel:3304909663> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "4909663";
+    nco:phoneNumber "(330)490-9663".
+<tel:3106692019> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "6692019";
+    nco:phoneNumber "(310)669-2019".
+<mailto:elinor.kerns@nislutduis.edu> a nco:EmailAddress;
+    nco:emailAddress "elinor.kerns@nislutduis.edu".
+<telepathy:/fake/cake!elinor.kerns@doloresit.net> a nco:IMAddress;
+    nco:imNickname "elinor.kerns@doloresit.net".
+<address:34> a nco:PostalAddress;
+    nco:streetAddress "1000 Alchester Drive";
+    nco:locality "Ocala";
+    nco:region "FL";
+    nco:postalcode "34474";
+    nco:country "USA".
+<affiliation:34> a nco:Affiliation;
+    nco:title "Reactor Operator";
+    nco:hasPhoneNumber <tel:3106692019>.
+<contact:34> a nco:PersonContact;
+    nco:contactLocalUID "34";
+    nco:fullname "Elinor Kerns";
+    nco:nameFamily "Kerns";
+    nco:nameGiven "Elinor";
+    nco:birthDate "1965-07-27T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:3304909663>;
+    nco:hasEmailAddress <mailto:elinor.kerns@nislutduis.edu>;
+    nco:hasIMAddress <telepathy:/fake/cake!elinor.kerns@doloresit.net>;
+    nco:hasPostalAddress <address:34>;
+    nco:hasAffiliation <affiliation:34>.
+<tel:9379464622> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "9464622";
+    nco:phoneNumber "(937)946-4622".
+<tel:7852524442> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "2524442";
+    nco:phoneNumber "(785)252-4442".
+<mailto:alytle@delenitminim.us> a nco:EmailAddress;
+    nco:emailAddress "alytle@delenitminim.us".
+<telepathy:/fake/cake!angelica.lytle@commodozzril.gov> a nco:IMAddress;
+    nco:imNickname "angelica.lytle@commodozzril.gov".
+<address:35> a nco:PostalAddress;
+    nco:streetAddress "7620 Woodford Drive";
+    nco:locality "Perry";
+    nco:region "IL";
+    nco:postalcode "62362";
+    nco:country "USA".
+<affiliation:35> a nco:Affiliation;
+    nco:title "Residence Leasing Agent";
+    nco:hasPhoneNumber <tel:7852524442>.
+<contact:35> a nco:PersonContact;
+    nco:contactLocalUID "35";
+    nco:fullname "Angelica Lytle";
+    nco:nameFamily "Lytle";
+    nco:nameGiven "Angelica";
+    nco:birthDate "1984-04-12T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:9379464622>;
+    nco:hasEmailAddress <mailto:alytle@delenitminim.us>;
+    nco:hasIMAddress <telepathy:/fake/cake!angelica.lytle@commodozzril.gov>;
+    nco:hasPostalAddress <address:35>;
+    nco:hasAffiliation <affiliation:35>.
+<tel:5054737869> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "4737869";
+    nco:phoneNumber "(505)473-7869".
+<tel:9207399361> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "7399361";
+    nco:phoneNumber "(920)739-9361".
+<mailto:lrader@facilisiaccumsan.edu> a nco:EmailAddress;
+    nco:emailAddress "lrader@facilisiaccumsan.edu".
+<telepathy:/fake/cake!lynnette.rader@molestiedelenit.info> a nco:IMAddress;
+    nco:imNickname "lynnette.rader@molestiedelenit.info".
+<address:36> a nco:PostalAddress;
+    nco:streetAddress "228 Sunrise Lane";
+    nco:locality "Hoagland";
+    nco:region "IN";
+    nco:postalcode "46745";
+    nco:country "USA".
+<affiliation:36> a nco:Affiliation;
+    nco:title "Animal Warden";
+    nco:hasPhoneNumber <tel:9207399361>.
+<contact:36> a nco:PersonContact;
+    nco:contactLocalUID "36";
+    nco:fullname "Lynnette Rader";
+    nco:nameFamily "Rader";
+    nco:nameGiven "Lynnette";
+    nco:birthDate "1932-03-19T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:5054737869>;
+    nco:hasEmailAddress <mailto:lrader@facilisiaccumsan.edu>;
+    nco:hasIMAddress <telepathy:/fake/cake!lynnette.rader@molestiedelenit.info>;
+    nco:hasPostalAddress <address:36>;
+    nco:hasAffiliation <affiliation:36>.
+<tel:7865725462> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "5725462";
+    nco:phoneNumber "(786)572-5462".
+<tel:2607155351> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "7155351";
+    nco:phoneNumber "(260)715-5351".
+<mailto:wiley.hogg@feugaitmolestie.net> a nco:EmailAddress;
+    nco:emailAddress "wiley.hogg@feugaitmolestie.net".
+<telepathy:/fake/cake!whogg@quiseu.gov> a nco:IMAddress;
+    nco:imNickname "whogg@quiseu.gov".
+<address:37> a nco:PostalAddress;
+    nco:streetAddress "5435 Hickory Post Trail";
+    nco:locality "Callao";
+    nco:region "MO";
+    nco:postalcode "63534";
+    nco:country "USA".
+<affiliation:37> a nco:Affiliation;
+    nco:title "Industrial Designer";
+    nco:hasPhoneNumber <tel:2607155351>.
+<contact:37> a nco:PersonContact;
+    nco:contactLocalUID "37";
+    nco:fullname "Wiley Hogg";
+    nco:nameFamily "Hogg";
+    nco:nameGiven "Wiley";
+    nco:birthDate "1942-07-22T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:7865725462>;
+    nco:hasEmailAddress <mailto:wiley.hogg@feugaitmolestie.net>;
+    nco:hasIMAddress <telepathy:/fake/cake!whogg@quiseu.gov>;
+    nco:hasPostalAddress <address:37>;
+    nco:hasAffiliation <affiliation:37>.
+<tel:7756239272> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "6239272";
+    nco:phoneNumber "(775)623-9272".
+<tel:3199034654> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "9034654";
+    nco:phoneNumber "(319)903-4654".
+<mailto:matt.conti@invulputateconsequat.tv> a nco:EmailAddress;
+    nco:emailAddress "matt.conti@invulputateconsequat.tv".
+<telepathy:/fake/cake!mconti@eratvelit.us> a nco:IMAddress;
+    nco:imNickname "mconti@eratvelit.us".
+<address:38> a nco:PostalAddress;
+    nco:streetAddress "2617 Caylors Wood Trail";
+    nco:locality "Palmyra";
+    nco:region "ME";
+    nco:postalcode "04965";
+    nco:country "USA".
+<affiliation:38> a nco:Affiliation;
+    nco:title "Mechanic Automotive Equipment";
+    nco:hasPhoneNumber <tel:3199034654>.
+<contact:38> a nco:PersonContact;
+    nco:contactLocalUID "38";
+    nco:fullname "Matt Conti";
+    nco:nameFamily "Conti";
+    nco:nameGiven "Matt";
+    nco:birthDate "1965-09-20T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:7756239272>;
+    nco:hasEmailAddress <mailto:matt.conti@invulputateconsequat.tv>;
+    nco:hasIMAddress <telepathy:/fake/cake!mconti@eratvelit.us>;
+    nco:hasPostalAddress <address:38>;
+    nco:hasAffiliation <affiliation:38>.
+<tel:7011306146> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "1306146";
+    nco:phoneNumber "(701)130-6146".
+<tel:3196456775> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "6456775";
+    nco:phoneNumber "(319)645-6775".
+<mailto:ccoward@utvelit.gov> a nco:EmailAddress;
+    nco:emailAddress "ccoward@utvelit.gov".
+<telepathy:/fake/cake!coy.coward@autemminim.net> a nco:IMAddress;
+    nco:imNickname "coy.coward@autemminim.net".
+<address:39> a nco:PostalAddress;
+    nco:streetAddress "854 Ravensdale Avenue";
+    nco:locality "Le Grand";
+    nco:region "IA";
+    nco:postalcode "50142";
+    nco:country "USA".
+<affiliation:39> a nco:Affiliation;
+    nco:title "Physical Therapy Aide";
+    nco:hasPhoneNumber <tel:3196456775>.
+<contact:39> a nco:PersonContact;
+    nco:contactLocalUID "39";
+    nco:fullname "Coy Coward";
+    nco:nameFamily "Coward";
+    nco:nameGiven "Coy";
+    nco:birthDate "1985-12-17T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:7011306146>;
+    nco:hasEmailAddress <mailto:ccoward@utvelit.gov>;
+    nco:hasIMAddress <telepathy:/fake/cake!coy.coward@autemminim.net>;
+    nco:hasPostalAddress <address:39>;
+    nco:hasAffiliation <affiliation:39>.
+<tel:7021953062> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "1953062";
+    nco:phoneNumber "(702)195-3062".
+<tel:5058138835> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "8138835";
+    nco:phoneNumber "(505)813-8835".
+<mailto:jmccutcheon@iriuredoloresse.us> a nco:EmailAddress;
+    nco:emailAddress "jmccutcheon@iriuredoloresse.us".
+<telepathy:/fake/cake!jmccutcheon@delenitlorem.gov> a nco:IMAddress;
+    nco:imNickname "jmccutcheon@delenitlorem.gov".
+<address:40> a nco:PostalAddress;
+    nco:streetAddress "6091 Farnifold Way";
+    nco:locality "High Springs";
+    nco:region "FL";
+    nco:postalcode "32655";
+    nco:country "USA".
+<affiliation:40> a nco:Affiliation;
+    nco:title "Engineer Traffic";
+    nco:hasPhoneNumber <tel:5058138835>.
+<contact:40> a nco:PersonContact;
+    nco:contactLocalUID "40";
+    nco:fullname "Joanna Mccutcheon";
+    nco:nameFamily "Mccutcheon";
+    nco:nameGiven "Joanna";
+    nco:birthDate "1937-07-23T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:7021953062>;
+    nco:hasEmailAddress <mailto:jmccutcheon@iriuredoloresse.us>;
+    nco:hasIMAddress <telepathy:/fake/cake!jmccutcheon@delenitlorem.gov>;
+    nco:hasPostalAddress <address:40>;
+    nco:hasAffiliation <affiliation:40>.
+<tel:7014268603> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "4268603";
+    nco:phoneNumber "(701)426-8603".
+<tel:2697053326> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "7053326";
+    nco:phoneNumber "(269)705-3326".
+<mailto:ealbright@dignissimadipiscing.net> a nco:EmailAddress;
+    nco:emailAddress "ealbright@dignissimadipiscing.net".
+<telepathy:/fake/cake!ealbright@esseat.eu> a nco:IMAddress;
+    nco:imNickname "ealbright@esseat.eu".
+<address:41> a nco:PostalAddress;
+    nco:streetAddress "3605 Deer Parkway";
+    nco:locality "Brooklyn";
+    nco:region "NY";
+    nco:postalcode "11230";
+    nco:country "USA".
+<affiliation:41> a nco:Affiliation;
+    nco:title "Ophthalmic Technician";
+    nco:hasPhoneNumber <tel:2697053326>.
+<contact:41> a nco:PersonContact;
+    nco:contactLocalUID "41";
+    nco:fullname "Eugene Albright";
+    nco:nameFamily "Albright";
+    nco:nameGiven "Eugene";
+    nco:birthDate "1993-02-09T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:7014268603>;
+    nco:hasEmailAddress <mailto:ealbright@dignissimadipiscing.net>;
+    nco:hasIMAddress <telepathy:/fake/cake!ealbright@esseat.eu>;
+    nco:hasPostalAddress <address:41>;
+    nco:hasAffiliation <affiliation:41>.
+<tel:3189814680> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "9814680";
+    nco:phoneNumber "(318)981-4680".
+<tel:2017176355> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "7176355";
+    nco:phoneNumber "(201)717-6355".
+<mailto:wm.hillman@ametcommodoconsequat.org> a nco:EmailAddress;
+    nco:emailAddress "wm.hillman@ametcommodoconsequat.org".
+<telepathy:/fake/cake!wm.hillman@duisduis.net> a nco:IMAddress;
+    nco:imNickname "wm.hillman@duisduis.net".
+<address:42> a nco:PostalAddress;
+    nco:streetAddress "3438 Shannon Oaks Street";
+    nco:locality "Friday Harbor";
+    nco:region "WA";
+    nco:postalcode "98250";
+    nco:country "USA".
+<affiliation:42> a nco:Affiliation;
+    nco:title "Automobile Mechanic";
+    nco:hasPhoneNumber <tel:2017176355>.
+<contact:42> a nco:PersonContact;
+    nco:contactLocalUID "42";
+    nco:fullname "Wm Hillman";
+    nco:nameFamily "Hillman";
+    nco:nameGiven "Wm";
+    nco:birthDate "1987-09-29T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:3189814680>;
+    nco:hasEmailAddress <mailto:wm.hillman@ametcommodoconsequat.org>;
+    nco:hasIMAddress <telepathy:/fake/cake!wm.hillman@duisduis.net>;
+    nco:hasPostalAddress <address:42>;
+    nco:hasAffiliation <affiliation:42>.
+<tel:9315025278> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "5025278";
+    nco:phoneNumber "(931)502-5278".
+<tel:7151431704> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "1431704";
+    nco:phoneNumber "(715)143-1704".
+<mailto:shirley.huston@erosamet.net> a nco:EmailAddress;
+    nco:emailAddress "shirley.huston@erosamet.net".
+<telepathy:/fake/cake!shirley.huston@esseconsequat.info> a nco:IMAddress;
+    nco:imNickname "shirley.huston@esseconsequat.info".
+<address:43> a nco:PostalAddress;
+    nco:streetAddress "2 Oren Way";
+    nco:locality "Lubbock";
+    nco:region "TX";
+    nco:postalcode "79423";
+    nco:country "USA".
+<affiliation:43> a nco:Affiliation;
+    nco:title "Oral Surgeon";
+    nco:hasPhoneNumber <tel:7151431704>.
+<contact:43> a nco:PersonContact;
+    nco:contactLocalUID "43";
+    nco:fullname "Shirley Huston";
+    nco:nameFamily "Huston";
+    nco:nameGiven "Shirley";
+    nco:birthDate "1989-09-12T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:9315025278>;
+    nco:hasEmailAddress <mailto:shirley.huston@erosamet.net>;
+    nco:hasIMAddress <telepathy:/fake/cake!shirley.huston@esseconsequat.info>;
+    nco:hasPostalAddress <address:43>;
+    nco:hasAffiliation <affiliation:43>.
+<tel:7088456998> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "8456998";
+    nco:phoneNumber "(708)845-6998".
+<tel:5053925410> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "3925410";
+    nco:phoneNumber "(505)392-5410".
+<mailto:raven.mcbride@utminim.com> a nco:EmailAddress;
+    nco:emailAddress "raven.mcbride@utminim.com".
+<telepathy:/fake/cake!raven.mcbride@praesentdolore.info> a nco:IMAddress;
+    nco:imNickname "raven.mcbride@praesentdolore.info".
+<address:44> a nco:PostalAddress;
+    nco:streetAddress "6545 Center Hill Drive";
+    nco:locality "Sicily Island";
+    nco:region "LA";
+    nco:postalcode "71368";
+    nco:country "USA".
+<affiliation:44> a nco:Affiliation;
+    nco:title "Therapist Respiratory";
+    nco:hasPhoneNumber <tel:5053925410>.
+<contact:44> a nco:PersonContact;
+    nco:contactLocalUID "44";
+    nco:fullname "Raven Mcbride";
+    nco:nameFamily "Mcbride";
+    nco:nameGiven "Raven";
+    nco:birthDate "1981-06-03T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:7088456998>;
+    nco:hasEmailAddress <mailto:raven.mcbride@utminim.com>;
+    nco:hasIMAddress <telepathy:/fake/cake!raven.mcbride@praesentdolore.info>;
+    nco:hasPostalAddress <address:44>;
+    nco:hasAffiliation <affiliation:44>.
+<tel:2709304775> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "9304775";
+    nco:phoneNumber "(270)930-4775".
+<tel:4082279862> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "2279862";
+    nco:phoneNumber "(408)227-9862".
+<mailto:nbolden@veniamquisdolor.gov> a nco:EmailAddress;
+    nco:emailAddress "nbolden@veniamquisdolor.gov".
+<telepathy:/fake/cake!normand.bolden@duisesse.info> a nco:IMAddress;
+    nco:imNickname "normand.bolden@duisesse.info".
+<address:45> a nco:PostalAddress;
+    nco:streetAddress "5662 Trailville Drive";
+    nco:locality "Gildford";
+    nco:region "MT";
+    nco:postalcode "59525";
+    nco:country "USA".
+<affiliation:45> a nco:Affiliation;
+    nco:title "Supervisor Accounts Receivable";
+    nco:hasPhoneNumber <tel:4082279862>.
+<contact:45> a nco:PersonContact;
+    nco:contactLocalUID "45";
+    nco:fullname "Normand Bolden";
+    nco:nameFamily "Bolden";
+    nco:nameGiven "Normand";
+    nco:birthDate "1950-10-24T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:2709304775>;
+    nco:hasEmailAddress <mailto:nbolden@veniamquisdolor.gov>;
+    nco:hasIMAddress <telepathy:/fake/cake!normand.bolden@duisesse.info>;
+    nco:hasPostalAddress <address:45>;
+    nco:hasAffiliation <affiliation:45>.
+<tel:2524426000> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "4426000";
+    nco:phoneNumber "(252)442-6000".
+<tel:6062651667> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "2651667";
+    nco:phoneNumber "(606)265-1667".
+<mailto:breinhart@consequatvelamet.info> a nco:EmailAddress;
+    nco:emailAddress "breinhart@consequatvelamet.info".
+<telepathy:/fake/cake!breinhart@adluptatum.eu> a nco:IMAddress;
+    nco:imNickname "breinhart@adluptatum.eu".
+<address:46> a nco:PostalAddress;
+    nco:streetAddress "9806 Waterleaf Drive";
+    nco:locality "Hartville";
+    nco:region "MO";
+    nco:postalcode "65667";
+    nco:country "USA".
+<affiliation:46> a nco:Affiliation;
+    nco:title "Motel Clerk";
+    nco:hasPhoneNumber <tel:6062651667>.
+<contact:46> a nco:PersonContact;
+    nco:contactLocalUID "46";
+    nco:fullname "Brooke Reinhart";
+    nco:nameFamily "Reinhart";
+    nco:nameGiven "Brooke";
+    nco:birthDate "1930-03-24T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:2524426000>;
+    nco:hasEmailAddress <mailto:breinhart@consequatvelamet.info>;
+    nco:hasIMAddress <telepathy:/fake/cake!breinhart@adluptatum.eu>;
+    nco:hasPostalAddress <address:46>;
+    nco:hasAffiliation <affiliation:46>.
+<tel:5057993909> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "7993909";
+    nco:phoneNumber "(505)799-3909".
+<tel:9105572610> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "5572610";
+    nco:phoneNumber "(910)557-2610".
+<mailto:boyd.hunter@dignissimduis.tv> a nco:EmailAddress;
+    nco:emailAddress "boyd.hunter@dignissimduis.tv".
+<telepathy:/fake/cake!bhunter@suscipitte.org> a nco:IMAddress;
+    nco:imNickname "bhunter@suscipitte.org".
+<address:47> a nco:PostalAddress;
+    nco:streetAddress "2863 Victoria Cove";
+    nco:locality "Welaka";
+    nco:region "FL";
+    nco:postalcode "32193";
+    nco:country "USA".
+<affiliation:47> a nco:Affiliation;
+    nco:title "Supervisor Production";
+    nco:hasPhoneNumber <tel:9105572610>.
+<contact:47> a nco:PersonContact;
+    nco:contactLocalUID "47";
+    nco:fullname "Boyd Hunter";
+    nco:nameFamily "Hunter";
+    nco:nameGiven "Boyd";
+    nco:birthDate "1938-11-26T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:5057993909>;
+    nco:hasEmailAddress <mailto:boyd.hunter@dignissimduis.tv>;
+    nco:hasIMAddress <telepathy:/fake/cake!bhunter@suscipitte.org>;
+    nco:hasPostalAddress <address:47>;
+    nco:hasAffiliation <affiliation:47>.
+<tel:3369137360> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "9137360";
+    nco:phoneNumber "(336)913-7360".
+<tel:2762382500> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "2382500";
+    nco:phoneNumber "(276)238-2500".
+<mailto:isweeney@blanditautem.tv> a nco:EmailAddress;
+    nco:emailAddress "isweeney@blanditautem.tv".
+<telepathy:/fake/cake!isweeney@duisduis.tv> a nco:IMAddress;
+    nco:imNickname "isweeney@duisduis.tv".
+<address:48> a nco:PostalAddress;
+    nco:streetAddress "6824 Beaufort Drive";
+    nco:locality "Queen Anne";
+    nco:region "MD";
+    nco:postalcode "21657";
+    nco:country "USA".
+<affiliation:48> a nco:Affiliation;
+    nco:title "Analyst Business Systems";
+    nco:hasPhoneNumber <tel:2762382500>.
+<contact:48> a nco:PersonContact;
+    nco:contactLocalUID "48";
+    nco:fullname "Iona Sweeney";
+    nco:nameFamily "Sweeney";
+    nco:nameGiven "Iona";
+    nco:birthDate "1977-06-28T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:3369137360>;
+    nco:hasEmailAddress <mailto:isweeney@blanditautem.tv>;
+    nco:hasIMAddress <telepathy:/fake/cake!isweeney@duisduis.tv>;
+    nco:hasPostalAddress <address:48>;
+    nco:hasAffiliation <affiliation:48>.
+<tel:4063166918> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "3166918";
+    nco:phoneNumber "(406)316-6918".
+<tel:9078286962> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "8286962";
+    nco:phoneNumber "(907)828-6962".
+<mailto:lbronson@quiet.edu> a nco:EmailAddress;
+    nco:emailAddress "lbronson@quiet.edu".
+<telepathy:/fake/cake!lbronson@duisfacilisi.com> a nco:IMAddress;
+    nco:imNickname "lbronson@duisfacilisi.com".
+<address:49> a nco:PostalAddress;
+    nco:streetAddress "8318 Dellwood Road Cove";
+    nco:locality "Amissville";
+    nco:region "VA";
+    nco:postalcode "20106";
+    nco:country "USA".
+<affiliation:49> a nco:Affiliation;
+    nco:title "Computer Programmer 2";
+    nco:hasPhoneNumber <tel:9078286962>.
+<contact:49> a nco:PersonContact;
+    nco:contactLocalUID "49";
+    nco:fullname "Leonor Bronson";
+    nco:nameFamily "Bronson";
+    nco:nameGiven "Leonor";
+    nco:birthDate "1936-08-24T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:4063166918>;
+    nco:hasEmailAddress <mailto:lbronson@quiet.edu>;
+    nco:hasIMAddress <telepathy:/fake/cake!lbronson@duisfacilisi.com>;
+    nco:hasPostalAddress <address:49>;
+    nco:hasAffiliation <affiliation:49>.
+<tel:2545536792> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "5536792";
+    nco:phoneNumber "(254)553-6792".
+<tel:6235313370> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "5313370";
+    nco:phoneNumber "(623)531-3370".
+<mailto:lrobles@facilisiste.gov> a nco:EmailAddress;
+    nco:emailAddress "lrobles@facilisiste.gov".
+<telepathy:/fake/cake!lrobles@etautem.org> a nco:IMAddress;
+    nco:imNickname "lrobles@etautem.org".
+<address:50> a nco:PostalAddress;
+    nco:streetAddress "7838 Forest Downs Avenue";
+    nco:locality "Ulmer";
+    nco:region "SC";
+    nco:postalcode "29849";
+    nco:country "USA".
+<affiliation:50> a nco:Affiliation;
+    nco:title "Professor";
+    nco:hasPhoneNumber <tel:6235313370>.
+<contact:50> a nco:PersonContact;
+    nco:contactLocalUID "50";
+    nco:fullname "Lyn Robles";
+    nco:nameFamily "Robles";
+    nco:nameGiven "Lyn";
+    nco:birthDate "1954-11-26T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:2545536792>;
+    nco:hasEmailAddress <mailto:lrobles@facilisiste.gov>;
+    nco:hasIMAddress <telepathy:/fake/cake!lrobles@etautem.org>;
+    nco:hasPostalAddress <address:50>;
+    nco:hasAffiliation <affiliation:50>.
+<tel:5863554657> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "3554657";
+    nco:phoneNumber "(586)355-4657".
+<tel:8707405044> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "7405044";
+    nco:phoneNumber "(870)740-5044".
+<mailto:gene.oneal@adexerci.gov> a nco:EmailAddress;
+    nco:emailAddress "gene.oneal@adexerci.gov".
+<telepathy:/fake/cake!gene.oneal@nonummyut.tv> a nco:IMAddress;
+    nco:imNickname "gene.oneal@nonummyut.tv".
+<address:51> a nco:PostalAddress;
+    nco:streetAddress "6524 Mustang Cove";
+    nco:locality "Sparland";
+    nco:region "IL";
+    nco:postalcode "61565";
+    nco:country "USA".
+<affiliation:51> a nco:Affiliation;
+    nco:title "Information Center Specialist";
+    nco:hasPhoneNumber <tel:8707405044>.
+<contact:51> a nco:PersonContact;
+    nco:contactLocalUID "51";
+    nco:fullname "Gene Oneal";
+    nco:nameFamily "Oneal";
+    nco:nameGiven "Gene";
+    nco:birthDate "1973-06-28T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:5863554657>;
+    nco:hasEmailAddress <mailto:gene.oneal@adexerci.gov>;
+    nco:hasIMAddress <telepathy:/fake/cake!gene.oneal@nonummyut.tv>;
+    nco:hasPostalAddress <address:51>;
+    nco:hasAffiliation <affiliation:51>.
+<tel:2084512258> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "4512258";
+    nco:phoneNumber "(208)451-2258".
+<tel:5672322411> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "2322411";
+    nco:phoneNumber "(567)232-2411".
+<mailto:shawna.peak@exquis.net> a nco:EmailAddress;
+    nco:emailAddress "shawna.peak@exquis.net".
+<telepathy:/fake/cake!speak@euaugue.edu> a nco:IMAddress;
+    nco:imNickname "speak@euaugue.edu".
+<address:52> a nco:PostalAddress;
+    nco:streetAddress "4100 Kimbrook Cove";
+    nco:locality "Birmingham";
+    nco:region "AL";
+    nco:postalcode "35286";
+    nco:country "USA".
+<affiliation:52> a nco:Affiliation;
+    nco:title "Test Technician";
+    nco:hasPhoneNumber <tel:5672322411>.
+<contact:52> a nco:PersonContact;
+    nco:contactLocalUID "52";
+    nco:fullname "Shawna Peak";
+    nco:nameFamily "Peak";
+    nco:nameGiven "Shawna";
+    nco:birthDate "1931-09-04T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:2084512258>;
+    nco:hasEmailAddress <mailto:shawna.peak@exquis.net>;
+    nco:hasIMAddress <telepathy:/fake/cake!speak@euaugue.edu>;
+    nco:hasPostalAddress <address:52>;
+    nco:hasAffiliation <affiliation:52>.
+<tel:6604456120> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "4456120";
+    nco:phoneNumber "(660)445-6120".
+<tel:9596207273> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "6207273";
+    nco:phoneNumber "(959)620-7273".
+<mailto:rshin@autemfacilisi.info> a nco:EmailAddress;
+    nco:emailAddress "rshin@autemfacilisi.info".
+<telepathy:/fake/cake!roxanna.shin@etluptatum.edu> a nco:IMAddress;
+    nco:imNickname "roxanna.shin@etluptatum.edu".
+<address:53> a nco:PostalAddress;
+    nco:streetAddress "855 Tuscany Cove";
+    nco:locality "Williamsport";
+    nco:region "TN";
+    nco:postalcode "38487";
+    nco:country "USA".
+<affiliation:53> a nco:Affiliation;
+    nco:title "Artificial-Marble Worker";
+    nco:hasPhoneNumber <tel:9596207273>.
+<contact:53> a nco:PersonContact;
+    nco:contactLocalUID "53";
+    nco:fullname "Roxanna Shin";
+    nco:nameFamily "Shin";
+    nco:nameGiven "Roxanna";
+    nco:birthDate "1946-11-06T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:6604456120>;
+    nco:hasEmailAddress <mailto:rshin@autemfacilisi.info>;
+    nco:hasIMAddress <telepathy:/fake/cake!roxanna.shin@etluptatum.edu>;
+    nco:hasPostalAddress <address:53>;
+    nco:hasAffiliation <affiliation:53>.
+<tel:5103817091> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "3817091";
+    nco:phoneNumber "(510)381-7091".
+<tel:7277375169> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "7375169";
+    nco:phoneNumber "(727)737-5169".
+<mailto:lcarper@iustoin.org> a nco:EmailAddress;
+    nco:emailAddress "lcarper@iustoin.org".
+<telepathy:/fake/cake!leisa.carper@exvel.com> a nco:IMAddress;
+    nco:imNickname "leisa.carper@exvel.com".
+<address:54> a nco:PostalAddress;
+    nco:streetAddress "7271 Clear Spring Avenue";
+    nco:locality "De Borgia";
+    nco:region "MT";
+    nco:postalcode "59830";
+    nco:country "USA".
+<affiliation:54> a nco:Affiliation;
+    nco:title "Writer Screen";
+    nco:hasPhoneNumber <tel:7277375169>.
+<contact:54> a nco:PersonContact;
+    nco:contactLocalUID "54";
+    nco:fullname "Leisa Carper";
+    nco:nameFamily "Carper";
+    nco:nameGiven "Leisa";
+    nco:birthDate "1986-10-30T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:5103817091>;
+    nco:hasEmailAddress <mailto:lcarper@iustoin.org>;
+    nco:hasIMAddress <telepathy:/fake/cake!leisa.carper@exvel.com>;
+    nco:hasPostalAddress <address:54>;
+    nco:hasAffiliation <affiliation:54>.
+<tel:4055371481> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "5371481";
+    nco:phoneNumber "(405)537-1481".
+<tel:7024704484> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "4704484";
+    nco:phoneNumber "(702)470-4484".
+<mailto:mbrowning@erosminim.us> a nco:EmailAddress;
+    nco:emailAddress "mbrowning@erosminim.us".
+<telepathy:/fake/cake!mbrowning@enimeum.us> a nco:IMAddress;
+    nco:imNickname "mbrowning@enimeum.us".
+<address:55> a nco:PostalAddress;
+    nco:streetAddress "9168 Oak Drive";
+    nco:locality "San Antonio";
+    nco:region "TX";
+    nco:postalcode "78245";
+    nco:country "USA".
+<affiliation:55> a nco:Affiliation;
+    nco:title "Accountant Tax";
+    nco:hasPhoneNumber <tel:7024704484>.
+<contact:55> a nco:PersonContact;
+    nco:contactLocalUID "55";
+    nco:fullname "Maximo Browning";
+    nco:nameFamily "Browning";
+    nco:nameGiven "Maximo";
+    nco:birthDate "1972-12-02T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:4055371481>;
+    nco:hasEmailAddress <mailto:mbrowning@erosminim.us>;
+    nco:hasIMAddress <telepathy:/fake/cake!mbrowning@enimeum.us>;
+    nco:hasPostalAddress <address:55>;
+    nco:hasAffiliation <affiliation:55>.
+<tel:3109054154> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "9054154";
+    nco:phoneNumber "(310)905-4154".
+<tel:9131893575> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "1893575";
+    nco:phoneNumber "(913)189-3575".
+<mailto:colton.hulsey@esseveniam.edu> a nco:EmailAddress;
+    nco:emailAddress "colton.hulsey@esseveniam.edu".
+<telepathy:/fake/cake!chulsey@molestiein.us> a nco:IMAddress;
+    nco:imNickname "chulsey@molestiein.us".
+<address:56> a nco:PostalAddress;
+    nco:streetAddress "7276 Tuscany Trail";
+    nco:locality "Vincentown";
+    nco:region "NJ";
+    nco:postalcode "08088";
+    nco:country "USA".
+<affiliation:56> a nco:Affiliation;
+    nco:title "Solar Energy Systems Designer";
+    nco:hasPhoneNumber <tel:9131893575>.
+<contact:56> a nco:PersonContact;
+    nco:contactLocalUID "56";
+    nco:fullname "Colton Hulsey";
+    nco:nameFamily "Hulsey";
+    nco:nameGiven "Colton";
+    nco:birthDate "1955-10-14T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:3109054154>;
+    nco:hasEmailAddress <mailto:colton.hulsey@esseveniam.edu>;
+    nco:hasIMAddress <telepathy:/fake/cake!chulsey@molestiein.us>;
+    nco:hasPostalAddress <address:56>;
+    nco:hasAffiliation <affiliation:56>.
+<tel:6208558694> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "8558694";
+    nco:phoneNumber "(620)855-8694".
+<tel:2348606853> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "8606853";
+    nco:phoneNumber "(234)860-6853".
+<mailto:shad.mccauley@nostrudlobortis.tv> a nco:EmailAddress;
+    nco:emailAddress "shad.mccauley@nostrudlobortis.tv".
+<telepathy:/fake/cake!shad.mccauley@sitminim.us> a nco:IMAddress;
+    nco:imNickname "shad.mccauley@sitminim.us".
+<address:57> a nco:PostalAddress;
+    nco:streetAddress "6924 Station Hill Street";
+    nco:locality "Sheldahl";
+    nco:region "IA";
+    nco:postalcode "50243";
+    nco:country "USA".
+<affiliation:57> a nco:Affiliation;
+    nco:title "Public Interviewer";
+    nco:hasPhoneNumber <tel:2348606853>.
+<contact:57> a nco:PersonContact;
+    nco:contactLocalUID "57";
+    nco:fullname "Shad Mccauley";
+    nco:nameFamily "Mccauley";
+    nco:nameGiven "Shad";
+    nco:birthDate "1987-05-06T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:6208558694>;
+    nco:hasEmailAddress <mailto:shad.mccauley@nostrudlobortis.tv>;
+    nco:hasIMAddress <telepathy:/fake/cake!shad.mccauley@sitminim.us>;
+    nco:hasPostalAddress <address:57>;
+    nco:hasAffiliation <affiliation:57>.
+<tel:8597735149> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "7735149";
+    nco:phoneNumber "(859)773-5149".
+<tel:6056653111> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "6653111";
+    nco:phoneNumber "(605)665-3111".
+<mailto:carolyn.lunsford@illumut.eu> a nco:EmailAddress;
+    nco:emailAddress "carolyn.lunsford@illumut.eu".
+<telepathy:/fake/cake!carolyn.lunsford@eafeugait.net> a nco:IMAddress;
+    nco:imNickname "carolyn.lunsford@eafeugait.net".
+<address:58> a nco:PostalAddress;
+    nco:streetAddress "7632 Hickory Glen Drive";
+    nco:locality "Modesto";
+    nco:region "CA";
+    nco:postalcode "95351";
+    nco:country "USA".
+<affiliation:58> a nco:Affiliation;
+    nco:title "Hotel Food Counter Worker";
+    nco:hasPhoneNumber <tel:6056653111>.
+<contact:58> a nco:PersonContact;
+    nco:contactLocalUID "58";
+    nco:fullname "Carolyn Lunsford";
+    nco:nameFamily "Lunsford";
+    nco:nameGiven "Carolyn";
+    nco:birthDate "1941-06-20T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:8597735149>;
+    nco:hasEmailAddress <mailto:carolyn.lunsford@illumut.eu>;
+    nco:hasIMAddress <telepathy:/fake/cake!carolyn.lunsford@eafeugait.net>;
+    nco:hasPostalAddress <address:58>;
+    nco:hasAffiliation <affiliation:58>.
+<tel:2091141527> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "1141527";
+    nco:phoneNumber "(209)114-1527".
+<tel:7028184793> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "8184793";
+    nco:phoneNumber "(702)818-4793".
+<mailto:jaime.terry@nullaerat.us> a nco:EmailAddress;
+    nco:emailAddress "jaime.terry@nullaerat.us".
+<telepathy:/fake/cake!jaime.terry@exeu.gov> a nco:IMAddress;
+    nco:imNickname "jaime.terry@exeu.gov".
+<address:59> a nco:PostalAddress;
+    nco:streetAddress "1121 Water Lane";
+    nco:locality "Fort Wainwright";
+    nco:region "AK";
+    nco:postalcode "99703";
+    nco:country "USA".
+<affiliation:59> a nco:Affiliation;
+    nco:title "Manager Office";
+    nco:hasPhoneNumber <tel:7028184793>.
+<contact:59> a nco:PersonContact;
+    nco:contactLocalUID "59";
+    nco:fullname "Jaime Terry";
+    nco:nameFamily "Terry";
+    nco:nameGiven "Jaime";
+    nco:birthDate "1943-11-24T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:2091141527>;
+    nco:hasEmailAddress <mailto:jaime.terry@nullaerat.us>;
+    nco:hasIMAddress <telepathy:/fake/cake!jaime.terry@exeu.gov>;
+    nco:hasPostalAddress <address:59>;
+    nco:hasAffiliation <affiliation:59>.
+<tel:4127102231> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "7102231";
+    nco:phoneNumber "(412)710-2231".
+<tel:5646398180> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "6398180";
+    nco:phoneNumber "(564)639-8180".
+<mailto:wcrum@etaccumsanvolutpat.net> a nco:EmailAddress;
+    nco:emailAddress "wcrum@etaccumsanvolutpat.net".
+<telepathy:/fake/cake!wcrum@illumhendrerit.tv> a nco:IMAddress;
+    nco:imNickname "wcrum@illumhendrerit.tv".
+<address:60> a nco:PostalAddress;
+    nco:streetAddress "6785 Saint Louis Drive";
+    nco:locality "Garretson";
+    nco:region "SD";
+    nco:postalcode "57030";
+    nco:country "USA".
+<affiliation:60> a nco:Affiliation;
+    nco:title "Lawyer Practicing";
+    nco:hasPhoneNumber <tel:5646398180>.
+<contact:60> a nco:PersonContact;
+    nco:contactLocalUID "60";
+    nco:fullname "Winnifred Crum";
+    nco:nameFamily "Crum";
+    nco:nameGiven "Winnifred";
+    nco:birthDate "1951-09-16T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:4127102231>;
+    nco:hasEmailAddress <mailto:wcrum@etaccumsanvolutpat.net>;
+    nco:hasIMAddress <telepathy:/fake/cake!wcrum@illumhendrerit.tv>;
+    nco:hasPostalAddress <address:60>;
+    nco:hasAffiliation <affiliation:60>.
+<tel:8281369060> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "1369060";
+    nco:phoneNumber "(828)136-9060".
+<tel:5735751855> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "5751855";
+    nco:phoneNumber "(573)575-1855".
+<mailto:hpape@lobortiszzril.org> a nco:EmailAddress;
+    nco:emailAddress "hpape@lobortiszzril.org".
+<telepathy:/fake/cake!hpape@utamet.net> a nco:IMAddress;
+    nco:imNickname "hpape@utamet.net".
+<address:61> a nco:PostalAddress;
+    nco:streetAddress "2539 Turkey Parkway";
+    nco:locality "Whites City";
+    nco:region "NM";
+    nco:postalcode "88268";
+    nco:country "USA".
+<affiliation:61> a nco:Affiliation;
+    nco:title "Human Resources Plant Manager";
+    nco:hasPhoneNumber <tel:5735751855>.
+<contact:61> a nco:PersonContact;
+    nco:contactLocalUID "61";
+    nco:fullname "Harold Pape";
+    nco:nameFamily "Pape";
+    nco:nameGiven "Harold";
+    nco:birthDate "1992-02-22T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:8281369060>;
+    nco:hasEmailAddress <mailto:hpape@lobortiszzril.org>;
+    nco:hasIMAddress <telepathy:/fake/cake!hpape@utamet.net>;
+    nco:hasPostalAddress <address:61>;
+    nco:hasAffiliation <affiliation:61>.
+<tel:7856953596> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "6953596";
+    nco:phoneNumber "(785)695-3596".
+<tel:5025211703> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "5211703";
+    nco:phoneNumber "(502)521-1703".
+<mailto:mpeeples@suscipitdolore.info> a nco:EmailAddress;
+    nco:emailAddress "mpeeples@suscipitdolore.info".
+<telepathy:/fake/cake!mpeeples@velitex.info> a nco:IMAddress;
+    nco:imNickname "mpeeples@velitex.info".
+<address:62> a nco:PostalAddress;
+    nco:streetAddress "4416 Cotton Plant Lane";
+    nco:locality "Charlotte";
+    nco:region "NC";
+    nco:postalcode "28265";
+    nco:country "USA".
+<affiliation:62> a nco:Affiliation;
+    nco:title "Product Designer";
+    nco:hasPhoneNumber <tel:5025211703>.
+<contact:62> a nco:PersonContact;
+    nco:contactLocalUID "62";
+    nco:fullname "Missy Peeples";
+    nco:nameFamily "Peeples";
+    nco:nameGiven "Missy";
+    nco:birthDate "1963-03-16T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:7856953596>;
+    nco:hasEmailAddress <mailto:mpeeples@suscipitdolore.info>;
+    nco:hasIMAddress <telepathy:/fake/cake!mpeeples@velitex.info>;
+    nco:hasPostalAddress <address:62>;
+    nco:hasAffiliation <affiliation:62>.
+<tel:2606035618> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "6035618";
+    nco:phoneNumber "(260)603-5618".
+<tel:5807085734> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "7085734";
+    nco:phoneNumber "(580)708-5734".
+<mailto:bcockrell@etad.gov> a nco:EmailAddress;
+    nco:emailAddress "bcockrell@etad.gov".
+<telepathy:/fake/cake!buster.cockrell@nullaluptatum.info> a nco:IMAddress;
+    nco:imNickname "buster.cockrell@nullaluptatum.info".
+<address:63> a nco:PostalAddress;
+    nco:streetAddress "919 Stone Creek Drive";
+    nco:locality "Blue Jay";
+    nco:region "CA";
+    nco:postalcode "92317";
+    nco:country "USA".
+<affiliation:63> a nco:Affiliation;
+    nco:title "Camera Operator";
+    nco:hasPhoneNumber <tel:5807085734>.
+<contact:63> a nco:PersonContact;
+    nco:contactLocalUID "63";
+    nco:fullname "Buster Cockrell";
+    nco:nameFamily "Cockrell";
+    nco:nameGiven "Buster";
+    nco:birthDate "1980-06-02T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:2606035618>;
+    nco:hasEmailAddress <mailto:bcockrell@etad.gov>;
+    nco:hasIMAddress <telepathy:/fake/cake!buster.cockrell@nullaluptatum.info>;
+    nco:hasPostalAddress <address:63>;
+    nco:hasAffiliation <affiliation:63>.
+<tel:2399239855> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "9239855";
+    nco:phoneNumber "(239)923-9855".
+<tel:8187077713> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "7077713";
+    nco:phoneNumber "(818)707-7713".
+<mailto:smcafee@adipiscingeum.edu> a nco:EmailAddress;
+    nco:emailAddress "smcafee@adipiscingeum.edu".
+<telepathy:/fake/cake!shayla.mcafee@hendreritdoloremagna.gov> a nco:IMAddress;
+    nco:imNickname "shayla.mcafee@hendreritdoloremagna.gov".
+<address:64> a nco:PostalAddress;
+    nco:streetAddress "6396 Schulenberg Circle";
+    nco:locality "Askov";
+    nco:region "MN";
+    nco:postalcode "55704";
+    nco:country "USA".
+<affiliation:64> a nco:Affiliation;
+    nco:title "Industrial Safety Technician";
+    nco:hasPhoneNumber <tel:8187077713>.
+<contact:64> a nco:PersonContact;
+    nco:contactLocalUID "64";
+    nco:fullname "Shayla Mcafee";
+    nco:nameFamily "Mcafee";
+    nco:nameGiven "Shayla";
+    nco:birthDate "1962-01-18T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:2399239855>;
+    nco:hasEmailAddress <mailto:smcafee@adipiscingeum.edu>;
+    nco:hasIMAddress <telepathy:/fake/cake!shayla.mcafee@hendreritdoloremagna.gov>;
+    nco:hasPostalAddress <address:64>;
+    nco:hasAffiliation <affiliation:64>.
+<tel:4068262865> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "8262865";
+    nco:phoneNumber "(406)826-2865".
+<tel:9807537565> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "7537565";
+    nco:phoneNumber "(980)753-7565".
+<mailto:doris.rupert@dolorehendrerit.tv> a nco:EmailAddress;
+    nco:emailAddress "doris.rupert@dolorehendrerit.tv".
+<telepathy:/fake/cake!doris.rupert@duisblandit.us> a nco:IMAddress;
+    nco:imNickname "doris.rupert@duisblandit.us".
+<address:65> a nco:PostalAddress;
+    nco:streetAddress "8200 Shadowmoss Avenue";
+    nco:locality "Mayer";
+    nco:region "MN";
+    nco:postalcode "55360";
+    nco:country "USA".
+<affiliation:65> a nco:Affiliation;
+    nco:title "Self Service Laundry Operator";
+    nco:hasPhoneNumber <tel:9807537565>.
+<contact:65> a nco:PersonContact;
+    nco:contactLocalUID "65";
+    nco:fullname "Doris Rupert";
+    nco:nameFamily "Rupert";
+    nco:nameGiven "Doris";
+    nco:birthDate "1962-12-03T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:4068262865>;
+    nco:hasEmailAddress <mailto:doris.rupert@dolorehendrerit.tv>;
+    nco:hasIMAddress <telepathy:/fake/cake!doris.rupert@duisblandit.us>;
+    nco:hasPostalAddress <address:65>;
+    nco:hasAffiliation <affiliation:65>.
+<tel:3044137522> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "4137522";
+    nco:phoneNumber "(304)413-7522".
+<tel:6828672109> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "8672109";
+    nco:phoneNumber "(682)867-2109".
+<mailto:garth.lovell@consequatmolestie.org> a nco:EmailAddress;
+    nco:emailAddress "garth.lovell@consequatmolestie.org".
+<telepathy:/fake/cake!glovell@dolorqui.info> a nco:IMAddress;
+    nco:imNickname "glovell@dolorqui.info".
+<address:66> a nco:PostalAddress;
+    nco:streetAddress "2973 Dogwood Grove Cove";
+    nco:locality "Kidder";
+    nco:region "MO";
+    nco:postalcode "64649";
+    nco:country "USA".
+<affiliation:66> a nco:Affiliation;
+    nco:title "Operator Extruder Helper";
+    nco:hasPhoneNumber <tel:6828672109>.
+<contact:66> a nco:PersonContact;
+    nco:contactLocalUID "66";
+    nco:fullname "Garth Lovell";
+    nco:nameFamily "Lovell";
+    nco:nameGiven "Garth";
+    nco:birthDate "1959-01-11T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:3044137522>;
+    nco:hasEmailAddress <mailto:garth.lovell@consequatmolestie.org>;
+    nco:hasIMAddress <telepathy:/fake/cake!glovell@dolorqui.info>;
+    nco:hasPostalAddress <address:66>;
+    nco:hasAffiliation <affiliation:66>.
+<tel:7314614540> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "4614540";
+    nco:phoneNumber "(731)461-4540".
+<tel:3079778771> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "9778771";
+    nco:phoneNumber "(307)977-8771".
+<mailto:justin.whitman@suscipitvero.gov> a nco:EmailAddress;
+    nco:emailAddress "justin.whitman@suscipitvero.gov".
+<telepathy:/fake/cake!jwhitman@quiduis.info> a nco:IMAddress;
+    nco:imNickname "jwhitman@quiduis.info".
+<address:67> a nco:PostalAddress;
+    nco:streetAddress "1353 Deer Path Lane";
+    nco:locality "Biscoe";
+    nco:region "AR";
+    nco:postalcode "72017";
+    nco:country "USA".
+<affiliation:67> a nco:Affiliation;
+    nco:title "Teacher Driving";
+    nco:hasPhoneNumber <tel:3079778771>.
+<contact:67> a nco:PersonContact;
+    nco:contactLocalUID "67";
+    nco:fullname "Justin Whitman";
+    nco:nameFamily "Whitman";
+    nco:nameGiven "Justin";
+    nco:birthDate "1947-09-16T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:7314614540>;
+    nco:hasEmailAddress <mailto:justin.whitman@suscipitvero.gov>;
+    nco:hasIMAddress <telepathy:/fake/cake!jwhitman@quiduis.info>;
+    nco:hasPostalAddress <address:67>;
+    nco:hasAffiliation <affiliation:67>.
+<tel:5802126213> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "2126213";
+    nco:phoneNumber "(580)212-6213".
+<tel:8785046388> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "5046388";
+    nco:phoneNumber "(878)504-6388".
+<mailto:bertie.archuleta@nullaiusto.edu> a nco:EmailAddress;
+    nco:emailAddress "bertie.archuleta@nullaiusto.edu".
+<telepathy:/fake/cake!barchuleta@atfeugait.us> a nco:IMAddress;
+    nco:imNickname "barchuleta@atfeugait.us".
+<address:68> a nco:PostalAddress;
+    nco:streetAddress "1376 Nena Lane";
+    nco:locality "Carson City";
+    nco:region "NV";
+    nco:postalcode "89702";
+    nco:country "USA".
+<affiliation:68> a nco:Affiliation;
+    nco:title "Insurance Cancellation Clerk";
+    nco:hasPhoneNumber <tel:8785046388>.
+<contact:68> a nco:PersonContact;
+    nco:contactLocalUID "68";
+    nco:fullname "Bertie Archuleta";
+    nco:nameFamily "Archuleta";
+    nco:nameGiven "Bertie";
+    nco:birthDate "1964-06-18T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:5802126213>;
+    nco:hasEmailAddress <mailto:bertie.archuleta@nullaiusto.edu>;
+    nco:hasIMAddress <telepathy:/fake/cake!barchuleta@atfeugait.us>;
+    nco:hasPostalAddress <address:68>;
+    nco:hasAffiliation <affiliation:68>.
+<tel:7086426612> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "6426612";
+    nco:phoneNumber "(708)642-6612".
+<tel:9177899278> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "7899278";
+    nco:phoneNumber "(917)789-9278".
+<mailto:ldrayton@nostrudUtwisi.org> a nco:EmailAddress;
+    nco:emailAddress "ldrayton@nostrudUtwisi.org".
+<telepathy:/fake/cake!ldrayton@facilisissuscipit.net> a nco:IMAddress;
+    nco:imNickname "ldrayton@facilisissuscipit.net".
+<address:69> a nco:PostalAddress;
+    nco:streetAddress "9815 Germantown Trail";
+    nco:locality "Evans City";
+    nco:region "PA";
+    nco:postalcode "16033";
+    nco:country "USA".
+<affiliation:69> a nco:Affiliation;
+    nco:title "Business Administration Manager";
+    nco:hasPhoneNumber <tel:9177899278>.
+<contact:69> a nco:PersonContact;
+    nco:contactLocalUID "69";
+    nco:fullname "Luke Drayton";
+    nco:nameFamily "Drayton";
+    nco:nameGiven "Luke";
+    nco:birthDate "1948-01-16T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:7086426612>;
+    nco:hasEmailAddress <mailto:ldrayton@nostrudUtwisi.org>;
+    nco:hasIMAddress <telepathy:/fake/cake!ldrayton@facilisissuscipit.net>;
+    nco:hasPostalAddress <address:69>;
+    nco:hasAffiliation <affiliation:69>.
+<tel:7604265355> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "4265355";
+    nco:phoneNumber "(760)426-5355".
+<tel:6827277568> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "7277568";
+    nco:phoneNumber "(682)727-7568".
+<mailto:parsenault@nullafeugait.gov> a nco:EmailAddress;
+    nco:emailAddress "parsenault@nullafeugait.gov".
+<telepathy:/fake/cake!pedro.arsenault@facilisisetaccumsan.edu> a nco:IMAddress;
+    nco:imNickname "pedro.arsenault@facilisisetaccumsan.edu".
+<address:70> a nco:PostalAddress;
+    nco:streetAddress "1025 Burntwood Avenue";
+    nco:locality "Watchung";
+    nco:region "NJ";
+    nco:postalcode "07069";
+    nco:country "USA".
+<affiliation:70> a nco:Affiliation;
+    nco:title "Bail Bonding Agent";
+    nco:hasPhoneNumber <tel:6827277568>.
+<contact:70> a nco:PersonContact;
+    nco:contactLocalUID "70";
+    nco:fullname "Pedro Arsenault";
+    nco:nameFamily "Arsenault";
+    nco:nameGiven "Pedro";
+    nco:birthDate "1977-06-10T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:7604265355>;
+    nco:hasEmailAddress <mailto:parsenault@nullafeugait.gov>;
+    nco:hasIMAddress <telepathy:/fake/cake!pedro.arsenault@facilisisetaccumsan.edu>;
+    nco:hasPostalAddress <address:70>;
+    nco:hasAffiliation <affiliation:70>.
+<tel:2547234349> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "7234349";
+    nco:phoneNumber "(254)723-4349".
+<tel:4057484138> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "7484138";
+    nco:phoneNumber "(405)748-4138".
+<mailto:concetta.lincoln@eumullamcorper.edu> a nco:EmailAddress;
+    nco:emailAddress "concetta.lincoln@eumullamcorper.edu".
+<telepathy:/fake/cake!concetta.lincoln@amette.org> a nco:IMAddress;
+    nco:imNickname "concetta.lincoln@amette.org".
+<address:71> a nco:PostalAddress;
+    nco:streetAddress "2687 Willard Trail";
+    nco:locality "Gilroy";
+    nco:region "CA";
+    nco:postalcode "95021";
+    nco:country "USA".
+<affiliation:71> a nco:Affiliation;
+    nco:title "Supervisor Payroll";
+    nco:hasPhoneNumber <tel:4057484138>.
+<contact:71> a nco:PersonContact;
+    nco:contactLocalUID "71";
+    nco:fullname "Concetta Lincoln";
+    nco:nameFamily "Lincoln";
+    nco:nameGiven "Concetta";
+    nco:birthDate "1958-09-14T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:2547234349>;
+    nco:hasEmailAddress <mailto:concetta.lincoln@eumullamcorper.edu>;
+    nco:hasIMAddress <telepathy:/fake/cake!concetta.lincoln@amette.org>;
+    nco:hasPostalAddress <address:71>;
+    nco:hasAffiliation <affiliation:71>.
+<tel:7197808759> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "7808759";
+    nco:phoneNumber "(719)780-8759".
+<tel:4056897517> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "6897517";
+    nco:phoneNumber "(405)689-7517".
+<mailto:rodolfo.regalado@teut.us> a nco:EmailAddress;
+    nco:emailAddress "rodolfo.regalado@teut.us".
+<telepathy:/fake/cake!rregalado@ullamcorpereu.us> a nco:IMAddress;
+    nco:imNickname "rregalado@ullamcorpereu.us".
+<address:72> a nco:PostalAddress;
+    nco:streetAddress "1158 Billy Cross Cove";
+    nco:locality "Philo";
+    nco:region "CA";
+    nco:postalcode "95466";
+    nco:country "USA".
+<affiliation:72> a nco:Affiliation;
+    nco:title "Helper Production";
+    nco:hasPhoneNumber <tel:4056897517>.
+<contact:72> a nco:PersonContact;
+    nco:contactLocalUID "72";
+    nco:fullname "Rodolfo Regalado";
+    nco:nameFamily "Regalado";
+    nco:nameGiven "Rodolfo";
+    nco:birthDate "1988-12-31T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:7197808759>;
+    nco:hasEmailAddress <mailto:rodolfo.regalado@teut.us>;
+    nco:hasIMAddress <telepathy:/fake/cake!rregalado@ullamcorpereu.us>;
+    nco:hasPostalAddress <address:72>;
+    nco:hasAffiliation <affiliation:72>.
+<tel:4129165314> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "9165314";
+    nco:phoneNumber "(412)916-5314".
+<tel:3131373980> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "1373980";
+    nco:phoneNumber "(313)137-3980".
+<mailto:brigitte.dollar@luptatumaliquip.org> a nco:EmailAddress;
+    nco:emailAddress "brigitte.dollar@luptatumaliquip.org".
+<telepathy:/fake/cake!bdollar@loremaliquip.info> a nco:IMAddress;
+    nco:imNickname "bdollar@loremaliquip.info".
+<address:73> a nco:PostalAddress;
+    nco:streetAddress "4916 Penfield Cove";
+    nco:locality "Grundy Center";
+    nco:region "IA";
+    nco:postalcode "50638";
+    nco:country "USA".
+<affiliation:73> a nco:Affiliation;
+    nco:title "Supervisor Long-Range Planning";
+    nco:hasPhoneNumber <tel:3131373980>.
+<contact:73> a nco:PersonContact;
+    nco:contactLocalUID "73";
+    nco:fullname "Brigitte Dollar";
+    nco:nameFamily "Dollar";
+    nco:nameGiven "Brigitte";
+    nco:birthDate "1969-08-26T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:4129165314>;
+    nco:hasEmailAddress <mailto:brigitte.dollar@luptatumaliquip.org>;
+    nco:hasIMAddress <telepathy:/fake/cake!bdollar@loremaliquip.info>;
+    nco:hasPostalAddress <address:73>;
+    nco:hasAffiliation <affiliation:73>.
+<tel:8026889337> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "6889337";
+    nco:phoneNumber "(802)688-9337".
+<tel:9077134704> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "7134704";
+    nco:phoneNumber "(907)713-4704".
+<mailto:luciano.wagner@nonummydignissim.tv> a nco:EmailAddress;
+    nco:emailAddress "luciano.wagner@nonummydignissim.tv".
+<telepathy:/fake/cake!lwagner@illumamet.com> a nco:IMAddress;
+    nco:imNickname "lwagner@illumamet.com".
+<address:74> a nco:PostalAddress;
+    nco:streetAddress "7173 Turkey Creek Drive";
+    nco:locality "Allakaket";
+    nco:region "AK";
+    nco:postalcode "99720";
+    nco:country "USA".
+<affiliation:74> a nco:Affiliation;
+    nco:title "Television Technician";
+    nco:hasPhoneNumber <tel:9077134704>.
+<contact:74> a nco:PersonContact;
+    nco:contactLocalUID "74";
+    nco:fullname "Luciano Wagner";
+    nco:nameFamily "Wagner";
+    nco:nameGiven "Luciano";
+    nco:birthDate "1953-03-28T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:8026889337>;
+    nco:hasEmailAddress <mailto:luciano.wagner@nonummydignissim.tv>;
+    nco:hasIMAddress <telepathy:/fake/cake!lwagner@illumamet.com>;
+    nco:hasPostalAddress <address:74>;
+    nco:hasAffiliation <affiliation:74>.
+<tel:4065496987> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "5496987";
+    nco:phoneNumber "(406)549-6987".
+<tel:3162693575> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "2693575";
+    nco:phoneNumber "(316)269-3575".
+<mailto:acolby@atblandit.us> a nco:EmailAddress;
+    nco:emailAddress "acolby@atblandit.us".
+<telepathy:/fake/cake!angela.colby@velvelit.tv> a nco:IMAddress;
+    nco:imNickname "angela.colby@velvelit.tv".
+<address:75> a nco:PostalAddress;
+    nco:streetAddress "1106 Crossbow Cove";
+    nco:locality "Bluejacket";
+    nco:region "OK";
+    nco:postalcode "74333";
+    nco:country "USA".
+<affiliation:75> a nco:Affiliation;
+    nco:title "Engineer Construction Office";
+    nco:hasPhoneNumber <tel:3162693575>.
+<contact:75> a nco:PersonContact;
+    nco:contactLocalUID "75";
+    nco:fullname "Angela Colby";
+    nco:nameFamily "Colby";
+    nco:nameGiven "Angela";
+    nco:birthDate "1930-03-31T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:4065496987>;
+    nco:hasEmailAddress <mailto:acolby@atblandit.us>;
+    nco:hasIMAddress <telepathy:/fake/cake!angela.colby@velvelit.tv>;
+    nco:hasPostalAddress <address:75>;
+    nco:hasAffiliation <affiliation:75>.
+<tel:7709052692> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "9052692";
+    nco:phoneNumber "(770)905-2692".
+<tel:5404314515> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "4314515";
+    nco:phoneNumber "(540)431-4515".
+<mailto:hbruner@zzrilut.info> a nco:EmailAddress;
+    nco:emailAddress "hbruner@zzrilut.info".
+<telepathy:/fake/cake!harrison.bruner@minimtincidunt.us> a nco:IMAddress;
+    nco:imNickname "harrison.bruner@minimtincidunt.us".
+<address:76> a nco:PostalAddress;
+    nco:streetAddress "6118 Last Arrow Street";
+    nco:locality "Drayton";
+    nco:region "SC";
+    nco:postalcode "29333";
+    nco:country "USA".
+<affiliation:76> a nco:Affiliation;
+    nco:title "Customer Service Manager";
+    nco:hasPhoneNumber <tel:5404314515>.
+<contact:76> a nco:PersonContact;
+    nco:contactLocalUID "76";
+    nco:fullname "Harrison Bruner";
+    nco:nameFamily "Bruner";
+    nco:nameGiven "Harrison";
+    nco:birthDate "1970-02-15T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:7709052692>;
+    nco:hasEmailAddress <mailto:hbruner@zzrilut.info>;
+    nco:hasIMAddress <telepathy:/fake/cake!harrison.bruner@minimtincidunt.us>;
+    nco:hasPostalAddress <address:76>;
+    nco:hasAffiliation <affiliation:76>.
+<tel:3308233606> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "8233606";
+    nco:phoneNumber "(330)823-3606".
+<tel:3039753802> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "9753802";
+    nco:phoneNumber "(303)975-3802".
+<mailto:sherrie.purvis@zzrilnulla.us> a nco:EmailAddress;
+    nco:emailAddress "sherrie.purvis@zzrilnulla.us".
+<telepathy:/fake/cake!spurvis@nostrudluptatumzzril.info> a nco:IMAddress;
+    nco:imNickname "spurvis@nostrudluptatumzzril.info".
+<address:77> a nco:PostalAddress;
+    nco:streetAddress "7834 Anniston Avenue";
+    nco:locality "Houston";
+    nco:region "TX";
+    nco:postalcode "77289";
+    nco:country "USA".
+<affiliation:77> a nco:Affiliation;
+    nco:title "Valuer";
+    nco:hasPhoneNumber <tel:3039753802>.
+<contact:77> a nco:PersonContact;
+    nco:contactLocalUID "77";
+    nco:fullname "Sherrie Purvis";
+    nco:nameFamily "Purvis";
+    nco:nameGiven "Sherrie";
+    nco:birthDate "1940-12-18T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:3308233606>;
+    nco:hasEmailAddress <mailto:sherrie.purvis@zzrilnulla.us>;
+    nco:hasIMAddress <telepathy:/fake/cake!spurvis@nostrudluptatumzzril.info>;
+    nco:hasPostalAddress <address:77>;
+    nco:hasAffiliation <affiliation:77>.
+<tel:6206865522> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "6865522";
+    nco:phoneNumber "(620)686-5522".
+<tel:2701914574> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "1914574";
+    nco:phoneNumber "(270)191-4574".
+<mailto:nmaynard@exerciipsum.gov> a nco:EmailAddress;
+    nco:emailAddress "nmaynard@exerciipsum.gov".
+<telepathy:/fake/cake!nmaynard@Utwisieros.us> a nco:IMAddress;
+    nco:imNickname "nmaynard@Utwisieros.us".
+<address:78> a nco:PostalAddress;
+    nco:streetAddress "7412 River Forest Way";
+    nco:locality "Stockdale";
+    nco:region "OH";
+    nco:postalcode "45683";
+    nco:country "USA".
+<affiliation:78> a nco:Affiliation;
+    nco:title "Abstract Clerk";
+    nco:hasPhoneNumber <tel:2701914574>.
+<contact:78> a nco:PersonContact;
+    nco:contactLocalUID "78";
+    nco:fullname "Nikita Maynard";
+    nco:nameFamily "Maynard";
+    nco:nameGiven "Nikita";
+    nco:birthDate "1973-07-04T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:6206865522>;
+    nco:hasEmailAddress <mailto:nmaynard@exerciipsum.gov>;
+    nco:hasIMAddress <telepathy:/fake/cake!nmaynard@Utwisieros.us>;
+    nco:hasPostalAddress <address:78>;
+    nco:hasAffiliation <affiliation:78>.
+<tel:2078433914> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "8433914";
+    nco:phoneNumber "(207)843-3914".
+<tel:5043357382> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "3357382";
+    nco:phoneNumber "(504)335-7382".
+<mailto:guy.melton@luptatumzzrilnonummy.eu> a nco:EmailAddress;
+    nco:emailAddress "guy.melton@luptatumzzrilnonummy.eu".
+<telepathy:/fake/cake!guy.melton@infacilisi.tv> a nco:IMAddress;
+    nco:imNickname "guy.melton@infacilisi.tv".
+<address:79> a nco:PostalAddress;
+    nco:streetAddress "188 Kimdale Circle";
+    nco:locality "Ashland";
+    nco:region "KY";
+    nco:postalcode "41102";
+    nco:country "USA".
+<affiliation:79> a nco:Affiliation;
+    nco:title "Electronics Sales Engineer";
+    nco:hasPhoneNumber <tel:5043357382>.
+<contact:79> a nco:PersonContact;
+    nco:contactLocalUID "79";
+    nco:fullname "Guy Melton";
+    nco:nameFamily "Melton";
+    nco:nameGiven "Guy";
+    nco:birthDate "1980-11-14T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:2078433914>;
+    nco:hasEmailAddress <mailto:guy.melton@luptatumzzrilnonummy.eu>;
+    nco:hasIMAddress <telepathy:/fake/cake!guy.melton@infacilisi.tv>;
+    nco:hasPostalAddress <address:79>;
+    nco:hasAffiliation <affiliation:79>.
+<tel:7011194777> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "1194777";
+    nco:phoneNumber "(701)119-4777".
+<tel:7018982352> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "8982352";
+    nco:phoneNumber "(701)898-2352".
+<mailto:bnapier@duisnostrud.info> a nco:EmailAddress;
+    nco:emailAddress "bnapier@duisnostrud.info".
+<telepathy:/fake/cake!branden.napier@consequatpraesent.org> a nco:IMAddress;
+    nco:imNickname "branden.napier@consequatpraesent.org".
+<address:80> a nco:PostalAddress;
+    nco:streetAddress "9987 Rutherford Street";
+    nco:locality "Lynn";
+    nco:region "MA";
+    nco:postalcode "01902";
+    nco:country "USA".
+<affiliation:80> a nco:Affiliation;
+    nco:title "Technologist Food";
+    nco:hasPhoneNumber <tel:7018982352>.
+<contact:80> a nco:PersonContact;
+    nco:contactLocalUID "80";
+    nco:fullname "Branden Napier";
+    nco:nameFamily "Napier";
+    nco:nameGiven "Branden";
+    nco:birthDate "1952-01-08T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:7011194777>;
+    nco:hasEmailAddress <mailto:bnapier@duisnostrud.info>;
+    nco:hasIMAddress <telepathy:/fake/cake!branden.napier@consequatpraesent.org>;
+    nco:hasPostalAddress <address:80>;
+    nco:hasAffiliation <affiliation:80>.
+<tel:8156819953> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "6819953";
+    nco:phoneNumber "(815)681-9953".
+<tel:6165442892> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "5442892";
+    nco:phoneNumber "(616)544-2892".
+<mailto:quintin.swann@facilisiautem.net> a nco:EmailAddress;
+    nco:emailAddress "quintin.swann@facilisiautem.net".
+<telepathy:/fake/cake!quintin.swann@praesentblandit.tv> a nco:IMAddress;
+    nco:imNickname "quintin.swann@praesentblandit.tv".
+<address:81> a nco:PostalAddress;
+    nco:streetAddress "4938 Homeward Lane";
+    nco:locality "Post Falls";
+    nco:region "ID";
+    nco:postalcode "83877";
+    nco:country "USA".
+<affiliation:81> a nco:Affiliation;
+    nco:title "Clerk Time Card";
+    nco:hasPhoneNumber <tel:6165442892>.
+<contact:81> a nco:PersonContact;
+    nco:contactLocalUID "81";
+    nco:fullname "Quintin Swann";
+    nco:nameFamily "Swann";
+    nco:nameGiven "Quintin";
+    nco:birthDate "1979-03-07T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:8156819953>;
+    nco:hasEmailAddress <mailto:quintin.swann@facilisiautem.net>;
+    nco:hasIMAddress <telepathy:/fake/cake!quintin.swann@praesentblandit.tv>;
+    nco:hasPostalAddress <address:81>;
+    nco:hasAffiliation <affiliation:81>.
+<tel:9523189729> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "3189729";
+    nco:phoneNumber "(952)318-9729".
+<tel:4088792092> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "8792092";
+    nco:phoneNumber "(408)879-2092".
+<mailto:lwitherspoon@consequatconsectetuer.edu> a nco:EmailAddress;
+    nco:emailAddress "lwitherspoon@consequatconsectetuer.edu".
+<telepathy:/fake/cake!leonardo.witherspoon@enimut.eu> a nco:IMAddress;
+    nco:imNickname "leonardo.witherspoon@enimut.eu".
+<address:82> a nco:PostalAddress;
+    nco:streetAddress "5540 Walking Horse Avenue";
+    nco:locality "Rico";
+    nco:region "CO";
+    nco:postalcode "81332";
+    nco:country "USA".
+<affiliation:82> a nco:Affiliation;
+    nco:title "Engineering Laboratory Technician";
+    nco:hasPhoneNumber <tel:4088792092>.
+<contact:82> a nco:PersonContact;
+    nco:contactLocalUID "82";
+    nco:fullname "Leonardo Witherspoon";
+    nco:nameFamily "Witherspoon";
+    nco:nameGiven "Leonardo";
+    nco:birthDate "1981-02-06T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:9523189729>;
+    nco:hasEmailAddress <mailto:lwitherspoon@consequatconsectetuer.edu>;
+    nco:hasIMAddress <telepathy:/fake/cake!leonardo.witherspoon@enimut.eu>;
+    nco:hasPostalAddress <address:82>;
+    nco:hasAffiliation <affiliation:82>.
+<tel:4074394366> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "4394366";
+    nco:phoneNumber "(407)439-4366".
+<tel:5616279985> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "6279985";
+    nco:phoneNumber "(561)627-9985".
+<mailto:hollis.cahill@doloreconsequat.eu> a nco:EmailAddress;
+    nco:emailAddress "hollis.cahill@doloreconsequat.eu".
+<telepathy:/fake/cake!hollis.cahill@hendreritaccumsan.tv> a nco:IMAddress;
+    nco:imNickname "hollis.cahill@hendreritaccumsan.tv".
+<address:83> a nco:PostalAddress;
+    nco:streetAddress "7633 Broadgreen Cove";
+    nco:locality "Kingston";
+    nco:region "UT";
+    nco:postalcode "84743";
+    nco:country "USA".
+<affiliation:83> a nco:Affiliation;
+    nco:title "Sales Telemarketing Supervisor";
+    nco:hasPhoneNumber <tel:5616279985>.
+<contact:83> a nco:PersonContact;
+    nco:contactLocalUID "83";
+    nco:fullname "Hollis Cahill";
+    nco:nameFamily "Cahill";
+    nco:nameGiven "Hollis";
+    nco:birthDate "1958-11-03T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:4074394366>;
+    nco:hasEmailAddress <mailto:hollis.cahill@doloreconsequat.eu>;
+    nco:hasIMAddress <telepathy:/fake/cake!hollis.cahill@hendreritaccumsan.tv>;
+    nco:hasPostalAddress <address:83>;
+    nco:hasAffiliation <affiliation:83>.
+<tel:6072825078> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "2825078";
+    nco:phoneNumber "(607)282-5078".
+<tel:5156799684> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "6799684";
+    nco:phoneNumber "(515)679-9684".
+<mailto:garfield.olsen@eroseufeugiat.us> a nco:EmailAddress;
+    nco:emailAddress "garfield.olsen@eroseufeugiat.us".
+<telepathy:/fake/cake!golsen@utelitsed.edu> a nco:IMAddress;
+    nco:imNickname "golsen@utelitsed.edu".
+<address:84> a nco:PostalAddress;
+    nco:streetAddress "7515 Cattail Trail";
+    nco:locality "Dallardsville";
+    nco:region "TX";
+    nco:postalcode "77332";
+    nco:country "USA".
+<affiliation:84> a nco:Affiliation;
+    nco:title "Architectural Drafter";
+    nco:hasPhoneNumber <tel:5156799684>.
+<contact:84> a nco:PersonContact;
+    nco:contactLocalUID "84";
+    nco:fullname "Garfield Olsen";
+    nco:nameFamily "Olsen";
+    nco:nameGiven "Garfield";
+    nco:birthDate "1954-09-04T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:6072825078>;
+    nco:hasEmailAddress <mailto:garfield.olsen@eroseufeugiat.us>;
+    nco:hasIMAddress <telepathy:/fake/cake!golsen@utelitsed.edu>;
+    nco:hasPostalAddress <address:84>;
+    nco:hasAffiliation <affiliation:84>.
+<tel:8784295820> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "4295820";
+    nco:phoneNumber "(878)429-5820".
+<tel:8036122169> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "6122169";
+    nco:phoneNumber "(803)612-2169".
+<mailto:christal.christianson@nullaeum.info> a nco:EmailAddress;
+    nco:emailAddress "christal.christianson@nullaeum.info".
+<telepathy:/fake/cake!cchristianson@nisluteros.eu> a nco:IMAddress;
+    nco:imNickname "cchristianson@nisluteros.eu".
+<address:85> a nco:PostalAddress;
+    nco:streetAddress "9648 Birch Post Street";
+    nco:locality "Townsend";
+    nco:region "GA";
+    nco:postalcode "31331";
+    nco:country "USA".
+<affiliation:85> a nco:Affiliation;
+    nco:title "Operator Laundry";
+    nco:hasPhoneNumber <tel:8036122169>.
+<contact:85> a nco:PersonContact;
+    nco:contactLocalUID "85";
+    nco:fullname "Christal Christianson";
+    nco:nameFamily "Christianson";
+    nco:nameGiven "Christal";
+    nco:birthDate "1948-04-11T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:8784295820>;
+    nco:hasEmailAddress <mailto:christal.christianson@nullaeum.info>;
+    nco:hasIMAddress <telepathy:/fake/cake!cchristianson@nisluteros.eu>;
+    nco:hasPostalAddress <address:85>;
+    nco:hasAffiliation <affiliation:85>.
+<tel:5859349157> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "9349157";
+    nco:phoneNumber "(585)934-9157".
+<tel:6182251200> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "2251200";
+    nco:phoneNumber "(618)225-1200".
+<mailto:steven.whelan@veniamdolore.net> a nco:EmailAddress;
+    nco:emailAddress "steven.whelan@veniamdolore.net".
+<telepathy:/fake/cake!steven.whelan@accumsanerat.gov> a nco:IMAddress;
+    nco:imNickname "steven.whelan@accumsanerat.gov".
+<address:86> a nco:PostalAddress;
+    nco:streetAddress "4988 Fairport Lane";
+    nco:locality "Smithland";
+    nco:region "IA";
+    nco:postalcode "51056";
+    nco:country "USA".
+<affiliation:86> a nco:Affiliation;
+    nco:title "Collection Supervisor";
+    nco:hasPhoneNumber <tel:6182251200>.
+<contact:86> a nco:PersonContact;
+    nco:contactLocalUID "86";
+    nco:fullname "Steven Whelan";
+    nco:nameFamily "Whelan";
+    nco:nameGiven "Steven";
+    nco:birthDate "1929-04-06T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:5859349157>;
+    nco:hasEmailAddress <mailto:steven.whelan@veniamdolore.net>;
+    nco:hasIMAddress <telepathy:/fake/cake!steven.whelan@accumsanerat.gov>;
+    nco:hasPostalAddress <address:86>;
+    nco:hasAffiliation <affiliation:86>.
+<tel:8585243055> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "5243055";
+    nco:phoneNumber "(858)524-3055".
+<tel:3303888281> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "3888281";
+    nco:phoneNumber "(330)388-8281".
+<mailto:julian.peebles@elitsedblandit.org> a nco:EmailAddress;
+    nco:emailAddress "julian.peebles@elitsedblandit.org".
+<telepathy:/fake/cake!jpeebles@exvelit.net> a nco:IMAddress;
+    nco:imNickname "jpeebles@exvelit.net".
+<address:87> a nco:PostalAddress;
+    nco:streetAddress "6539 Station Hill Parkway";
+    nco:locality "Kodak";
+    nco:region "TN";
+    nco:postalcode "37764";
+    nco:country "USA".
+<affiliation:87> a nco:Affiliation;
+    nco:title "Communications Analyst";
+    nco:hasPhoneNumber <tel:3303888281>.
+<contact:87> a nco:PersonContact;
+    nco:contactLocalUID "87";
+    nco:fullname "Julian Peebles";
+    nco:nameFamily "Peebles";
+    nco:nameGiven "Julian";
+    nco:birthDate "1973-11-18T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:8585243055>;
+    nco:hasEmailAddress <mailto:julian.peebles@elitsedblandit.org>;
+    nco:hasIMAddress <telepathy:/fake/cake!jpeebles@exvelit.net>;
+    nco:hasPostalAddress <address:87>;
+    nco:hasAffiliation <affiliation:87>.
+<tel:8311702633> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "1702633";
+    nco:phoneNumber "(831)170-2633".
+<tel:4058983245> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "8983245";
+    nco:phoneNumber "(405)898-3245".
+<mailto:geneva.dionne@inullamcorper.tv> a nco:EmailAddress;
+    nco:emailAddress "geneva.dionne@inullamcorper.tv".
+<telepathy:/fake/cake!gdionne@Utwisitincidunt.us> a nco:IMAddress;
+    nco:imNickname "gdionne@Utwisitincidunt.us".
+<address:88> a nco:PostalAddress;
+    nco:streetAddress "8742 Cornuta Avenue";
+    nco:locality "Covington";
+    nco:region "GA";
+    nco:postalcode "30016";
+    nco:country "USA".
+<affiliation:88> a nco:Affiliation;
+    nco:title "Sales Representative 4";
+    nco:hasPhoneNumber <tel:4058983245>.
+<contact:88> a nco:PersonContact;
+    nco:contactLocalUID "88";
+    nco:fullname "Geneva Dionne";
+    nco:nameFamily "Dionne";
+    nco:nameGiven "Geneva";
+    nco:birthDate "1977-08-04T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:8311702633>;
+    nco:hasEmailAddress <mailto:geneva.dionne@inullamcorper.tv>;
+    nco:hasIMAddress <telepathy:/fake/cake!gdionne@Utwisitincidunt.us>;
+    nco:hasPostalAddress <address:88>;
+    nco:hasAffiliation <affiliation:88>.
+<tel:2516956305> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "6956305";
+    nco:phoneNumber "(251)695-6305".
+<tel:8026537326> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "6537326";
+    nco:phoneNumber "(802)653-7326".
+<mailto:fritz.reynoso@doloreexerci.tv> a nco:EmailAddress;
+    nco:emailAddress "fritz.reynoso@doloreexerci.tv".
+<telepathy:/fake/cake!fritz.reynoso@ipsumut.edu> a nco:IMAddress;
+    nco:imNickname "fritz.reynoso@ipsumut.edu".
+<address:89> a nco:PostalAddress;
+    nco:streetAddress "775 Saint Louis Circle";
+    nco:locality "Bard";
+    nco:region "CA";
+    nco:postalcode "92222";
+    nco:country "USA".
+<affiliation:89> a nco:Affiliation;
+    nco:title "Sterilizer";
+    nco:hasPhoneNumber <tel:8026537326>.
+<contact:89> a nco:PersonContact;
+    nco:contactLocalUID "89";
+    nco:fullname "Fritz Reynoso";
+    nco:nameFamily "Reynoso";
+    nco:nameGiven "Fritz";
+    nco:birthDate "1935-08-16T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:2516956305>;
+    nco:hasEmailAddress <mailto:fritz.reynoso@doloreexerci.tv>;
+    nco:hasIMAddress <telepathy:/fake/cake!fritz.reynoso@ipsumut.edu>;
+    nco:hasPostalAddress <address:89>;
+    nco:hasAffiliation <affiliation:89>.
+<tel:9064361302> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "4361302";
+    nco:phoneNumber "(906)436-1302".
+<tel:9403254350> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "3254350";
+    nco:phoneNumber "(940)325-4350".
+<mailto:robert.pike@euismodet.edu> a nco:EmailAddress;
+    nco:emailAddress "robert.pike@euismodet.edu".
+<telepathy:/fake/cake!robert.pike@adnisl.com> a nco:IMAddress;
+    nco:imNickname "robert.pike@adnisl.com".
+<address:90> a nco:PostalAddress;
+    nco:streetAddress "3502 Olene Trail";
+    nco:locality "Hope Hull";
+    nco:region "AL";
+    nco:postalcode "36043";
+    nco:country "USA".
+<affiliation:90> a nco:Affiliation;
+    nco:title "Librarian Video";
+    nco:hasPhoneNumber <tel:9403254350>.
+<contact:90> a nco:PersonContact;
+    nco:contactLocalUID "90";
+    nco:fullname "Robert Pike";
+    nco:nameFamily "Pike";
+    nco:nameGiven "Robert";
+    nco:birthDate "1986-01-22T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:9064361302>;
+    nco:hasEmailAddress <mailto:robert.pike@euismodet.edu>;
+    nco:hasIMAddress <telepathy:/fake/cake!robert.pike@adnisl.com>;
+    nco:hasPostalAddress <address:90>;
+    nco:hasAffiliation <affiliation:90>.
+<tel:4409096647> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "9096647";
+    nco:phoneNumber "(440)909-6647".
+<tel:6089781207> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "9781207";
+    nco:phoneNumber "(608)978-1207".
+<mailto:sbecerra@suscipitaliquip.info> a nco:EmailAddress;
+    nco:emailAddress "sbecerra@suscipitaliquip.info".
+<telepathy:/fake/cake!sbecerra@invulputateet.org> a nco:IMAddress;
+    nco:imNickname "sbecerra@invulputateet.org".
+<address:91> a nco:PostalAddress;
+    nco:streetAddress "613 Bavarian Way";
+    nco:locality "Commerce";
+    nco:region "GA";
+    nco:postalcode "30530";
+    nco:country "USA".
+<affiliation:91> a nco:Affiliation;
+    nco:title "Assistant Controller";
+    nco:hasPhoneNumber <tel:6089781207>.
+<contact:91> a nco:PersonContact;
+    nco:contactLocalUID "91";
+    nco:fullname "Seymour Becerra";
+    nco:nameFamily "Becerra";
+    nco:nameGiven "Seymour";
+    nco:birthDate "1952-02-14T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:4409096647>;
+    nco:hasEmailAddress <mailto:sbecerra@suscipitaliquip.info>;
+    nco:hasIMAddress <telepathy:/fake/cake!sbecerra@invulputateet.org>;
+    nco:hasPostalAddress <address:91>;
+    nco:hasAffiliation <affiliation:91>.
+<tel:9795167624> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "5167624";
+    nco:phoneNumber "(979)516-7624".
+<tel:5624122092> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "4122092";
+    nco:phoneNumber "(562)412-2092".
+<mailto:hroger@eumillum.com> a nco:EmailAddress;
+    nco:emailAddress "hroger@eumillum.com".
+<telepathy:/fake/cake!hans.roger@consequatautem.info> a nco:IMAddress;
+    nco:imNickname "hans.roger@consequatautem.info".
+<address:92> a nco:PostalAddress;
+    nco:streetAddress "1974 Lofton Avenue";
+    nco:locality "Wolverine";
+    nco:region "MI";
+    nco:postalcode "49799";
+    nco:country "USA".
+<affiliation:92> a nco:Affiliation;
+    nco:title "Loan Officer Commercial";
+    nco:hasPhoneNumber <tel:5624122092>.
+<contact:92> a nco:PersonContact;
+    nco:contactLocalUID "92";
+    nco:fullname "Hans Roger";
+    nco:nameFamily "Roger";
+    nco:nameGiven "Hans";
+    nco:birthDate "1963-07-17T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:9795167624>;
+    nco:hasEmailAddress <mailto:hroger@eumillum.com>;
+    nco:hasIMAddress <telepathy:/fake/cake!hans.roger@consequatautem.info>;
+    nco:hasPostalAddress <address:92>;
+    nco:hasAffiliation <affiliation:92>.
+<tel:2525669465> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "5669465";
+    nco:phoneNumber "(252)566-9465".
+<tel:3162928801> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "2928801";
+    nco:phoneNumber "(316)292-8801".
+<mailto:mel.pennell@duisvero.us> a nco:EmailAddress;
+    nco:emailAddress "mel.pennell@duisvero.us".
+<telepathy:/fake/cake!mel.pennell@utvulputate.net> a nco:IMAddress;
+    nco:imNickname "mel.pennell@utvulputate.net".
+<address:93> a nco:PostalAddress;
+    nco:streetAddress "9881 Leesburg Circle";
+    nco:locality "North Little Rock";
+    nco:region "AR";
+    nco:postalcode "72190";
+    nco:country "USA".
+<affiliation:93> a nco:Affiliation;
+    nco:title "Metal Fabricator";
+    nco:hasPhoneNumber <tel:3162928801>.
+<contact:93> a nco:PersonContact;
+    nco:contactLocalUID "93";
+    nco:fullname "Mel Pennell";
+    nco:nameFamily "Pennell";
+    nco:nameGiven "Mel";
+    nco:birthDate "1969-06-17T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:2525669465>;
+    nco:hasEmailAddress <mailto:mel.pennell@duisvero.us>;
+    nco:hasIMAddress <telepathy:/fake/cake!mel.pennell@utvulputate.net>;
+    nco:hasPostalAddress <address:93>;
+    nco:hasAffiliation <affiliation:93>.
+<tel:3192188484> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "2188484";
+    nco:phoneNumber "(319)218-8484".
+<tel:5073467797> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "3467797";
+    nco:phoneNumber "(507)346-7797".
+<mailto:werner.gaskin@adad.us> a nco:EmailAddress;
+    nco:emailAddress "werner.gaskin@adad.us".
+<telepathy:/fake/cake!werner.gaskin@enimconsequatvel.us> a nco:IMAddress;
+    nco:imNickname "werner.gaskin@enimconsequatvel.us".
+<address:94> a nco:PostalAddress;
+    nco:streetAddress "6645 Dubuque Cove";
+    nco:locality "New Martinsville";
+    nco:region "WV";
+    nco:postalcode "26155";
+    nco:country "USA".
+<affiliation:94> a nco:Affiliation;
+    nco:title "Sonographer";
+    nco:hasPhoneNumber <tel:5073467797>.
+<contact:94> a nco:PersonContact;
+    nco:contactLocalUID "94";
+    nco:fullname "Werner Gaskin";
+    nco:nameFamily "Gaskin";
+    nco:nameGiven "Werner";
+    nco:birthDate "1954-02-01T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:3192188484>;
+    nco:hasEmailAddress <mailto:werner.gaskin@adad.us>;
+    nco:hasIMAddress <telepathy:/fake/cake!werner.gaskin@enimconsequatvel.us>;
+    nco:hasPostalAddress <address:94>;
+    nco:hasAffiliation <affiliation:94>.
+<tel:4344602132> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "4602132";
+    nco:phoneNumber "(434)460-2132".
+<tel:8622681407> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "2681407";
+    nco:phoneNumber "(862)268-1407".
+<mailto:adele.mcgowan@delenitauguehendrerit.net> a nco:EmailAddress;
+    nco:emailAddress "adele.mcgowan@delenitauguehendrerit.net".
+<telepathy:/fake/cake!amcgowan@velvelit.us> a nco:IMAddress;
+    nco:imNickname "amcgowan@velvelit.us".
+<address:95> a nco:PostalAddress;
+    nco:streetAddress "7690 Cane Creek Lane";
+    nco:locality "Arthur";
+    nco:region "TN";
+    nco:postalcode "37707";
+    nco:country "USA".
+<affiliation:95> a nco:Affiliation;
+    nco:title "Mailer";
+    nco:hasPhoneNumber <tel:8622681407>.
+<contact:95> a nco:PersonContact;
+    nco:contactLocalUID "95";
+    nco:fullname "Adele Mcgowan";
+    nco:nameFamily "Mcgowan";
+    nco:nameGiven "Adele";
+    nco:birthDate "1963-12-15T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:4344602132>;
+    nco:hasEmailAddress <mailto:adele.mcgowan@delenitauguehendrerit.net>;
+    nco:hasIMAddress <telepathy:/fake/cake!amcgowan@velvelit.us>;
+    nco:hasPostalAddress <address:95>;
+    nco:hasAffiliation <affiliation:95>.
+<tel:3341495688> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "1495688";
+    nco:phoneNumber "(334)149-5688".
+<tel:9041863975> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "1863975";
+    nco:phoneNumber "(904)186-3975".
+<mailto:jshafer@veroiustoodio.tv> a nco:EmailAddress;
+    nco:emailAddress "jshafer@veroiustoodio.tv".
+<telepathy:/fake/cake!jshafer@blanditelitsed.com> a nco:IMAddress;
+    nco:imNickname "jshafer@blanditelitsed.com".
+<address:96> a nco:PostalAddress;
+    nco:streetAddress "616 Heritage Avenue";
+    nco:locality "Knowlesville";
+    nco:region "NY";
+    nco:postalcode "14479";
+    nco:country "USA".
+<affiliation:96> a nco:Affiliation;
+    nco:title "Airport Engineer";
+    nco:hasPhoneNumber <tel:9041863975>.
+<contact:96> a nco:PersonContact;
+    nco:contactLocalUID "96";
+    nco:fullname "Juanita Shafer";
+    nco:nameFamily "Shafer";
+    nco:nameGiven "Juanita";
+    nco:birthDate "1973-04-26T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:3341495688>;
+    nco:hasEmailAddress <mailto:jshafer@veroiustoodio.tv>;
+    nco:hasIMAddress <telepathy:/fake/cake!jshafer@blanditelitsed.com>;
+    nco:hasPostalAddress <address:96>;
+    nco:hasAffiliation <affiliation:96>.
+<tel:5026441660> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "6441660";
+    nco:phoneNumber "(502)644-1660".
+<tel:9077552368> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "7552368";
+    nco:phoneNumber "(907)755-2368".
+<mailto:kyla.darden@duisnulla.tv> a nco:EmailAddress;
+    nco:emailAddress "kyla.darden@duisnulla.tv".
+<telepathy:/fake/cake!kyla.darden@duisfeugait.edu> a nco:IMAddress;
+    nco:imNickname "kyla.darden@duisfeugait.edu".
+<address:97> a nco:PostalAddress;
+    nco:streetAddress "6261 Sherburne Trail";
+    nco:locality "Mine Hill";
+    nco:region "NJ";
+    nco:postalcode "07803";
+    nco:country "USA".
+<affiliation:97> a nco:Affiliation;
+    nco:title "Consultant Wedding";
+    nco:hasPhoneNumber <tel:9077552368>.
+<contact:97> a nco:PersonContact;
+    nco:contactLocalUID "97";
+    nco:fullname "Kyla Darden";
+    nco:nameFamily "Darden";
+    nco:nameGiven "Kyla";
+    nco:birthDate "1972-04-14T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:5026441660>;
+    nco:hasEmailAddress <mailto:kyla.darden@duisnulla.tv>;
+    nco:hasIMAddress <telepathy:/fake/cake!kyla.darden@duisfeugait.edu>;
+    nco:hasPostalAddress <address:97>;
+    nco:hasAffiliation <affiliation:97>.
+<tel:7178845592> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "8845592";
+    nco:phoneNumber "(717)884-5592".
+<tel:4408985095> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "8985095";
+    nco:phoneNumber "(440)898-5095".
+<mailto:idella.shultz@delenitte.edu> a nco:EmailAddress;
+    nco:emailAddress "idella.shultz@delenitte.edu".
+<telepathy:/fake/cake!ishultz@suscipitmolestie.gov> a nco:IMAddress;
+    nco:imNickname "ishultz@suscipitmolestie.gov".
+<address:98> a nco:PostalAddress;
+    nco:streetAddress "1286 Briar Knoll Drive";
+    nco:locality "Troy";
+    nco:region "SC";
+    nco:postalcode "29848";
+    nco:country "USA".
+<affiliation:98> a nco:Affiliation;
+    nco:title "Medical Nurse Midwife";
+    nco:hasPhoneNumber <tel:4408985095>.
+<contact:98> a nco:PersonContact;
+    nco:contactLocalUID "98";
+    nco:fullname "Idella Shultz";
+    nco:nameFamily "Shultz";
+    nco:nameGiven "Idella";
+    nco:birthDate "1937-10-26T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:7178845592>;
+    nco:hasEmailAddress <mailto:idella.shultz@delenitte.edu>;
+    nco:hasIMAddress <telepathy:/fake/cake!ishultz@suscipitmolestie.gov>;
+    nco:hasPostalAddress <address:98>;
+    nco:hasAffiliation <affiliation:98>.
+<tel:5152953610> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "2953610";
+    nco:phoneNumber "(515)295-3610".
+<tel:3049005146> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "9005146";
+    nco:phoneNumber "(304)900-5146".
+<mailto:calger@suscipitdelenit.edu> a nco:EmailAddress;
+    nco:emailAddress "calger@suscipitdelenit.edu".
+<telepathy:/fake/cake!christy.alger@nislutconsequat.eu> a nco:IMAddress;
+    nco:imNickname "christy.alger@nislutconsequat.eu".
+<address:99> a nco:PostalAddress;
+    nco:streetAddress "7012 Branford Trail";
+    nco:locality "Newell";
+    nco:region "WV";
+    nco:postalcode "26050";
+    nco:country "USA".
+<affiliation:99> a nco:Affiliation;
+    nco:title "Computer Software Design Manager";
+    nco:hasPhoneNumber <tel:3049005146>.
+<contact:99> a nco:PersonContact;
+    nco:contactLocalUID "99";
+    nco:fullname "Christy Alger";
+    nco:nameFamily "Alger";
+    nco:nameGiven "Christy";
+    nco:birthDate "1989-07-14T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:5152953610>;
+    nco:hasEmailAddress <mailto:calger@suscipitdelenit.edu>;
+    nco:hasIMAddress <telepathy:/fake/cake!christy.alger@nislutconsequat.eu>;
+    nco:hasPostalAddress <address:99>;
+    nco:hasAffiliation <affiliation:99>.
+<tel:8484189587> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "4189587";
+    nco:phoneNumber "(848)418-9587".
+<tel:2054254314> a nco:VoicePhoneNumber;
+    maemo:localPhoneNumber "4254314";
+    nco:phoneNumber "(205)425-4314".
+<mailto:celia.mattox@eterat.us> a nco:EmailAddress;
+    nco:emailAddress "celia.mattox@eterat.us".
+<telepathy:/fake/cake!celia.mattox@blandithendrerit.org> a nco:IMAddress;
+    nco:imNickname "celia.mattox@blandithendrerit.org".
+<address:100> a nco:PostalAddress;
+    nco:streetAddress "5667 Beaux Bridge Trail";
+    nco:locality "Monticello";
+    nco:region "IL";
+    nco:postalcode "61856";
+    nco:country "USA".
+<affiliation:100> a nco:Affiliation;
+    nco:title "Insulation Worker";
+    nco:hasPhoneNumber <tel:2054254314>.
+<contact:100> a nco:PersonContact;
+    nco:contactLocalUID "100";
+    nco:fullname "Celia Mattox";
+    nco:nameFamily "Mattox";
+    nco:nameGiven "Celia";
+    nco:birthDate "1937-11-24T00:00:00Z"^^xsd:dateTime;
+    nco:hasPhoneNumber <tel:8484189587>;
+    nco:hasEmailAddress <mailto:celia.mattox@eterat.us>;
+    nco:hasIMAddress <telepathy:/fake/cake!celia.mattox@blandithendrerit.org>;
+    nco:hasPostalAddress <address:100>;
+    nco:hasAffiliation <affiliation:100>.

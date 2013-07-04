@@ -1,0 +1,422 @@
+##################################################################################################
+## SQLite has the tendency to massively leak its buffers, and according to information
+## you find in the web (e.g. Chromium's suppressions file) are not going to change this.
+## Because of their huge amount we pretend they all are tolerable - for now.
+##
+## TODO: Verify the occuring leaks and apply more specific suppression rules.
+##################################################################################################
+
+{
+   # FIXME: use more specific suppression
+   sqlite3MemMalloc
+   Memcheck:Leak
+   ...
+   fun:sqlite3MemMalloc
+   ...
+}
+
+{
+   # FIXME: use more specific suppression
+   sqlite3Realloc
+   Memcheck:Leak
+   ...
+   fun:sqlite3Realloc
+   ...
+}
+
+##################################################################################################
+## GLib's runtime type system never frees any of its data. Might actually even make some
+## sense considering the problems which could occure when GLib would install cleanup code,,
+## and this code would be run before the application's cleanup code.
+##################################################################################################
+
+{
+   g_type_init
+   Memcheck:Leak
+   ...
+   fun:g_type_init_with_debug_flags
+   ...
+}
+
+{
+   g_type_register
+   Memcheck:Leak
+   ...
+   fun:g_type_register_*
+   ...
+}
+
+{
+   g_type_add_interface
+   Memcheck:Leak
+   ...
+   fun:g_type_add_interface_*
+   ...
+}
+
+{
+   type_iface_vtable_base_init_Wm
+   Memcheck:Leak
+   ...
+   fun:type_iface_vtable_base_init_Wm
+   ...
+}
+
+{
+   g_type_interface_add_prerequisite
+   Memcheck:Leak
+   ...
+   fun:g_type_interface_add_prerequisite
+   ...
+}
+
+{
+   g_param_spec
+   Memcheck:Leak
+   ...
+   fun:g_param_spec_*
+   ...
+}
+
+{
+   g_type_class_new
+   Memcheck:Leak
+   fun:calloc
+   fun:g_malloc0
+   fun:g_type_class_ref
+   ...
+}
+
+{
+   g_object_class_install_property
+   Memcheck:Leak
+   ...
+   fun:g_object_class_install_property
+   ...
+}
+
+{
+   g_signal_new
+   Memcheck:Leak
+   ...
+   fun:g_signal_new
+   ...
+}
+
+## GDBus also seems have some leaks. It seems those leaks are somewhat static.
+##################################################################################################
+
+{
+   g_bus_get_sync
+   Memcheck:Leak
+   ...
+   fun:g_bus_get_sync
+   ...
+}
+
+{
+   g_dbus_error_register_error
+   Memcheck:Leak
+   ...
+   fun:g_dbus_error_register_error
+   ...
+}
+
+{
+   g_dbus_connection_signal_subscribe
+   Memcheck:Leak
+   ...
+   fun:g_dbus_connection_signal_subscribe
+   ...
+}
+
+{
+   fun:gdbus_shared_thread_func
+   Memcheck:Leak
+   ...
+   fun:gdbus_shared_thread_func
+   ...
+}
+
+##################################################################################################
+## The GThread initialization code is run only once, therefore this leak is static.
+##################################################################################################
+
+{
+   g_thread_init
+   Memcheck:Leak
+   ...
+   fun:g_thread_init
+   ...
+}
+
+##################################################################################################
+## The GVFS initialization code is run only once, therefore this leak is static.
+##################################################################################################
+
+{
+   g_vfs_get_default
+   Memcheck:Leak
+   ...
+   fun:g_vfs_get_default
+   ...
+}
+
+##################################################################################################
+## Strings interned by GLib are a static leak
+##################################################################################################
+
+{
+   g_intern_static_string
+   Memcheck:Leak
+   ...
+   fun:g_intern_static_string
+   ...
+}
+
+##################################################################################################
+## Updating the QMutexPool looks like a static leak
+##################################################################################################
+
+{
+   QMutexPool::get
+   Memcheck:Leak
+   ...
+   fun:_ZN10QMutexPool3getEPKv
+   ...
+}
+
+##################################################################################################
+## Static leaks during Qt initialization
+##################################################################################################
+
+{
+   qsrand
+   Memcheck:Leak
+   ...
+   fun:_ZN11QThreadData7currentEv
+   fun:_ZNK18QThreadStorageData3getEv
+   fun:_Z6qsrandj
+   ...
+}
+
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   ...
+   fun:_ZN16QCoreApplication4initEv
+   ...
+}
+
+##################################################################################################
+## Following initialization functions of tracker are static leaks
+##################################################################################################
+
+{
+   tracker_collation_init
+   Memcheck:Leak
+   ...
+   fun:tracker_collation_init
+   ...
+}
+
+{
+   tracker_locale_init
+   Memcheck:Leak
+   ...
+   fun:tracker_locale_init
+   ...
+}
+
+{
+   tracker_ontologies_get_namespaces
+   Memcheck:Leak
+   ...
+   fun:tracker_ontologies_get_namespaces
+   ...
+}
+
+##################################################################################################
+## Loading shared libraries can be considered a static leak
+##################################################################################################
+
+{
+   _dl_open
+   Memcheck:Leak
+   ...
+   fun:_dl_open
+   ...
+}
+
+{
+   _dl_runtime_resolve
+   Memcheck:Leak
+   ...
+   fun:_dl_runtime_resolve
+   ...
+}
+
+{
+   _dlerror_run
+   Memcheck:Leak
+   ...
+   fun:_dlerror_run
+   ...
+}
+
+##################################################################################################
+## Initializing the thread support of libdbus should cause only static leaks
+##################################################################################################
+
+{
+   dbus_threads_init
+   Memcheck:Leak
+   ...
+   fun:dbus_threads_init
+   ...
+}
+
+##################################################################################################
+## TODO: Verify the following leaks to be static
+##################################################################################################
+
+{
+   tracker_file_get_mtime
+   Memcheck:Leak
+   ...
+   fun:tracker_file_get_mtime
+   ...
+}
+
+{
+   g_once_impl
+   Memcheck:Leak
+   ...
+   fun:g_once_impl
+   ...
+}
+
+{
+   plugin:QContactActionServiceManager
+   Memcheck:Leak
+   ...
+   fun:_ZN10QtMobility28QContactActionServiceManagerC1Ev
+   fun:qt_plugin_instance
+   ...
+}
+
+{
+   plugin:QTrackerDirectDriverPlugin
+   Memcheck:Leak
+   ...
+   fun:_ZN26QTrackerDirectDriverPluginC1Ev
+   fun:qt_plugin_instance
+   ...
+}
+
+{
+   plugin:QTrackerDriverPlugin
+   Memcheck:Leak
+   ...
+   fun:_ZN20QTrackerDriverPluginC1Ev
+   fun:qt_plugin_instance
+   ...
+}
+
+{
+   plugin:ContactTrackerFactory
+   Memcheck:Leak
+   ...
+   fun:_ZN21ContactTrackerFactoryC1Ev
+   fun:qt_plugin_instance
+   ...
+}
+
+##################################################################################################
+## TODO: File bug report for those leaks
+##################################################################################################
+
+{
+   QtMobility::QContactManagerData::createEngine()
+   Memcheck:Leak
+   ...
+   fun:_ZN10QtMobility15QServiceManagerC1EP7QObject
+   fun:_ZN10QtMobility28QContactActionServiceManagerC1Ev
+   fun:qt_plugin_instance
+   fun:_ZN13QPluginLoader8instanceEv
+   fun:_ZN10QtMobility19QContactManagerData13loadFactoriesEv
+   fun:_ZN10QtMobility19QContactManagerData12createEngineERK7QStringRK4QMapIS1_S1_E
+   fun:_ZN10QtMobility15QContactManager12createEngineERK7QStringRK4QMapIS1_S1_E
+   fun:_ZN10QtMobility15QContactManagerC1ERK7QStringRK4QMapIS1_S1_EP7QObject
+   ...
+}
+
+{
+   QDBusConnectionPrivate::dbus_malloc_and_realloc
+   Memcheck:Leak
+   fun:*alloc
+   fun:dbus_*alloc
+
+   ...
+   fun:_ZN22QDBusConnectionPrivate*
+   ...
+}
+
+{
+   QDBusConnection::dbus_malloc_and_realloc
+   Memcheck:Leak
+   fun:*alloc
+   fun:dbus_*alloc
+
+   ...
+   fun:_ZN15QDBusConnection*
+   ...
+}
+
+{
+   tracker_sparql_backend_finalize
+   Memcheck:Leak
+   ...
+   fun:tracker_sparql_backend_finalize
+   ...
+}
+
+{
+   g_static_private_set
+   Memcheck:Leak
+   ...
+   fun:g_static_private_set
+   ...
+}
+
+{
+   tracker_sparql_backend_get
+   Memcheck:Leak
+   ...
+   fun:tracker_sparql_backend_get
+   ...
+}
+
+{
+   qt_plugin_instance
+   Memcheck:Leak
+   fun:_Znwj
+   fun:qt_plugin_instance
+   ...
+}
+
+{
+   g_main_context_dispatch
+   Memcheck:Leak
+   ...
+   fun:g_main_context_dispatch
+   ...
+}
+
+{
+   XInitThreads
+   Memcheck:Leak
+   ...
+   fun:XInitThreads
+   ...
+}

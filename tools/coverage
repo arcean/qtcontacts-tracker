@@ -1,0 +1,47 @@
+#!/bin/bash
+
+# This file is part of QtContacts tracker storage plugin
+#
+# Copyright (c) 2010-2011 Nokia Corporation and/or its subsidiary(-ies).
+#
+# Contact:  Nokia Corporation (info@qt.nokia.com)
+#
+# GNU Lesser General Public License Usage
+# This file may be used under the terms of the GNU Lesser General Public License
+# version 2.1 as published by the Free Software Foundation and appearing in the
+# file LICENSE.LGPL included in the packaging of this file.  Please review the
+# following information to ensure the GNU Lesser General Public License version
+# 2.1 requirements will be met:
+# http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+#
+# In addition, as a special exception, Nokia gives you certain additional rights.
+# These rights are described in the Nokia Qt LGPL Exception version 1.1, included
+# in the file LGPL_EXCEPTION.txt in this package.
+#
+# Other Usage
+# Alternatively, this file may be used in accordance with the terms and
+# conditions contained in a signed written agreement between you and Nokia.
+
+srcdir=$(dirname "$0")/../src
+
+filelist() {
+    for i in $(echo "$srcdir"/*/*.{cpp,h}); do f="$i.gcov"; test -f "$f" && echo "$f"; done |
+    egrep -v '/(moc_|globalmutex|relationshipfetchrequest|contactfetchrequest2|contactremoverequest2)'
+}
+
+percent() {
+    echo $[(100 * $1 + $2 / 2) / $2]
+}
+
+t=$(cat $(filelist) | wc -l)
+c=$(cat $(filelist) | egrep -c '^ *[0-9]+:')
+s=$(cat $(filelist) | egrep -c '^ *#{5}:')
+p=$(cat $(filelist) | egrep -c '^ *-:')
+
+printf 'Overall lines: %9d (%d%%)\n' $t $(percent $t $t)
+printf 'Covered lines: %9d (%d%%, real: %d%%)\n' $c $(percent $c $t) $(percent $c $[$c + $s])
+printf 'Skipped lines: %9d (%d%%, real: %d%%)\n' $s $(percent $s $t) $(percent $s $[$c + $s])
+printf 'Passive count: %9d (%d%%)\n' $p $(percent $p $t)
+
+#filelist
+#egrep '^ *#{5}:' $(filelist) > /tmp/coverage.txt

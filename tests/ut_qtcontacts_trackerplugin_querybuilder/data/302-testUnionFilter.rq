@@ -1,0 +1,18 @@
+SELECT
+  ?_contact tracker:id(?_contact)
+  ?_context rdfs:label(?_context)
+
+  nco:nameHonorificPrefix(?_contact, "\u002c", "\u001c")
+  nco:nameGiven(?_contact, "\u002c", "\u001c")
+  nco:nameAdditional(?_contact, "\u002c", "\u001c")
+  nco:nameFamily(?_contact, "\u002c", "\u001c")
+  nco:nameHonorificSuffix(?_contact, "\u002c", "\u001c")
+  nco:fullname(?_contact, "\u002c", "\u001c")
+
+WHERE {
+  ?_contact rdf:type nco:PersonContact
+  OPTIONAL { ?_contact nco:hasAffiliation ?_context }
+
+  FILTER(((tracker:id(?_contact) IN (225543300,58390905,55500278)) ||
+          (tracker:id(?_contact) IN (225543300,55500278,254908088))))
+}

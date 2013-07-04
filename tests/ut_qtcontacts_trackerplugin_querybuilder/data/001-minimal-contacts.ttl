@@ -1,0 +1,8 @@
+@prefix nco: <http://www.semanticdesktop.org/ontologies/2007/03/22/nco#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+<contact:225543300> a nco:PersonContact .
+<contact:58390905> a nco:PersonContact .
+<contact:55500278> a nco:PersonContact .
+<contact:254908088> a nco:PersonContact .
+<contact:197632483> a nco:PersonContact .

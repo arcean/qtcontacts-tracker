@@ -1,0 +1,24 @@
+SELECT
+  ?_contact tracker:id(?_contact)
+  ?_context rdfs:label(?_context)
+
+  (SELECT fn:concat(fn:concat(?_created, "|", fn:timezone-from-dateTime( ?_created )),
+                    "\u001c",
+                    tracker:coalesce((SELECT ?_g1 WHERE { GRAPH ?_g1 { ?_contact nie:contentCreated ?_created } } ), ""))
+   WHERE { ?_contact nie:contentCreated ?_created })
+
+  (SELECT fn:concat(fn:concat(?_modified, "|", fn:timezone-from-dateTime( ?_modified )),
+                    "\u001c",
+                    tracker:coalesce((SELECT ?_g2 WHERE { GRAPH ?_g2 { ?_contact nie:contentLastModified ?_modified } } ), ""))
+   WHERE { ?_contact nie:contentLastModified ?_modified })
+
+  (SELECT fn:concat(fn:concat(?_accessed, "|", fn:timezone-from-dateTime( ?_accessed )),
+                    "\u001c",
+                    tracker:coalesce((SELECT ?_g3 WHERE { GRAPH ?_g3 { ?_contact nie:contentAccessed ?_accessed } } ), ""))
+   WHERE { ?_contact nie:contentAccessed ?_accessed })
+
+WHERE {
+  ?_contact rdf:type nco:ContactGroup, nco:Contact
+
+  OPTIONAL { ?_contact nco:hasAffiliation ?_context }
+}

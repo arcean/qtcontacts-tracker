@@ -1,0 +1,12 @@
+# number of fast/slow/glacial tests: 193/9/2
+ut_qtcontacts_trackerplugin::testTorture: slow (5 seconds)
+ut_qtcontacts_trackerplugin::testSavePhoneNumber: slow (7 seconds)
+ut_qtcontacts_trackerplugin::testContactsAddedSince: slow (7 seconds)
+ut_qtcontacts_trackerplugin::testDisplayLabelFetch: slow (9 seconds)
+ut_qtcontacts_trackerplugin::testFuzzing: slow (19 seconds)
+ut_qtcontacts_trackerplugin::testFetchingNonQctResourcesAsReadOnlyDetails: slow (6 seconds)
+ut_qtcontacts_trackerplugin::testDeleteFromStateChangedHandler: slow (10 seconds)
+ut_qtcontacts_trackerplugin_settings::testSignallingOfSettingsChangeInOtherProcess: slow (15 seconds)
+ut_qtcontacts_trackerplugin_signals::testOmitPresenceChanges: slow (19 seconds)
+ut_qtcontacts_trackerplugin::testSparqlSorting: glacial (37 seconds)
+ut_qtcontacts_trackerplugin_signals::testSignals: glacial (104 seconds)

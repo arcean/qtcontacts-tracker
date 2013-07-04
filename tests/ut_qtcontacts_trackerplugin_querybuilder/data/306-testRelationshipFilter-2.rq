@@ -1,0 +1,18 @@
+# groups of given contact query
+
+SELECT
+  ?_contact tracker:id(?_contact)
+  ?_context rdfs:label(?_context)
+
+  nco:contactGroupName(?_contact, "\u002c", "\u001c")
+
+WHERE {
+  ?_contact rdf:type nco:ContactGroup, nco:Contact
+  OPTIONAL { ?_contact nco:hasAffiliation ?_context }
+
+  FILTER(EXISTS {
+    ?_member rdf:type nco:Contact ;
+             nco:belongsToGroup ?_contact
+    FILTER((tracker:id(?_member) = 1234))
+  })
+}

@@ -1,0 +1,23 @@
+SELECT
+  ?_contact tracker:id(?_contact)
+  ?_context rdfs:label(?_context)
+
+ (SELECT
+    GROUP_CONCAT(
+        fn:concat(
+            ?_email,
+            "\u001f",
+            fn:concat(
+                nco:emailAddress(?_email),
+                "\u001c",
+                tracker:coalesce((SELECT ?g WHERE { GRAPH ?g { ?_contact nco:hasEmailAddress ?_email } }),""))),
+        "\u001e")
+  WHERE {
+    ?_contact nco:hasEmailAddress ?_email
+  })
+
+WHERE {
+  ?_contact rdf:type nco:ContactGroup, nco:Contact
+
+  OPTIONAL { ?_contact nco:hasAffiliation ?_context }
+}

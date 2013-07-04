@@ -1,0 +1,23 @@
+SELECT
+  ?_contact tracker:id(?_contact)
+  ?_context rdfs:label(?_context)
+
+ (SELECT
+    GROUP_CONCAT
+       (fn:concat(tracker:coalesce
+           ((SELECT
+               fn:concat(nie:url(?_imAvatar), "\u001c",
+                         tracker:coalesce((SELECT ?g1 WHERE { GRAPH ?g1 { ?_imAddress nco:imAvatar ?_imAvatar } }), ""))
+             WHERE {?_imAddress nco:imAvatar ?_imAvatar} ), ""), "\u001f",
+            tracker:coalesce(rdfs:label(nco:imAvatar(?_imAddress), "\u002c", "\u001c"), ""), "\u001f",
+            fn:concat(?_imAddress, "\u001c",
+                      tracker:coalesce((SELECT ?g2 WHERE { GRAPH ?g2 { ?_contact nco:hasIMAddress ?_imAddress } }), ""))),
+        "\u001e")
+  WHERE {
+    ?_contact nco:hasIMAddress ?_imAddress
+  })
+
+WHERE {
+  ?_contact rdf:type nco:ContactGroup, nco:Contact
+  OPTIONAL { ?_contact nco:hasAffiliation ?_context }
+}

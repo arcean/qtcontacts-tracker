@@ -1,0 +1,23 @@
+<Contacts>
+  <Contact iri="contact:225543300">
+    <DisplayLabel><Label></Label></DisplayLabel>
+    <Type>Contact</Type>
+
+    <Name>
+      <Prefix>Sir</Prefix>
+      <FirstName>Andre</FirstName>
+      <LastName>Andrews</LastName>
+    </Name>
+  </Contact>
+
+  <Contact iri="contact:55500278">
+    <DisplayLabel><Label></Label></DisplayLabel>
+    <Type>Contact</Type>
+
+    <Name>
+      <FirstName>Christine</FirstName>
+      <LastName>Christian</LastName>
+    </Name>
+  </Contact>
+</Contacts>
+

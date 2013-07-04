@@ -1,0 +1,35 @@
+# Reference query for QContactLocalIdFetchRequest
+# Verify if original fields and generic fields can be mixed within an union filter.
+# The original field only exists for one contact type.
+# Applied filter: (Nickname == "Havoc") || (Gender == Female)
+# ==================================================================================================
+
+SELECT
+  tracker:id(?_contact)
+
+WHERE {
+  {
+    ?_contact rdf:type nco:PersonContact
+
+    FILTER((EXISTS {
+      ?_contact nco:nickname ?_nickname1
+      FILTER((fn:lower-case(?_nickname1) = "havoc"))
+    } || EXISTS {
+      ?_contact nco:gender ?_gender1
+      FILTER((?_gender1 = nco:gender-female))
+    }))
+  } UNION {
+    ?_contact rdf:type nco:ContactGroup, nco:Contact
+
+    FILTER((EXISTS {
+      ?_contact nco:contactGroupName ?_nickname2
+      FILTER((fn:lower-case(?_nickname2) = "havoc"))
+    } || EXISTS {
+      ?_contact nao:hasProperty ?_customDetail .
+      ?_customDetail nao:propertyName "Gender" ;
+                     nao:hasProperty ?_customField .
+      ?_customField nao:propertyValue ?_fieldValue
+      FILTER((fn:lower-case(?_fieldValue) = "female"))
+    }))
+  }
+}

@@ -1,0 +1,25 @@
+SELECT
+  ?_contact tracker:id(?_contact)
+  ?_context rdfs:label(?_context)
+
+  (SELECT
+  fn:concat(nie:url(?_audioRingtone), "\u001c",
+                         tracker:coalesce((SELECT ?g1 WHERE { GRAPH ?g1 { ?_contact maemo:contactGroupAudioRingtone ?_audioRingtone } }),
+                                          ""))
+  WHERE {?_contact maemo:contactGroupAudioRingtone ?_audioRingtone} )
+  (SELECT
+  fn:concat(nie:url(?_videoRingtone), "\u001c",
+                         tracker:coalesce((SELECT ?g2 WHERE { GRAPH ?g2 { ?_contact maemo:contactGroupVideoRingtone ?_videoRingtone } }),
+                                          ""))
+  WHERE {?_contact maemo:contactGroupVideoRingtone ?_videoRingtone} )
+  (SELECT
+  fn:concat(nie:url(?_vibrationRingtone), "\u001c",
+                         tracker:coalesce((SELECT ?g3 WHERE { GRAPH ?g3 { ?_contact maemo:contactGroupVibrationRingtone ?_vibrationRingtone } }),
+                                          ""))
+  WHERE {?_contact maemo:contactGroupVibrationRingtone ?_vibrationRingtone} )
+
+WHERE {
+  ?_contact rdf:type nco:ContactGroup, nco:Contact
+
+  OPTIONAL { ?_contact nco:hasAffiliation ?_context }
+}

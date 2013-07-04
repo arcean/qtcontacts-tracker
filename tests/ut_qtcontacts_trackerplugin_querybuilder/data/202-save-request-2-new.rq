@@ -1,0 +1,80 @@
+# Delete properties related objects so that we can update them.
+# =================================================================================================
+
+DELETE
+{
+  <urn:x-maemo-phone:messagingcapable,mobile,voice:+4916134567> ?predicate ?object .
+}
+WHERE
+{
+  <urn:x-maemo-phone:messagingcapable,mobile,voice:+4916134567> ?predicate ?object .
+  FILTER(?predicate IN (nao:hasProperty, nco:phoneNumber, maemo:localPhoneNumber)) .
+}
+
+DELETE
+{
+  ?resource a nco:CarPhoneNumber, nco:BbsNumber, nco:PagerNumber, nco:VideoTelephoneNumber,
+              nco:MessagingNumber, nco:VoicePhoneNumber, nco:CellPhoneNumber, nco:FaxNumber,
+              nco:ModemNumber .
+}
+WHERE
+{
+  ?resource a nco:PhoneNumber .
+  FILTER(?resource IN (<urn:x-maemo-phone:messagingcapable,mobile,voice:+4916134567>)) .
+}
+
+# Write new contact data
+# =================================================================================================
+
+INSERT
+{
+  GRAPH <urn:uuid:08070f5c-a334-4d19-a8b0-12a3071bfab9>
+  {
+    <mailto:babera@beverly.com>
+      a nco:EmailAddress ;
+      nco:emailAddress "babera@beverly.com" .
+  }
+}
+WHERE
+{
+  FILTER(NOT EXISTS { ?resource nco:emailAddress "babera@beverly.com" })
+}
+
+INSERT
+{
+  GRAPH <urn:uuid:08070f5c-a334-4d19-a8b0-12a3071bfab9>
+  {
+    <contact:58390905>
+      rdf:type nco:PersonContact ;
+      nco:gender nco:gender-female ;
+      nco:nameGiven "Babera" ;
+      nco:nameAdditional "Beate" ;
+      nco:nameFamily "Beverly" ;
+      nco:hasAffiliation _:Affiliation_Home1, _:Affiliation_Work2 ;
+      nie:contentLastModified "2010-05-04T09:30:00Z" ;
+      nie:contentCreated "2010-05-04T09:30:00Z" ;
+      nco:contactUID "<placeholder:guid>" ;
+      nie:generator "addressbook" .
+
+    _:Affiliation_Home1
+      rdf:type nco:Affiliation ;
+      rdfs:label "Home" ;
+      nco:hasEmailAddress ?emailAddress ;
+      nco:hasPhoneNumber <urn:x-maemo-phone:messagingcapable,mobile,voice:+4916134567> ;
+      nco:websiteUrl "http://beverly.com/" .
+
+    _:Affiliation_Work2
+      rdf:type nco:Affiliation ;
+      nco:title "Office Clerk" .
+
+    <urn:x-maemo-phone:messagingcapable,mobile,voice:+4916134567>
+      rdf:type nco:VoicePhoneNumber, nco:CellPhoneNumber, nco:MessagingNumber, nco:PhoneNumber ;
+      nco:phoneNumber "+4916134567" ;
+      maemo:localPhoneNumber "6134567" .
+  }
+}
+WHERE
+{
+  ?emailAddress nco:emailAddress "babera@beverly.com"
+}
+

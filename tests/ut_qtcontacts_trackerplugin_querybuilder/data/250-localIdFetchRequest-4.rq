@@ -1,0 +1,28 @@
+# Reference query for QContactLocalIdFetchRequest
+# Verify filters with original fields that apply to only one contact type.
+# Applied filter: (Gender == Female)
+# ==================================================================================================
+
+SELECT
+  tracker:id(?_contact)
+
+WHERE {
+  {
+    ?_contact rdf:type nco:PersonContact
+
+    FILTER(EXISTS {
+      ?_contact nco:gender ?_gender
+      FILTER((?_gender = nco:gender-female))
+    })
+  } UNION {
+    ?_contact rdf:type nco:ContactGroup, nco:Contact
+
+    FILTER(EXISTS {
+      ?_contact nao:hasProperty ?_customDetail .
+      ?_customDetail nao:propertyName "Gender" ;
+                     nao:hasProperty ?_customField .
+      ?_customField nao:propertyValue ?_fieldValue
+      FILTER((fn:lower-case(?_fieldValue) = "female"))
+    })
+  }
+}

@@ -1,0 +1,26 @@
+SELECT
+  ?_contact tracker:id(?_contact)
+  ?_context rdfs:label(?_context)
+
+  nco:nameHonorificPrefix(?_contact, "\u002c", "\u001c")
+  nco:nameGiven(?_contact, "\u002c", "\u001c")
+  nco:nameAdditional(?_contact, "\u002c", "\u001c")
+  nco:nameFamily(?_contact, "\u002c", "\u001c")
+  nco:nameHonorificSuffix(?_contact, "\u002c", "\u001c")
+  nco:fullname(?_contact, "\u002c", "\u001c")
+
+WHERE {
+  ?_contact rdf:type nco:PersonContact
+  OPTIONAL { ?_contact nco:hasAffiliation ?_context }
+
+  FILTER((EXISTS {
+    ?_contact nco:nameGiven ?_name
+    FILTER((("Andre" <= ?_name) && (?_name < "Xavier")))
+  } || EXISTS {
+    ?_contact nco:birthDate ?_date1
+    FILTER((("2008-01-01T00:00:00Z" < ?_date1) && (?_date1 <= "2009-12-31T00:00:00Z")))
+  } || EXISTS {
+    ?_contact nco:birthDate ?_date2
+    FILTER((("2010-01-01T00:00:00Z" <= ?_date2) && (?_date2 < "2011-12-31T00:00:00Z")))
+  }))
+}

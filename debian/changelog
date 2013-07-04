@@ -1,0 +1,2020 @@
+libqtcontacts-tracker (4.19.2-1+0m8) unstable; urgency=low
+
+  * This entry has been added by BIFH queue processor
+    version has been changed to 4.19.2-1+0m8
+
+ -- BIFH Bot <sysint@maemo.research.nokia.com>  Tue, 27 Mar 2012 14:03:08 +0300
+
+libqtcontacts-tracker (4.19.2-1) unstable; urgency=low
+
+  * Fixes: NB#299194 - Cannot edit and sync contacts from old PR (Mail for Exchange (MfE) does not sync contacts with Exchange / Google since PR 1.2)
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Tue, 27 Mar 2012 13:03:07 +0200
+
+libqtcontacts-tracker (4.19.1-1) unstable; urgency=low
+
+  * Fixes: NB#299114 - Contact names are not shown during incoming call when phone numbers are saved via copy/paste from call log
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Tue, 14 Feb 2012 14:13:45 +0100
+
+libqtcontacts-tracker (4.19.0-2) unstable; urgency=low
+
+  * Cleaning the changelog.
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Tue, 14 Feb 2012 14:12:59 +0100
+
+libqtcontacts-tracker (4.19.0-1) unstable; urgency=low
+
+  * Fixes: NB#298434
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Tue, 14 Feb 2012 13:40:03 +0100
+
+libqtcontacts-tracker (4.18.0-3) unstable; urgency=low
+
+  * Move postinst queries to contactsd to avoid SSU taking hours. Addresses NB#297371.
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Wed, 08 Feb 2012 08:39:57 +0100
+
+libqtcontacts-tracker (4.18.0-2) unstable; urgency=low
+
+  * Split postinst cleanup query into smaller pieces to avoid timeouts. Addresses NB#297371.
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Mon, 06 Feb 2012 09:00:09 +0100
+
+libqtcontacts-tracker (4.18.0-1) unstable; urgency=low
+
+  * Unbreaks: NB#297371 - Contacts getting splitted again/FB-social gets merged to the wrong contact
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Mon, 06 Feb 2012 08:59:25 +0100
+
+libqtcontacts-tracker (4.17.10.1-1) unstable; urgency=low
+
+  * Fixes: NB#291450 - Settings singleton has random thread affinity
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Thu, 03 Nov 2011 20:45:53 +0100
+
+libqtcontacts-tracker (4.17.10-1) unstable; urgency=low
+
+  * Fixes: NB#284941 - [Endurance] Increasing number of unfreed allocations from QctRequestTask::run()
+  * Fixes: NB#258939 - [TASK] Add regression test for request performance
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Thu, 03 Nov 2011 20:45:44 +0100
+
+libqtcontacts-tracker (4.17.9-1) unstable; urgency=low
+
+  * Fixes: NB#287923 - [TASK] QtContacts-Tracker should link online accounts and their details
+  * Fixes: add graph statements to test data file avatars.ttl, to match tp plugin behaviour
+  * Fixes: Make workers pretty print their debug output again
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Wed, 02 Nov 2011 13:47:22 +0100
+
+libqtcontacts-tracker (4.17.8-1) unstable; urgency=low
+
+  * Fixes: NB#288314 - Adapt merging logic for multiple MFE accounts
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Tue, 01 Nov 2011 15:38:17 +0100
+
+libqtcontacts-tracker (4.17.7-1) unstable; urgency=low
+
+  * Fixes: Always initialize m_forceNative in ID fetch request
+  * Fixes: make individual timeouts settings in tests also work with shadow builds
+  * Changes: Don't hardcode timeouts in tests
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Mon, 31 Oct 2011 14:40:13 +0100
+
+libqtcontacts-tracker (4.17.6-1) unstable; urgency=low
+
+  * Fixes: NB#258736 - [TASK] Implement result sorting using SPARQL
+  * Fixes: NB#270090 - [TASK] Support paging in contact and local id fetch request
+  * Fixes: Generate valid values in testSparqlSorting
+  * Fixes: adapt test-account-1.rq and insertIMContact() to current behaviour of contactsd tp-plugin
+  * New: Add QctContactLocalIdFetchRequest
+  * New: Permit saving and removal of custom detail definitions
+  * New: adds QtContactsTrackerTelepathyGraphIri to lib/constants.h
+  * Changes: Re-enable validateContact() for unit tests
+  * Changes: Set individual timeouts for unit tests
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Wed, 26 Oct 2011 22:10:23 +0200
+
+libqtcontacts-tracker (4.17.5.1-1) unstable; urgency=low
+
+  * Changes: Temporarly bump timeout in testSparqlSorting
+
+ -- Adrien Bustany <adrien.bustany@nokia.com>  Thu, 27 Oct 2011 14:55:50 +0300
+
+libqtcontacts-tracker (4.17.5-1) unstable; urgency=low
+
+  * Fixes: Performance regression introduced with partial saving
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Wed, 26 Oct 2011 22:10:23 +0200
+
+libqtcontacts-tracker (4.17.4-2) unstable; urgency=low
+
+  * Update required contactsd version
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Tue, 25 Oct 2011 22:56:36 +0200
+
+libqtcontacts-tracker (4.17.4-1) unstable; urgency=low
+
+  * Fixes: NB#248793 - [TASK] Large avatars needed for call UI
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Tue, 25 Oct 2011 22:52:27 +0200
+
+libqtcontacts-tracker (4.17.3.1-1) unstable; urgency=low
+
+  * Fixes: Reduce amount of data generated by testSparqlSorting()
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Tue, 25 Oct 2011 09:30:38 +0200
+
+libqtcontacts-tracker (4.17.3-1) unstable; urgency=low
+
+  * Fixes: NB#287273- [TASK] Implement nickname preference setting for qtcontacts-tracker
+  * Fixes: Put an instance of QctSettings in QctThreadLocalData to reduce heap fragmentation (addresses NB#28494)
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Tue, 25 Oct 2011 09:29:33 +0200
+
+libqtcontacts-tracker (4.17.2-1) unstable; urgency=low
+
+  * Fixes: Add missing NB248183.vcf to the installed vcards
+
+ -- Adrien Bustany <adrien.bustany@nokia.com>  Fri, 21 Oct 2011 13:56:31 +0300
+
+libqtcontacts-tracker (4.17.1-1) unstable; urgency=low
+
+  * Fixes: Permit new contacts in partial saving
+  * Fixes: Only consider details with context field in testFilterOnContext
+  * New: "compliance" engine parameter for adjusting strictness of the engine
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Wed, 19 Oct 2011 16:30:09 +0200
+
+libqtcontacts-tracker (4.17.0-1) unstable; urgency=low
+
+  * Fixes: NB#248183 - Empty address field is displayed in temporary contact card when a contact card is received with postal address
+  * Fixes: NB#262057 - Unable to see the saved gender option 'Not defined' in edit contact view
+  * Fixes: NB#265933 - [TASK][EngineV2] Implement native partial saving
+  * Fixes: NB#265935 - [TASK][EngineV2] Implement native fetchbyid request
+  * Fixes: NB#265937 - [TASK][EngineV2] Implement QContactManagerEngineV2 interface
+  * Changes: Only filter on value, not rdf:type when inserting foreign keys
+  * Changes: Use EXISTS filter for insertValue in preserve mode
+  * Fixes: Fetching of fields like QContactGeoLocation::Timestamp
+  * Fixes: Let the save request reject contacts with bad contact manager URI
+  * Fixes: Let the save request reject contacts with non-existent, non-zero local id
+  * Fixes: Only accept contact ids that really point to contacts, but not some random other RDF resource
+  * Fixes: Propagate errors from compatibleContact()
+  * Fixes: Properly store/restore UTC offset for DateTime fields (fail with dates that can't be serialized in ISO8601)
+  * Fixes: Really test UID creation for full save request
+  * Fixes: Verify linked detail URIs and report DetailError when saving a contact with details that link to non-existent details.
+  * New: Permit restriction of resource class in SPARQL resolver
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Tue, 18 Oct 2011 13:03:07 +0200
+
+libqtcontacts-tracker (4.16.3.3-1) unstable; urgency=low
+
+  * Changes: Increase timeout to 5 secs in testFilterOnContext
+
+ -- Adrien Bustany <adrien.bustany@nokia.com>  Wed, 12 Oct 2011 10:16:22 +0300
+
+libqtcontacts-tracker (4.16.3.2-1) unstable; urgency=low
+
+  * Fixes: NB#283142 - Nickname should have higher priority for contact label
+
+ -- Adrien Bustany <adrien.bustany@nokia.com>  Tue, 11 Oct 2011 11:52:40 +0300
+
+libqtcontacts-tracker (4.16.3.1-2) unstable; urgency=low
+
+  * Changes: Fix debian control file
+
+ -- Adrien Bustany <adrien.bustany@nokia.com>  Tue, 04 Oct 2011 11:03:32 +0300
+
+libqtcontacts-tracker (4.16.3.1-1) unstable; urgency=low
+
+  * Changes: Update the requirements of libqtcontacts-extensions-tracker-dev
+
+ -- Adrien Bustany <adrien.bustany@nokia.com>  Tue, 04 Oct 2011 10:23:52 +0300
+
+libqtcontacts-tracker (4.16.3-1) unstable; urgency=low
+
+  * Changes: Ensure the default graph exists before resolving its tracker:id
+  * Changes: Remove graph-iri engine parameter
+  * Changes: Remove Qt keywords from public headers in the lib
+  * Changes: Pull QtGui in qtcontacts_extensions_tracker.prf
+
+ -- Adrien Bustany <adrien.bustany@nokia.com>  Thu, 29 Sep 2011 15:58:53 +0300
+
+libqtcontacts-tracker (4.16.2-3) unstable; urgency=low
+
+  * Fixes: List Python as build dependency
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Wed, 28 Sep 2011 14:20:55 +0200
+
+libqtcontacts-tracker (4.16.2-2) unstable; urgency=low
+
+  * Fixes: Mark ut_qtcontacts_trackerplugin::testSparqlSorting as expected to fail
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Wed, 28 Sep 2011 11:07:11 +0200
+
+libqtcontacts-tracker (4.16.2-1) unstable; urgency=low
+
+  * Fixes: NB#281295 - qtcontacts-tracker should provide an option to ignore change signals coming from contactsd
+  * Fixes: NB#257949 - fetchrequest does not correctly decode IRIs
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Wed, 28 Sep 2011 10:29:50 +0200
+
+libqtcontacts-tracker (4.16.1-1) unstable; urgency=low
+
+  * Fixes: NB#274282 - Contacts crash in qct merge request
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Mon, 12 Sep 2011 14:30:33 +0200
+
+libqtcontacts-tracker (4.15.4-1) unstable; urgency=low
+
+  * Fixes: NB#279711 - qtcontacts-tracker does not backup avatars
+
+ -- Adrien Bustany <adrien.bustany@nokia.com>  Mon, 29 Aug 2011 10:38:00 +0300
+
+libqtcontacts-tracker (4.15.3-1) unstable; urgency=low
+
+  * Fixes: Avoid "Cannot set parent, new parent is in a different thread" warning
+  * Changes: extend bm_qtcontacts_trackerplugin_batchsaving with optional detail mask on overwrite
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Wed, 17 Aug 2011 15:12:16 +0300
+
+libqtcontacts-tracker (4.15.2-1) unstable; urgency=low
+
+  * Fixes: NB#275609 - qtcontacts-tracker crashes when starting a contact fetch request if AEGIS tokens are missing
+  * Fixes: NB#275610 - Resolving contact ID for contact saved from temporary contact card through fenix fails
+  * Fixes: Typo in security token banner
+
+  * New: Export qctAvailabilityRank() and qctUpdateGlobalPresence()
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Mon, 15 Aug 2011 23:17:46 +0300
+
+libqtcontacts-tracker (4.15.1.1-1) unstable; urgency=low
+
+  * Brown paper bag release.
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Wed, 03 Aug 2011 15:07:39 +0200
+
+libqtcontacts-tracker (4.15.1-1) unstable; urgency=low
+
+  * Fixes: NB#238440 - Is is not possible to filter on Context field
+  * Fixes: NB#273891 - Phone numbers should be stored in latin script
+  * Fixes: Make testFilterDTMFNumber more robust to DB pollution
+
+  * New: Expose eastern arabic number translation in qctNormalizePhoneNumber
+  * New: Add unit test for storing and fetching tags, rename old ut_qtcontacts_trackerplugin::testTags() to testFavouriteTag()
+  * New: Support filters and permit selection of details in contact fetching benchmark
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Wed, 03 Aug 2011 14:18:36 +0200
+
+libqtcontacts-tracker (4.15.0-1) unstable; urgency=low
+
+  * Fixes: NB#270353 - Wrong ownership fetching for QContactOnlineAccount
+  * Fixes: NB#272187 - <Coverity> defects for /libqtcontacts-tracker/ (CID 47461, 47494, 47522)
+  * Fixes: NB#268895 - [TASK] Let contact fetch request fill QContact::relationships()
+  * Fixes: NB#269920 - Check that number is attached to a PersonContact in DTMF lookup
+
+  * Fixes: on removing relationships only skip those with invalid values
+  * Fixes: in QTrackerRelationshipRemoveRequest check values of relationships for errors
+  * Fixes: in QTrackerRelationshipSaveRequest set error to last in m_errorMap if existing
+  * Fixes: on relationship saving also check if first and second contact are not identic
+  * Fixes: Fill ContChanges: Add fetching of their relationships on fetching contacts
+  * Fixes: Properly setup plugin search path for benchmarks
+  * Fixes: properly return all relationships of a type if asked for it
+  * Fixes: do not reset an empty context to QContactDetail::ContextOther on contact fetching
+  * Fixes: graph iri was not read for QContactOrganization::FieldLocation
+
+  * New: More unit tests about contact groups
+  * New: Support groups in bm_qtcontacts_trackerplugin_batchsaving
+  * New: Consider eastern arabic numerals when computing local phone number
+  * New: testFilterContactsWithBirthday()
+  * New: Query builder tests for DTMF filters
+
+  * Changes: report separate numbers for fetched contacts, groups and relationships in bm_qtcontacts_trackerplugin_fetch
+  * Changes: Query builder: use predicate functions to get ownership when possible
+  * Changes: do not advertize SelfContact feature (because not completely supported)
+  * Changes: make ut_qtcontacts_trackerplugin_groups::testFetchSavedGroupContactId*() also check sorting
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Mon, 18 Jul 2011 16:55:04 +0200
+
+libqtcontacts-tracker (4.14.19-1) unstable; urgency=low
+
+  * Fixes: NB#259472 - Facebook: Contact thumbnails missing after restoring backup
+  * Fixes: Few API doc comments.
+  * Fixes: Guard against request deletion from outside
+  * Fixes: Leave waitForFinished() loop when request gets deleted
+  * Fixes: Warn for global functions without declaration.
+  * Changes: Disable wait-for-finished nagging for unit tests
+  * Changes: Improve testDeleteFromStateChangedHandler()
+  * Changes: Print warning when the queue's background thread stalled.
+  * Changes: Use .local/share instead of .cache for avatar images
+  * Changes: extend testTorture to do a delete after request->cancel()
+  * New: Introduce qct*LocalDataDir() functions
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Sat, 25 Jun 2011 00:57:00 +0200
+
+libqtcontacts-tracker (4.14.18.1-2) unstable; urgency=low
+
+  * Fixes: List doxygen as build dependency
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Tue, 21 Jun 2011 17:32:22 +0200
+
+libqtcontacts-tracker (4.14.18.1-1) unstable; urgency=low
+
+  * Fixes: Really fix doxs package
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Tue, 21 Jun 2011 13:55:58 +0200
+
+libqtcontacts-tracker (4.14.18-1) unstable; urgency=low
+
+  * Fixes: ActionPreferences wrongly advertized as feature already
+  * Fixes: Make saving of relationships comply with API documentation
+  * Changes: Only document schema when --enable-docs is configured
+  * Changes: Rename --enable-doc to --enable-docs for consistency
+  * Changes: Run qmake recursively from configure script
+  * Fixes: Build issues from 4.14.17-1
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Tue, 21 Jun 2011 12:01:25 +0200
+
+libqtcontacts-tracker (4.14.17-1) unstable; urgency=low
+
+  * Fixes: NB#263843 - Document engine parameters
+  * Fixes: Some query builder unit tests
+  * Fixes: Advertised engine features
+  * Changes: Remove useless GC query from save request
+  * New: Provide package with API documentation
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Mon, 20 Jun 2011 21:42:55 +0200
+
+libqtcontacts-tracker (4.14.16-1) unstable; urgency=low
+
+  * Fixes: NB#233660 - <MemLeak> first contacts sync (1000 contacts) increase dirty memory to 32 Mb for as-daemon
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Tue, 14 Jun 2011 11:01:58 +0200
+
+libqtcontacts-tracker (4.14.15-1) unstable; urgency=low
+
+  * Fixes: NB#262619 - Unmerging fails if two IMAddress are on one affiliation
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Thu, 09 Jun 2011 16:32:16 +0200
+
+libqtcontacts-tracker (4.14.14.1-1) unstable; urgency=low
+
+  * Changes: Mark testSignals as insignificant
+
+ -- Adrien Bustany <adrien.bustany@nokia.com>  Wed, 08 Jun 2011 14:22:00 +0300
+
+libqtcontacts-tracker (4.14.14-1) unstable; urgency=low
+
+  * Fixes: Prevent crash from late signal emission by waitForFinished()
+  * Fixes: Avoid spawning of redundant background thread for running synchronious requests
+  * Changes: List more valgrind suppressions
+  * Changes: Use external garbage collector for contact save request.
+  * New: Run (external) garbage collector after removing contacts.
+  * New: Add gc-limit parameter to engine to control GC triggering
+  * New: Add debug flag for disabling waitForFinished() nagging
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Mon, 06 Jun 2011 22:09:07 +0200
+
+libqtcontacts-tracker (4.14.13-1) unstable; urgency=low
+
+  * Fixes: NB#259357 - After unmerging, nie:generator statement misses graph
+  * Fixes: NB#243268 - Information banner 'Device memory is full. Unable to save group' is not shown
+  * Fixes: NB#245102 - Device memory full error message in not displayed when importing contacts from service/SIM/file
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Wed, 01 Jun 2011 11:34:02 +0200
+
+libqtcontacts-tracker (4.14.12-1) unstable; urgency=low
+
+  * Fixes: Don't expect subtype to be always set in save request
+  * Fixes: NB#252374 - Call UI crashes while enabling screen lock after pressing REDIAL button
+  * Fixes: NB#259006 - Crash in QtMobility::qContactsCleanEngines () at qcontactmanager_p.cpp:92
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Fri, 27 May 2011 15:40:24 +0200
+
+libqtcontacts-tracker (4.14.11.1-1) unstable; urgency=low
+
+  * Add ut_qtcontacts_trackerplugin::testAnniversary to EXPECTFAIL again
+
+ -- Adrien Bustany <adrien.bustany@nokia.com>  Thu, 26 May 2011 10:25:00 +0200
+
+libqtcontacts-tracker (4.14.11-1) unstable; urgency=low
+
+  * Fixes: NB#255776 - Support sorting for LocalIdFetchRequest
+  * Fixes: NB#229821 - QtContacts "samplephonebook" example does not work
+  * Fixes: Ensure that details needed for sorting are fetched
+  * Fixes: Save request: Don't save avatar file if thumbnailing failed
+  * Changes: Remove ut_qtcontacts_trackerplugin::testAnniversary from EXPECTFAIL
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Tue, 24 May 2011 15:26:17 +0300
+
+libqtcontacts-tracker (4.14.10-2) unstable; urgency=low
+
+  * Fixes: NB#258679 - contact sync is not happening with ovi.com
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Tue, 24 May 2011 13:57:55 +0300
+
+libqtcontacts-tracker (4.14.10-1) unstable; urgency=low
+
+  * Fixes: NB#225606 - Birthday field in contact synced to DUT is shown one day less
+  * Fixes: NB#250330 - Batch save should result with batch signaling
+  * Fixes: NB#256863 - Race when starting and deleting requests at the same time
+  * Fixes: Update engine.pro dependency on qtsparql-tracker-extensions
+  * Fixes: Don't update request state in createRequestWorker
+  * Fixes: Possible memory leak in SPARQL resolver
+  * Fixes: Messy request handling in batch saving benchmark
+  * Fixes: Let waitForFinished() deal with StateChanged handlers which delete their request
+  * Fixes: Reduce QVariant/QString roundtrips in contact fetch request
+
+  * Changes: Bump required libcubi version to 0.1.9
+  * Changes: Permit running the benchmarks with latest build without having to install anything
+  * Changes: Rename methods for checking cancelation state of requests
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Tue, 24 May 2011 00:47:27 +0300
+
+libqtcontacts-tracker (4.14.9.1-1) unstable; urgency=low
+
+  * Changes: increase timeout value in tests.xml
+
+ -- Adrien Bustany <adrien.bustany@nokia.com>  Tue, 20 May 2011 11:04:00 +0300
+
+libqtcontacts-tracker (4.14.9-1) unstable; urgency=low
+
+  * Fixes: NB#225606 - Birthday field in contact synced to DUT is shown one day less
+  * Fixes: Don't reuse fields from QContactSaveRequest in UnmergeRequest
+  * Changes: Bump timeout in testSignals
+  * Changes: Mark testDateDetail as expected to fail
+  * Changes: Extract singleton template class from Transform and share with Conversation
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Thu, 19 May 2011 22:42:32 +0200
+
+libqtcontacts-tracker (4.14.8-1) unstable; urgency=low
+
+  * Fixes: NB#243268 - Information banner 'Device memory is full. Unable to save group' is not shown
+  * Fixes: NB#255795 - Crash when unmerging invalid contact
+  * Changes: Check for QSparqlResult nullity in relationshipfetchrequest
+
+ -- Adrien Bustany <adrien.bustany@nokia.com>  Tue, 17 May 2011 17:31:00 +0300
+
+libqtcontacts-tracker (4.14.7-1) unstable; urgency=low
+
+  * Fixes: NB#193261 - One of the job title is lost when contact with two job titles is synchronized to device
+  * New: Add vCard from NB#193261
+  * Changes: Scalar QB: Add support for custom fields not on prefix
+  * Changes: Add support for multi valued chains in multi details
+  * Changes: Fix saving of mapping-less fields on multi details
+
+ -- Jens Georg <jensg@openismus.com>  Mon, 16 May 2011 16:36:57 +0200
+
+libqtcontacts-tracker (4.14.6-1) unstable; urgency=low
+
+  * Fixes: Properly cancel request tasks (for correctness and NB#229814)
+  * Fixes: QContactTrackerEngine::waitForRequestFinished() should return true also if Canceled
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Wed, 11 May 2011 15:43:27 +0200
+
+libqtcontacts-tracker (4.14.5-1) unstable; urgency=low
+
+  * Fixes: Preserve named/default graph of statements during merge
+  * New: bm_qtcontacts_trackerplugin_merge - Simple merge benchmark
+  * New: Add unittest to check that the phone number is preserved when merging two contacts in a group
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Wed, 11 May 2011 02:21:26 +0200
+
+libqtcontacts-tracker (4.14.4-1) unstable; urgency=low
+
+  * New: Test signal emission during merging and unmerging
+  * Fixes: Avoid bogus ContactsAdded signal from merge request
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Wed, 11 May 2011 02:19:28 +0200
+
+libqtcontacts-tracker (4.14.3-1) unstable; urgency=low
+
+  * Fixes: NB#253679 - Duplicate contact when adding a new buddy
+  * New: Add test for QContactOnlineAccount IRI generation
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Wed, 11 May 2011 02:11:52 +0200
+
+libqtcontacts-tracker (4.14.2-1) unstable; urgency=low
+
+  * Fixes: NB#245534 - Legal Bug
+  * Fixes: Spelling error in package description
+  * Fixes: Behave more sanely when passing no slot to QTrackerAbstractRequest::runQuery() (avoid misleading warning)
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Wed, 11 May 2011 02:07:22 +0200
+
+libqtcontacts-tracker (4.14.1-1) unstable; urgency=low
+
+  * Fixes: Saving a contact deletes group membership
+  * Fixes: Properly calculate local plugin path for unit tests
+  * Changes: Bump required contactsd version
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Thu, 05 May 2011 15:19:58 +0200
+
+libqtcontacts-tracker (4.14.0-1) unstable; urgency=low
+
+  * Fixes: NB#219320 - Huge memory usage in Contacts UI with larger number of contacts
+  * Fixes: NB#233660 - First contacts sync (1000 contacts) increase dirty memory to 32 Mb for as-daemon
+  * Fixes: NB#243267 - Editing a contact loses SIP account
+
+  * Fixes: Coalesce behaviour for NB#252232
+  * Fixes: Handle QVariant::Int in QTrackerContactDetailField::makeValue()
+  * Fixes: Signal emission in sparql resolver
+  * Fixes: Truncate QtSparql error messages in resolver
+  * Fixes: Improve error handling for request workers
+
+  * New: Support QContactDetailDefinitionFetchRequest
+  * New: Let qctWriteThumbnail() report a proper error code
+
+  * Changes: Use sync QtSparql API to massively reduce memory consumption of the plugin
+  * Changes: Fix ownership fetching for fields with inverse properties
+  * Changes: Remove ontology-compiler, has been moved to libcubi repo
+  * Changes: Use more QMetaObject::invokeMethod(...) instead of QTimer::singleShot(...)
+  * Changes: Remove workaround for NB#213419
+  * Changes: Bump required tracker version
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Wed, 04 May 2011 11:04:00 +0200
+
+libqtcontacts-tracker (4.13.11.1-1) unstable; urgency=low
+
+  * Fixes: Unmerging if there's only an OnlineAccount to unmerge
+  * Changes: Add dependency on cubi for libqtcontacts-extensions-tracker
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Wed, 04 May 2011 10:34:22 +0200
+
+libqtcontacts-tracker (4.13.11-1) unstable; urgency=low
+
+  * Fixes: NB#218962 - Mappings for addresses have wrong format
+  * Fixes: NB#232231 - Fax field shown as double after sync when number of phone(work) and Fax are same in other device
+  * Fixes: NB#239287 - Unmerging of contacts is not working
+  * Fixes: NB#244743 - Qct should generate normalized phone number IRIs
+  * Changes: Don't disconnect task signals
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Thu, 28 Apr 2011 16:03:43 +0200
+
+libqtcontacts-tracker (4.13.10-3) unstable; urgency=low
+
+  * And revert the previous fixes
+
+ -- Jens Georg <jensg@openismus.com>  Thu, 28 Apr 2011 10:26:04 +0300
+
+libqtcontacts-tracker (4.13.10-2) unstable; urgency=low
+
+  * Minor changelog fixes
+
+ -- Jens Georg <jensg@openismus.com>  Wed, 27 Apr 2011 16:26:57 +0300
+
+libqtcontacts-tracker (4.13.10-1) unstable; urgency=low
+
+  * Fixes: Move <contact> nco:belongsToGroup <group> into plugin's graph.
+  * Fixes: Don't dump query twice in debug mode
+  * Changes: use installed cubi ontology headers instead of own copy
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Wed, 27 Apr 2011 08:56:16 +0200
+
+libqtcontacts-tracker (4.13.9-1) unstable; urgency=low
+
+  * Fixes: NB#197701 - Performance issue: The libQtContacts APIs take lot of time to complete
+  * Fixes: NB#201620 - Synchronization - Field names for contact are getting lost when sync is done
+  * Fixes: NB#242034 - Call-history winds up in an eternal poll-loop because of faulty lock mechanisms
+  * Fixes: NB#246586 - messaging-ui crashes when tapping on mms message in sending status
+  * Fixes: NB#248611 - Provide the way to disable groups in QContactManager
+
+  * Fixes: Warning about wrong parent thread
+  * Fixes: Race condition on queue shutdown
+  * Fixes: Don't set task queue parent in engine's assignment operator
+  * Fixes: Don't leak QctQueue's internal task queue
+  * Fixes: Don't leak finished tasks
+  * Fixes: Avoid freeze when QctQueue is deleted while a task is running
+
+  * New: Implement compatibleContact
+
+  * Changes: re-add debian/copyright, as requested by legal
+  * Changes: Use tracker engine via manager in testTorture
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Thu, 21 Apr 2011 15:26:58 +0200
+
+libqtcontacts-tracker (4.13.8.1-1) unstable; urgency=low
+
+  * Paperbag release: Add missing source file and missing cubi updates.
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Mon, 18 Apr 2011 10:17:46 +0200
+
+libqtcontacts-tracker (4.13.8-1) unstable; urgency=low
+
+  * Fixes: Use user data instead of dynamic properties for request extensions
+  * Fixes: Drop engine data sharing. Not really needed and only causes trouble.
+    Actually we only wanted to share the tracker listener anyway.
+  * Fixes: Ensure requests are not deleted already when accessed.
+  * Fixes: Properly report when the plugin is initialized
+  * Fixes: Report proper engine interface version
+  * Fixes: Prevent that QctSparqlResolver::lookup() is called from random thread
+
+  * New: Execute any queue task in one single background thread. There is
+    one background thread per queue, that is one thread per engine.
+  * New: Add an engine parameter for sync target mangling
+  * New: Add Cubi::ResourceValue qctMakePhoneNumberResource(QString, QStringList)
+
+  * Changes: Use cubidefines.h from cubi
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Mon, 18 Apr 2011 03:41:20 +0200
+
+libqtcontacts-tracker (4.13.7-1) unstable; urgency=low
+
+  * Fixes: NB#242026 - The device takes long time to save contact from the dialler (~7 secs)
+  * Fixes: NB#221660 - Creation of QContactManager take too much time
+  * Fixes: Add libqtcontacts-tracker to XB-Maemo-CI-Packages
+
+  * New: QString and Cubi::ResouceValue version of qctMakePhoneNumberIri
+
+  * Changes: Only do coalesce with empty string on single-value predicate functions
+  * Changes: Remove wrong copyright file from debian folder
+  * Changes: Remove generated detail URIs (addresses NB#233660)
+  * Changes: Don't run garbage collector when saving only one contact
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Mon, 11 Apr 2011 12:40:39 +0200
+
+libqtcontacts-tracker (4.13.6-1) unstable; urgency=low
+
+  * Fixes: Avoid reentrancy issues when starting requests
+  * Fixes: Define readonlyness with shared resources only by the predicate to them
+
+  * New: Add method to generate phone number IRIs to the lib
+
+  * Changes: Print the app path for missing AEGIS credentials
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Thu, 07 Apr 2011 11:36:41 +0200
+
+libqtcontacts-tracker (4.13.5-1) unstable; urgency=low
+
+  * Fixes: NB#239457 - libqtcontacts-tracker-dbg should be split
+  * Fixes: NB#239930 - don't create a event loop in the ctor
+  * Fixes: NB#236735 - <MemLeak> memory leak for contactsaverequest.cpp:2024
+  * Fixes: NB#216848 - Valgrind shows possible memory leaks
+  * Fixes: NB#233396 - [SSU-Reinstallation] localUID postinst script fails
+  * Fixes: NB#233857 - libqtcontacts-tracker tests : CITA cases FAILS.
+
+  * Fixes: Potential lock-up when trying to remove the self-contact
+  * Fixes: Write proper resource for ncal:dtstart
+  * Fixes: testVCardsAndSync failing if testfiles are not writable by user running tests
+  * Fixes: Don't report finished state with first save request error already
+  * Fixes: Overwrite mode of batch saving benchmark
+  * Fixes: Use proper variant type in TelepathyConversion::makeValue
+
+  * Changes: avoid str() cast in projections where no longer needed
+  * Changes: Update reference queries to make most query builder unit tests pass
+  * Changes: Remove obsolete "optional" attribute from ResourceInfo
+
+  * New: Add contact fetching benchmark
+  * New: testIMContactsFiltering with tracker 0.10.5
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Tue, 05 Apr 2011 11:28:24 +0200
+
+libqtcontacts-tracker (4.13.4-1) unstable; urgency=low
+
+  * Paperbag release: Add missing files.
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Fri, 25 Mar 2011 14:28:02 +0100
+
+libqtcontacts-tracker (4.13.3-1) unstable; urgency=low
+
+  * Fixes: Always propagate error codes from query builder
+  * Fixes: Add missing test data files in ut_qtcontacts_trackerplugin_tests.pro
+  * Fixes: Fetch values-by-instances with graph as well
+  * Fixes: Handling of range flags in the scary builder
+  * Fixes: Properly filter fields like gender and presence status
+
+  * Changes: Move avatar generation method to the extension library
+  * Changes: Update reference queries in unit tests
+  * Changes: Use integer literals for tracker:id() based filters
+  * Changes: Micro-optimize hasDTMFCodes check
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Fri, 25 Mar 2011 14:13:19 +0100
+
+libqtcontacts-tracker (4.13.2-1) unstable; urgency=low
+
+  * Fixes: NB#217752 - Deletion of 100 Device contacts is taking more time
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Wed, 23 Mar 2011 13:56:12 +0100
+
+libqtcontacts-tracker (4.13.1-1) unstable; urgency=low
+
+  * Fixes: NB#233629 - Phone number lookup fails if number dialed contains "p"
+  * Fixes: Merge request: insert/delete sync target in QCT's graph
+  * Fixes: Change sync target from "telepathy" to "addressbook" when saving
+  * Changes: New list common sync targets in customdetails.h
+  * New: Add --cleanup switch to batch saving benchmark
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Tue, 22 Mar 2011 15:51:24 +0100
+
+libqtcontacts-tracker (4.13.0-2) unstable; urgency=low
+
+  * Fixes: NB#233629 - Phone number lookup fails if number dialed contains "p"
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Fri, 18 Mar 2011 15:47:44 +0100
+
+libqtcontacts-tracker (4.13.0-1) unstable; urgency=low
+
+  * Fixes: NB#235995 - QContactDetailFilter doesn't support QContactType
+  * Fixes: Do not add graph iri for field with single predicate chain and
+    without hasOwner
+  * Fixes: Results for URL type need to be separated by detail separator
+  * Fixes: Properly handle sync target when merging: Preserve MfE and telepathy
+    target when appropriate, overwrite with addressbook target in other cases.
+  * Fixes: Consider DTMF codes when normalizing phone numbers for fuzzy phone
+    number matching.
+  * Fixes: Only delete associated objects inside qct graph
+
+  * Changes: Use external Cubi library instead of shipping a copy of it.
+  * Changes: Mark QContact details as readonly if its properties have a
+    different RDF graph but qtcontacts-tracker's default graph. IM contacts
+    imported by contactsd are an use-case.
+  * Changes: Use localtime for nie:contentLastModified in contact merge
+  * Changes: Avoid redundant DELETE statements when creating new contacts
+  * Changes: Check for parallel parameter in debian/rules
+  * Changes: Don't update nco:contactLocalUID after saving
+  * Changes: Use prefix notation instead of IRI notation in fetch and save
+    request queries. Reduces tracker's parsing effort.
+  * Changes: Use shared ResourceValues and PredicateFunctions in query builder
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Fri, 18 Mar 2011 10:58:09 +0100
+
+libqtcontacts-tracker (4.12.11-1) unstable; urgency=low
+
+  * Changes: Ignore nco:contactLocalUID when merging
+  * Changes: Move makeLocalPhoneNumber and normalizePhoneNumber to the lib
+  * Fixes: NB#225067 - It is possible to delete nco:default-contact-me using UI
+
+ -- Adrien Bustany <adrien.bustany@nokia.com>  Wed, 16 Mar 2011 16:55:22 +0200
+
+libqtcontacts-tracker (4.12.10-2) unstable; urgency=low
+
+  * Fixes: NB#229032 - IRI encoding broken in qtcontacts-tracker
+
+  * New: Add VCard from bug NB#229032
+
+ -- Jens Georg <mail@jensge.org>  Wed, 16 Mar 2011 12:56:23 +0200
+
+libqtcontacts-tracker (4.12.10-1) unstable; urgency=low
+
+  * Fixes: Preserve graph when merging contacts
+  * Fixes: ut_qtcontacts_trackerplugin_querybuilder::testFetchRequestQuery
+  * Fixes: Explicitly run pre steps as user on CITA
+
+  * Changes: Augment the tests timeout even more
+  * Changes: Use QString instead of QUrl for Iris
+  * Changes: Update reference queries for fetching individual details
+  * Changes: Update FUTURE file
+
+  * Update Cubi to 284edbf8dd2ba52cb51a997014c2e1d1cd7fc31d
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Fri, 11 Mar 2011 12:42:02 +0100
+
+libqtcontacts-tracker (4.12.9-1) unstable; urgency=low
+
+  * Changes: Remove the localUID postinst script
+  * Changes: install ut_qtcontacts_trackerplugin_settings_helper and ut_qtcontacts_trackerplugin_helper
+  * Changes: Increase timeout of tests to 240 seconds
+  * New: Add unit test for QContactFavorite
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Wed, 09 Mar 2011 15:59:39 +0100
+
+libqtcontacts-tracker (4.12.8-1) unstable; urgency=low
+
+  * Fixes: NB#218724 - Display of the contact name is call history view is incorrect
+  * Fixes: NB#231925 - Replace libcreds2-qt with mssf-qt
+  * Fixes: Solve warnings about "Invalid account path:"
+  * Fixes: Permit simliar phone numbers in one contact without failing
+  * Fixes: A potential lock-up in sync API (MR#133)
+
+  * Changes: Make merge request use less memory and less time
+  * Changes: Bump tracker-runtime dependency to 0.10.0 for SQL variable fix
+
+  * Changes: Simplify logic in scalar query builder
+  * Changes: Improve performance of scalar query builder
+  * Changes: use "jabber" as default protocol in ut_qtcontacts_trackerplugin::insertContact(...)
+  * Changes: Store phone numbers with anonymous IRIs instead of misleading tel: IRIs
+
+  * New: ut_qtcontacts_trackerplugin::testSimilarPhoneNumber()
+  * New: ut_qtcontacts_trackerplugin::testSamePhoneNumber()
+
+  * Update Cubi to efa9834aef170e608453f708f2ef8473a9d70ae4
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Tue, 08 Mar 2011 12:07:59 +0100
+
+libqtcontacts-tracker (4.12.7-1) unstable; urgency=low
+
+  * Fixes: 230105 - Unable to remove the merged (gtalk+gtalk) contact from favourites
+  * Fixes: tracker-store killed by OOM due to merge on device
+
+  * Changes: Make merge request use less memory
+
+ -- Jens Georg <jens.georg@openismus.com>  Thu, 24 Feb 2011 16:47:23 +0100
+
+libqtcontacts-tracker (4.12.6-1) unstable; urgency=low
+
+  * Fixes: NB#180538 - Gtalk contact details are not shown in the Microsoft outlook contact card when a merged (gtalk with local) contact card is sent by email
+  * Fixes: NB#222553 - [CRASH] deleting QContactManager before a request finishes crashes qct
+  * Fixes: NB#224391 - Merged local+IM contact lost IM address and avatar after device rebooting
+
+  * Fixes: 223894 - libqtcontacts-extensions-tracker0 has unnecessary libsysinf0 dependency
+  * Fixes: online account protocol ids need to be converted from telepathy style to the new Qt Mobility style
+  * Fixes: adapt schema to the new way of storing the protocol of an account in tracker
+  * Fixes: clean-up shlib dependencies
+  * Fixes: Don't delete the original QContactAbstractRequest as it might be stack-allocated
+  * Fixes: Typo in EXPECTFAIL, bump timeout for testFuzzing and test_signals
+  * Fixes: Regressions introduced with a855fea0
+  * Fixes: Bump wait time for test, probably caused by a855fea05
+
+  * Changes: Mark QContactOnlineAccount__FieldProtocol declaration as deprecated
+  * Changes: Mark QContactOnlineAccount::FieldProtocol as r/w
+  * Changes: only call QTrackerContactDetailData::computePredicateChains() if really needed
+  * Changes: Update EXPECTFAIL
+  * Changes: .prf files are always post-processed, no chance to override it
+  * Changes: Don't call emitResult() from start() in requests
+  * Changes: adds unittest testFilterOnDetailFieldValueWithSingleSpaceOrEmptyString()
+  * Changes: Query builder UT: Remove now superfluous qDebug for QContactDetailField
+  * Changes: Fix token name in aegis check
+
+  * New: Add test for InvalidFilter handling
+  * New: ScalarQueryBuilder: Properly handle InvalidFilter
+  * New: Add .vcf from NB#225606
+
+ -- Jens Georg <jens.georg@openismus.com>  Sat, 19 Feb 2011 13:56:12 +0100
+
+libqtcontacts-tracker (4.12.5-1) unstable; urgency=low
+
+  * Fixes build with Qt Mobility 1.2
+  * Fixes: NB#224194 - Contacts sync never end
+
+ -- Adrien Bustany <adrien.bustany@nokia.com>  Wed, 17 Feb 2011 17:25:42 +0200
+
+libqtcontacts-tracker (4.12.4-2) unstable; urgency=low
+
+  * Fixes: NB#223009 - Contacts not shown immediately after transferring contacts from 5800 via sync
+  * Fixes: NB#226496 - [REG] Crash after reboot
+  * Fixes: NB#217593 - Different contacts with same last name are identified as duplicates
+
+ -- Jens Georg <jensg@openismus.com>  Mon, 14 Feb 2011 13:47:08 +0100
+
+libqtcontacts-tracker (4.12.4-1) unstable; urgency=low
+
+  * Fixes: Lock-up on saverequest
+  * Changes: remove unused "QHash<QUrl, Variable> subjects", is always the same subject, which is const
+  * New: Valgrind support for the testsuite
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Fri, 11 Feb 2011 09:46:13 +0100
+
+libqtcontacts-tracker (4.12.3-1) unstable; urgency=low
+
+  * Fixes: NB#175110 - Batch saving of 500 contacts is over the target (target: 90s)
+  * Fixes: NB#224090 - Requesting list of contact IDs takes too long
+  * Fixes: NB#225460 - Details with access constraints flags set to ReadOnly are saved
+  * Fixes: NB#204035 - Add new contact failed without error warning when User memory is full
+  * Fixes: NB#201032 - QContactFetchRequest()->start() takes ~9 seconds
+  * Fixes: NB#226496 - [REG] Messaging is crashing after reboot
+
+  * Fixes: actually also test the new field added in ut_qtcontacts_trackerplugin::testSaveOrganization()
+  * Fixes: Crash when EngineData (and thus TrackerChangeListener) lives longer than the engine
+  * Fixes: Properly report errors in QTrackerRelationshipRemoveRequest
+
+  * Changes: Make QTRACKER_DIRECT the default backend again.
+
+  * Changes: Refactor SPARQL query and associated error handling to have everying at one place
+  * Changes: Separate QTrackerContactCopyAndRemoveRequest and QTrackerContactRemoveRequest from each other
+  * Changes: Separate QTrackerContactSaveOrUnmergeRequest and QTrackerContactSaveRequest from each other
+
+  * Changes: Reenable security token checks, people just fail way too often to
+    provide proper tokens. So we want to print our warnings to educate plugin
+    users. If the security checks should cause trouble they can be temporarly
+    disabled by exporting QT_CONTACTS_TRACKER="debug=no-sec".
+  * Changes: Update AEGIS manifest for unit tests
+
+  * New: ut_qtcontacts_trackerplugin::testTorture
+
+  * Update Cubi to 93057ceec194d0ea124019d2da1630bcd2c1276c
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Wed, 09 Feb 2011 16:32:15 +0100
+
+libqtcontacts-tracker (4.12.2-3) unstable; urgency=low
+
+  * Remove offending bug 223014 from changelog
+
+ -- Adrien Bustany <adrien.bustany@nokia.com>  Wed, 09 Feb 2011 09:48:42 +0200
+
+libqtcontacts-tracker (4.12.2-2) unstable; urgency=low
+
+  * Avoid git dependency for mktests.sh
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Thu, 03 Feb 2011 13:03:51 +0100
+
+libqtcontacts-tracker (4.12.2-1) unstable; urgency=low
+
+  * Fixes: NB#222099 - [REG] Presence indicator for remote contact is not changing in Conversations List View and Conversational View
+  * Fixes: Membership relationship filters with "Either" role.
+  * Fixes: Rewrite contact change listener to make it actually work
+  * Fixes: Propagate query builder errors for filters in fetch request
+
+  * New: signals debug flag (QT_CONTACTS_TRACKER="debug=signals")
+
+  * Changes: ut_qtcontacts_trackerplugin_groups and ut_qtcontacts_trackerplugin_signals are expected to pass now
+  * Changes: Merge testFetchContactsOfGivenGroup() and testFetchGroupsOfGivenContact() variants into one test (each).
+  * Changes: Silence ut_qtcontacts_trackerplugin_groups a bit
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Thu, 03 Feb 2011 12:42:33 +0100
+
+libqtcontacts-tracker (4.12.1-5) unstable; urgency=low
+
+  * Allow postinst script to fail silently if ran without DBus running
+
+ -- Adrien Bustany <adrien.bustany@nokia.com>  Wed, 02 Feb 2011 17:04:28 +0200
+
+libqtcontacts-tracker (4.12.1-4) unstable; urgency=low
+
+  * Update postinst script for tracker .36 and setup its AEGIS credentials.
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Tue, 01 Feb 2011 15:24:28 +0100
+
+libqtcontacts-tracker (4.12.1-3) unstable; urgency=low
+
+  * Actually also delete wrong nco:contactLocalUID during package upgrade.
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Mon, 31 Jan 2011 22:06:22 +0100
+
+libqtcontacts-tracker (4.12.1-2) unstable; urgency=low
+
+  * Add post-install script for updating nco:contactLocalUID properties to match the tracker:id()
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Mon, 31 Jan 2011 19:39:07 +0100
+
+libqtcontacts-tracker (4.12.1-1) unstable; urgency=low
+
+  * Fixes: NB#217400 - Very slow resolution of contacts while searching
+  * Fixes: Local contact id ignored for contacts with empty manager URI
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Mon, 31 Jan 2011 15:37:11 +0100
+
+libqtcontacts-tracker (4.12.0-1) unstable; urgency=low
+
+  * Changes: Use tracker:id() to identify contacts (QContactLocalId). The
+    previously used nco:contactLocalUID property is synched with the contact's
+    tracker:id(). This also affects the self contact's id which as fixed before
+    and now is retrieved from tracker:id(nco:default_contact_me).
+
+  * Changes: Consider the contact's manager URI to recognize new contacts: If
+    the contact's manager URI doesn't match the engine's manager URI the
+    contact is considered a new contact.
+
+  * Changes: Replace trouble making RDF class cache with more trivial, process-local cache.
+
+  * Fixes: Report proper error code for unsupported relationships
+  * Fixes: Restore support for single value restricted values like QContactAnniversary::SubType
+
+  * Changes: Always generate tests.xml, add tests-local.xml.
+  * Changes: Avoid cellular GUID algorithm being created when not needed.
+  * Changes: Code cleanup in contact fetch request
+  * Changes: Create separate CITA set for each unit test fixture
+  * Changes: Merge ut_qtcontacts_trackerplugin::testChangesOverflow and ut_qtcontacts_trackerplugin_signals::testSignals
+  * Changes: Properly mark QContactAnniversary::FieldSubType as QString.
+  * Changes: Remove details that are always generated from exists & wildcard filter
+  * Changes: Remove now obsolete unit tests for make and parseContactIri()
+  * Changes: Remove obsolete DBus classes
+  * Changes: Tell integration bot to clean tracker before running each test set
+  * Changes: Update run-all.sh to use private tracker
+  * Changes: Use EXISTS filter instead of OPTIONAL clause for copy-and-remove request
+  * Changes: Use RDF meta-data instead of hard-coded lists for merge request.
+  * Changes: Use common column limit also in remove request
+  * Changes: Use scalar query builder for filtering in contact fetch and local id fetch request
+
+  * New: Add unit test for fetching of contacts using a filter with a wildcard on a detail field
+  * New: Add unit test for fetching of contacts using an exists filter on a detail
+  * New: Support for generating code coverate reports, activated via --enable-coverage configure switch
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Mon, 31 Jan 2011 10:00:19 +0100
+
+libqtcontacts-tracker (4.11.8-1) unstable; urgency=low
+
+  * Fixes: NB#218688 - libqtcontacts-tracker freezes and stops the request
+  * Fixes: Usage of disconnect() was accidently inverted in fetch request
+
+  * Changes: Use concurrency level of #CPU + 1
+  * Changes: Give QContactTrackerEngine::finishDetailDefinitions() better chance of reporting reason of invokation.
+  * Changes: Remove unused dependency on QtNetwork
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Mon, 17 Jan 2011 11:53:11 +0100
+
+libqtcontacts-tracker (4.11.7-1) unstable; urgency=low
+
+  * Fixes: NB#203983 - libqtcontacts-tracker-tests fail during execution.
+  * Fixes: NB#206582 - libtqcontacts_tracker uses too much memory for class cache
+  * Fixes: NB#216805 - Unable to merge 2 tracker contacts (local or IM).
+
+  * Changes: List --disable-schemalist in help output
+  * Changes: List configuration of ENABLE_SCHEMA_LIST, ENABLE_BUILDDIRS_RPATH and ENABLE_RTTI after checks
+  * Changes: Really preserve order when fetching custom value lists.
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Wed, 12 Jan 2011 13:42:34 +0100
+
+libqtcontacts-tracker (4.11.6-1) unstable; urgency=low
+
+  * Fixes: NB#214563 - Regression - Few contact fields (family, assistant) not restored
+  * Fixes: NB#216503 - libqtcontacts-tracker should use QElapsedTimer instead of QTime
+  * Fixes: BMC#12003 - schemalist is not building in qtcontact tracker plugin (meego)
+  * Fixes: Remove unneeded QUrl(...) from QUrl(QUrl::fromEncoded(...))
+  * Fixes: Don't let ontology headers include themself.
+
+  * New: Enable tracker direct access by default
+  * New: Enable groups by default
+
+  * New: Add test for Landline subtype in testSavePhoneNumber
+  * New: Add unit test for saving and fetching of non-latin1 names
+  * New: Add unit test for fetching of contacts using FieldAccountPath or FieldAccountUri of QContactOnlineAccount
+  * New: Add ut_qtcontacts_trackerplugin_settings, a test suite for QctSettings
+  * New: Test preservation of custom value lists.
+
+  * Changes: Listen to changes of nco:PersonContact and nco:ContactGroup only
+  * Changes: Enable pretty printing for contact fetch and save request
+  * Changes: Use more robust (and efficient) approach for finding customDetailColumn
+  * Changes: Search ontologies.overrides in SRCDIR instead of build dir
+  * Changes: Scalar QB: Some code cleanups
+  * Changes: Use QLatin1String for default arguments
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Fri, 07 Jan 2011 12:25:53 +0100
+
+libqtcontacts-tracker (4.11.5-2) unstable; urgency=low
+
+  * Fix build error
+
+ -- Tan Miaoqing <miaoqing.tan@nokia.com>  Fri, 31 Dec 2010 11:31:33 +0200
+
+libqtcontacts-tracker (4.11.5-1) unstable; urgency=low
+
+  * Fixes: NB#215611 - qtcontacts-tracker deletes postal addresses inserted by camera
+  * Display label and global presence not being calculated during fetch unless required by definition hint
+
+ -- Aleksandar Stojiljkovic <aleksandar.stojiljkovic@nokia.com>  Fri, 31 Dec 2010 09:32:00 +2000
+
+libqtcontacts-tracker (4.11.4-1) unstable; urgency=low
+
+  * Fixes: Possible Lockup in cellular guid algorithm if MSISDN is missing
+
+ -- Jens Georg <jensg@openismus.com>  Wed, 22 Dec 2010 15:07:57 +0100
+
+libqtcontacts-tracker (4.11.3-2) unstable; urgency=low
+
+  * Fixes: Synchronize sonumber with version number
+
+ -- Adrien Bustany <adrien.bustany@nokia.com>  Mon, 20 Dec 2010 18:02:00 +0200
+
+libqtcontacts-tracker (4.11.3-1) unstable; urgency=low
+
+  * Changes: Also read contextual details from contact itself
+
+ -- Adrien Bustany <adrien.bustany@nokia.com>  Mon, 20 Dec 2010 18:00:00 +0200
+
+libqtcontacts-tracker (4.11.2-1) unstable; urgency=low
+
+  * Switch to scalar query builder for fetch request
+  * Fixes: "too many SQL variables" error when importing 500+ telepathy contacts
+  * Changes: Save Other context detail within separate affiliation instead of the contact
+
+ -- Adrien Bustany <adrien.bustany@nokia.com>  Mon, 20 Dec 2010 11:19:00 +0200
+
+libqtcontacts-tracker (4.11.1-2) unstable; urgency=low
+
+  * Add missing information to 4.11.1-1 changelog entry.
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Fri, 17 Dec 2010 07:19:32 +0100
+
+libqtcontacts-tracker (4.11.1-1) unstable; urgency=low
+
+  * New: QctUnmergeIMContactsRequest for unmerging merged instant messaging contacts.
+  * New: unit test for NB#212463 - "too many SQL variables" error when importing 500+ telepathy contacts
+  * New: adds method to deal with filters on custom details, bindCustomDetailFilter()
+
+  * Changes: Don't fetch display label details unless requested
+  * Changes: Added test for filterring on custom details
+  * Changes: Properly handle fetch requests where the fetch hint doesn't contain unique
+  * Changes: Update Cubi to 611d14db0cbc19d9caf1f1ee3bae4effffdd8e0e
+
+ -- Aleksandar Stojiljkovic <aleksandar.stojiljkovic@nokia.com>  Fri, 17 Dec 2010 01:28:07 +0200
+
+libqtcontacts-tracker (4.11.0-3) unstable; urgency=low
+
+  * Remove NB#210566 from changelog.
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Tue, 14 Dec 2010 13:51:07 +0100
+
+libqtcontacts-tracker (4.11.0-2) unstable; urgency=low
+
+  * Fixes: the files slots.{h,cpp} are now in ut_qtcontacts_trackerplugin_common, so remove from .pro files in old dirs
+
+  * Changes: Update reference queries for 946b8b17eaa96ea0df4bb29e456de41a841119f3
+  * Changes: Update EXPECTFAIL file
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Tue, 14 Dec 2010 13:51:07 +0100
+
+libqtcontacts-tracker (4.11.0-1) unstable; urgency=low
+
+  * Fixes: Properly fetch nao:Properties with custom values
+  * Fixes: Control contacts was never saved in testFilterContactsMatchPhoneNumberWithShortNumber(), which made test hide a bug
+  * Fixes: NB#208065 - call ui displays incorrect contact name
+  * Fixes: QContactManager signal test
+
+  * Changes: Liberate last pieces of the plugin from QtTracker \O/
+  * Update Cubi to ef060bd7f8046fb03e9f3572a880ca000fca54ca
+
+  * Changes: Port QContactRemoveRequest to QSparql
+  * Changes: Factor OPTIONALs better
+  * Changes: Add missing setOptional on Organization::Name
+  * Changes: Update QB UT data files to match Cubi queries
+  * Changes: QB UT: Rename all variables and anonymous nodes to ease comparison
+  * Changes: QB UT: Add more cleaning regexps to queries
+  * Changes: Avoid "Too many SQL variables" warning in remove request
+  * Changes: Sanitize cubidefines a bit.
+  * Changes: Remove long time obsolete rdf-mapping tool
+  * Changes: Cleanup Cubi namespace usage.
+  * Changes: Improve command line parsing of configure script: "--prefix=/usr" works now.
+  * Changes: Remove useless ut_qtcontacts_trackerplugin_sparql.
+  * Changes: Add Other context to ut_qtcontacts_trackerplugin::testUrl
+
+  * New: Introduce ontology compiler tool
+  * New: Add generated ontology classes
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Mon, 13 Dec 2010 23:57:36 +0100
+
+libqtcontacts-tracker (4.10.92-1) unstable; urgency=low
+
+  * New: QctContactMergeRequest for merging two contacts into one
+  * New: Update Cubi to 030dbc075d0e594d7d8a07e4f6d80c66131b7359
+
+  * Fixes: Broken union filter
+  * Fixes: GRAPH for contact only applies to insert part of contact
+  * Fixes: Improve handling of restricted-valued properties
+  * Fixes: Install all data files for ut_qtcontacts_tracker_plugin
+  * Fixes: Massive amount of "unexpected contact" warnings
+  * Fixes: NB#179622 - Massive memory leak in sync qtcontacts-tracker API
+  * Fixes: Online account retrieval working properly again (OPTIONAL handling was broken)
+  * Fixes: don't drop detail when fetching contacts
+
+  * Changes: Adapt to packaging changes of libqtsparql-tracker(-extensions)
+  * Changes: Apply query filters to customDetail query too
+  * Changes: Don't emit changed signal for removed contacts
+  * Changes: Move cubi in-tree to avoid build-time dependency on git
+  * Changes: Port ContactIdFetchRequest to Cubi
+  * Changes: Port ContactSaveRequest to Cubi
+  * Changes: Port FetchRequest querybuilder to cubi
+  * Changes: Properly save restricted values
+  * Changes: Update header location for TrackerChangeListener
+  * Changes: Warn if value can't be converted in QTrackerContactDetailField::makeValue
+  * Changes: respect prefix when installing shared lib
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Tue, 07 Dec 2010 01:35:00 +0100
+
+libqtcontacts-tracker (4.10.91-4) unstable; urgency=low
+
+  * Changes: Remove ad-hoc ncal definitions from schema since QtTracker provides them now
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Thu, 09 Dec 2010 12:48:13 +0100
+
+libqtcontacts-tracker (4.10.91-3) unstable; urgency=low
+
+  * Changes: Fix changelog formatting
+
+ -- Jens Georg <jensg@openismus.com>  Fri, 26 Nov 2010 15:34:44 +0100
+
+libqtcontacts-tracker (4.10.91-2) unstable; urgency=low
+
+  * Fixes: NB#206677 - Contacts application crashes when selecting 'Add group' option in Contacts List view menu
+
+ -- Jens Georg <jensg@openismus.com>  Fri, 26 Nov 2010 13:20:23 +0100
+
+libqtcontacts-tracker (4.10.91-1) unstable; urgency=low
+
+  * Fixes: Saving of anniversary detail
+  * Changes: Workaround NB#206404 - Saving a contact using qtcontacts-tracker causes nco:IMAccount to be removed.
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Tue, 23 Nov 2010 23:22:57 +0100
+
+libqtcontacts-tracker (4.10.90-1) unstable; urgency=low
+
+  * Fixes: NB#198749 - One contact from N900 is not transferred to device under development
+  * Fixes: NB#201011 - Synced contacts are not shown in contacts list until we restart the application (without Erase EMMC flash)
+  * Fixes: NB#202099 - Contacts crashes when trying to add a new group with facebook contacts
+  * Fixes: NB#203983 - libqtcontacts-tracker-tests fail during execution
+
+  * Fixes: Re-parent the contact request's QSparqlResult to prevent possible crash during destruction
+  * Fixes: Avoid the ontology cache being built twice
+  * Fixes: Avoid QContactTrackerEngineData getting copied by accident
+  * Fixes: Avoid dereferencing of null result when no QtSparql connection is found
+  * Fixes: Make sure the settings file exists, so that the file system watcher can work
+
+  * New: Provide native, ncal based mapping for anniversary detail
+  * New: Map QContactBirthday::FieldCalendarId to ncal ontology
+  * New: Support QStringList data type for unrestricted fields
+
+  * Changes: Initial port of contact fetch request to QtSparql
+  * Changes: Initial port of contact id fetch request to QtSparql
+  * Changes: Port relationship fetch request to QtSparql
+  * Changes: Port relationship remove request to QSparql
+  * Changes: Port relationship save request to QSparql
+  * Changes: Port ontology cache to QtSparql
+
+  * Changes: Let QContactTrackerEngine::managerParameters() report only significant parameters
+  * Changes: Extract QTrackerAbstractRequest::runQuery()
+  * Changes: Remove some redundant QtTracker includes
+  * Changes: Consider both ends of a predicate chain when collecting resource types
+  * Changes: Improve error message when QtSparql connection couldn't be created
+  * Changes: Mark QContactUrl__SubTypeBlog declaration as deprecated
+
+  * Changes: Group deletion of obsolete resources by their type
+  * Changes: Consider that one online avatars could be shared by multiple accounts
+  * Changes: Really test online avatar query
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Mon, 22 Nov 2010 08:15:06 +0100
+
+libqtcontacts-tracker (4.10.9-1) unstable; urgency=low
+
+  * Changes: Adapt to namespace removal in libqtsparql-tracker
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Mon, 15 Nov 2010 10:58:05 +0100
+
+libqtcontacts-tracker (4.10.8-1) unstable; urgency=low
+
+  * Fixes: Emulated partial saving: when no definition hint is supplied, read all custom details, too
+  * Fixes: NB#194501 - Custom details are lost when saving a contact
+
+  * New: Provide change notifications for QctSettings
+  * New: Make settings keys public
+  * New: Add vcardreader and vcardwriter tools, which are not installed yet
+
+  * Changes: Improve performance by collecting lost resources like addresses, affiliations and custom details as late as possible
+  * Changes: Improve performance by merging PredicateChain and PropertyInfoList into PropertyInfoList
+  * Changes: Add support for filters on detail fields only mapped by nao::Property, limited to MatchContains on single item
+  * Changes: Add support for filters on detail subtypes mapped by RDF classes, limited to MatchContains on single subtype
+  * Changes: Use QtSparql for contact save request
+  * Changes: Use more useful RDF range for nco:hasLocation
+  * Changes: Update creation of display label to match updated UI spec
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Mon, 15 Nov 2010 09:34:58 +0100
+
+libqtcontacts-tracker (4.10.7-2) unstable; urgency=low
+
+  * Fixes: libqtsparql-tracker needs to be listed under "Depends:", not just "Recommends:" in debian/control
+
+ -- Friedrich W. H. Kossebau <friedrich@openismus.com>  Tue, 09 Nov 2010 17:31:16 +0100
+
+libqtcontacts-tracker (4.10.7-1) unstable; urgency=low
+
+  * Use qtsparql-tracker for watching tracker notifications.
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Tue, 09 Nov 2010 13:37:00 +0100
+
+libqtcontacts-tracker (4.10.6-2) unstable; urgency=low
+
+  * Fixes: bumps VERSION_MICRO to proper value 6
+
+ -- Friedrich W. H. Kossebau <friedrich@openismus.com>  Fri, 05 Nov 2010 15:42:31 +0100
+
+libqtcontacts-tracker (4.10.6-1) unstable; urgency=low
+
+  * Fixes: Disable libcreds2 support temporarily
+
+ -- Jens Georg <jensg@openismus.com>  Fri, 05 Nov 2010 15:36:23 +0200
+
+libqtcontacts-tracker (4.10.5-1) unstable; urgency=low
+
+  * Fixes: Default concurrency level should be minimal 1, not maximal
+  * Fixes: Possible deadlock in sync API
+  * Fixes: Make tests loading raw tuples reliable again
+
+  * Changes: Set sync target to "addressbook" if no sync target is provided
+  * Changes: Make default sync target an engine parameter.
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Tue, 02 Nov 2010 17:42:22 +0200
+
+libqtcontacts-tracker (4.10.4-1) unstable; urgency=low
+
+  * Fixes: NB#200532 - Contacts are not synced with avatar to phone from device
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Wed, 27 Oct 2010 11:44:58 +0200
+
+libqtcontacts-tracker (4.10.3-1) unstable; urgency=low
+
+  * New: Adds unit tests for filtering by subtype
+
+  * Fixes: NB#183073 - Contact notes are not saved when a contact has two notes
+  * Fixes: NB#200059 - QContact's displayLabel() is not updated when name is edited and if "fullname" property is set for the contact in Tracker.
+  * Fixes: qtcontacts_extensions_tracker.prf was missing from package libqtcontacts-extensions-tracker-dev
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Mon, 25 Oct 2010 22:11:33 +0200
+
+libqtcontacts-tracker (4.10.2-1) unstable; urgency=low
+
+  * New: Add QctSparqlConnectionManager similar to DBus connection manager
+  * New: Make QSettings object behind QctSettings accessable by delegating setValue() and value()
+
+  * Changes: Test saving of subtypes via nao:Property
+  * Changes: make rtti a configure switch, using ENABLE_RTTI={yes,no} as qmake VARIABLE, default to yes (was hardcoded to no-rtti before)
+  * Changes: do not give /usr/include/qtcontacts-tracker as include path, just /usr/include, qtcontacts-tracker/ is needed as namespace
+  * Changes: Give better names to some QTrackerClassHierarchy fields
+  * Changes: Rename few QTrackerClassHierarchy methods
+  * Changes: Tolerate bad input on property based subtypes
+  * Changes: Consider contact graph in insertTpContact.sparql script
+  * Changes: Kill more waitForRequestFinished() abuse.
+  * Changes: Fix handling of date details in ut_qtcontacts_trackerplugin::testVCardsAndSync
+  * Changes: Make ut_qtcontacts_trackerplugin::testAvatar more robust
+  * Changes: Properly register now synthetic Avatar detail with schema.
+  * Changes: Avoid that Thumbnail details are stored as custom detail.
+  * Changes: Update testSaveThumbnail(online-avatar)
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Tue, 19 Oct 2010 11:09:54 +0200
+
+libqtcontacts-tracker (4.10.1-1) unstable; urgency=low
+
+  * Fixes: NB#187954 - For each additinal web address added a duplicate of added web address is getting displayed in all details subview
+  * Fixes: Build issue within unit tests
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Tue, 19 Oct 2010 11:09:54 +0200
+
+libqtcontacts-tracker (4.10.0-1) unstable; urgency=low
+
+  * New: Shared library libqtcontacts_extensions_tracker.so with custom detail declarations and settings facility.
+  * New: Adds unit test for date fields in details
+  * New: Signal addition/removal of nco:belongsToGroup as relationshipAdded/Removed()
+  * New: Support for relationship filter with HasMember
+  * New: Permit selection of display name generator per global setting and per fetch request
+  * New: Add GUID algorithm based on cellular device properties
+  * New: Add flag to enable/disable rpath to builddirs (default: enabled)
+
+  * Fixes: NB#174291 - OTHER context not supported (was: Contact field synchronized from server are mapped to wrong fields in the device)
+  * Fixes: NB#179301 - Contact is shown as 'Unnamed' in contact list if only 'Nickname' is provided
+  * Fixes: NB#176668 - Need QContactBirthday and QContactAnniversary store internal data in QDateTime
+  * Fixes: NB#188038 - It is not possible to fetch IM (QOnlineAccount) related Avatar URL's
+  * Fixes: Use proper aegis format for benchmarks
+  * Fixes: Remove Bash-isms from configure script
+  * Fixes: Don't let fillAddressbook() drop ontologies by accident.
+
+  * Changes: Port sync calls to use a single per-thread worker thread
+  * Changes: Use SPARQL like syntax to describe property chain in schema lister
+  * Changes: HTML formatting changes in schema lister
+  * Changes: Add libcellular-qt-dev and libsysinfo-dev to build dependencies
+  * Changes: Report errors when saving avatar images
+  * Changes: Cleanup DetailMapping class
+  * Changes: Only define custom details if not provided by QTM yet
+
+  * Changes: Explicitly use tracker backend for batch-saving benchmark
+  * Changes: Store Affiliations, File URIs, Organizatons, PostalAddress and Tags with anonymous IRI
+  * Changes: Store contacts within explict RDF graph
+  * Changes: Create an nco:Affiliation for each context but Other context.
+
+  * Changes: Cache some frequently needed predicate chains in contact detail
+  * Changes: Make QContactOnlineAccount::FieldAccountPath writable.
+  * Changes: Use anonymous blank nodes for save request.
+  * Changes: Use slo ontology instead of deprecated mlo ontology for GeoLocation detail.
+  * Changes: Share IRI aliasing code among scheme lister and unit tests.
+  * Changes: Permit annotation for properties which serve as foreign key for a shared resource (e.g. files and tags)
+  * Changes: Print information about fields without mapping and foreign keys in the scheme lister.
+  * Changes: Only delete related objects of they are possessed.
+  * Changes: Apply more useful domain to nie:url property
+  * Changes: Enable compiler error for unhandled enum values in switch statements.
+  * Changes: Share the query builder's knowledge about some SPARQL functions.
+  * Changes: Make QContactTag::FieldTag as case-insensitive foreign key.
+  * Changes: Use SPARQL collate functions instead of regex for case-insensitive string matching.
+  * Changes: Make QContactPresence::FieldNickname as optional.
+  * Changes: Build fixes for upcomming QtMobility 1.2
+  * Changes: Add minimal support for Favorite detail
+  * Changes: Properly map ringtones via nie:url
+  * Changes: Rename some IRI scheme related attributes and fields to actually make some sense.
+  * Changes: Make error messages in testUnionFilterUniqueness more useful.
+  * Changes: Request proper version of default detail schema to avoid problems with Favorite detail
+  * Changes: Improve error messages from save request.
+  * Changes: Properly encode content IRIs to avoid SPARQL syntax errors.
+  * Changes: Make QtMobility 1.1.0~git20101005 mandatory
+  * Changes: Preserve order of custom value lists.
+  * Changes: Add bold warning about QContactManagerEngine::waitForRequestFinished() abuse.
+  * Changes: Use configured GUID algorithm in save request.
+  * Changes: Print warning when requested GUID algorithm is not available
+  * Changes: Also pass contact in question to GUID algorithm
+  * Changes: Use QExplicitlySharedDataPointer for ExplictObjectInfo
+  * Changes: Map QContactOnlineAccount__FieldProtocol to proper RDF property
+  * Changes: Make clear that libsysinfo-dev also is related to ENABLE_CELLULAR
+  * Changes: Repair update of subtype classes.
+  * Changes: Remove left-over debug message
+  * Changes: Mark RDF property for QContactOnlineAccount::FieldServiceProvider as optional
+  * Changes: Update OnlineAccount reference queries
+  * Changes: Show QContactManager::contact() warning only once.
+  * Changes: Add information to conversions which data types are used.
+  * Changes: Properly handle inverse nco:hasIMContact property when saving.
+  * Changes: Map SyncTarget detail to nie:generator
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Mon, 18 Oct 2010 15:44:42 +0200
+
+libqtcontacts-tracker (4.9.7-1) unstable; urgency=low
+
+  * Fixes: NB#192947 - QContactFetchRequest returns QContactOrganization detail for every contact
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Tue, 12 Oct 2010 09:12:06 +0200
+
+libqtcontacts-tracker (4.9.6-1) unstable; urgency=low
+
+  * New: Add AuthStatusFrom/To support
+
+  * Fixes: NB#192949 - Incorrect number of contacts matched in Auto-completion dialog
+  * Fixes: NB#188921 - Auto completion dialog suggests multiple contacts even if single contact exists
+  * Fixes: NB#196862 - <Other> libqtcontacts-tracker-tests depends on testrunner instead of testrunner-lite
+  * Fixes: NB#192947 - QContactFetchRequest returns QContactOrganization detail for every contact
+
+  * Fixes: Don't hardcode plugin install path
+  * Fixes: Use proper aegis format for benchmarks
+  * Fixes: Configure's --help option
+  * Fixes: Remove bash-isms from configure script
+
+  * Changes: Update tracker dependency.
+  * Changes: Mark QContactPresence::FieldNickname as optional.
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Mon, 11 Oct 2010 09:37:10 +0200
+
+libqtcontacts-tracker (4.9.5-2) unstable; urgency=low
+
+  * Changes: Use "libqtcontacts-tracker" for PACKAGE and .pro file.
+  * Changes: Revert install paths for libqtcontacts-tracker-tests
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Mon, 04 Oct 2010 11:43:20 +0200
+
+libqtcontacts-tracker (4.9.5-1) unstable; urgency=low
+
+  * New: Add simple configure script
+  * New: Check security tokens before starting request for better error reporting.
+  * Changes: Add libcreds2-dev and libcreds2-qt-dev as build dependency.
+  * Changes: Suppress ridiculous ABI break warning for QString.
+  * Changes: Update install paths for libqtcontacts-tracker-tests
+  * Changes: Properly request security tokens.
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Wed, 29 Sep 2010 11:48:16 +0200
+
+libqtcontacts-tracker (4.9.4-2) unstable; urgency=low
+
+  * Fixes: NB#193656 - libqtcontacts-tracker may have resource token problem with Tracker, please verify
+
+  * Added dependency to aegis builder
+  * Added aegis security manifest files to requests tracker access for unit tests and banchmarks
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Fri, 24 Sep 2010 11:23:48 +0200
+
+libqtcontacts-tracker (4.9.4-1) unstable; urgency=low
+
+  * Fixes: NB#173388 - Contacts are not displayed with avatar when they are synchronized
+  * Fixes: NB#192151 - libqtcontacts-tracker: add pkg-config to build-deps
+
+  * Changes: Get rid of QSharedPointer for QTrackerContactUpdate
+  * Changes: Only create TrackerChangeListener when the user actually connects signals.
+  * Changes: Use parent relationship for memory management of QTrackerContactUpdate
+
+  * New: Support QContactThumbnail in save requests
+  * New: Add test data from NB#191670
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Thu, 16 Sep 2010 07:15:50 +0200
+
+libqtcontacts-tracker (4.9.3-1) unstable; urgency=low
+
+  * Fixes: NB#153234 - Contact details <Company, Job Title, Video Call and Internet Telephone> are not stored in tracker
+  * Fixes: NB#175940 - Send data from E71 - after modifying contact, URL and ORG fields are not shown in device
+  * Fixes: NB#185683 - Performance decrease on subsequent contact saves
+
+  * Changes: Improve vcards and sync test
+  * Changes: Let class cache make use of global mutex timeout
+  * Changes: Only finish detail schema when starting a request.
+  * Changes: Revert "Changes: Disable schema generation for now"
+
+  * New: Add support for custom subtype and field values.
+  * New: Define custom value based mapping for QContactOrganization::FieldAssistantName
+  * New: QContactRelevance detail
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Wed, 15 Sep 2010 00:41:59 +0200
+
+libqtcontacts-tracker (4.9.2-2) unstable; urgency=low
+
+  * Changes: Disable building of schema for now
+
+ -- Jens Georg <jensg@openismus.com>  Sat, 11 Sep 2010 20:04:11 +0200
+
+libqtcontacts-tracker (4.9.2-1) unstable; urgency=low
+
+  * Fixes: NB#190770 - Segfault when adding QContact with QContactOnlineAccount that has a subtype
+
+  * Changes: Add more constants to <dao/customdetails.h>
+  * Changes: Also save modified contacts when fuzzing
+  * Changes: Delete affiliation and organization at rdf:Resource level instead of nco:Role
+  * Changes: Introduce central logging facility
+  * Changes: Let schemelister print currently written file.
+  * Changes: Prevent name class between SopranoLive::BackEnds::Tracker::tracker() and SopranoLive::Ontologies::tracker.
+  * Changes: Remove nie:contentAccessed property when needed
+  * Changes: Replace (almost) all Q_ASSERT() statements with graceful qWarning() or rude qFatal() calls.
+  * Changes: do not start a new signal coalescing timer, if there is already one running
+  * Changes: rename QTrackerContactDetailField's property "properties" to "propertyChain"
+
+  * New: Add generated schema listings to debian package
+  * New: Add unit test to check if UIDs are preserved.
+  * New: Coalesce contacts added/changed/removed signals.
+  * New: ut_qtcontacts_trackerplugin::testFetchAll()
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Sat, 11 Sep 2010 17:11:43 +0200
+
+libqtcontacts-tracker (4.9.1-1) unstable; urgency=low
+
+  * Fixes: NB#187153 - COREWEB: "libqtcontacts-tracker: cannot rebuild RDF class cache. aborting."
+  * Fixes: NB#189735 - Contact Sync never ends
+  * Fixes: Make concurrency == 1 work
+
+  * Changes: Add concurrency level to configuration file and use saner default value for improved performance
+  * Changes: Sanitize save request warnings
+
+  * New: Add tool to create a HTML listing of the schemas used
+  * New: Implement QContactTrackerEngine::cancelRequest()
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Tue, 07 Sep 2010 13:15:28 +0200
+
+libqtcontacts-tracker (4.9.0-1) unstable; urgency=low
+
+  * New: Add support for contact groups (saving, fetching, membership).
+    Disabled by default because of negative performane impact which must be
+    fixed. Enable for now by passing to the contact manager "features=group".
+  * New: Add mapping for QContactAvatar::FieldVideoUrl
+  * New: Add OnlineAccount::Protocol field
+  * New: Add OnlineAccount::SubType field
+  * New: Add declaration for custom hobby detail
+
+  * Changes: nco:presenceLastModified in contactsd and tracker plugin
+  * Changes: Explicitly try to cleanup thread-local memory of qttracker
+  * Changes: Improve output of vcf2xml tool
+  * Changes: Do case-insensitive matching for instance values
+  * Changes: Properly announce all supported contact types
+  * Changes: Skip some tests which are known to fail
+  * Changes: Create separate classes for each tracker specific detail definition
+  * Changes: Prevent the class cache from being written multiple times
+  * Changes: Refactor several model classes to use QExplicitlySharedDataPointer
+  * Changes: Make sure to announce only details that really are possible with the ontology
+  * Changes: Avoid gmake's jobserver warning when building static libraries
+  * Changes: Modify return value of bindFilter() to indicate if restrictions were added
+  * Changes: Remove obsolete addressbook tag
+  * Changes: Merge all test suites/fixtures within on set to make sure CITA runs them all
+  * Changes: Prevent ut_qtcontacts_trackerplugin_add_async crashing
+
+  * Fixes: NB#186996 - libqtcontacts-tracker leaks memory
+  * Fixes: The X-GENDER issues mentioned in NB#153234
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Fri, 03 Sep 2010 10:12:00 +0200
+
+libqtcontacts-tracker (4.8.8-2) unstable; urgency=low
+
+  * Bump build dependencies for latest QtMobility
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Tue, 24 Aug 2010 11:51:45 +0200
+
+libqtcontacts-tracker (4.8.8-1) unstable; urgency=low
+
+  * Changes: Use LiveNodeModel::rawRow() for fetching data
+  * Changes: Refactor QTrackerContactSaveRequest::Context into an almost proper UpdateBuilder
+  * Fixes: Restore saving of custom contact details
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Tue, 24 Aug 2010 00:13:31 +0200
+
+libqtcontacts-tracker (4.8.7-1) unstable; urgency=low
+
+  * Fixes: BMC#5410 - QContactPhoneNumber <-> Tracker does not save formatting
+  * Fixes: NB#175705 - Adding a contact, the signal is emitted before the contact is really stored on tracker
+  * Fixes: NB#183895 - Unable to add more than one Web Address for a contact
+  * Changes: Make everything compile with QtMobility release candidate
+  * Changes: Don't emit additional signal for added/removed/changed contacts, with zero contacts as argument
+  * Changes: Store list of inherited conatact classes in schema instead of generating on each save request
+  * Changes: Add support for storing QContactRelationship::HasMember
+  * Changes: Remove code for merging-by-IsSameAs hack, no longer used
+  * Changes: Stop additional signal with zero list for contact added/removed/changed
+  * Changes: Stop leaking signaler for contactgroups
+  * New: First draft of QTrackerRelationshipRemoveRequest
+  * Changes: Remove Context field from reported Anniversary and SyncTarget definition
+  * Changes: Generate list of inherited contact classes from contact hierarchy
+  * Changes: Increase sanity for GeoLocation mapping
+  * Changes: Always permit writing of the GeoLocation detail
+  * Changes: Store valid presence status for reference contact
+  * Changes: Also use tracker:id() for single value enums
+  * Changes: Only bind columns after creating all patterns.
+  * Changes: Actually permit saving of Hobby detail
+  * New: Add new and hopefully correct detail fuzzing test
+  * Changes: Convert fields of custom details to expected data type when known
+  * Changes: Properly report errors in fetch request
+  * Changes: Bump QtTracker dependency
+  * Changes: Use tracker specific query in save request and for debugging
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Mon, 23 Aug 2010 01:32:45 +0200
+
+libqtcontacts-tracker (4.8.6-1) unstable; urgency=low
+
+  * Fixes: NB#182154 - The QContactFilter incorrect behavior
+  * Fixes: NB#177406 - Remote contact presence indicator is not visible
+  * Fixes: NB#183235 - All the contacts does not get imported for a configured gtalk account
+  * Fixes: NB#183111 - Sometimes: Unable to launch contacts application
+  * New: Map nie:contentAccessed to custom "AccessedTimestamp" field of QContactTimestamp
+  * New: Several new unit tests and enhancements.
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Wed, 11 Aug 2010 22:45:26 +0200
+
+libqtcontacts-tracker (4.8.5-1) unstable; urgency=low
+
+  * Changes: Make sure that ut_qtcontacts_trackerplugin/contacts.vcf gets installed
+  * New: Add libqtcontacts-tracker-benchmarks package
+  * Changes: Also fetch class ids for instance values like nco:gender_female
+  * Changes: Print last libc error message when mkpath() fails.
+  * Changes: Double link detail URIs
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Mon, 09 Aug 2010 12:44:07 +0200
+
+libqtcontacts-tracker (4.8.4-1) unstable; urgency=low
+
+  * Fixes: NB#183386 - libqtcontacts-tracker blocks waiting for class cache mutex
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Wed, 04 Aug 2010 15:26:15 +0200
+
+libqtcontacts-tracker (4.8.3-1) unstable; urgency=low
+
+  * Initial support for contact group saving - don't rely on it yet.
+  * New: Support for custom "Hobby" detail which is mapped to nco:hobby
+  * New: Map nco:fullname to QContactName::FieldCustomLabel
+  * Changes: Only fetch requested custom details
+  * Changes: Preserve lastModified field for new contacts
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Wed, 04 Aug 2010 13:40:00 +0200
+
+libqtcontacts-tracker (4.8.2-1) unstable; urgency=low
+
+  * Don't abort after writing RDF class cache.
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Fri, 30 Jul 2010 15:21:58 +0200
+
+libqtcontacts-tracker (4.8.1-1) unstable; urgency=low
+
+  * Fixes: NB#182154 - The QContactFilter incorrect behavior
+  * Fixes: NB#178354 - communication info for www address type contains appended text content of an newly added www address field
+  * Fixes: NB#182612 - Unable to launch contacts/Me application
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Fri, 30 Jul 2010 14:08:50 +0200
+
+libqtcontacts-tracker (4.8.0-1) unstable; urgency=low
+
+  * Activate new fetch request by default, remove old fetch request
+  * Read RDF class hierarchy from cache when possible
+  * Partly fixes: NB#172589 - Only about 10% of the required items are deleted via Mobility API
+  * Remove QTrackerContactRemoveRequest2
+  * Avoid failing assertion in QTrackerContactQueryBuilder::bindFilter()
+  * Build without C++ RTTI which are against Qt coding conventions
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Thu, 29 Jul 2010 10:48:56 +0200
+
+libqtcontacts-tracker (4.7.8-1) unstable; urgency=low
+
+  * temp porting to tracker 0.9.13-1maemo1+0m6 - regenerated classhierarchystatic.h
+  * Remove timeout for read and save request (related to NB#174937)
+  * Dependency to libqtm-contacts(-dev) and libqtm-versit(-dev)
+  * word completion benchmark to simulate NB#179622
+  * Add batch-saving benchmark from NB#175110
+  * New: Support fetch of custom contact details
+
+ -- Aleksandar Stojiljkovic <aleksandar.stojiljkovic@nokia.com>  Wed, 28 Jul 2010 08:58:53 +0300
+
+libqtcontacts-tracker (4.7.7-1) unstable; urgency=low
+
+  * Provide workaround for NB#180669 - libqtcontacts-tracker spends 2 blocked seconds to initialize on device
+  * Initial fixes for NB#180578 - vardconverter reports errors but still returns with 0
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Thu, 22 Jul 2010 11:31:53 +0300
+
+libqtcontacts-tracker (4.7.6-2) unstable; urgency=low
+
+  * Properly list dependencies for libqtcontacts-tracker-tests package
+  * Provide proper package descriptions and use (hopefully correct) categories
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Tue, 13 Jul 2010 18:28:48 +0200
+
+libqtcontacts-tracker (4.7.6-1) unstable; urgency=low
+
+  * Fixes: NB#178222 - Switch-not all contacts are transfered from N95 and N900 to device using switch application
+  * Fixes: NB#177741 - No test package for libqtcontacts-tracker
+  * Fix list sizes comparison in "bool operator<(const QList<T> &a, const QList<T> &b)"
+  * Use GROUP_CONCAT for subtype classes instead of ridicilous amounts of OPTIONAL clauses for new fetch request
+  * Keep class ids as string to save few CPU cycles.
+  * Introduce "check" target which runs unit tests
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Tue, 13 Jul 2010 17:08:09 +0200
+
+libqtcontacts-tracker (4.7.5-1) unstable; urgency=low
+
+  * Fixes: NB#170918 - QContactOnlineAccount of default-contact-me does not contain all info needed
+  * Fixes: NB#177560 - Contact Editor overwrites me-contact details in tracker when saving
+  * Hide symbols in Unix builds
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Wed, 07 Jul 2010 11:05:29 +0200
+
+libqtcontacts-tracker (4.7.4-1) unstable; urgency=low
+
+  * Fixes: NB#174349 -  Contacts crash in "QPointer".
+  * Fixes: NB#176881 : :~TrackerChangeListener(): read of deleted memory
+  * Fixes: NB#177051 - 'msyncd' crash observed and sync fails while syncing contacts
+  * Make Organization detail as unique and add Role field
+  * Support requests from other threads than the engine
+  * Set infinite timeout for sync requests
+  * Improved tag support
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Sat, 03 Jul 2010 00:52:48 +0200
+
+libqtcontacts-tracker (4.7.3-1) unstable; urgency=low
+
+  * Avoid spinning the calling thread's event loop in sync requests.
+  * Prevent segfault if the request contains multiple merges for the same contact
+  * Improve errorMap handling and cleanup save request flow a bit
+  * Generate local contact id from GUID.
+  * Create and update contacts in one step
+  * Introduce concurrency and batch-size engine parameter
+  * Run few update requests in parallel for reduced latency
+  * Delete base type for contact mediums instead of individual subtypes
+  * Use tracker's batch API for saving contacts
+  * Remove old save request and rename ContactSaveRequest2 to ContactSaveRequest
+  * Properly update GUID and timestamps when saving
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Wed, 23 Jun 2010 00:45:16 +0200
+
+libqtcontacts-tracker (4.7.2-1) unstable; urgency=low
+
+  * Fixes: NB#175259 - QContactPhoneNumber::match returns all contacts if there are no matches
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Thu, 17 Jun 2010 09:51:23 +0200
+
+libqtcontacts-tracker (4.7.1-1) unstable; urgency=low
+
+  * Remove early emit of empty contacts
+  * Fix leaking of request workers in contact engine
+  * Refactor QTrackerContactGlobalMutex to work without spinning the event loop
+  * Properly save subtypes for address detail
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Wed, 16 Jun 2010 23:27:42 +0200
+
+libqtcontacts-tracker (4.7.0-1) unstable; urgency=low
+
+  * Enable new local id fetch request by default
+  * Use new local id fetch request for filtering in old contact fetch request.
+  * Avoid accidental deletion of all address properties when saving a contact
+  * Don't create nested event loop for getting RDF class hierarchy
+  * Copy really all fields when copying the QContactTrackerEngine.
+  * Initialize error variable in detailDefinitions().
+  * Give better control on which queries are shown on debugging
+  * Fix some unit test cases for out of tree builds
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Tue, 15 Jun 2010 00:41:31 +0200
+
+libqtcontacts-tracker (4.6.9-1) unstable; urgency=low
+
+  * Fix saving of organization detail's title and department field
+  * Slightly optimize contact fetching by id
+  * Support removal of phone number types
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Tue, 08 Jun 2010 22:27:32 +0200
+
+libqtcontacts-tracker (4.6.8-1) unstable; urgency=low
+
+  * Fixes: NB#170812 - Unnamed contacts gets displayed instead of valid gtalk/skype contacts
+  * Fixes: NB#162993 - <MemLeak> code review report/issues for application people & contacts
+  * Make old fetch request and new save request work together
+  * Dramatically improve performance of new save request
+  * Activate new save request by default
+  * Implements: SWP#MPEOP-1001
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Mon, 07 Jun 2010 10:59:15 +0200
+
+libqtcontacts-tracker (4.6.7-1) unstable; urgency=low
+
+  * Fixes: NB#159444
+  * Fixes: NB#164875
+  * Fixes: NB#166268
+  * Fixes: NB#167816
+  * Fixes: NB#168145
+  * Fixes: NB#169064
+  * Fixes: NB#169245
+  * Fixes: NB#169422
+  * Fixes: NB#170292
+  * Fixes: NB#170310
+  * Fixes: NB#161572
+  * Fixes: NB#162696
+  * Fixes: NB#171324
+  * Fixes: NB#167008
+  * Fixes: NB#170836
+
+ -- Johan Paul <ext-johan.2.paul@nokia.com>  Sun, 30 May 2010 10:44:25 +0300
+
+libqtcontacts-tracker (4.6.6-2) unstable; urgency=low
+
+  * Deactivate new save request again as it doesn't work proper with old fetch request.
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Fri, 28 May 2010 11:00:13 +0200
+
+libqtcontacts-tracker (4.6.6-1) unstable; urgency=low
+
+  * MAJOR CHANGE: Enable new save request by default
+  * Use weak pointer in waitForFinished() to protect from early request deletion by client code
+  * Permit configuration of display name
+  * Create proper SPARQL update for organization detail
+  * Support ringtone detail in new fetch request
+  * Properly save gender in new save request
+  * Reduce OPTIONAL clauses for new fetch request
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Fri, 28 May 2010 07:13:26 +0200
+
+libqtcontacts-tracker (4.6.5-3) unstable; urgency=low
+
+  * Use weak pointer in waitForFinished() to protect from early request deletion by client code
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Fri, 28 May 2010 09:16:52 +0200
+
+libqtcontacts-tracker (4.6.5-2) unstable; urgency=low
+
+  * Also update unit tests for libqttracker-dev (1~6.9.0+0m6)
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Wed, 26 May 2010 09:40:52 +0200
+
+libqtcontacts-tracker (4.6.5-1) unstable; urgency=low
+
+  * Fixed compilation against libqttracker-dev (1~6.9.0+0m6)
+  * Limit thread count to 1
+
+ -- Aleksandar Stojiljkovic <aleksandar.stojiljkovic@nokia.com>  Wed, 26 May 2010 09:44:06 +0300
+
+libqtcontacts-tracker (4.6.4-3) unstable; urgency=low
+
+  * Repair debian changelog.
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Tue, 25 May 2010 11:36:01 +0200
+
+libqtcontacts-tracker (4.6.4-2) unstable; urgency=low
+
+  * Fix for debug package - debug symbols were stripped during build
+
+ -- Aleksandar Stojiljkovic <aleksandar.stojiljkovic@nokia.com>  Sat, 22 May 2010 08:30:21 +0300
+
+libqtcontacts-tracker (4.6.4-1) unstable; urgency=low
+
+  * Fixes: NB#168249 - mutexing access to event loop, signalling quit and wait until thread finishes
+  * Fetch all details required for the display name
+  * Fixes crash in detail schema on exit.
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Fri, 21 May 2010 01:08:05 +0200
+
+libqtcontacts-tracker (4.6.3-1) unstable; urgency=low
+
+  * Stop using nco:contactUID to store contactLocalId
+  * Support GUID and Gender in old requests and unit tests
+  * Fix Self Contact Query
+  * Improve display name handling
+  * Fixes: NB#162457
+
+ -- Mathias Hasselmann <mathias@openismus.com>  Thu, 20 May 2010 17:06:29 +0200
+
+libqtcontacts-tracker (4.6.2-4) unstable; urgency=low
+
+  * Added needed libqtversit4 dependencies
+
+ -- Aleksandar Stojiljkovic <aleksandar.stojiljkovic@nokia.com>  Mon, 17 May 2010 17:59:06 +0300
+
+libqtcontacts-tracker (4.6.2-3) unstable; urgency=low
+
+  * Using function<> instead of optional property in RDFSelect brings better contact fetch performances
+
+ -- Aleksandar Stojiljkovic <aleksandar.stojiljkovic@nokia.com>  Mon, 17 May 2010 12:03:08 +0300
+
+libqtcontacts-tracker (4.6.2-2) unstable; urgency=low
+
+  * Fixing waitForFinished early request disposal
+  * Old save request fixed - request not finished
+  * Added synthesized global presence to old fetch request
+  * Display label changed to match UI spec
+  * Filter contacts by office phonenumbers, too.
+  * Fetch Timestamp for old fetch request
+  * fetch me contact request
+
+ -- Aleksandar Stojiljkovic <aleksandar.stojiljkovic@nokia.com>  Mon, 17 May 2010 09:28:24 +0300
+
+libqtcontacts-tracker (4.6.2-1) unstable; urgency=low
+
+  * Segfault handling on early disposal of requests
+  * localPhoneNumber filtering in new requests
+
+ -- Nathan Letwory <nathan.letwory@cybercom.com>  Tue, 11 May 2010 13:37:42 +0300
+
+libqtcontacts-tracker (4.6.1-1) unstable; urgency=low
+
+  * Fixes: NB#161807
+  * Fixes: NB#161784
+
+ -- Nathan Letwory <nathan.letwory@cybercom.com>  Mon, 10 May 2010 08:54:45 +0300
+
+libqtcontacts-tracker (4.6.0-1) unstable; urgency=low
+
+  * Fixes: NB#167342
+  * Fixes: NB#166255
+
+ -- Nathan Letwory <nathan.letwory@cybercom.com>  Sat, 08 May 2010 12:18:24 +0300
+
+libqtcontacts-tracker (4.5.9-1) unstable; urgency=low
+
+  * maemo:localPhoneNumber filtering added
+  * handle context (work/home) better
+  * handle editing fields in a better way
+
+ -- Nathan Letwory <nathan.letwory@cybercom.com>  Fri, 07 May 2010 18:38:11 +0300
+
+libqtcontacts-tracker (4.5.8-1) unstable; urgency=low
+
+  * Fixes: NB#161788
+  * Fixes: NB#164369
+  * Fixes: NB#165918
+  * Fixes: NB#165924
+  * Fixes: NB#163080
+  * Fixes: NB#161792
+  * Fixes: NB#161914
+  * Fixes: NB#162693
+  * Added unit tests that effectively test above mentioned bugs
+  * local phonenumber now saved to tracker according number match length customization point
+  * ongoing work on new generation requests. These can be enabled by
+    setting QT_CONTACTS_TRACKER environment variable:
+       export QT_CONTACTS_TRACKER='query-builder=fetch,save'
+
+ -- Nathan Letwory <nathan.letwory@cybercom.com>  Tue, 04 May 2010 10:59:44 +0300
+
+libqtcontacts-tracker (4.5.7-1) unstable; urgency=low
+
+  * Fix for assert with tracker 0.9 - no results received from tracker when result set is empty
+
+ -- Nathan Letwory <nathan.letwory@cybercom.com>  Thu, 29 Apr 2010 11:32:59 +0300
+
+libqtcontacts-tracker (4.5.6-1) unstable; urgency=low
+
+  * Fixes: NB#163573 - Not able to add a contact
+  * Fixes: NB#164852 - Contact sync fails with S60/S40/Ovi Suite/ Ovi.com
+  * out-of-tree building back
+  * improvemenst and WIP on saving
+
+ -- Nathan Letwory <nathanletwory@cybercom.com>  Tue, 20 Apr 2010 12:31:41 +0200
+
+libqtcontacts-tracker (4.5.5-1) unstable; urgency=low
+
+  * merge query-builder in master
+  * porting against new qtcontacts completed
+
+ -- Nathan Letwory <nathanletwory@cybercom.com>  Fri, 16 Apr 2010 15:33:12 +0200
+
+libqtcontacts-tracker (4.5.compilespre5-1) unstable; urgency=low
+
+  * compile fixes against latest libqtcontacts
+  * note: more changes upcoming for functional fixes
+
+ -- Nathan Letwory <nathanletwory@cybercom.com>  Wed, 07 Apr 2010 15:02:32 +0200
+
+libqtcontacts-tracker (4.5.4staging-3) unstable; urgency=low
+
+  * resolve IMAddress Signal changes and update the contact
+
+ -- Nathan Letwory <nathanletwory@cybercom.com>  Wed, 07 Apr 2010 15:02:32 +0200
+
+libqtcontacts-tracker (4.5.4-3) unstable; urgency=low
+
+  * Make removal request async
+
+ -- Nathan Letwory <nathanletwory@cybercom.com>  Wed, 07 Apr 2010 14:38:20 +0200
+
+libqtcontacts-tracker (4.5.4-2) unstable; urgency=low
+
+  * Fixed: NB#162457 -  QContact::displayLabel() returns Null QString even if
+    there's a nickname
+  * Fixed: NB#161572 -  QTrackerContactIdFetchRequest leaks a
+    QContactFetchRequest
+  * Fixed: NB#160824 -  Two web addresses are displayed for a contact added
+    with one address
+
+ -- Nathan Letwory <nathanletwory@cybercom.com>  Fri, 30 Mar 2010 09:35:07 +0200
+
+libqtcontacts-tracker (4.5.4-1) unstable; urgency=low
+
+  * Fixed: NB#159556 - avatar and me-contact name info
+  * Fixed: NB#160138 - Status message always empty
+
+ -- Nathan Letwory <nathanletwory@cybercom.com>  Fri, 19 Mar 2010 13:02:30 +0200
+
+libqtcontacts-tracker (4.5.3~git20100205.1) unstable; urgency=low
+
+  * Change packge name to reflect the QtMobility release name.
+
+ -- tapio <tapio.laxstrom@plenware.fi>  Fri, 05 Feb 2010 12:32:37 +0200
+
+qtcontacts-tracker (4.5.3~git20100204.1) unstable; urgency=low
+
+  * Initial release
+
+ -- tapio <tapio.laxstrom@plenware.fi>  Thu, 04 Feb 2010 13:19:17 +0200

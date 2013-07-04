@@ -1,0 +1,36 @@
+* Include module header first to make sure it is self-contained,
+  e.g. foo.cpp should have foo.h has first include directive.
+
+* Field names are prefixed with "m_", e.g. "m_fooBar".
+  Only exception is the private implementation field, which is called "d".
+
+* Private implementation class use the "Data" suffix, e.g. "FooBarData".
+
+* Use implicit sharing carefully, use QExplicitlySharedDataPointer
+  for the private implementation pointer if in doubt.
+
+* Avoid importing namespaces in header files.
+
+* Only include a minimal set of other headers in header files.
+  Use forward declarations when possible.
+
+* Use assignment operator to initialize variables when ever possible
+  for better readability and more importantly to get warned when
+  accidentally using an explicit constructor.
+
+* No commits of "#if 0" code please. If the code is obsolete, just drop it:
+  We got version control. If an unit test is not proper yet, please use the
+  QSKIP() facility which does such a better job in documenting missing
+  features than "#if 0". If you still feel like adding an "#if 0" block,
+  please add a comment why that block is disabled, and call qctWarn() with
+  a good message describing the problem.
+
+* Only call deleteLater() when being absolutely certain that the object
+  won't be dereferenced anymore. This method often is seen as way to hint
+  Qt that an object can be safely deleted after the current function is
+  left. Unfortunately that's only half true for single threaded environments.
+  That assumption is entirely wrong for threaded environments like this
+  project. Any spinning of the object thread's event loop will delete
+  the object instantly. In single threaded environments you have some
+  chance to avoid this problem by strictly avoiding nested event loops,
+  which is a good idea anyway, but in threaded code your are out of control.

@@ -1,0 +1,20 @@
+<aegis>
+    <request>
+        <credential name="TrackerReadAccess" />
+        <credential name="TrackerWriteAccess" />
+        <credential name="GRP::metadata-users" />
+        <for path="/usr/bin/bm_qtcontacts_trackerplugin_batchsaving" />
+    </request>
+    <request>
+        <credential name="TrackerReadAccess" />
+        <credential name="TrackerWriteAccess" />
+        <credential name="GRP::metadata-users" />
+        <for path="/usr/bin/bm_qtcontacts_trackerplugin_wordcompletion" />
+    </request>
+    <request>
+        <credential name="TrackerReadAccess" />
+        <credential name="TrackerWriteAccess" />
+        <credential name="GRP::metadata-users" />
+        <for path="/usr/bin/bm_qtcontacts_trackerplugin_fetch" />
+    </request>
+</aegis>

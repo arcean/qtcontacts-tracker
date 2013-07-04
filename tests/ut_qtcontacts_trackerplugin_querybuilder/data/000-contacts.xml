@@ -1,0 +1,301 @@
+<Contacts>
+  <Contact iri="contact:225543300">
+    <DisplayLabel><Label>Andre Andrews</Label></DisplayLabel>
+    <Type>Contact</Type>
+
+    <Timestamp>
+      <CreationTimestamp>2010-04-22T01:00:00Z</CreationTimestamp>
+      <ModificationTimestamp>2010-04-22T01:30:00Z</ModificationTimestamp>
+    </Timestamp>
+
+    <Guid>746d9a1e-2059-4801-b3c8-24c1e74e0b94</Guid>
+    <Gender>Male</Gender>
+
+    <Avatar>
+      <ImageUrl>file:///home/user/.contacts/avatars/sleeping-bonobo.png</ImageUrl>
+      <VideoUrl>file:///home/user/.contacts/avatars/crazy-banana.ogv</VideoUrl>
+      <SubType>Personal</SubType>
+    </Avatar>
+
+    <Name>
+      <Prefix>Sir</Prefix>
+      <FirstName>Andre</FirstName>
+      <LastName>Andrews</LastName>
+    </Name>
+
+    <Organization>
+      <DetailUri>affiliation:225543300</DetailUri>
+      <LogoUrl>file:///home/user/.contacts/avatars/boring-cube.png</LogoUrl>
+    </Organization>
+
+    <EmailAddress>
+      <Context>Home</Context>
+      <DetailUri>mailto:andre@andrews.com</DetailUri>
+      <EmailAddress>andre@andrews.com</EmailAddress>
+    </EmailAddress>
+
+    <EmailAddress>
+      <Context>Work</Context>
+      <DetailUri>mailto:andre.andrews@meego.com</DetailUri>
+      <EmailAddress>andre.andrews@meego.com</EmailAddress>
+    </EmailAddress>
+
+    <PhoneNumber>
+      <Context>Home</Context>
+      <DetailUri>tel:+4917212345</DetailUri>
+      <PhoneNumber>+4917212345</PhoneNumber>
+      <SubTypes>Voice</SubTypes>
+    </PhoneNumber>
+
+    <PhoneNumber>
+      <Context>Home</Context>
+      <DetailUri>tel:+4916134567</DetailUri>
+      <PhoneNumber>+4916134567</PhoneNumber>
+      <SubTypes>Mobile;MessagingCapable;Voice</SubTypes>
+    </PhoneNumber>
+
+    <Url>
+      <Context>Home</Context>
+      <SubType>Favourite</SubType>
+      <Url>http://andrews.com/</Url>
+    </Url>
+
+    <Address>
+      <Context>Home</Context>
+      <DetailUri>postal:alexanderplatz1</DetailUri>
+      <SubTypes>Postal;Domestic</SubTypes>
+      <Country>Germany</Country>
+      <Locality>Berlin</Locality>
+      <Street>Alexanderplatz 1</Street>
+    </Address>
+
+    <Address>
+      <Context>Work</Context>
+      <DetailUri>postal:friedrichstrasse105</DetailUri>
+      <SubTypes>Parcel</SubTypes>
+      <Country>Germany</Country>
+      <Locality>Berlin</Locality>
+      <Street>Friedrichstrasse 105</Street>
+    </Address>
+
+    <Anniversary>
+      <Event>Hochzeit</Event>
+      <OriginalDate>2007-05-05T00:00Z</OriginalDate>
+      <CalendarId>11223344</CalendarId>
+      <SubType>Wedding</SubType>
+    </Anniversary>
+
+    <SyncTarget>addressbook</SyncTarget>
+    <Hobby>fishing</Hobby>
+
+    <Tag>
+      <Tag>Knorke</Tag>
+    </Tag>
+
+    <Preferences>
+      <Color>Blue</Color>
+      <Car>Tesla</Car>
+    </Preferences>
+  </Contact>
+
+  <Contact iri="contact:58390905">
+    <DisplayLabel><Label>Babera Beverly</Label></DisplayLabel>
+    <Type>Contact</Type>
+
+    <Timestamp>
+      <CreationTimestamp>2010-04-22T02:00:00Z</CreationTimestamp>
+      <ModificationTimestamp>2010-04-22T02:30:00Z</ModificationTimestamp>
+    </Timestamp>
+
+    <Guid>260393ed-c41d-4a7a-a9aa-7f0b1f9840f9</Guid>
+    <Gender>Female</Gender>
+
+    <Name>
+      <FirstName>Babera</FirstName>
+      <MiddleName>Beate</MiddleName>
+      <LastName>Beverly</LastName>
+    </Name>
+
+    <EmailAddress>
+      <Context>Home</Context>
+      <DetailUri>mailto:babera@beverly.com</DetailUri>
+      <EmailAddress>babera@beverly.com</EmailAddress>
+    </EmailAddress>
+
+    <Organization>
+      <DetailUri>affiliation:58390905</DetailUri>
+      <Title>Office Clerk</Title>
+    </Organization>
+
+    <PhoneNumber>
+      <Context>Home</Context>
+      <DetailUri>tel:+4916134567</DetailUri>
+      <PhoneNumber>+4916134567</PhoneNumber>
+      <SubTypes>Mobile;MessagingCapable;Voice</SubTypes>
+    </PhoneNumber>
+
+    <Url>
+      <Context>Home</Context>
+      <SubType>HomePage</SubType>
+      <Url>http://beverly.com/</Url>
+    </Url>
+  </Contact>
+
+  <Contact iri="contact:55500278">
+    <DisplayLabel><Label>Christine Christian</Label></DisplayLabel>
+    <Type>Contact</Type>
+
+    <Timestamp>
+      <CreationTimestamp>2010-04-22T03:00:00Z</CreationTimestamp>
+      <ModificationTimestamp>2010-04-22T03:30:00Z</ModificationTimestamp>
+    </Timestamp>
+
+    <Guid>41236f10-9dec-489a-84ac-b31eaa1b13d6</Guid>
+
+    <Name>
+      <FirstName>Christine</FirstName>
+      <LastName>Christian</LastName>
+    </Name>
+
+    <Organization>
+      <DetailUri>affiliation:55500278</DetailUri>
+      <Department>Sales</Department>
+    </Organization>
+
+    <PhoneNumber>
+      <Context>Work</Context>
+      <DetailUri>tel:+4916134567</DetailUri>
+      <PhoneNumber>+4916134567</PhoneNumber>
+      <SubTypes>Mobile;MessagingCapable;Voice</SubTypes>
+    </PhoneNumber>
+
+    <Url>
+      <Context>Work</Context>
+      <SubType>HomePage</SubType>
+      <Url>http://chris.com/</Url>
+    </Url>
+  </Contact>
+
+  <Contact iri="contact:254908088">
+    <DisplayLabel><Label>Dirk Daniels</Label></DisplayLabel>
+    <Type>Contact</Type>
+
+    <Timestamp>
+      <CreationTimestamp>2010-04-22T04:00:00Z</CreationTimestamp>
+      <ModificationTimestamp>2010-04-22T04:30:00Z</ModificationTimestamp>
+    </Timestamp>
+
+    <Guid>167e43eb-2c61-4eaf-a24e-3eea2383a288</Guid>
+
+    <Name>
+      <FirstName>Dirk</FirstName>
+      <LastName>Daniels</LastName>
+    </Name>
+
+    <Organization>
+      <DetailUri>affiliation:254908088</DetailUri>
+      <Department>R&amp;D</Department>
+      <Title>Chief Plumber</Title>
+    </Organization>
+
+    <PhoneNumber>
+      <Context>Work</Context>
+      <DetailUri>tel:+493054321</DetailUri>
+      <PhoneNumber>+493054321</PhoneNumber>
+      <SubTypes>Voice;Fax</SubTypes>
+    </PhoneNumber>
+
+    <Url>
+      <Context>Work</Context>
+      <SubType>HomePage</SubType>
+      <Url>http://daniels.com/</Url>
+    </Url>
+  </Contact>
+
+  <Contact iri="contact:197632483">
+    <DisplayLabel><Label>userFake</Label></DisplayLabel>
+    <Type>Contact</Type>
+
+    <Timestamp>
+      <CreationTimestamp>2010-04-22T05:00:00Z</CreationTimestamp>
+      <ModificationTimestamp>2010-04-22T05:30:00Z</ModificationTimestamp>
+    </Timestamp>
+
+    <Guid>c563e9e8-1f41-4873-ba90-e1a166552fa3</Guid>
+
+    <Avatar>
+      <LinkedDetailUris>telepathy:/fake/account!userfake@cake.com</LinkedDetailUris>
+      <ImageUrl>file://home/user/.cache/avatars/square/snowball.jpg</ImageUrl>
+      <SubType>Default</SubType>
+    </Avatar>
+
+    <Avatar>
+      <LinkedDetailUris>telepathy:/fake/account!userfake@cake.com</LinkedDetailUris>
+      <ImageUrl>file://home/user/.cache/avatars/large/snowball.jpg</ImageUrl>
+      <SubType>Large</SubType>
+    </Avatar>
+
+    <OnlineAccount>
+      <DetailUri>telepathy:/fake/account!userfake@cake.com</DetailUri>
+      <LinkedDetailUris>presence:/fake/account!userfake@cake.com</LinkedDetailUris>
+      <AccountPath>/fake/account</AccountPath>
+      <AccountUri>userfake@cake.com</AccountUri>
+      <ServiceProvider>Fake Cake</ServiceProvider>
+      <Capabilities>TextChat;AudioCalls</Capabilities>
+      <Context>Home</Context>
+    </OnlineAccount>
+
+    <Presence>
+      <DetailUri>presence:/fake/account!userfake@cake.com</DetailUri>
+      <LinkedDetailUris>telepathy:/fake/account!userfake@cake.com</LinkedDetailUris>
+      <Nickname>userFake</Nickname>
+      <CustomMessage>Freezing in Helsinki</CustomMessage>
+      <Timestamp>2010-04-22T12:00:00Z</Timestamp>
+      <PresenceState>4</PresenceState>
+      <Context>Home</Context>
+    </Presence>
+
+    <OnlineAccount>
+      <DetailUri>telepathy:/fake/account!fakeuser@cake.com</DetailUri>
+      <LinkedDetailUris>presence:/fake/account!fakeuser@cake.com</LinkedDetailUris>
+      <AccountPath>/fake/account</AccountPath>
+      <AccountUri>fakeuser@cake.com</AccountUri>
+      <ServiceProvider>Fake Cake</ServiceProvider>
+      <Capabilities>TextChat;AudioCalls;VideoCalls;UpgradingCalls;FileTransfers</Capabilities>
+      <Context>Hobby</Context>
+    </OnlineAccount>
+
+    <Presence>
+      <DetailUri>presence:/fake/account!fakeuser@cake.com</DetailUri>
+      <LinkedDetailUris>telepathy:/fake/account!fakeuser@cake.com</LinkedDetailUris>
+      <Nickname>fakeUser</Nickname>
+      <CustomMessage>Sweating in Palma</CustomMessage>
+      <Timestamp>2010-04-22T11:30:00Z</Timestamp>
+      <PresenceState>1</PresenceState>
+      <Context>Hobby</Context>
+    </Presence>
+
+    <GlobalPresence>
+      <LinkedDetailUris>presence:/fake/account!userfake@cake.com;presence:/fake/account!fakeuser@cake.com</LinkedDetailUris>
+      <Nickname>userFake</Nickname>
+      <CustomMessage>Freezing in Helsinki</CustomMessage>
+      <Timestamp>2010-04-22T12:00:00Z</Timestamp>
+      <PresenceState>1</PresenceState>
+    </GlobalPresence>
+  </Contact>
+
+  <Contact iri="contactgroup:98899889">
+    <DisplayLabel><Label>Freischwimmer</Label></DisplayLabel>
+    <Nickname>Freischwimmer</Nickname>
+    <Type>Group</Type>
+
+    <Timestamp>
+      <CreationTimestamp>2010-01-23T12:00:00Z</CreationTimestamp>
+      <ModificationTimestamp>2010-01-23T12:50:00Z</ModificationTimestamp>
+    </Timestamp>
+
+    <Guid>8e4c3c72-8560-4350-9d96-30694bbdb71f</Guid>
+
+    <SyncTarget>addressbook</SyncTarget>
+  </Contact>
+</Contacts>

@@ -1,0 +1,25 @@
+# Reference query for QContactLocalIdFetchRequest
+# Verify filters with only generic fields.
+# Applied filter: (Note == "Chaos")
+# ==================================================================================================
+
+SELECT
+  tracker:id(?_contact)
+
+WHERE {
+  {
+    ?_contact rdf:type nco:PersonContact
+
+    FILTER(EXISTS {
+      ?_contact nco:note ?_note1
+      FILTER((fn:lower-case(?_note1) = "chaos"))
+    })
+  } UNION {
+    ?_contact rdf:type nco:ContactGroup, nco:Contact
+
+    FILTER(EXISTS {
+      ?_contact nco:note ?_note2
+      FILTER((fn:lower-case(?_note2) = "chaos"))
+    })
+  }
+}

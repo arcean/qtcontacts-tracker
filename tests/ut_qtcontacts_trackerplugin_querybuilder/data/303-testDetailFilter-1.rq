@@ -1,0 +1,35 @@
+# test the detail filter with various random details
+
+SELECT
+  ?_contact tracker:id(?_contact)
+  ?_context rdfs:label(?_context)
+
+  nco:nameHonorificPrefix(?_contact, "\u002c", "\u001c")
+  nco:nameGiven(?_contact, "\u002c", "\u001c")
+  nco:nameAdditional(?_contact, "\u002c", "\u001c")
+  nco:nameFamily(?_contact, "\u002c", "\u001c")
+  nco:nameHonorificSuffix(?_contact, "\u002c", "\u001c")
+  nco:fullname(?_contact, "\u002c", "\u001c")
+
+WHERE
+{
+  ?_contact rdf:type nco:PersonContact
+  OPTIONAL { ?_contact nco:hasAffiliation ?_context }
+
+  FILTER((EXISTS {
+    ?_contact nco:hasAffiliation ?_1 . ?_1 nco:hasEmailAddress ?_2 . ?_2 nco:emailAddress ?_3
+    FILTER((?_3 = "andre@andrews.com"))
+  } || EXISTS {
+    ?_contact nco:nameGiven ?_4
+    FILTER((fn:lower-case(?_4) = "babera"))
+  } || EXISTS {
+    ?_contact nco:hasAffiliation ?_5 . ?_5 nco:url ?_6
+    FILTER(fn:contains(fn:lower-case(?_6), "chris"))
+  } || EXISTS {
+    ?_contact nco:birthDate ?_7
+    FILTER((fn:lower-case(?_7) = "2008-01-27t00:00:00z"))
+  } || EXISTS {
+    ?_contact nco:birthDate ?_8
+    FILTER((fn:lower-case(?_8) = "2009-04-05t00:00:00z"))
+  }))
+}

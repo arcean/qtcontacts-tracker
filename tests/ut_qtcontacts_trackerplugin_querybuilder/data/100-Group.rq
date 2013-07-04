@@ -1,0 +1,256 @@
+SELECT
+  ?_contact tracker:id(?_contact)
+  ?_context rdfs:label(?_context)
+
+ (SELECT
+    GROUP_CONCAT(fn:concat(?_postalAddress, "\u001f",
+                           tracker:coalesce(nco:country(?_postalAddress, "\u002c", "\u001c"), ""), "\u001f",
+                           tracker:coalesce(nco:extendedAddress(?_postalAddress, "\u002c", "\u001c"), ""), "\u001f",
+                           tracker:coalesce(nco:locality(?_postalAddress, "\u002c", "\u001c"), ""), "\u001f",
+                           tracker:coalesce(nco:pobox(?_postalAddress, "\u002c", "\u001c"), ""), "\u001f",
+                           tracker:coalesce(nco:postalcode(?_postalAddress, "\u002c", "\u001c"), ""), "\u001f",
+                           tracker:coalesce(nco:region(?_postalAddress, "\u002c", "\u001c"), ""), "\u001f",
+                           tracker:coalesce(nco:streetAddress(?_postalAddress, "\u002c", "\u001c"), ""), "\u001f",
+                           tracker:coalesce((SELECT GROUP_CONCAT(tracker:id(?_t), "\u001d")
+                                             WHERE { ?_postalAddress rdf:type ?_t }), ""), "\u001f",
+                           tracker:coalesce((SELECT GROUP_CONCAT(fn:concat(nao:propertyValue(?_p), "\u001c",
+                                                                           tracker:coalesce((SELECT ?g0 WHERE { GRAPH ?g0 { ?_postalAddress nao:hasProperty ?_p } }),  "")),
+                                                                 "\u001d")
+                                             WHERE { ?_postalAddress nao:hasProperty ?_p . ?_p nao:propertyName "SubTypes" }), "")),
+                 "\u001e")
+  WHERE { ?_contact nco:hasPostalAddress ?_postalAddress })
+
+ (SELECT
+    GROUP_CONCAT(fn:concat(tracker:coalesce(ncal:uid(?_anniversary, "\u002c", "\u001c"), ""), "\u001f",
+                           tracker:coalesce((SELECT fn:concat(fn:concat(?_dateTime, "|", fn:timezone-from-dateTime(?_dateTime)), "\u001c",
+                                                              tracker:coalesce ((SELECT ?_anniversary_graph WHERE { GRAPH ?_anniversary_graph { ?_dtstart ncal:dateTime ?_dateTime } } ) , "" ) )
+                                             WHERE { ?_anniversary ncal:dtstart ?_dtstart . ?_dtstart ncal:dateTime ?_dateTime } ) , "" ), "\u001f",
+                           tracker:coalesce(ncal:description(?_anniversary, "\u002c", "\u001c"), ""), "\u001f",
+                           tracker:coalesce(ncal:categories(?_anniversary, "\u001d", "\u001c"), "")),
+                 "\u001e")
+  WHERE { ?_contact ncal:anniversary ?_anniversary })
+
+ (SELECT fn:concat (fn:concat(?birthDate, "|", fn:timezone-from-dateTime(?birthDate)) , "\u001c",
+                    tracker:coalesce((SELECT ?_3
+                                      WHERE { GRAPH ?_3 { ?_contact nco:birthDate ?birthDate }}), ""))
+  WHERE { ?_contact nco:birthDate ?birthDate })
+
+
+ (SELECT ncal:uid(?_birthday, "\u002c", "\u001c")
+  WHERE {?_contact ncal:birthday ?_birthday})
+
+ (SELECT GROUP_CONCAT(fn:concat(?_emailAddress, "\u001f",
+                                fn:concat(
+                                    nco:emailAddress(?_emailAddress),"\u001c",
+                                    tracker:coalesce((SELECT ?g11 WHERE { GRAPH ?g11 { ?_contact nco:hasEmailAddress ?_emailAddress } }),""))), "\u001e")
+  WHERE { ?_contact nco:hasEmailAddress ?_emailAddress })
+
+  nie:title(nco:hasLocation(?_contact), "\u002c", "\u001c")
+  slo:latitude(nco:hasLocation(?_contact), "\u002c", "\u001c")
+  slo:longitude(nco:hasLocation(?_contact), "\u002c", "\u001c")
+  slo:altitude(nco:hasLocation(?_contact), "\u002c", "\u001c")
+ (SELECT
+     fn:concat(fn:concat(?_locationTimestamp, "|", fn:timezone-from-dateTime(?_locationTimestamp)) ,
+               "\u001c",
+               tracker:coalesce((SELECT ?_g27 WHERE { GRAPH ?_g27 { ?_contact nco:hasLocation ?_location . ?_location slo:timestamp ?_locationTimestamp } }), "")
+     )
+  WHERE { ?_contact nco:hasLocation ?_location . ?_location slo:timestamp ?_locationTimestamp })
+
+  nco:contactUID(?_contact, "\u002c", "\u001c")
+
+  nco:contactGroupName(?_contact, "\u002c", "\u001c")
+
+  nco:note(?_contact, "\u001e", "\u001c")
+
+ (SELECT
+    GROUP_CONCAT(fn:concat(?_onlineAccount, "\u001f",
+                           tracker:coalesce(nco:imID(?_onlineAccount, "\u002c", "\u001c"), ""), "\u001f",
+                           tracker:coalesce(nco:imProtocol(?_onlineAccount, "\u002c", "\u001c"), ""), "\u001f",
+                           tracker:coalesce((SELECT GROUP_CONCAT(fn:concat(tracker:id(?_capability), "\u001c",
+                                                                           tracker:coalesce((SELECT ?g7 WHERE { GRAPH ?g7 { ?_onlineAccount nco:imCapability ?_capability } }), "")),
+                                                                 "\u001d")
+                                             WHERE { ?_onlineAccount nco:imCapability ?_capability }), ""), "\u001f",
+                           tracker:coalesce((SELECT GROUP_CONCAT(fn:concat(nao:propertyValue(?_p), "\u001c",
+                                                                           tracker:coalesce((SELECT ?g2 WHERE { GRAPH ?g2 { ?_onlineAccount nao:hasProperty ?_p } }), "")),
+                                                                 "\u001d")
+                                             WHERE { ?_onlineAccount nao:hasProperty ?_p . ?_p nao:propertyName "Capabilities" }), ""), "\u001f",
+                           tracker:coalesce((SELECT GROUP_CONCAT(fn:concat(nao:propertyValue(?_p), "\u001c",
+                                                                           tracker:coalesce((SELECT ?g3 WHERE { GRAPH ?g3 { ?_onlineAccount nao:hasProperty ?_p } }), "")),
+                                                                 "\u001d")
+                                             WHERE { ?_onlineAccount nao:hasProperty ?_p . ?_p nao:propertyName "SubTypes" }), ""), "\u001f",
+                           tracker:coalesce((SELECT fn:concat(fn:concat(?_account, "\u001c",
+                                                                        tracker:coalesce((SELECT ?g4 WHERE { GRAPH ?g4 { ?_contact nco:hasIMAddress ?_onlineAccount } }), "")),
+                                                                        "\u001f",
+                                                                        tracker:coalesce(fn:concat(nco:imDisplayName(?_account), "\u001c",
+                                                                                         tracker:coalesce((SELECT ?g21 WHERE { GRAPH ?g21 { ?_contact nco:hasIMAddress ?_onlineAccount } }), "")), ""))
+                                             WHERE { ?_account nco:hasIMContact ?_onlineAccount }), "\u001f")),
+                 "\u001e")
+  WHERE { ?_contact nco:hasIMAddress ?_onlineAccount })
+
+ (SELECT GROUP_CONCAT(fn:concat(tracker:coalesce((SELECT fn:concat(nie:url(?_imAvatar), "\u001c",
+                                                                   tracker:coalesce((SELECT ?g12 WHERE { GRAPH ?g12 { ?_imAddress nco:imAvatar ?_imAvatar } }), ""))
+                                                  WHERE {?_imAddress nco:imAvatar ?_imAvatar} ), ""), "\u001f",
+                                tracker:coalesce(rdfs:label(nco:imAvatar(?_imAddress), "\u002c", "\u001c"), ""), "\u001f",
+                                fn:concat(?_imAddress, "\u001c",
+                                          tracker:coalesce((SELECT ?g5 WHERE { GRAPH ?g5 { ?_contact nco:hasIMAddress ?_imAddress } }), ""))),
+                      "\u001e")
+  WHERE { ?_contact nco:hasIMAddress ?_imAddress })
+
+ (SELECT
+  fn:concat(nie:url(?_photo), "\u001c",
+                         tracker:coalesce((SELECT ?g18 WHERE { GRAPH ?g18 { ?_contact nco:photo ?_photo } }),
+                                          ""))
+  WHERE {?_contact nco:photo ?_photo} )
+ (SELECT
+  fn:concat(nie:url(?_video), "\u001c",
+                         tracker:coalesce((SELECT ?g19 WHERE { GRAPH ?g19 { ?_contact nco:video ?_video } }),
+                                          ""))
+  WHERE {?_contact nco:video ?_video} )
+
+ (SELECT
+    GROUP_CONCAT(fn:concat(?_phoneNumber, "\u001f",
+                           fn:concat(nco:phoneNumber(?_phoneNumber),
+                                     "\u001c",
+                                     tracker:coalesce((SELECT ?g13 WHERE { GRAPH ?g13 { ?_contact nco:hasPhoneNumber ?_phoneNumber } }),
+                                                 "")), "\u001f",
+                           tracker:coalesce((SELECT GROUP_CONCAT(tracker:id(?_t), "\u001d")
+                                             WHERE {?_phoneNumber rdf:type ?_t}), ""), "\u001f",
+                           tracker:coalesce((SELECT GROUP_CONCAT(fn:concat(nao:propertyValue(?_p), "\u001c",
+                                                                           tracker:coalesce((SELECT ?g6 WHERE { GRAPH ?g6 { ?_phoneNumber nao:hasProperty ?_p } }), "")),
+                                                                 "\u001d")
+                                             WHERE {?_phoneNumber nao:hasProperty ?_p . ?_p nao:propertyName "SubTypes"}), "")),
+                 "\u001e")
+  WHERE { ?_contact nco:hasPhoneNumber ?_phoneNumber })
+
+ (SELECT
+    GROUP_CONCAT(fn:concat(?_onlinePresence, "\u001f",
+                           tracker:coalesce(nco:imNickname(?_onlinePresence, "\u002c", "\u001c"), ""), "\u001f",
+                           tracker:coalesce(nco:imStatusMessage(?_onlinePresence, "\u002c", "\u001c"), ""), "\u001f",
+                           tracker:coalesce((SELECT fn:concat(fn:concat(?_presenceLastModified, "|", fn:timezone-from-dateTime(?_presenceLastModified)),
+                                                             "\u001c",
+                                                             tracker:coalesce((SELECT ?_g23 WHERE {GRAPH ?_g23 { ?_onlinePresence nco:presenceLastModified ?_presenceLastModified } }), "" ))
+                                             WHERE { ?_onlinePresence nco:presenceLastModified ?_presenceLastModified }), ""), "\u001f",
+                           tracker:coalesce((SELECT
+                                               GROUP_CONCAT(fn:concat(tracker:id(?_presenceStatus), "\u001c",
+                                                                      tracker:coalesce((SELECT ?g8 WHERE { GRAPH ?g8 { ?_onlinePresence nco:imPresence ?_presenceStatus } }), "")),
+                                                            "\u001d")
+                                             WHERE {
+                                               ?_onlinePresence nco:imPresence ?_presenceStatus
+                                             }), ""), "\u001f",
+                           tracker:coalesce((SELECT
+                                               GROUP_CONCAT(fn:concat(tracker:id(?_authStatusFrom), "\u001c",
+                                                                      tracker:coalesce((SELECT ?g9 WHERE { GRAPH ?g9 { ?_onlinePresence nco:imAddressAuthStatusFrom ?_authStatusFrom } }), "")),
+                                                            "\u001d")
+                                             WHERE {
+                                               ?_onlinePresence nco:imAddressAuthStatusFrom ?_authStatusFrom
+                                             }), ""), "\u001f",
+                           tracker:coalesce((SELECT
+                                               GROUP_CONCAT(fn:concat(tracker:id(?_authStatusTo), "\u001c",
+                                                                      tracker:coalesce((SELECT ?g10 WHERE { GRAPH ?g10 { ?_onlinePresence nco:imAddressAuthStatusTo ?_authStatusTo } }), "")),
+                                                            "\u001d")
+                                             WHERE {
+                                               ?_onlinePresence nco:imAddressAuthStatusTo ?_authStatusTo
+                                             }), "")),
+                 "\u001e")
+  WHERE { ?_contact nco:hasIMAddress ?_onlinePresence })
+
+  maemo:relevance(?_contact, "\u002c", "\u001c")
+
+  (SELECT
+  fn:concat(nie:url(?_audioRingtone), "\u001c",
+                         tracker:coalesce((SELECT ?g15 WHERE { GRAPH ?g15 { ?_contact maemo:contactGroupAudioRingtone ?_audioRingtone } }),
+                                          ""))
+  WHERE {?_contact maemo:contactGroupAudioRingtone ?_audioRingtone} )
+  (SELECT
+  fn:concat(nie:url(?_videoRingtone), "\u001c",
+                         tracker:coalesce((SELECT ?g16 WHERE { GRAPH ?g16 { ?_contact maemo:contactGroupVideoRingtone ?_videoRingtone } }),
+                                          ""))
+  WHERE {?_contact maemo:contactGroupVideoRingtone ?_videoRingtone} )
+  (SELECT
+  fn:concat(nie:url(?_vibrationRingtone), "\u001c",
+                         tracker:coalesce((SELECT ?g17 WHERE { GRAPH ?g17 { ?_contact maemo:contactGroupVibrationRingtone ?_vibrationRingtone } }),
+                                          ""))
+  WHERE {?_contact maemo:contactGroupVibrationRingtone ?_vibrationRingtone} )
+
+ (SELECT
+    GROUP_CONCAT
+       (fn:concat(tracker:coalesce
+           ((SELECT
+               fn:concat(nie:url(?_socialAvatar), "\u001c",
+                         tracker:coalesce((SELECT ?g27 WHERE { GRAPH ?g27 { ?_imAvatarSocial nie:relatedTo ?_socialAvatar } }), ""))
+             WHERE {?_imAddressSocial nco:imAvatar ?_imAvatarSocial .
+                    ?_imAvatarSocial nie:relatedTo ?_socialAvatar}), ""), "\u001f",
+            tracker:coalesce((SELECT rdfs:label(?_socialAvatar2, "\u002c", "\u001c")
+                              WHERE {?_imAddressSocial nco:imAvatar ?_imAvatarSocial2 .
+                                     ?_imAvatarSocial2 nie:relatedTo ?_socialAvatar2}), ""), "\u001f",
+            fn:concat(?_imAddressSocial, "\u001c",
+                      tracker:coalesce((SELECT ?g28 WHERE { GRAPH ?g28 { ?_contact nco:hasIMAddress ?_imAddressSocial } }), ""))),
+        "\u001e")
+  WHERE {
+    ?_contact nco:hasIMAddress ?_imAddressSocial
+  })
+
+  nie:generator(?_contact, "\u002c", "\u001c")
+
+ (SELECT GROUP_CONCAT(fn:concat(nao:prefLabel(?_tag), "\u001c",
+                           tracker:coalesce((SELECT ?g14 WHERE { GRAPH ?g14 { ?_contact nao:hasTag ?_tag } }), "")), "\u001e")
+  WHERE {?_contact nao:hasTag ?_tag})
+
+ (SELECT fn:concat(fn:concat(?_contactCreated, "|", fn:timezone-from-dateTime( ?_contactCreated )),
+                   "\u001c",
+                   tracker:coalesce((SELECT ?_g24 WHERE { GRAPH ?_g24 { ?_contact nie:contentCreated ?_contactCreated } } ), ""))
+  WHERE { ?_contact nie:contentCreated ?_contactCreated })
+
+ (SELECT fn:concat(fn:concat(?_contactModified, "|", fn:timezone-from-dateTime( ?_contactModified )),
+                   "\u001c",
+                   tracker:coalesce((SELECT ?_g25 WHERE { GRAPH ?_g25 { ?_contact nie:contentLastModified ?_contactModified } } ), ""))
+  WHERE { ?_contact nie:contentLastModified ?_contactModified })
+
+ (SELECT fn:concat(fn:concat(?_contactAccessed, "|", fn:timezone-from-dateTime( ?_contactAccessed )),
+                   "\u001c",
+                   tracker:coalesce((SELECT ?_g26 WHERE { GRAPH ?_g26 { ?_contact nie:contentAccessed ?_contactAccessed } } ), ""))
+  WHERE { ?_contact nie:contentAccessed ?_contactAccessed })
+
+ (SELECT GROUP_CONCAT(fn:concat(?_url, "\u001c",
+                                tracker:coalesce((SELECT ?g WHERE { GRAPH ?g { ?_contact nco:url ?_url } }), "")), "\u001e")
+  WHERE { ?_contact nco:url ?_url })
+
+ nco:websiteUrl(?_contact, "\u001e", "\u001c")
+ nco:blogUrl(?_contact, "\u001e", "\u001c")
+
+ (SELECT
+    GROUP_CONCAT(fn:concat(nao:propertyName(?_customDetail), "\u001f",
+                           (SELECT
+                              GROUP_CONCAT(fn:concat(nao:propertyName(?_customField), "\u001f",
+                                                     (SELECT GROUP_CONCAT(fn:concat(tracker:id(?_customField), ":", ?_value), "\u001d")
+                                                      WHERE {?_customField nao:propertyValue ?_value})), "\u001f")
+                            WHERE {
+                              ?_customDetail nao:hasProperty ?_customField
+                            })),
+                 "\u001e")
+  WHERE {
+    ?_contact nao:hasProperty ?_customDetail
+  })
+
+  (SELECT GROUP_CONCAT(tracker:id(?groupContact), "\u001d")
+   WHERE { ?_contact nco:belongsToGroup ?groupContact })
+
+  (SELECT GROUP_CONCAT(tracker:id(?memberContact), "\u001d")
+   WHERE { ?memberContact nco:belongsToGroup ?_contact })
+
+WHERE {
+  ?_contact rdf:type nco:ContactGroup, nco:Contact
+
+  OPTIONAL {?_contact nco:hasAffiliation ?_context}
+}
+
+ORDER BY (SELECT ?sortKey1 WHERE {
+            ?_contact nao:hasProperty ?sortDetail1 .
+            ?sortDetail1 nao:propertyName "Name" ; nao:hasProperty ?sortField1 .
+            ?sortField1 nao:propertyName "FirstName" ; nao:propertyValue ?sortKey1 .
+          } LIMIT 1 )
+    DESC((SELECT ?sortKey2 WHERE {
+            ?_contact nao:hasProperty ?sortDetail2 .
+            ?sortDetail2 nao:propertyName "Name" ; nao:hasProperty ?sortField2 .
+            ?sortField2 nao:propertyName "LastName" ; nao:propertyValue ?sortKey2 .
+          } LIMIT 1 ))

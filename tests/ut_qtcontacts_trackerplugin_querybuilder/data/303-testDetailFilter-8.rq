@@ -1,0 +1,28 @@
+SELECT
+  ?_contact tracker:id(?_contact)
+  ?_context rdfs:label(?_context)
+
+  nco:nameHonorificPrefix(?_contact, "\u002c", "\u001c")
+  nco:nameGiven(?_contact, "\u002c", "\u001c")
+  nco:nameAdditional(?_contact, "\u002c", "\u001c")
+  nco:nameFamily(?_contact, "\u002c", "\u001c")
+  nco:nameHonorificSuffix(?_contact, "\u002c", "\u001c")
+  nco:fullname(?_contact, "\u002c", "\u001c")
+
+WHERE
+{
+  ?_contact rdf:type nco:PersonContact
+  OPTIONAL { ?_contact nco:hasAffiliation ?_context }
+
+  FILTER((EXISTS {
+    ?_contact nco:hasAffiliation ?_1 . ?_1 nco:hasIMAddress ?_2 . ?_2 nco:imCapability ?_3
+    FILTER((?_3 = nco:im-capability-text-chat))
+  } || EXISTS {
+    ?_contact nco:hasAffiliation ?_4 . ?_4 nco:hasIMAddress ?_5 . ?_5 nco:imCapability ?_6
+    FILTER((?_6 IN (nco:im-capability-media-calls, nco:im-capability-audio-calls,
+                    nco:im-capability-video-calls, nco:im-capability-upgrading-calls)))
+  } || EXISTS {
+    ?_contact nco:hasAffiliation ?_7 . ?_7 nco:hasIMAddress ?_8 . ?_8 nco:imCapability ?_9
+    FILTER((?_9 IN (nco:im-capability-stream-tubes, nco:im-capability-dbus-tubes)))
+  }))
+}

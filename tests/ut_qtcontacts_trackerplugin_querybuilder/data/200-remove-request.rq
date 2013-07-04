@@ -1,0 +1,10 @@
+DELETE
+{
+  ?_contact a rdfs:Resource
+}
+WHERE
+{
+  ?_contact rdf:type nco:Contact .
+  FILTER(tracker:id(?_contact) IN (225543300, 58390905, 55500278, 254908088)) .
+}
+

@@ -1,0 +1,235 @@
+@prefix maemo: <http://maemo.org/ontologies/tracker#> .
+@prefix nao: <http://www.semanticdesktop.org/ontologies/2007/08/15/nao#> .
+@prefix ncal: <http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#> .
+@prefix nco: <http://www.semanticdesktop.org/ontologies/2007/03/22/nco#> .
+@prefix nfo: <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#> .
+@prefix nie: <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<postal:alexanderplatz1>
+    rdf:type nco:DomesticDeliveryAddress, maemo:PostalAddress ;
+    nco:country "Germany" ;
+    nco:locality "Berlin" ;
+    nco:streetAddress "Alexanderplatz 1" .
+
+<postal:friedrichstrasse105>
+    rdf:type nco:ParcelDeliveryAddress ;
+    nco:country "Germany" ;
+    nco:locality "Berlin" ;
+    nco:streetAddress "Friedrichstrasse 105" .
+
+<mailto:andre@andrews.com>
+    rdf:type nco:EmailAddress ;
+    nco:emailAddress "andre@andrews.com" .
+<mailto:andre.andrews@meego.com>
+    rdf:type nco:EmailAddress ;
+    nco:emailAddress "andre.andrews@meego.com" .
+
+<file:///home/user/.contacts/avatars/default_avatar.png>
+    rdf:type nfo:FileDataObject ;
+    nie:url "file:///home/user/.contacts/avatars/default_avatar.png" .
+
+<file:///home/user/.contacts/avatars/sleeping-bonobo.png>
+    rdf:type nfo:FileDataObject ;
+    nie:url "file:///home/user/.contacts/avatars/sleeping-bonobo.png" .
+
+<file:///home/user/.contacts/avatars/boring-cube.png>
+    rdf:type nfo:FileDataObject ;
+    nie:url "file:///home/user/.contacts/avatars/boring-cube.png" .
+
+<file:///home/user/.contacts/avatars/crazy-banana.ogv>
+    rdf:type nfo:FileDataObject ;
+    nie:url "file:///home/user/.contacts/avatars/crazy-banana.ogv" .
+
+<ncal:date:2007-05-05>
+    rdf:type ncal:NcalDateTime ;
+    ncal:dateTime "2007-05-05T00:00:00Z" .
+
+<contact:225543300>
+    rdf:type nco:PersonContact ;
+    nco:contactUID "746d9a1e-2059-4801-b3c8-24c1e74e0b94" ;
+    nie:contentCreated "2010-04-22T01:00:00Z"^^xsd:dateTime ;
+    nie:contentLastModified "2010-04-22T01:30:00Z"^^xsd:dateTime ;
+    nco:hasAffiliation <affiliation:225543300> ;
+    nco:nameHonorificPrefix "Sir" ;
+    nco:nameGiven "Andre" ;
+    nco:nameFamily "Andrews" ;
+    nco:gender nco:gender-male ;
+    nco:hasAffiliation [
+        a nco:Affiliation ; rdfs:label "Home" ;
+        nco:hasEmailAddress <mailto:andre@andrews.com> ] ;
+    nco:hasAffiliation [
+        a nco:Affiliation ; rdfs:label "Work" ;
+        nco:hasEmailAddress <mailto:andre.andrews@meego.com> ] ;
+    nco:photo <file:///home/user/.contacts/avatars/sleeping-bonobo.png> ;
+    nco:video <file:///home/user/.contacts/avatars/crazy-banana.ogv> ;
+    nco:hasAffiliation [
+        a nco:Affiliation ; rdfs:label "Home" ;
+        nco:url <http://andrews.com/> ] ;
+    nco:hasAffiliation [
+        a nco:Affiliation ; rdfs:label "Home" ;
+        nco:hasPhoneNumber <tel:+4917212345> ] ;
+    nco:hasAffiliation [
+        a nco:Affiliation ; rdfs:label "Home" ;
+        nco:hasPhoneNumber <tel:+4916134567> ] ;
+    nco:hasAffiliation [
+        a nco:Affiliation ; rdfs:label "Home" ;
+        nco:hasPostalAddress <postal:alexanderplatz1> ] ;
+    nao:hasProperty <urn:uuid:7d76c0b7-7d63-4654-89ea-a6ab9cba5c0b> ;
+    ncal:anniversary [
+        a ncal:Event ; ncal:uid "11223344" ;
+        ncal:description "Hochzeit" ;
+        ncal:dtstart <ncal:date:2007-05-05> ;
+        ncal:categories "Wedding" ] ;
+    nao:hasTag [ a nao:Tag ; nao:prefLabel "Knorke" ] ;
+    nie:generator "addressbook" ;
+    nco:hobby "fishing" .
+<affiliation:225543300>
+    rdf:type nco:Affiliation ;
+    rdfs:label "Work" ;
+    nco:org <organization:225543300> ;
+    nco:hasPostalAddress <postal:friedrichstrasse105> .
+<organization:225543300>
+    rdf:type nco:OrganizationContact ;
+    nco:logo <file:///home/user/.contacts/avatars/boring-cube.png> .
+<tel:+4917212345>
+    rdf:type nco:VoicePhoneNumber ;
+    nco:phoneNumber "+4917212345" .
+<tel:+4916134567>
+    rdf:type nco:CellPhoneNumber ;
+    nco:phoneNumber "+4916134567" .
+
+<contact:58390905>
+    rdf:type nco:PersonContact ;
+    nco:contactUID "260393ed-c41d-4a7a-a9aa-7f0b1f9840f9" ;
+    nie:contentCreated "2010-04-22T02:00:00Z"^^xsd:dateTime ;
+    nie:contentLastModified "2010-04-22T02:30:00Z"^^xsd:dateTime ;
+    nco:nameGiven "Babera" ;
+    nco:nameAdditional "Beate" ;
+    nco:nameFamily "Beverly" ;
+    nco:gender nco:gender-female ;
+    nco:hasAffiliation <affiliation:58390905> ;
+    nco:hasAffiliation [
+        a nco:Affiliation ; rdfs:label "Home" ;
+        nco:hasEmailAddress <mailto:babera@beverly.com> ] ;
+    nco:hasAffiliation [
+        a nco:Affiliation ; rdfs:label "Home" ;
+        nco:websiteUrl <http://beverly.com/> ] ;
+    nco:hasAffiliation [
+        a nco:Affiliation ; rdfs:label "Home" ;
+        nco:hasPhoneNumber <tel:+4916134567> ] .
+<affiliation:58390905>
+    rdf:type nco:Affiliation ;
+    nco:title "Office Clerk" .
+<mailto:babera@beverly.com>
+    rdf:type nco:EmailAddress ;
+    nco:emailAddress "babera@beverly.com" .
+
+<contact:55500278>
+    rdf:type nco:PersonContact ;
+    nco:contactUID "41236f10-9dec-489a-84ac-b31eaa1b13d6" ;
+    nie:contentCreated "2010-04-22T03:00:00Z"^^xsd:dateTime ;
+    nie:contentLastModified "2010-04-22T03:30:00Z"^^xsd:dateTime ;
+    nco:nameGiven "Christine" ;
+    nco:nameFamily "Christian" ;
+    nco:hasAffiliation <affiliation:55500278> .
+<affiliation:55500278>
+    rdf:type nco:Affiliation ;
+    rdfs:label "Work" ;
+    nco:hasPhoneNumber <tel:+4916134567> ;
+    nco:websiteUrl <http://chris.com/> ;
+    nco:department "Sales" .
+
+<contact:254908088>
+    rdf:type nco:PersonContact ;
+    nco:contactUID "167e43eb-2c61-4eaf-a24e-3eea2383a288" ;
+    nie:contentCreated "2010-04-22T04:00:00Z"^^xsd:dateTime ;
+    nie:contentLastModified "2010-04-22T04:30:00Z"^^xsd:dateTime ;
+    nco:nameGiven "Dirk" ;
+    nco:nameFamily "Daniels" ;
+    nco:hasAffiliation <affiliation:254908088> .
+<affiliation:254908088>
+    rdf:type nco:Affiliation ;
+    rdfs:label "Work" ;
+    nco:department "R&D" ;
+    nco:title "Chief Plumber" ;
+    nco:hasPhoneNumber <tel:+493054321> ;
+    nco:url <http://daniels.com/> ;
+    nco:websiteUrl <http://daniels.com/> .
+<tel:+493054321>
+    rdf:type nco:FaxNumber, nco:VoicePhoneNumber ;
+    nco:phoneNumber "+493054321"^^xsd:string .
+
+<contact:197632483>
+    rdf:type nco:PersonContact ;
+    nco:contactUID "c563e9e8-1f41-4873-ba90-e1a166552fa3" ;
+    nie:contentCreated "2010-04-22T05:00:00Z"^^xsd:dateTime ;
+    nie:contentLastModified "2010-04-22T05:30:00Z"^^xsd:dateTime ;
+    nco:hasAffiliation [
+        a nco:Affiliation ; rdfs:label "Home";
+        nco:hasIMAddress <telepathy:/fake/account!userfake@cake.com> ] ;
+    nco:hasAffiliation [
+        a nco:Affiliation ; rdfs:label "Hobby";
+        nco:hasIMAddress <telepathy:/fake/account!fakeuser@cake.com> ] .
+<telepathy:/fake/account!userfake@cake.com>
+    rdf:type nco:IMAddress ;
+    nco:imID "userfake@cake.com" ;
+    nco:imNickname "userFake" ;
+    nco:imStatusMessage "Freezing in Helsinki" ;
+    nco:imCapability nco:im-capability-audio-calls , nco:im-capability-text-chat ;
+    nco:imPresence nco:presence-status-away ;
+    nco:imAvatar <file://home/user/.cache/avatars/square/snowball.jpg> ;
+    rdf:type nie:InformationElement ;
+    nco:presenceLastModified "2010-04-22T12:00:00Z"^^xsd:dateTime .
+<telepathy:/fake/account!fakeuser@cake.com>
+    rdf:type nco:IMAddress ;
+    nco:imID "fakeuser@cake.com" ;
+    nco:imNickname "fakeUser" ;
+    nco:imStatusMessage "Sweating in Palma" ;
+    nco:imCapability nco:im-capability-text-chat , nco:im-capability-audio-calls ,
+                     nco:im-capability-video-calls , nco:im-capability-upgrading-calls ,
+                     nco:im-capability-file-transfers ;
+    nco:imPresence nco:presence-status-available ;
+    rdf:type nie:InformationElement ;
+    nco:presenceLastModified "2010-04-22T11:30:00Z"^^xsd:dateTime .
+
+<telepathy:/fake/account>
+    rdf:type nco:IMAccount ;
+    nco:imDisplayName "Fake Cake" ;
+    nco:hasIMContact <telepathy:/fake/account!userfake@cake.com> ;
+    nco:hasIMContact <telepathy:/fake/account!fakeuser@cake.com> .
+
+<file://home/user/.cache/avatars/square/snowball.jpg>
+    rdf:type nfo:FileDataObject, nfo:Image ;
+    rdfs:label "Default" ;
+    nie:relatedTo <file://home/user/.cache/avatars/large/snowball.jpg> ;
+    nie:url "file://home/user/.cache/avatars/square/snowball.jpg" .
+
+<file://home/user/.cache/avatars/large/snowball.jpg>
+    rdf:type nfo:FileDataObject, nfo:Image ;
+    rdfs:label "Large" ;
+    nie:relatedTo <file://home/user/.cache/avatars/square/snowball.jpg> ;
+    nie:url "file://home/user/.cache/avatars/large/snowball.jpg" .
+
+<urn:uuid:7d76c0b7-7d63-4654-89ea-a6ab9cba5c0b>
+    rdf:type nao:Property, nie:InformationElement ;
+    nao:hasProperty <urn:uuid:2fbf9ec0-18b0-46c8-95f7-81fbe1de66f6> ;
+    nao:hasProperty <urn:uuid:fffd1cad-1c0d-48e5-80e7-932dc2e63c5e> ;
+    nao:propertyName "Preferences" .
+<urn:uuid:2fbf9ec0-18b0-46c8-95f7-81fbe1de66f6>
+    rdf:type nao:Property ;
+    nao:propertyName "Color" ;
+    nao:propertyValue "Blue" .
+<urn:uuid:fffd1cad-1c0d-48e5-80e7-932dc2e63c5e>
+    rdf:type nao:Property ;
+    nao:propertyName "Car" ;
+    nao:propertyValue "Tesla" .
+
+<contactgroup:98899889>
+    rdf:type nco:Contact, nco:ContactGroup ;
+    nco:contactGroupName "Freischwimmer" ;
+    nco:contactUID "8e4c3c72-8560-4350-9d96-30694bbdb71f" ;
+    nie:contentCreated "2010-01-23T12:00:00Z"^^xsd:dateTime ;
+    nie:contentLastModified "2010-01-23T12:50:00Z"^^xsd:dateTime ;
+    nie:generator "addressbook" .
