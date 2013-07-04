@@ -2201,11 +2201,12 @@ bool
 QContactTrackerEngine::runSyncRequest(QContactAbstractRequest *request,
                                       QContactManager::Error *error) const
 {
-    // Copy the engine to prevent forwarding side-effects to the caller's engine.
-    // It costs a bit, but guess that's a justified penalty to all sync API users.
-    QContactTrackerEngine taskEngine(*this);
+    // This method is const because QContactManager::contacts and a few other methods
+    // are const (which makes little sense, but well...). Since we don't modify the
+    // public state of the manager, doing a const_cast is ok here
+    QContactTrackerEngine *const engine = const_cast<QContactTrackerEngine*>(this);
 
-    QctTask *const task = taskEngine.startRequestImpl(request, SyncTaskQueue);
+    QctTask *const task = engine->startRequestImpl(request, SyncTaskQueue);
 
     if (0 != task && not QctTaskWaiter(task).wait(requestTimeout())) {
         qctPropagate(QContactManager::UnspecifiedError, error);
