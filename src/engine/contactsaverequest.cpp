@@ -2278,14 +2278,6 @@ QTrackerContactSaveRequest::run()
             continue;
         }
 
-        // reject new contacts on partial save
-        if (engine()->isRestrictive() && contactId.localId() == 0 && not m_detailMask.isEmpty()) {
-            qctWarn(QString::fromLatin1("Partial saving not allowed for the new contact %1/%2").
-                    arg(QString::number(i + 1), QString::number(m_contacts.count())));
-            m_errorMap.insert(i, QContactManager::BadArgumentError);
-            continue;
-        }
-
         // drop odd details, add missing details, collect named details
         QHash<QString, QContactDetail> detailsByUri;
 
