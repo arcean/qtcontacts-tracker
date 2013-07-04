@@ -80,6 +80,7 @@ class QContactTrackerEngineData : public QSharedData
 {
     // Using void pointer for the key since it might point onto an already destructed object.
     typedef QList<QTrackerAbstractRequest*> RequestList;
+    typedef QContactTrackerEngine::TaskQueue TaskQueue;
 
 public: // constructor/destructor
     explicit QContactTrackerEngineData(const QMap<QString, QString> &parameters,
@@ -103,7 +104,8 @@ public: // state
     QHash<const QTrackerAbstractRequest*, QContactAbstractRequest*> m_requestsByWorker;
     QReadWriteLock m_tableLock;
     QMutex m_requestLifeGuard;
-    QctQueue *m_queue;
+
+    void enqueueTask(QctTask *task, TaskQueue queue);
 
     CustomContactDetailMap m_customDetails;
 
@@ -112,6 +114,10 @@ public: // state
     QString m_gcQueryId;
 
     bool m_mandatoryTokensFound : 1;
+
+private: // fields
+    QctQueue *m_asyncQueue;
+    QctQueue *m_syncQueue;
 };
 
 /*!

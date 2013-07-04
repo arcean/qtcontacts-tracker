@@ -100,6 +100,11 @@ public:
 
     Q_DECLARE_FLAGS(DebugFlags, DebugFlag)
 
+    enum TaskQueue {
+        AsyncTaskQueue,
+        SyncTaskQueue
+    };
+
     static const int DefaultRequestTimeout = 0; // infinite
     static const int DefaultTrackerTimeout = 30 * 1000; // 30 seconds
     static const int DefaultCoalescingDelay = 10; // 10 milliseconds
@@ -216,8 +221,6 @@ public: // custom methods
     QString gcQueryId() const;
     QString cleanupQueryString() const;
 
-    void enqueueTask(QctTask *task);
-
 protected:
     void connectNotify(const char *signal);
 
@@ -234,7 +237,7 @@ private:
     /// Note that the return value of this method doesn't indicate success or failure of this
     /// operation. For instance this method will return 0 when the client managed to delete
     /// the request from some slot or some other thread.
-    QctTask *startRequestImpl(QContactAbstractRequest *request);
+    QctTask *startRequestImpl(QContactAbstractRequest *request, TaskQueue queue);
 
     /// Starts the request and blocks until the request is completed in a worker thread.
     bool runSyncRequest(QContactAbstractRequest *request, QContactManager::Error *error) const;

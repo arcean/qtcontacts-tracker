@@ -476,9 +476,10 @@ QContactTrackerEngineData::QContactTrackerEngineData(const QMap<QString, QString
     , m_selfContactId(0)
     , m_changeListener(0) // create on demand
     , m_requestLifeGuard(QMutex::Recursive)
-    , m_queue(new QctQueue)
     , m_satisfiedDependencies(QTrackerAbstractRequest::NoDependencies)
     , m_mandatoryTokensFound(false)
+    , m_asyncQueue(0)
+    , m_syncQueue(0)
 {
     // disable security token checks if requested
     if (m_parameters.m_debugFlags & QContactTrackerEngine::SkipSecurityChecks) {
@@ -493,11 +494,12 @@ QContactTrackerEngineData::QContactTrackerEngineData(const QContactTrackerEngine
     , m_selfContactId(other.m_selfContactId)
     , m_changeListener(0) // must create our own when needed
     , m_requestLifeGuard(QMutex::Recursive)
-    , m_queue(new QctQueue) // the queue is per engine
     , m_customDetails(other.m_customDetails)
     , m_satisfiedDependencies(other.m_satisfiedDependencies)
     , m_gcQueryId(other.m_gcQueryId)
     , m_mandatoryTokensFound(other.m_mandatoryTokensFound)
+    , m_asyncQueue(0)
+    , m_syncQueue(0)
 {
 }
 
@@ -505,7 +507,31 @@ QContactTrackerEngineData::~QContactTrackerEngineData()
 {
     // Delete the queue early to avoid that its tasks see a half destructed objects
     // like this engine or SPARQL resolvers.
-    delete m_queue;
+    delete m_asyncQueue;
+    delete m_syncQueue;
+}
+
+void
+QContactTrackerEngineData::enqueueTask(QctTask *task, TaskQueue queue)
+{
+    QctQueue **q = 0;
+
+    switch (queue) {
+    case QContactTrackerEngine::AsyncTaskQueue:
+        q = &m_asyncQueue;
+        break;
+    case QContactTrackerEngine::SyncTaskQueue:
+        q = &m_syncQueue;
+        break;
+    }
+
+    Q_ASSERT(q != 0);
+
+    if (*q == 0) {
+        *q = new QctQueue;
+    }
+
+    (*q)->enqueue(task);
 }
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -1640,12 +1666,6 @@ QContactTrackerEngine::cleanupQueryString() const
     return queryString;
 }
 
-void
-QContactTrackerEngine::enqueueTask(QctTask *task)
-{
-    d->m_queue->enqueue(task);
-}
-
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 // Asynchronous data access methods
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1801,7 +1821,8 @@ QContactTrackerEngine::checkThreadOfRequest(QContactAbstractRequest *request) co
 }
 
 QctTask *
-QContactTrackerEngine::startRequestImpl(QContactAbstractRequest *request)
+QContactTrackerEngine::startRequestImpl(QContactAbstractRequest *request,
+                                        TaskQueue queue)
 {
     QCT_SYNCHRONIZED(&d->m_requestLifeGuard);
 
@@ -1829,7 +1850,7 @@ QContactTrackerEngine::startRequestImpl(QContactAbstractRequest *request)
         // might be called from a thread which is not the one where the engine was created.
         // In that case, we would get the "QObject: Cannot create children for a parent that
         // is in a different thread" warning, and the parent would be NULL anyway...
-        enqueueTask(new QctResourceCacheTask(schemas()));
+        d->enqueueTask(new QctResourceCacheTask(schemas()), queue);
         d->m_satisfiedDependencies |= QTrackerAbstractRequest::ResourceCache;
     }
 
@@ -1838,7 +1859,7 @@ QContactTrackerEngine::startRequestImpl(QContactAbstractRequest *request)
         not d->m_satisfiedDependencies.testFlag(QTrackerAbstractRequest::GuidAlgorithm)) {
         // Queue will take ownership of the task
         // See above why we don't set the parent here
-        enqueueTask(new QctGuidAlgorithmTask(this));
+        d->enqueueTask(new QctGuidAlgorithmTask(this), queue);
         d->m_satisfiedDependencies |= QTrackerAbstractRequest::GuidAlgorithm;
     }
 
@@ -1854,14 +1875,14 @@ QContactTrackerEngine::startRequestImpl(QContactAbstractRequest *request)
 
     // Transfer task ownership to the queue.
     QctRequestTask *const result = task.data();
-    enqueueTask(task.take());
+    d->enqueueTask(task.take(), queue);
     return result;
 }
 
 bool
 QContactTrackerEngine::startRequest(QContactAbstractRequest *request)
 {
-    startRequestImpl(request);
+    startRequestImpl(request, AsyncTaskQueue);
     return true; // this always works
 }
 
@@ -2184,7 +2205,7 @@ QContactTrackerEngine::runSyncRequest(QContactAbstractRequest *request,
     // It costs a bit, but guess that's a justified penalty to all sync API users.
     QContactTrackerEngine taskEngine(*this);
 
-    QctTask *const task = taskEngine.startRequestImpl(request);
+    QctTask *const task = taskEngine.startRequestImpl(request, SyncTaskQueue);
 
     if (0 != task && not QctTaskWaiter(task).wait(requestTimeout())) {
         qctPropagate(QContactManager::UnspecifiedError, error);
