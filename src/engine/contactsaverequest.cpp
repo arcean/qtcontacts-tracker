@@ -1044,12 +1044,12 @@ UpdateBuilder::UpdateBuilder(const QTrackerContactSaveRequest *request,
 
    if (m_creationTimestamp.isNull()) {
        m_creationTimestamp = request->timestamp();
-       m_preserveTimestamp = (0 != m_contactLocalId); // no need to delete timestamp for new contacts
+       m_preserveTimestamp = isExistingContact(); // no need to delete timestamp for new contacts
    } else {
        m_preserveTimestamp = isUnknownDetail<QContactTimestamp>();
    }
 
-   if (m_lastChangeTimestamp.isNull() || 0 != m_contactLocalId) {
+   if (m_lastChangeTimestamp.isNull() || isExistingContact()) {
        // only preserve the lastModified field for new contacts...
        m_lastChangeTimestamp = request->timestamp();
    }
@@ -1059,7 +1059,7 @@ UpdateBuilder::UpdateBuilder(const QTrackerContactSaveRequest *request,
 
    if (m_guidDetail.guid().isEmpty()) {
        m_guidDetail = request->engine()->guidAlgorithm().makeGuid(contact);
-       m_preserveGuid = (0 != m_contactLocalId); // no need to delete GUID for new contacts
+       m_preserveGuid = isExistingContact(); // no need to delete GUID for new contacts
    } else {
        m_preserveGuid = isUnknownDetail<QContactGuid>();
    }
@@ -1492,7 +1492,7 @@ UpdateBuilder::deleteRelatedObjects()
 #endif // QT_NO_DEBUG
 
 
-    if (0 != m_contactLocalId) {
+    if (isExistingContact()) {
         foreach(const QTrackerContactDetail &detail, m_implictlyRelatedObjects) {
             foreach(const PropertyInfoList &chain, detail.possessedChains()) {
                 const QString predicateIri = ResourceValue(chain.last().iri()).sparql();
@@ -1607,7 +1607,7 @@ UpdateBuilder::deleteRelatedObjects()
 void
 UpdateBuilder::deleteContactProperties()
 {
-    if (0 != m_contactLocalId) {
+    if (isExistingContact()) {
         if (isPartialSaveRequest()) {
             deleteMaskedContactProperties();
         } else {
