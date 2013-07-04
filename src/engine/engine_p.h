@@ -87,9 +87,6 @@ public: // constructor/destructor
                                        const QString &engineName, int engineVersion);
     virtual ~QContactTrackerEngineData();
 
-public: // operators
-    QContactTrackerEngineData(const QContactTrackerEngineData &other);
-
 public: // parameters
     const QContactTrackerEngineParameters m_parameters;
 

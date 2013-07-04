@@ -487,22 +487,6 @@ QContactTrackerEngineData::QContactTrackerEngineData(const QMap<QString, QString
     }
 }
 
-QContactTrackerEngineData::QContactTrackerEngineData(const QContactTrackerEngineData& other)
-    : QSharedData(other)
-    , m_parameters(other.m_parameters)
-    , m_supportedDataTypes(other.m_supportedDataTypes)
-    , m_selfContactId(other.m_selfContactId)
-    , m_changeListener(0) // must create our own when needed
-    , m_requestLifeGuard(QMutex::Recursive)
-    , m_customDetails(other.m_customDetails)
-    , m_satisfiedDependencies(other.m_satisfiedDependencies)
-    , m_gcQueryId(other.m_gcQueryId)
-    , m_mandatoryTokensFound(other.m_mandatoryTokensFound)
-    , m_asyncQueue(0)
-    , m_syncQueue(0)
-{
-}
-
 QContactTrackerEngineData::~QContactTrackerEngineData()
 {
     // Delete the queue early to avoid that its tasks see a half destructed objects
@@ -654,29 +638,10 @@ QContactTrackerEngine::QContactTrackerEngine(const QMap<QString, QString> &param
     registerGcQuery();
 }
 
-QContactTrackerEngine::QContactTrackerEngine(const QContactTrackerEngine& other)
-    : d(other.d)
-{
-    d.detach();
-    connectSignals();
-}
-
 QContactTrackerEngine::~QContactTrackerEngine()
 {
     disconnectSignals();
-}
-
-QContactTrackerEngine&
-QContactTrackerEngine::operator=(const QContactTrackerEngine& other)
-{
-    disconnectSignals();
-
-    d = other.d;
-    d.detach();
-
-    connectSignals();
-
-    return *this;
+    delete d;
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////

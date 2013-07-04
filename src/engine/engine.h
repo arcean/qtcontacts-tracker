@@ -118,9 +118,6 @@ public:
                           int interfaceVersion = -1, QObject *parent = 0);
     virtual ~QContactTrackerEngine();
 
-    QContactTrackerEngine(const QContactTrackerEngine& other);
-    QContactTrackerEngine& operator=(const QContactTrackerEngine& other);
-
     /* sync methods, wrapping async methods & waitForFinished */
     QList<QContactLocalId> contactIds(const QList<QContactSortOrder>& sortOrders, QContactManager::Error* error) const; // XXX FIXME: no longer part of engine API.
     QList<QContactLocalId> contactIds(const QContactFilter& filter, const QList<QContactSortOrder>& sortOrders, QContactManager::Error* error) const;
@@ -228,6 +225,8 @@ private slots:
     void onRequestDestroyed(QObject *obj = 0);
 
 private:
+    Q_DISABLE_COPY(QContactTrackerEngine)
+
     /// Checks if the process requested all required security tokens.
     bool checkSecurityTokens(QContactAbstractRequest *request);
 
@@ -248,7 +247,7 @@ private:
     void registerGcQuery();
 
 private:
-    QExplicitlySharedDataPointer<QContactTrackerEngineData> d;
+    QContactTrackerEngineData *d;
 };
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
