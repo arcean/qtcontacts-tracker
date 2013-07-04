@@ -52,8 +52,6 @@ public: // fields
     int m_requestTimeout;
     int m_trackerTimeout;
     int m_coalescingDelay;
-    int m_concurrencyLevel;
-    int m_batchSize;
     int m_gcLimit;
 
     QString m_syncTarget;
@@ -73,7 +71,6 @@ public: // fields
 
     bool m_omitPresenceChanges : 1;
     bool m_mangleAllSyncTargets : 1;
-    bool m_isRestrictive : 1;
 };
 
 class QContactTrackerEngineData : public QSharedData

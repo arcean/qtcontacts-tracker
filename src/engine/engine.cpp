@@ -178,14 +178,6 @@ parseParameter(int &result, const QString &key, const QString &text)
  *      Default values: "" (fetch all types)</td>
  * </tr>
  * <tr>
- *  <td>concurrency</td>
- *  <td>Unused</td>
- * </tr>
- * <tr>
- *  <td>batch-size</td>
- *  <td>Unused</td>
- * </tr>
- * <tr>
  *  <td>gc-limit</td>
  *  <td>Numbers of contacts saved/removed after which garbage collection should be triggered<br/>
  *      Default value: 100</td>
@@ -235,8 +227,6 @@ QContactTrackerEngineParameters::QContactTrackerEngineParameters(const QMap<QStr
     , m_requestTimeout(QContactTrackerEngine::DefaultRequestTimeout)
     , m_trackerTimeout(QContactTrackerEngine::DefaultTrackerTimeout)
     , m_coalescingDelay(QContactTrackerEngine::DefaultCoalescingDelay)
-    , m_concurrencyLevel(0) // Set in ctor
-    , m_batchSize(QContactTrackerEngine::DefaultBatchSize)
     , m_gcLimit(QContactTrackerEngine::DefaultGCLimit)
     , m_syncTarget(QContactTrackerEngine::DefaultSyncTarget)
     , m_weakSyncTargets(QContactTrackerEngine::DefaultWeakSyncTargets)
@@ -247,11 +237,8 @@ QContactTrackerEngineParameters::QContactTrackerEngineParameters(const QMap<QStr
     , m_updateQueryOptions(Cubi::Options::DefaultSparqlOptions)
     , m_omitPresenceChanges(false)
     , m_mangleAllSyncTargets(false)
-    , m_isRestrictive(false)
 {
     const QctSettings *const settings = QctThreadLocalData::instance()->settings();
-
-    m_concurrencyLevel = settings->concurrencyLevel();
 
     // Names of parameters exposed in the manager URI. See managerParameters() for details.
     static const QStringList managerParameterNames = QStringList();
@@ -371,22 +358,6 @@ QContactTrackerEngineParameters::QContactTrackerEngineParameters(const QMap<QStr
             continue;
         }
 
-        if (QLatin1String("concurrency") == i.key()) {
-            if ((m_concurrencyLevel = i.value().toInt()) < 1) {
-                m_concurrencyLevel = settings->concurrencyLevel();
-            }
-
-            continue;
-        }
-
-        if (QLatin1String("batch-size") == i.key()) {
-            if ((m_batchSize = i.value().toInt()) < 1) {
-                m_batchSize = QContactTrackerEngine::DefaultBatchSize;
-            }
-
-            continue;
-        }
-
         if (QLatin1String("gc-limit") == i.key()) {
             if ((m_gcLimit = i.value().toInt()) < 1) {
                 m_gcLimit = QContactTrackerEngine::DefaultGCLimit;
@@ -416,11 +387,6 @@ QContactTrackerEngineParameters::QContactTrackerEngineParameters(const QMap<QStr
             continue;
         }
 
-        if (QLatin1String("compliance") == i.key()) {
-            m_isRestrictive = (i.value() == QLatin1String("restrictive"));
-            continue;
-        }
-
         if (QLatin1String("native-numbers") == i.key()) {
             convertNumersToLatin = not(i.value().isEmpty() || QVariant(i.value()).toBool());
             continue;
@@ -432,6 +398,13 @@ QContactTrackerEngineParameters::QContactTrackerEngineParameters(const QMap<QStr
         }
 
         if (QLatin1String("com.nokia.qt.mobility.contacts.implementation.version") == i.key()) {
+            continue;
+        }
+
+        if (QLatin1String("concurrency") == i.key()
+                || QLatin1String("batch-size") == i.key()
+                || QLatin1String("compliance") == i.key()) {
+            qctWarn(QString::fromLatin1("The %1 parameter has been deprecated.").arg(i.key()));
             continue;
         }
 
@@ -915,18 +888,6 @@ QContactTrackerEngine::hasDebugFlag(DebugFlag flag) const
 }
 
 int
-QContactTrackerEngine::concurrencyLevel() const
-{
-    return d->m_parameters.m_concurrencyLevel;
-}
-
-int
-QContactTrackerEngine::batchSize() const
-{
-    return d->m_parameters.m_batchSize;
-}
-
-int
 QContactTrackerEngine::gcLimit() const
 {
     return d->m_parameters.m_gcLimit;
@@ -972,12 +933,6 @@ bool
 QContactTrackerEngine::mangleAllSyncTargets() const
 {
     return d->m_parameters.m_mangleAllSyncTargets;
-}
-
-bool
-QContactTrackerEngine::isRestrictive() const
-{
-    return d->m_parameters.m_isRestrictive;
 }
 
 Cubi::Options::SparqlOptions

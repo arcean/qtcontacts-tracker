@@ -108,7 +108,6 @@ public:
     static const int DefaultRequestTimeout = 0; // infinite
     static const int DefaultTrackerTimeout = 30 * 1000; // 30 seconds
     static const int DefaultCoalescingDelay = 10; // 10 milliseconds
-    static const int DefaultBatchSize = 25;
     static const int DefaultGCLimit = 100;
     static const QString DefaultSyncTarget;
     static const QStringList DefaultWeakSyncTargets;
@@ -188,8 +187,6 @@ public: // custom attributes
 
     const DebugFlags & debugFlags() const;
     bool hasDebugFlag(DebugFlag flag) const;
-    int concurrencyLevel() const;
-    int batchSize() const;
     int gcLimit() const;
     int requestTimeout() const;
     int trackerTimeout() const;
@@ -198,7 +195,6 @@ public: // custom attributes
     const QString & syncTarget() const;
     const QStringList & weakSyncTargets() const;
     bool mangleAllSyncTargets() const;
-    bool isRestrictive() const;
 
     Cubi::Options::SparqlOptions selectQueryOptions() const;
     Cubi::Options::SparqlOptions updateQueryOptions() const;
