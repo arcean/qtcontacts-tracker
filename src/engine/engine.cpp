@@ -1854,7 +1854,7 @@ QContactTrackerEngine::startRequestImpl(QContactAbstractRequest *request)
 
     // Transfer task ownership to the queue.
     QctRequestTask *const result = task.data();
-    d->m_queue->enqueue(task.take());
+    enqueueTask(task.take());
     return result;
 }
 
