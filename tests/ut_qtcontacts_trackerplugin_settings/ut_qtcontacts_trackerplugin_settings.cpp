@@ -35,8 +35,6 @@ QTM_USE_NAMESPACE
 // neutral values for making sure the setting is different from the test values used
 static const int avatarSizeNeutralValue = 18;
 static const int avatarSizeTestValue = 999;
-static const int concurrencyLevelNeutralValue = 2;
-static const int concurrencyLevelTestValue = 8192;
 static const QString guidAlgorithmNameNeutralValue = QLatin1String("default");
 static const QString guidAlgorithmNameTestValue = QLatin1String("magicCubeRolling");
 static const QString lastMSISDNNeutralValue = QLatin1String("12345678");
@@ -84,7 +82,6 @@ void ut_qtcontacts_trackerplugin_settings::checkValuesChangedSignal(QSignalSpy &
 void ut_qtcontacts_trackerplugin_settings::setQctSettingsNeutralValues(QctSettings &settings) const
 {
     settings.setAvatarSize(avatarSizeNeutralValue);
-    settings.setConcurrencyLevel(concurrencyLevelNeutralValue);
     settings.setGuidAlgorithmName(guidAlgorithmNameNeutralValue);
     settings.setLastMSISDN(lastMSISDNNeutralValue);
     settings.setLocalPhoneNumberLength(localPhoneNumberLengthNeutralValue);
@@ -102,7 +99,6 @@ void ut_qtcontacts_trackerplugin_settings::setTestSettingsNeutralValues(TestSett
 void ut_qtcontacts_trackerplugin_settings::checkQctSettingsNeutralValues(const QctSettings &settings) const
 {
     QCOMPARE(settings.avatarSize(), QSize(avatarSizeNeutralValue, avatarSizeNeutralValue));
-    QCOMPARE(settings.concurrencyLevel(), concurrencyLevelNeutralValue);
     QCOMPARE(settings.guidAlgorithmName(), guidAlgorithmNameNeutralValue);
     QCOMPARE(settings.lastMSISDN(), lastMSISDNNeutralValue);
     QCOMPARE(settings.localPhoneNumberLength(), localPhoneNumberLengthNeutralValue);
@@ -121,7 +117,6 @@ void ut_qtcontacts_trackerplugin_settings::checkTestSettingsNeutralValues(const 
 void ut_qtcontacts_trackerplugin_settings::setQctSettingsTestValues(QctSettings &settings) const
 {
     settings.setAvatarSize(avatarSizeTestValue);
-    settings.setConcurrencyLevel(concurrencyLevelTestValue);
     settings.setGuidAlgorithmName(guidAlgorithmNameTestValue);
     settings.setLastMSISDN(lastMSISDNTestValue);
     settings.setLocalPhoneNumberLength(localPhoneNumberLengthTestValue);
@@ -139,7 +134,6 @@ void ut_qtcontacts_trackerplugin_settings::setTestSettingsTestValues(TestSetting
 void ut_qtcontacts_trackerplugin_settings::checkQctSettingsTestValues(const QctSettings &settings) const
 {
     QCOMPARE(settings.avatarSize(), QSize(avatarSizeTestValue, avatarSizeTestValue));
-    QCOMPARE(settings.concurrencyLevel(), concurrencyLevelTestValue);
     QCOMPARE(settings.guidAlgorithmName(), guidAlgorithmNameTestValue);
     QCOMPARE(settings.lastMSISDN(), lastMSISDNTestValue);
     QCOMPARE(settings.localPhoneNumberLength(), localPhoneNumberLengthTestValue);
@@ -161,11 +155,6 @@ void ut_qtcontacts_trackerplugin_settings::checkQctSettingsSignalling(QctSetting
     settings.setAvatarSize(avatarSizeTestValue);
     checkValuesChangedSignal(valuesChangedSpy,
                              QctSettings::AvatarSizeKey, avatarSizeTestValue);
-    CHECK_CURRENT_TEST_FAILED;
-
-    settings.setConcurrencyLevel(concurrencyLevelTestValue);
-    checkValuesChangedSignal(valuesChangedSpy,
-                             QctSettings::ConcurrencyLevelKey, concurrencyLevelTestValue);
     CHECK_CURRENT_TEST_FAILED;
 
     settings.setGuidAlgorithmName(guidAlgorithmNameTestValue);
@@ -224,7 +213,6 @@ void ut_qtcontacts_trackerplugin_settings::init()
     // backup current values
     TestSettings settings;
     mSettingsDataBackup.avatarSize = settings.avatarSize();
-    mSettingsDataBackup.concurrencyLevel = settings.concurrencyLevel();
     mSettingsDataBackup.guidAlgorithmName = settings.guidAlgorithmName();
     mSettingsDataBackup.lastMSISDN = settings.lastMSISDN();
     mSettingsDataBackup.localPhoneNumberLength = settings.localPhoneNumberLength();
@@ -240,7 +228,6 @@ void ut_qtcontacts_trackerplugin_settings::cleanup()
     // set old values back
     TestSettings settings;
     settings.setAvatarSize(mSettingsDataBackup.avatarSize.width());
-    settings.setConcurrencyLevel(mSettingsDataBackup.concurrencyLevel);
     settings.setGuidAlgorithmName(mSettingsDataBackup.guidAlgorithmName);
     settings.setLastMSISDN(mSettingsDataBackup.lastMSISDN);
     settings.setLocalPhoneNumberLength(mSettingsDataBackup.localPhoneNumberLength);
@@ -250,7 +237,6 @@ void ut_qtcontacts_trackerplugin_settings::cleanup()
     settings.setUT__SomeStringSetting(mSettingsDataBackup.ut__someStringSetting);
     settings.setUT__SomeStringListSetting(mSettingsDataBackup.ut__someStringListSetting);
     QCOMPARE(settings.avatarSize(), mSettingsDataBackup.avatarSize);
-    QCOMPARE(settings.concurrencyLevel(), mSettingsDataBackup.concurrencyLevel);
     QCOMPARE(settings.guidAlgorithmName(), mSettingsDataBackup.guidAlgorithmName);
     QCOMPARE(settings.lastMSISDN(), mSettingsDataBackup.lastMSISDN);
     QCOMPARE(settings.localPhoneNumberLength(), mSettingsDataBackup.localPhoneNumberLength);
@@ -400,11 +386,6 @@ void ut_qtcontacts_trackerplugin_settings::testSignallingOfSettingsChangeInOther
             << QctSettings::AvatarSizeKey
             << QVariant(avatarSizeNeutralValue)
             << QVariant(avatarSizeTestValue);
-
-    QTest::newRow("ConcurrencyLevel")
-            << QctSettings::ConcurrencyLevelKey
-            << QVariant(concurrencyLevelNeutralValue)
-            << QVariant(concurrencyLevelTestValue);
 
     QTest::newRow("GuidAlgorithmName")
             << QctSettings::GuidAlgorithmNameKey

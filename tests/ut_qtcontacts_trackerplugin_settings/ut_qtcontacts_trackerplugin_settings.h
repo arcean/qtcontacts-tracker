@@ -33,7 +33,6 @@ class QctSettings;
 /// structure to backup the current settings data
 struct SettingsData {
     QSize avatarSize;
-    int concurrencyLevel;
     QString guidAlgorithmName;
     QString lastMSISDN;
     int localPhoneNumberLength;

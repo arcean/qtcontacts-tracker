@@ -57,10 +57,6 @@ int main(int argc, char **argv)
         const int avatarSize = arguments.takeFirst().toInt();
         settings.setAvatarSize(avatarSize);
     }
-    else if (QctSettings::ConcurrencyLevelKey == settingKey) {
-        const int concurrencyLevel = arguments.takeFirst().toInt();
-        settings.setConcurrencyLevel(concurrencyLevel);
-    }
     else if (QctSettings::GuidAlgorithmNameKey == settingKey) {
         const QString guidAlgorithmName = arguments.takeFirst();
         settings.setGuidAlgorithmName(guidAlgorithmName);

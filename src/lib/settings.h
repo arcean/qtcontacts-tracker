@@ -58,7 +58,6 @@ class LIBQTCONTACTS_EXTENSIONS_TRACKER_EXPORT QctSettings : public QObject
 
 public: // key constants
     static const QString NumberMatchLengthKey;
-    static const QString ConcurrencyLevelKey;
     static const QString AvatarSizeKey;
     static const QString NameOrderKey;
     static const QString GuidAlgorithmNameKey;
@@ -82,11 +81,6 @@ public: // attributes
     /// sets the length of the local part of the phone number
     void setLocalPhoneNumberLength(int length);
     int localPhoneNumberLength() const;
-
-    /// sets the number of parallel threads to be used by the Tracker backend to QtContacts
-    /// TODO: development setting only?
-    void setConcurrencyLevel(int concurrencyLevel);
-    int concurrencyLevel() const;
 
     /// sets the default size of the avatar image, which is square, in count of pixels
     void setAvatarSize(int avatarSize);

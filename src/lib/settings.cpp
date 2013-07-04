@@ -36,7 +36,6 @@ const QStringList QctSettings::DefaultSparqlBackends = QStringList() << QLatin1S
                                                                      << QLatin1String("QTRACKER");
 
 const QString QctSettings::NumberMatchLengthKey = QLatin1String("numberMatchLength");
-const QString QctSettings::ConcurrencyLevelKey  = QLatin1String("concurrencyLevel");
 const QString QctSettings::AvatarSizeKey        = QLatin1String("avatarSize");
 const QString QctSettings::NameOrderKey         = QLatin1String("nameOrder");
 const QString QctSettings::GuidAlgorithmNameKey = QLatin1String("guidAlgorithmName");
@@ -82,13 +81,6 @@ class QctSettingsData : public QSharedData
 {
     // Stub to prevent potential ABI issues with QctSettings in the future. Not used yet.
 };
-
-static inline int
-defaultConcurrencyLevel()
-{
-    const static int idealThreadCount = QThread::idealThreadCount() + 1;
-    return idealThreadCount;
-}
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -159,7 +151,6 @@ QctSettings::QctSettings(QObject *parent)
 
     if (not isSettingsRegistered) {
         registerSetting(NumberMatchLengthKey, DefaultPhoneNumberLength);
-        registerSetting(ConcurrencyLevelKey, defaultConcurrencyLevel());
         registerSetting(AvatarSizeKey, DefaultAvatarSize);
         registerSetting(NameOrderKey, DefaultNameOrder);
         registerSetting(GuidAlgorithmNameKey);
@@ -230,25 +221,6 @@ QctSettings::localPhoneNumberLength() const
     }
 
     return length;
-}
-
-void
-QctSettings::setConcurrencyLevel(int concurrencyLevel)
-{
-    setValue(ConcurrencyLevelKey, concurrencyLevel);
-}
-
-int
-QctSettings::concurrencyLevel() const
-{
-    bool valid;
-    int concurrencyLevel = value(ConcurrencyLevelKey).toInt(&valid);
-
-    if (not valid || concurrencyLevel < 1) {
-        concurrencyLevel = qMax(1, defaultConcurrencyLevel());
-    }
-
-    return concurrencyLevel;
 }
 
 void
