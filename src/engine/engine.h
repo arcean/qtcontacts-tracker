@@ -178,6 +178,9 @@ public:
     bool validateDefinition(const QContactDetailDefinition&, QContactManager::Error* error) const;
 
 public: // custom attributes
+    /// does not do any checks, e.g. on the thread the request belongs to,
+    /// so can be used for internal requests (where requests belong to worker thread)
+    QTrackerAbstractRequest * createRequestWorkerImpl(QContactAbstractRequest *request);
     const QTrackerContactDetailSchemaMap & schemas() const;
     const QTrackerContactDetailSchema & schema(const QString& contactType) const;
 
@@ -224,6 +227,8 @@ private slots:
 private:
     /// Checks if the process requested all required security tokens.
     bool checkSecurityTokens(QContactAbstractRequest *request);
+
+    bool checkThreadOfRequest(QContactAbstractRequest *request) const;
 
     /// Creates and queues a new task for the \p request.
     /// Note that the return value of this method doesn't indicate success or failure of this

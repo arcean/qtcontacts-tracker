@@ -273,7 +273,7 @@ QTrackerContactIdFetchRequest::runEmulated()
     request.setSorting(m_sorting);
     request.setFilter(m_filter);
 
-    QScopedPointer<QTrackerAbstractRequest>(engine()->createRequestWorker(&request))->exec();
+    QScopedPointer<QTrackerAbstractRequest>(engine()->createRequestWorkerImpl(&request))->exec();
 
     if (request.error() != QContactManager::NoError) {
         setLastError(request.error());
