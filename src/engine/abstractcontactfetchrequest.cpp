@@ -469,7 +469,7 @@ QTrackerAbstractContactFetchRequest::runPreliminaryIdFetchRequest(QList<QContact
     request.setForceNative(true);
     request.setLimit(m_fetchHint.maxCountHint());
 
-    QScopedPointer<QTrackerAbstractRequest>(engine()->createRequestWorkerImpl(&request))->exec();
+    QScopedPointer<QTrackerAbstractRequest>(engine()->createRequestWorker(&request))->exec();
 
     if (request.error() != QContactManager::NoError) {
         return request.error();

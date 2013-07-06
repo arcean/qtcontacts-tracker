@@ -1670,76 +1670,6 @@ QContactTrackerEngine::checkSecurityTokens(QContactAbstractRequest *request)
     return true;
 }
 
-static QString
-addressStringFromPointer(const void *pointer)
-{
-    return QString::fromLatin1("0x") + QString::number(reinterpret_cast<quintptr>(pointer),16);
-}
-
-bool
-QContactTrackerEngine::checkThreadOfRequest(QContactAbstractRequest *request) const
-{
-    const QThread * const requestThread = request->thread();
-
-    // check that request and contactmanager are in same thread
-    const QThread * const managerThread = thread();
-
-    if (managerThread != requestThread) {
-        qctWarn(QString::fromLatin1("\n"
-                                    "================================================================================\n"
-                                    "ERROR /!\\ - REQUEST IS NOT ASSIGNED TO THE SAME THREAD AS THE CONTACT MANAGER\n"
-                                    "================================================================================\n"
-                                    "A request has been started that is not assigned to the same thread as the\n"
-                                    "contact manager it belongs to. This is not supported.\n"
-                                    "\n"
-                                    "See also http://doc.qt.nokia.com/stable/threads-qobject.html#qobject-reentrancy\n"
-                                    "\n"
-                                    "Manager: %1 (thread address: %2)\n"
-                                    "Request: %3 (thread address: %4, object name: \"%5\").\n"
-                                    "\n"
-                                    "Offending application is %6 [%7].\n"
-                                    "=============================================================================").
-                arg(managerUri(), addressStringFromPointer(managerThread),
-                    QString::fromLatin1(request->metaObject()->className()),
-                    addressStringFromPointer(requestThread), request->objectName(),
-                    QCoreApplication::applicationFilePath(),
-                    QString::number(QCoreApplication::applicationPid())));
-
-        return false;
-    }
-
-    // check that start of the request is done in same thread
-    const QThread * const currentThread = QThread::currentThread();
-
-    if (currentThread != requestThread) {
-        qctWarn(QString::fromLatin1("\n"
-                                    "================================================================================\n"
-                                    "ERROR /!\\ - REQUEST IS NOT STARTED IN THE THREAD IT BELONGS TO\n"
-                                    "================================================================================\n"
-                                    "QContactAbstractRequest::start() has been called on a request from a different\n"
-                                    "thread than the one it is assigned to. This is not supported.\n"
-                                    "\n"
-                                    "See also http://doc.qt.nokia.com/stable/threads-qobject.html#qobject-reentrancy\n"
-                                    "\n"
-                                    "Manager: %1 (thread address: %2)\n"
-                                    "Request: %3 (thread address: %4, object name: \"%5\").\n"
-                                    "Current thread address: %6.\n"
-                                    "\n"
-                                    "Offending application is %7 [%8].\n"
-                                    "=============================================================================").
-                arg(managerUri(), addressStringFromPointer(managerThread),
-                    QString::fromLatin1(request->metaObject()->className()),
-                    addressStringFromPointer(requestThread), request->objectName(),
-                    addressStringFromPointer(currentThread),
-                    QCoreApplication::applicationFilePath(),
-                    QString::number(QCoreApplication::applicationPid())));
-
-        return false;
-    }
-
-    return true;
-}
-
 QctTask *
 QContactTrackerEngine::startRequestImpl(QContactAbstractRequest *request,
                                         TaskQueue queue)
@@ -1814,19 +1744,8 @@ QContactTrackerEngine::createRequestWorker(QContactAbstractRequest *request)
         return 0;
     }
 
-    if (not checkThreadOfRequest(request)) {
-        return 0;
-    }
-
     // ensure old worker got destroyed when request gets reused
     requestDestroyed(request);
-
-    return createRequestWorkerImpl(request);
-}
-
-QTrackerAbstractRequest *
-QContactTrackerEngine::createRequestWorkerImpl(QContactAbstractRequest *request)
-{
 
     QTrackerAbstractRequest *worker = 0;
     QElapsedTimer t; t.start();
